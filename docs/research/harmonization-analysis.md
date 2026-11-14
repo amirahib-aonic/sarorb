@@ -190,9 +190,46 @@ Applying the per-month factors to 2002–2011 gives VIIRS-equivalent annual tota
 - **NOAA-20:** NOAA-20 / S-NPP = 1.01 with r = 0.987 over 104 shared months. Use it to fill gaps in S-NPP, not to add to it, because both satellites see the same fires and adding them would double count.
 - Show an uncertainty band of ±12% on harmonized years in the Burning Calendar, labelled as an estimate, so users can tell converted months from observed ones.
 
+## Borneo-wide check
+
+The Borneo FIRMS download (request IDs 846282–846285: MODIS, S-NPP, NOAA-20, NOAA-21; Nov 2001 to 13 Nov 2026) was split into the five Kalimantan provinces plus one Sarawak + Sabah + Brunei region. With only Indonesian boundaries on hand, that region is every Hotspot north of 0.8°N inside the Borneo box that falls outside an Indonesian province, so it is approximate.
+
+**Consistency.** West Kalimantan clipped from the Borneo download is within 0.2–0.23% of the existing West Kalimantan counts for every sensor over matching months to 2025, which is archive reprocessing between requests.
+
+Mean Hotspots per year, 2012–2025:
+
+| Region | VIIRS S-NPP | per 1,000 km² | Share of Borneo | S-NPP / MODIS |
+|---|---|---|---|---|
+| Central Kalimantan | 34,924 | 227 | 38.8% | 5.06 |
+| West Kalimantan | 25,929 | 176 | 28.8% | 4.27 |
+| East Kalimantan | 11,999 | 94 | 13.3% | 4.68 |
+| South Kalimantan | 8,624 | 223 | 9.6% | 5.40 |
+| Sarawak + Sabah + Brunei | 6,648 | 33 | 7.4% | 4.36 |
+| North Kalimantan | 1,855 | 25 | 2.1% | 4.41 |
+
+**Seasons differ by region.** West Kalimantan concentrates 70% of S-NPP Hotspots in August–September. Central, South and East Kalimantan peak in September–October. Sarawak + Sabah + Brunei has no sharp peak: March to September each carry 7–19%. A Burning Calendar fitted on West Kalimantan does not describe Malaysian Borneo.
+
+**Year-to-year swings.** Annual MODIS counts correlate with West Kalimantan at r = 0.92 for Central and South Kalimantan, 0.78 for East, 0.69 for Sarawak + Sabah + Brunei and 0.63 for North Kalimantan. 2026 is the highest MODIS year on record both in West Kalimantan and Borneo-wide.
+
+**Do the West Kalimantan k(m) transfer?** Median absolute error of annual VIIRS-equivalent totals, 2012–2025:
+
+| Region | West Kalimantan k(m) | Own k(m) |
+|---|---|---|
+| Central Kalimantan | 7.6% | 10.1% |
+| East Kalimantan | 7.8% | 4.3% |
+| North Kalimantan | 10.0% | 12.3% |
+| Sarawak + Sabah + Brunei | 6.7% | 7.4% |
+| South Kalimantan | 19.9% | 4.5% |
+
+The West Kalimantan table transfers everywhere except South Kalimantan, whose dry-season factors are far higher (k = 9.4 in March, 11.8 in April). The recommendation is one table fitted on West Kalimantan, with a separate table for South Kalimantan.
+
+Back-filling 2001–2011 with the West Kalimantan k(m) gives mean VIIRS-equivalent totals per year of about 55,000 (Central), 39,000 (West), 15,000 (Sarawak + Sabah + Brunei), 13,000 (East), 10,700 (South; 13,000 with its own k(m)) and 2,900 (North).
+
+NOAA-21 starts in 2024, so it is reported but not used for fitting.
+
 ## Limitations and open questions
 
-1. **One region only.** Every factor here is fitted on West Kalimantan. The Coverage Area is now all of Borneo, and the ratio may differ in Sarawak and Sabah, where land use and fire size differ. Refit when the Borneo data arrives and check whether one Borneo-wide table is enough or whether factors are needed per region.
+1. **Region coverage.** The Borneo-wide check above shows the West Kalimantan factors transfer to every region except South Kalimantan. Sarawak, Sabah and Brunei are still one approximate region; add Malaysian and Bruneian boundaries to split them and refit.
 2. **Quiet years are under-predicted.** In low-fire years (2020, 2025) every method under-predicts by 25–43%. A model with a fire-size or burning-level term could fix this, but it is out of scope for the deadline.
 3. **Confidence filtering.** Counts depend on which detections `burning_calendar.py` kept (for example, low-confidence VIIRS or MODIS detections below a cut-off). The factors are only valid for the same filter, so the filter must stay fixed between fitting and the app.
 4. **Terra and Aqua orbit drift.** Both MODIS satellites drift to later overpass times from roughly 2020 onward, which can change what they detect. Not visible yet in this data; worth rechecking.
@@ -204,6 +241,9 @@ Applying the per-month factors to 2002–2011 gives VIIRS-equivalent annual tota
 
 ```bash
 python docs/research/scripts/harmonization_analysis.py docs/research/output/west_kalimantan/monthly_by_sensor.csv
+python docs/research/scripts/borneo_comparison.py
 ```
+
+`borneo_comparison.py` reads the Borneo CSVs from `docs/research/data/firms_borneo/` and the boundary file from `docs/research/data/` (both gitignored), and writes its tables to `docs/research/output/borneo/`.
 
 The script pivots the counts to one row per month, fits the four methods, runs the leave-one-year-out test and prints every figure in this document. In the app pipeline it becomes a harmonization step that writes the twelve per-month factors to a small JSON file.

@@ -1,0 +1,3744 @@
+region,sensor,year,month,hotspots
+Central Kalimantan,MODIS,2001,11,3
+Central Kalimantan,MODIS,2001,12,10
+Central Kalimantan,MODIS,2002,1,4
+Central Kalimantan,MODIS,2002,2,13
+Central Kalimantan,MODIS,2002,3,2
+Central Kalimantan,MODIS,2002,4,10
+Central Kalimantan,MODIS,2002,5,64
+Central Kalimantan,MODIS,2002,6,39
+Central Kalimantan,MODIS,2002,7,1082
+Central Kalimantan,MODIS,2002,8,11433
+Central Kalimantan,MODIS,2002,9,9468
+Central Kalimantan,MODIS,2002,10,7313
+Central Kalimantan,MODIS,2002,11,220
+Central Kalimantan,MODIS,2002,12,38
+Central Kalimantan,MODIS,2003,1,39
+Central Kalimantan,MODIS,2003,2,11
+Central Kalimantan,MODIS,2003,3,68
+Central Kalimantan,MODIS,2003,4,15
+Central Kalimantan,MODIS,2003,5,190
+Central Kalimantan,MODIS,2003,6,853
+Central Kalimantan,MODIS,2003,7,400
+Central Kalimantan,MODIS,2003,8,2974
+Central Kalimantan,MODIS,2003,9,5536
+Central Kalimantan,MODIS,2003,10,830
+Central Kalimantan,MODIS,2003,11,62
+Central Kalimantan,MODIS,2003,12,4
+Central Kalimantan,MODIS,2004,1,33
+Central Kalimantan,MODIS,2004,2,37
+Central Kalimantan,MODIS,2004,3,106
+Central Kalimantan,MODIS,2004,4,47
+Central Kalimantan,MODIS,2004,5,100
+Central Kalimantan,MODIS,2004,6,341
+Central Kalimantan,MODIS,2004,7,75
+Central Kalimantan,MODIS,2004,8,5650
+Central Kalimantan,MODIS,2004,9,5197
+Central Kalimantan,MODIS,2004,10,5742
+Central Kalimantan,MODIS,2004,11,158
+Central Kalimantan,MODIS,2004,12,8
+Central Kalimantan,MODIS,2005,1,40
+Central Kalimantan,MODIS,2005,2,24
+Central Kalimantan,MODIS,2005,3,98
+Central Kalimantan,MODIS,2005,4,12
+Central Kalimantan,MODIS,2005,5,36
+Central Kalimantan,MODIS,2005,6,177
+Central Kalimantan,MODIS,2005,7,408
+Central Kalimantan,MODIS,2005,8,1009
+Central Kalimantan,MODIS,2005,9,4657
+Central Kalimantan,MODIS,2005,10,1152
+Central Kalimantan,MODIS,2005,11,59
+Central Kalimantan,MODIS,2005,12,27
+Central Kalimantan,MODIS,2006,1,142
+Central Kalimantan,MODIS,2006,2,33
+Central Kalimantan,MODIS,2006,3,64
+Central Kalimantan,MODIS,2006,4,10
+Central Kalimantan,MODIS,2006,5,62
+Central Kalimantan,MODIS,2006,6,22
+Central Kalimantan,MODIS,2006,7,596
+Central Kalimantan,MODIS,2006,8,4310
+Central Kalimantan,MODIS,2006,9,11322
+Central Kalimantan,MODIS,2006,10,16332
+Central Kalimantan,MODIS,2006,11,3412
+Central Kalimantan,MODIS,2006,12,77
+Central Kalimantan,MODIS,2007,1,56
+Central Kalimantan,MODIS,2007,2,40
+Central Kalimantan,MODIS,2007,3,77
+Central Kalimantan,MODIS,2007,4,11
+Central Kalimantan,MODIS,2007,5,55
+Central Kalimantan,MODIS,2007,6,44
+Central Kalimantan,MODIS,2007,7,61
+Central Kalimantan,MODIS,2007,8,184
+Central Kalimantan,MODIS,2007,9,2375
+Central Kalimantan,MODIS,2007,10,1171
+Central Kalimantan,MODIS,2007,11,62
+Central Kalimantan,MODIS,2007,12,22
+Central Kalimantan,MODIS,2008,1,72
+Central Kalimantan,MODIS,2008,2,76
+Central Kalimantan,MODIS,2008,3,11
+Central Kalimantan,MODIS,2008,4,16
+Central Kalimantan,MODIS,2008,5,116
+Central Kalimantan,MODIS,2008,6,128
+Central Kalimantan,MODIS,2008,7,48
+Central Kalimantan,MODIS,2008,8,77
+Central Kalimantan,MODIS,2008,9,978
+Central Kalimantan,MODIS,2008,10,638
+Central Kalimantan,MODIS,2008,11,71
+Central Kalimantan,MODIS,2008,12,8
+Central Kalimantan,MODIS,2009,1,31
+Central Kalimantan,MODIS,2009,2,81
+Central Kalimantan,MODIS,2009,3,18
+Central Kalimantan,MODIS,2009,4,38
+Central Kalimantan,MODIS,2009,5,85
+Central Kalimantan,MODIS,2009,6,184
+Central Kalimantan,MODIS,2009,7,517
+Central Kalimantan,MODIS,2009,8,3677
+Central Kalimantan,MODIS,2009,9,13272
+Central Kalimantan,MODIS,2009,10,856
+Central Kalimantan,MODIS,2009,11,208
+Central Kalimantan,MODIS,2009,12,19
+Central Kalimantan,MODIS,2010,1,14
+Central Kalimantan,MODIS,2010,2,74
+Central Kalimantan,MODIS,2010,3,14
+Central Kalimantan,MODIS,2010,4,9
+Central Kalimantan,MODIS,2010,5,6
+Central Kalimantan,MODIS,2010,6,11
+Central Kalimantan,MODIS,2010,7,9
+Central Kalimantan,MODIS,2010,8,23
+Central Kalimantan,MODIS,2010,9,214
+Central Kalimantan,MODIS,2010,10,323
+Central Kalimantan,MODIS,2010,11,5
+Central Kalimantan,MODIS,2010,12,18
+Central Kalimantan,MODIS,2011,1,31
+Central Kalimantan,MODIS,2011,2,34
+Central Kalimantan,MODIS,2011,3,9
+Central Kalimantan,MODIS,2011,4,18
+Central Kalimantan,MODIS,2011,5,41
+Central Kalimantan,MODIS,2011,6,268
+Central Kalimantan,MODIS,2011,7,561
+Central Kalimantan,MODIS,2011,8,3463
+Central Kalimantan,MODIS,2011,9,2760
+Central Kalimantan,MODIS,2011,10,841
+Central Kalimantan,MODIS,2011,11,43
+Central Kalimantan,MODIS,2011,12,6
+Central Kalimantan,MODIS,2012,1,29
+Central Kalimantan,MODIS,2012,2,14
+Central Kalimantan,MODIS,2012,3,37
+Central Kalimantan,MODIS,2012,4,34
+Central Kalimantan,MODIS,2012,5,77
+Central Kalimantan,MODIS,2012,6,172
+Central Kalimantan,MODIS,2012,7,122
+Central Kalimantan,MODIS,2012,8,995
+Central Kalimantan,MODIS,2012,9,4548
+Central Kalimantan,MODIS,2012,10,1966
+Central Kalimantan,MODIS,2012,11,67
+Central Kalimantan,MODIS,2012,12,10
+Central Kalimantan,MODIS,2013,1,28
+Central Kalimantan,MODIS,2013,2,19
+Central Kalimantan,MODIS,2013,3,28
+Central Kalimantan,MODIS,2013,4,16
+Central Kalimantan,MODIS,2013,5,12
+Central Kalimantan,MODIS,2013,6,94
+Central Kalimantan,MODIS,2013,7,30
+Central Kalimantan,MODIS,2013,8,206
+Central Kalimantan,MODIS,2013,9,1802
+Central Kalimantan,MODIS,2013,10,2374
+Central Kalimantan,MODIS,2013,11,39
+Central Kalimantan,MODIS,2013,12,16
+Central Kalimantan,MODIS,2014,1,108
+Central Kalimantan,MODIS,2014,2,306
+Central Kalimantan,MODIS,2014,3,13
+Central Kalimantan,MODIS,2014,4,26
+Central Kalimantan,MODIS,2014,5,41
+Central Kalimantan,MODIS,2014,6,47
+Central Kalimantan,MODIS,2014,7,205
+Central Kalimantan,MODIS,2014,8,1124
+Central Kalimantan,MODIS,2014,9,7151
+Central Kalimantan,MODIS,2014,10,5204
+Central Kalimantan,MODIS,2014,11,2309
+Central Kalimantan,MODIS,2014,12,3
+Central Kalimantan,MODIS,2015,1,34
+Central Kalimantan,MODIS,2015,2,7
+Central Kalimantan,MODIS,2015,3,21
+Central Kalimantan,MODIS,2015,4,17
+Central Kalimantan,MODIS,2015,5,49
+Central Kalimantan,MODIS,2015,6,69
+Central Kalimantan,MODIS,2015,7,726
+Central Kalimantan,MODIS,2015,8,5911
+Central Kalimantan,MODIS,2015,9,14502
+Central Kalimantan,MODIS,2015,10,11795
+Central Kalimantan,MODIS,2015,11,508
+Central Kalimantan,MODIS,2015,12,52
+Central Kalimantan,MODIS,2016,1,19
+Central Kalimantan,MODIS,2016,2,13
+Central Kalimantan,MODIS,2016,3,22
+Central Kalimantan,MODIS,2016,4,9
+Central Kalimantan,MODIS,2016,5,18
+Central Kalimantan,MODIS,2016,6,7
+Central Kalimantan,MODIS,2016,7,33
+Central Kalimantan,MODIS,2016,8,216
+Central Kalimantan,MODIS,2016,9,326
+Central Kalimantan,MODIS,2016,10,176
+Central Kalimantan,MODIS,2016,11,62
+Central Kalimantan,MODIS,2016,12,15
+Central Kalimantan,MODIS,2017,1,5
+Central Kalimantan,MODIS,2017,2,38
+Central Kalimantan,MODIS,2017,3,1
+Central Kalimantan,MODIS,2017,4,5
+Central Kalimantan,MODIS,2017,5,16
+Central Kalimantan,MODIS,2017,6,10
+Central Kalimantan,MODIS,2017,7,37
+Central Kalimantan,MODIS,2017,8,24
+Central Kalimantan,MODIS,2017,9,208
+Central Kalimantan,MODIS,2017,10,160
+Central Kalimantan,MODIS,2017,11,7
+Central Kalimantan,MODIS,2017,12,12
+Central Kalimantan,MODIS,2018,1,19
+Central Kalimantan,MODIS,2018,2,40
+Central Kalimantan,MODIS,2018,3,11
+Central Kalimantan,MODIS,2018,4,19
+Central Kalimantan,MODIS,2018,5,16
+Central Kalimantan,MODIS,2018,6,31
+Central Kalimantan,MODIS,2018,7,138
+Central Kalimantan,MODIS,2018,8,1160
+Central Kalimantan,MODIS,2018,9,1836
+Central Kalimantan,MODIS,2018,10,656
+Central Kalimantan,MODIS,2018,11,22
+Central Kalimantan,MODIS,2019,1,4
+Central Kalimantan,MODIS,2019,2,7
+Central Kalimantan,MODIS,2019,3,11
+Central Kalimantan,MODIS,2019,4,2
+Central Kalimantan,MODIS,2019,5,22
+Central Kalimantan,MODIS,2019,6,17
+Central Kalimantan,MODIS,2019,7,428
+Central Kalimantan,MODIS,2019,8,1979
+Central Kalimantan,MODIS,2019,9,12689
+Central Kalimantan,MODIS,2019,10,1246
+Central Kalimantan,MODIS,2019,11,1338
+Central Kalimantan,MODIS,2019,12,56
+Central Kalimantan,MODIS,2020,1,13
+Central Kalimantan,MODIS,2020,2,14
+Central Kalimantan,MODIS,2020,3,11
+Central Kalimantan,MODIS,2020,4,9
+Central Kalimantan,MODIS,2020,5,3
+Central Kalimantan,MODIS,2020,6,7
+Central Kalimantan,MODIS,2020,7,5
+Central Kalimantan,MODIS,2020,8,17
+Central Kalimantan,MODIS,2020,9,312
+Central Kalimantan,MODIS,2020,10,94
+Central Kalimantan,MODIS,2020,11,129
+Central Kalimantan,MODIS,2020,12,17
+Central Kalimantan,MODIS,2021,1,4
+Central Kalimantan,MODIS,2021,2,30
+Central Kalimantan,MODIS,2021,3,7
+Central Kalimantan,MODIS,2021,4,22
+Central Kalimantan,MODIS,2021,5,10
+Central Kalimantan,MODIS,2021,6,10
+Central Kalimantan,MODIS,2021,7,14
+Central Kalimantan,MODIS,2021,8,18
+Central Kalimantan,MODIS,2021,9,41
+Central Kalimantan,MODIS,2021,10,193
+Central Kalimantan,MODIS,2021,11,12
+Central Kalimantan,MODIS,2022,1,5
+Central Kalimantan,MODIS,2022,2,7
+Central Kalimantan,MODIS,2022,4,7
+Central Kalimantan,MODIS,2022,5,26
+Central Kalimantan,MODIS,2022,6,11
+Central Kalimantan,MODIS,2022,7,17
+Central Kalimantan,MODIS,2022,8,45
+Central Kalimantan,MODIS,2022,9,77
+Central Kalimantan,MODIS,2022,10,56
+Central Kalimantan,MODIS,2022,11,14
+Central Kalimantan,MODIS,2022,12,12
+Central Kalimantan,MODIS,2023,1,10
+Central Kalimantan,MODIS,2023,2,5
+Central Kalimantan,MODIS,2023,3,3
+Central Kalimantan,MODIS,2023,4,18
+Central Kalimantan,MODIS,2023,5,60
+Central Kalimantan,MODIS,2023,6,50
+Central Kalimantan,MODIS,2023,7,123
+Central Kalimantan,MODIS,2023,8,945
+Central Kalimantan,MODIS,2023,9,2781
+Central Kalimantan,MODIS,2023,10,2967
+Central Kalimantan,MODIS,2023,11,157
+Central Kalimantan,MODIS,2023,12,12
+Central Kalimantan,MODIS,2024,1,13
+Central Kalimantan,MODIS,2024,2,32
+Central Kalimantan,MODIS,2024,3,17
+Central Kalimantan,MODIS,2024,4,11
+Central Kalimantan,MODIS,2024,5,12
+Central Kalimantan,MODIS,2024,6,6
+Central Kalimantan,MODIS,2024,7,68
+Central Kalimantan,MODIS,2024,8,43
+Central Kalimantan,MODIS,2024,9,772
+Central Kalimantan,MODIS,2024,10,263
+Central Kalimantan,MODIS,2024,11,8
+Central Kalimantan,MODIS,2024,12,6
+Central Kalimantan,MODIS,2025,1,1
+Central Kalimantan,MODIS,2025,2,11
+Central Kalimantan,MODIS,2025,3,10
+Central Kalimantan,MODIS,2025,4,8
+Central Kalimantan,MODIS,2025,5,9
+Central Kalimantan,MODIS,2025,6,17
+Central Kalimantan,MODIS,2025,7,113
+Central Kalimantan,MODIS,2025,8,73
+Central Kalimantan,MODIS,2025,9,276
+Central Kalimantan,MODIS,2025,10,204
+Central Kalimantan,MODIS,2025,11,31
+Central Kalimantan,MODIS,2025,12,4
+Central Kalimantan,MODIS,2026,1,83
+Central Kalimantan,MODIS,2026,2,8
+Central Kalimantan,MODIS,2026,3,55
+Central Kalimantan,MODIS,2026,4,36
+Central Kalimantan,MODIS,2026,5,7
+Central Kalimantan,MODIS,2026,6,31
+Central Kalimantan,MODIS,2026,7,361
+Central Kalimantan,MODIS,2026,8,7505
+Central Kalimantan,MODIS,2026,9,14637
+Central Kalimantan,MODIS,2026,10,12036
+Central Kalimantan,MODIS,2026,11,519
+Central Kalimantan,VIIRS NOAA-20,2018,4,58
+Central Kalimantan,VIIRS NOAA-20,2018,5,47
+Central Kalimantan,VIIRS NOAA-20,2018,6,137
+Central Kalimantan,VIIRS NOAA-20,2018,7,643
+Central Kalimantan,VIIRS NOAA-20,2018,8,4997
+Central Kalimantan,VIIRS NOAA-20,2018,9,6907
+Central Kalimantan,VIIRS NOAA-20,2018,10,2924
+Central Kalimantan,VIIRS NOAA-20,2018,11,126
+Central Kalimantan,VIIRS NOAA-20,2018,12,22
+Central Kalimantan,VIIRS NOAA-20,2019,1,23
+Central Kalimantan,VIIRS NOAA-20,2019,2,38
+Central Kalimantan,VIIRS NOAA-20,2019,3,75
+Central Kalimantan,VIIRS NOAA-20,2019,4,26
+Central Kalimantan,VIIRS NOAA-20,2019,5,89
+Central Kalimantan,VIIRS NOAA-20,2019,6,93
+Central Kalimantan,VIIRS NOAA-20,2019,7,2319
+Central Kalimantan,VIIRS NOAA-20,2019,8,10142
+Central Kalimantan,VIIRS NOAA-20,2019,9,61066
+Central Kalimantan,VIIRS NOAA-20,2019,10,6169
+Central Kalimantan,VIIRS NOAA-20,2019,11,7114
+Central Kalimantan,VIIRS NOAA-20,2019,12,149
+Central Kalimantan,VIIRS NOAA-20,2020,1,25
+Central Kalimantan,VIIRS NOAA-20,2020,2,32
+Central Kalimantan,VIIRS NOAA-20,2020,3,39
+Central Kalimantan,VIIRS NOAA-20,2020,4,48
+Central Kalimantan,VIIRS NOAA-20,2020,5,36
+Central Kalimantan,VIIRS NOAA-20,2020,6,33
+Central Kalimantan,VIIRS NOAA-20,2020,7,75
+Central Kalimantan,VIIRS NOAA-20,2020,8,222
+Central Kalimantan,VIIRS NOAA-20,2020,9,956
+Central Kalimantan,VIIRS NOAA-20,2020,10,787
+Central Kalimantan,VIIRS NOAA-20,2020,11,454
+Central Kalimantan,VIIRS NOAA-20,2020,12,40
+Central Kalimantan,VIIRS NOAA-20,2021,1,16
+Central Kalimantan,VIIRS NOAA-20,2021,2,119
+Central Kalimantan,VIIRS NOAA-20,2021,3,59
+Central Kalimantan,VIIRS NOAA-20,2021,4,101
+Central Kalimantan,VIIRS NOAA-20,2021,5,40
+Central Kalimantan,VIIRS NOAA-20,2021,6,87
+Central Kalimantan,VIIRS NOAA-20,2021,7,141
+Central Kalimantan,VIIRS NOAA-20,2021,8,104
+Central Kalimantan,VIIRS NOAA-20,2021,9,122
+Central Kalimantan,VIIRS NOAA-20,2021,10,834
+Central Kalimantan,VIIRS NOAA-20,2021,11,47
+Central Kalimantan,VIIRS NOAA-20,2021,12,38
+Central Kalimantan,VIIRS NOAA-20,2022,1,45
+Central Kalimantan,VIIRS NOAA-20,2022,2,66
+Central Kalimantan,VIIRS NOAA-20,2022,3,65
+Central Kalimantan,VIIRS NOAA-20,2022,4,51
+Central Kalimantan,VIIRS NOAA-20,2022,5,90
+Central Kalimantan,VIIRS NOAA-20,2022,6,77
+Central Kalimantan,VIIRS NOAA-20,2022,7,90
+Central Kalimantan,VIIRS NOAA-20,2022,8,277
+Central Kalimantan,VIIRS NOAA-20,2022,9,336
+Central Kalimantan,VIIRS NOAA-20,2022,10,159
+Central Kalimantan,VIIRS NOAA-20,2022,11,90
+Central Kalimantan,VIIRS NOAA-20,2022,12,87
+Central Kalimantan,VIIRS NOAA-20,2023,1,89
+Central Kalimantan,VIIRS NOAA-20,2023,2,72
+Central Kalimantan,VIIRS NOAA-20,2023,3,26
+Central Kalimantan,VIIRS NOAA-20,2023,4,112
+Central Kalimantan,VIIRS NOAA-20,2023,5,217
+Central Kalimantan,VIIRS NOAA-20,2023,6,241
+Central Kalimantan,VIIRS NOAA-20,2023,7,375
+Central Kalimantan,VIIRS NOAA-20,2023,8,3744
+Central Kalimantan,VIIRS NOAA-20,2023,9,10984
+Central Kalimantan,VIIRS NOAA-20,2023,10,12853
+Central Kalimantan,VIIRS NOAA-20,2023,11,681
+Central Kalimantan,VIIRS NOAA-20,2023,12,81
+Central Kalimantan,VIIRS NOAA-20,2024,1,45
+Central Kalimantan,VIIRS NOAA-20,2024,2,74
+Central Kalimantan,VIIRS NOAA-20,2024,3,68
+Central Kalimantan,VIIRS NOAA-20,2024,4,28
+Central Kalimantan,VIIRS NOAA-20,2024,5,26
+Central Kalimantan,VIIRS NOAA-20,2024,6,42
+Central Kalimantan,VIIRS NOAA-20,2024,7,371
+Central Kalimantan,VIIRS NOAA-20,2024,8,268
+Central Kalimantan,VIIRS NOAA-20,2024,9,2398
+Central Kalimantan,VIIRS NOAA-20,2024,10,1049
+Central Kalimantan,VIIRS NOAA-20,2024,11,76
+Central Kalimantan,VIIRS NOAA-20,2024,12,40
+Central Kalimantan,VIIRS NOAA-20,2025,1,15
+Central Kalimantan,VIIRS NOAA-20,2025,2,70
+Central Kalimantan,VIIRS NOAA-20,2025,3,32
+Central Kalimantan,VIIRS NOAA-20,2025,4,27
+Central Kalimantan,VIIRS NOAA-20,2025,5,122
+Central Kalimantan,VIIRS NOAA-20,2025,6,102
+Central Kalimantan,VIIRS NOAA-20,2025,7,365
+Central Kalimantan,VIIRS NOAA-20,2025,8,320
+Central Kalimantan,VIIRS NOAA-20,2025,9,1447
+Central Kalimantan,VIIRS NOAA-20,2025,10,956
+Central Kalimantan,VIIRS NOAA-20,2025,11,125
+Central Kalimantan,VIIRS NOAA-20,2025,12,13
+Central Kalimantan,VIIRS NOAA-20,2026,1,399
+Central Kalimantan,VIIRS NOAA-20,2026,2,47
+Central Kalimantan,VIIRS NOAA-20,2026,3,133
+Central Kalimantan,VIIRS NOAA-20,2026,4,108
+Central Kalimantan,VIIRS NOAA-20,2026,5,64
+Central Kalimantan,VIIRS NOAA-20,2026,6,166
+Central Kalimantan,VIIRS NOAA-20,2026,7,1556
+Central Kalimantan,VIIRS NOAA-20,2026,8,31522
+Central Kalimantan,VIIRS NOAA-20,2026,9,62921
+Central Kalimantan,VIIRS NOAA-20,2026,10,71809
+Central Kalimantan,VIIRS NOAA-20,2026,11,3334
+Central Kalimantan,VIIRS NOAA-21,2023,3,24
+Central Kalimantan,VIIRS NOAA-21,2023,4,98
+Central Kalimantan,VIIRS NOAA-21,2023,5,220
+Central Kalimantan,VIIRS NOAA-21,2023,6,230
+Central Kalimantan,VIIRS NOAA-21,2023,7,387
+Central Kalimantan,VIIRS NOAA-21,2023,8,3502
+Central Kalimantan,VIIRS NOAA-21,2023,9,11529
+Central Kalimantan,VIIRS NOAA-21,2023,10,13193
+Central Kalimantan,VIIRS NOAA-21,2023,11,607
+Central Kalimantan,VIIRS NOAA-21,2023,12,65
+Central Kalimantan,VIIRS NOAA-21,2024,1,50
+Central Kalimantan,VIIRS NOAA-21,2024,2,79
+Central Kalimantan,VIIRS NOAA-21,2024,3,65
+Central Kalimantan,VIIRS NOAA-21,2024,4,26
+Central Kalimantan,VIIRS NOAA-21,2024,5,44
+Central Kalimantan,VIIRS NOAA-21,2024,6,58
+Central Kalimantan,VIIRS NOAA-21,2024,7,315
+Central Kalimantan,VIIRS NOAA-21,2024,8,229
+Central Kalimantan,VIIRS NOAA-21,2024,9,2571
+Central Kalimantan,VIIRS NOAA-21,2024,10,934
+Central Kalimantan,VIIRS NOAA-21,2024,11,87
+Central Kalimantan,VIIRS NOAA-21,2024,12,27
+Central Kalimantan,VIIRS NOAA-21,2025,1,10
+Central Kalimantan,VIIRS NOAA-21,2025,2,54
+Central Kalimantan,VIIRS NOAA-21,2025,3,38
+Central Kalimantan,VIIRS NOAA-21,2025,4,42
+Central Kalimantan,VIIRS NOAA-21,2025,5,118
+Central Kalimantan,VIIRS NOAA-21,2025,6,99
+Central Kalimantan,VIIRS NOAA-21,2025,7,359
+Central Kalimantan,VIIRS NOAA-21,2025,8,324
+Central Kalimantan,VIIRS NOAA-21,2025,9,1431
+Central Kalimantan,VIIRS NOAA-21,2025,10,999
+Central Kalimantan,VIIRS NOAA-21,2025,11,88
+Central Kalimantan,VIIRS NOAA-21,2025,12,28
+Central Kalimantan,VIIRS NOAA-21,2026,1,313
+Central Kalimantan,VIIRS NOAA-21,2026,2,44
+Central Kalimantan,VIIRS NOAA-21,2026,3,107
+Central Kalimantan,VIIRS NOAA-21,2026,4,149
+Central Kalimantan,VIIRS NOAA-21,2026,5,49
+Central Kalimantan,VIIRS NOAA-21,2026,6,180
+Central Kalimantan,VIIRS NOAA-21,2026,7,1635
+Central Kalimantan,VIIRS NOAA-21,2026,8,27870
+Central Kalimantan,VIIRS NOAA-21,2026,9,68702
+Central Kalimantan,VIIRS NOAA-21,2026,10,66092
+Central Kalimantan,VIIRS NOAA-21,2026,11,2804
+Central Kalimantan,VIIRS S-NPP,2012,1,34
+Central Kalimantan,VIIRS S-NPP,2012,2,77
+Central Kalimantan,VIIRS S-NPP,2012,3,142
+Central Kalimantan,VIIRS S-NPP,2012,4,155
+Central Kalimantan,VIIRS S-NPP,2012,5,393
+Central Kalimantan,VIIRS S-NPP,2012,6,680
+Central Kalimantan,VIIRS S-NPP,2012,7,479
+Central Kalimantan,VIIRS S-NPP,2012,8,4509
+Central Kalimantan,VIIRS S-NPP,2012,9,21225
+Central Kalimantan,VIIRS S-NPP,2012,10,10780
+Central Kalimantan,VIIRS S-NPP,2012,11,183
+Central Kalimantan,VIIRS S-NPP,2012,12,58
+Central Kalimantan,VIIRS S-NPP,2013,1,187
+Central Kalimantan,VIIRS S-NPP,2013,2,93
+Central Kalimantan,VIIRS S-NPP,2013,3,142
+Central Kalimantan,VIIRS S-NPP,2013,4,75
+Central Kalimantan,VIIRS S-NPP,2013,5,79
+Central Kalimantan,VIIRS S-NPP,2013,6,457
+Central Kalimantan,VIIRS S-NPP,2013,7,176
+Central Kalimantan,VIIRS S-NPP,2013,8,943
+Central Kalimantan,VIIRS S-NPP,2013,9,6046
+Central Kalimantan,VIIRS S-NPP,2013,10,10764
+Central Kalimantan,VIIRS S-NPP,2013,11,217
+Central Kalimantan,VIIRS S-NPP,2013,12,82
+Central Kalimantan,VIIRS S-NPP,2014,1,581
+Central Kalimantan,VIIRS S-NPP,2014,2,894
+Central Kalimantan,VIIRS S-NPP,2014,3,62
+Central Kalimantan,VIIRS S-NPP,2014,4,120
+Central Kalimantan,VIIRS S-NPP,2014,5,201
+Central Kalimantan,VIIRS S-NPP,2014,6,176
+Central Kalimantan,VIIRS S-NPP,2014,7,1055
+Central Kalimantan,VIIRS S-NPP,2014,8,4436
+Central Kalimantan,VIIRS S-NPP,2014,9,31175
+Central Kalimantan,VIIRS S-NPP,2014,10,29779
+Central Kalimantan,VIIRS S-NPP,2014,11,11059
+Central Kalimantan,VIIRS S-NPP,2014,12,53
+Central Kalimantan,VIIRS S-NPP,2015,1,105
+Central Kalimantan,VIIRS S-NPP,2015,2,84
+Central Kalimantan,VIIRS S-NPP,2015,3,70
+Central Kalimantan,VIIRS S-NPP,2015,4,66
+Central Kalimantan,VIIRS S-NPP,2015,5,191
+Central Kalimantan,VIIRS S-NPP,2015,6,366
+Central Kalimantan,VIIRS S-NPP,2015,7,2767
+Central Kalimantan,VIIRS S-NPP,2015,8,27839
+Central Kalimantan,VIIRS S-NPP,2015,9,77381
+Central Kalimantan,VIIRS S-NPP,2015,10,83126
+Central Kalimantan,VIIRS S-NPP,2015,11,3803
+Central Kalimantan,VIIRS S-NPP,2015,12,261
+Central Kalimantan,VIIRS S-NPP,2016,1,67
+Central Kalimantan,VIIRS S-NPP,2016,2,27
+Central Kalimantan,VIIRS S-NPP,2016,3,56
+Central Kalimantan,VIIRS S-NPP,2016,4,40
+Central Kalimantan,VIIRS S-NPP,2016,5,61
+Central Kalimantan,VIIRS S-NPP,2016,6,68
+Central Kalimantan,VIIRS S-NPP,2016,7,135
+Central Kalimantan,VIIRS S-NPP,2016,8,853
+Central Kalimantan,VIIRS S-NPP,2016,9,1102
+Central Kalimantan,VIIRS S-NPP,2016,10,1141
+Central Kalimantan,VIIRS S-NPP,2016,11,270
+Central Kalimantan,VIIRS S-NPP,2016,12,43
+Central Kalimantan,VIIRS S-NPP,2017,1,20
+Central Kalimantan,VIIRS S-NPP,2017,2,81
+Central Kalimantan,VIIRS S-NPP,2017,3,23
+Central Kalimantan,VIIRS S-NPP,2017,4,28
+Central Kalimantan,VIIRS S-NPP,2017,5,34
+Central Kalimantan,VIIRS S-NPP,2017,6,54
+Central Kalimantan,VIIRS S-NPP,2017,7,132
+Central Kalimantan,VIIRS S-NPP,2017,8,91
+Central Kalimantan,VIIRS S-NPP,2017,9,1056
+Central Kalimantan,VIIRS S-NPP,2017,10,941
+Central Kalimantan,VIIRS S-NPP,2017,11,53
+Central Kalimantan,VIIRS S-NPP,2017,12,48
+Central Kalimantan,VIIRS S-NPP,2018,1,74
+Central Kalimantan,VIIRS S-NPP,2018,2,198
+Central Kalimantan,VIIRS S-NPP,2018,3,38
+Central Kalimantan,VIIRS S-NPP,2018,4,41
+Central Kalimantan,VIIRS S-NPP,2018,5,83
+Central Kalimantan,VIIRS S-NPP,2018,6,181
+Central Kalimantan,VIIRS S-NPP,2018,7,660
+Central Kalimantan,VIIRS S-NPP,2018,8,4785
+Central Kalimantan,VIIRS S-NPP,2018,9,7144
+Central Kalimantan,VIIRS S-NPP,2018,10,2744
+Central Kalimantan,VIIRS S-NPP,2018,11,69
+Central Kalimantan,VIIRS S-NPP,2018,12,11
+Central Kalimantan,VIIRS S-NPP,2019,1,40
+Central Kalimantan,VIIRS S-NPP,2019,2,47
+Central Kalimantan,VIIRS S-NPP,2019,3,62
+Central Kalimantan,VIIRS S-NPP,2019,4,21
+Central Kalimantan,VIIRS S-NPP,2019,5,80
+Central Kalimantan,VIIRS S-NPP,2019,6,88
+Central Kalimantan,VIIRS S-NPP,2019,7,2168
+Central Kalimantan,VIIRS S-NPP,2019,8,10495
+Central Kalimantan,VIIRS S-NPP,2019,9,60484
+Central Kalimantan,VIIRS S-NPP,2019,10,6555
+Central Kalimantan,VIIRS S-NPP,2019,11,7497
+Central Kalimantan,VIIRS S-NPP,2019,12,141
+Central Kalimantan,VIIRS S-NPP,2020,1,37
+Central Kalimantan,VIIRS S-NPP,2020,2,32
+Central Kalimantan,VIIRS S-NPP,2020,3,29
+Central Kalimantan,VIIRS S-NPP,2020,4,44
+Central Kalimantan,VIIRS S-NPP,2020,5,36
+Central Kalimantan,VIIRS S-NPP,2020,6,58
+Central Kalimantan,VIIRS S-NPP,2020,7,53
+Central Kalimantan,VIIRS S-NPP,2020,8,253
+Central Kalimantan,VIIRS S-NPP,2020,9,846
+Central Kalimantan,VIIRS S-NPP,2020,10,988
+Central Kalimantan,VIIRS S-NPP,2020,11,441
+Central Kalimantan,VIIRS S-NPP,2020,12,74
+Central Kalimantan,VIIRS S-NPP,2021,1,6
+Central Kalimantan,VIIRS S-NPP,2021,2,134
+Central Kalimantan,VIIRS S-NPP,2021,3,44
+Central Kalimantan,VIIRS S-NPP,2021,4,107
+Central Kalimantan,VIIRS S-NPP,2021,5,35
+Central Kalimantan,VIIRS S-NPP,2021,6,76
+Central Kalimantan,VIIRS S-NPP,2021,7,101
+Central Kalimantan,VIIRS S-NPP,2021,8,96
+Central Kalimantan,VIIRS S-NPP,2021,9,215
+Central Kalimantan,VIIRS S-NPP,2021,10,776
+Central Kalimantan,VIIRS S-NPP,2021,11,84
+Central Kalimantan,VIIRS S-NPP,2021,12,30
+Central Kalimantan,VIIRS S-NPP,2022,1,33
+Central Kalimantan,VIIRS S-NPP,2022,2,46
+Central Kalimantan,VIIRS S-NPP,2022,3,75
+Central Kalimantan,VIIRS S-NPP,2022,4,63
+Central Kalimantan,VIIRS S-NPP,2022,5,79
+Central Kalimantan,VIIRS S-NPP,2022,6,64
+Central Kalimantan,VIIRS S-NPP,2022,7,65
+Central Kalimantan,VIIRS S-NPP,2022,8,136
+Central Kalimantan,VIIRS S-NPP,2022,9,357
+Central Kalimantan,VIIRS S-NPP,2022,10,229
+Central Kalimantan,VIIRS S-NPP,2022,11,78
+Central Kalimantan,VIIRS S-NPP,2022,12,99
+Central Kalimantan,VIIRS S-NPP,2023,1,134
+Central Kalimantan,VIIRS S-NPP,2023,2,50
+Central Kalimantan,VIIRS S-NPP,2023,3,18
+Central Kalimantan,VIIRS S-NPP,2023,4,110
+Central Kalimantan,VIIRS S-NPP,2023,5,235
+Central Kalimantan,VIIRS S-NPP,2023,6,219
+Central Kalimantan,VIIRS S-NPP,2023,7,334
+Central Kalimantan,VIIRS S-NPP,2023,8,3601
+Central Kalimantan,VIIRS S-NPP,2023,9,12637
+Central Kalimantan,VIIRS S-NPP,2023,10,13095
+Central Kalimantan,VIIRS S-NPP,2023,11,731
+Central Kalimantan,VIIRS S-NPP,2023,12,63
+Central Kalimantan,VIIRS S-NPP,2024,1,39
+Central Kalimantan,VIIRS S-NPP,2024,2,109
+Central Kalimantan,VIIRS S-NPP,2024,3,72
+Central Kalimantan,VIIRS S-NPP,2024,4,34
+Central Kalimantan,VIIRS S-NPP,2024,5,24
+Central Kalimantan,VIIRS S-NPP,2024,6,50
+Central Kalimantan,VIIRS S-NPP,2024,7,88
+Central Kalimantan,VIIRS S-NPP,2024,8,270
+Central Kalimantan,VIIRS S-NPP,2024,9,2357
+Central Kalimantan,VIIRS S-NPP,2024,10,1125
+Central Kalimantan,VIIRS S-NPP,2024,11,77
+Central Kalimantan,VIIRS S-NPP,2024,12,25
+Central Kalimantan,VIIRS S-NPP,2025,1,23
+Central Kalimantan,VIIRS S-NPP,2025,2,57
+Central Kalimantan,VIIRS S-NPP,2025,3,29
+Central Kalimantan,VIIRS S-NPP,2025,4,35
+Central Kalimantan,VIIRS S-NPP,2025,5,145
+Central Kalimantan,VIIRS S-NPP,2025,6,94
+Central Kalimantan,VIIRS S-NPP,2025,7,374
+Central Kalimantan,VIIRS S-NPP,2025,8,349
+Central Kalimantan,VIIRS S-NPP,2025,9,1410
+Central Kalimantan,VIIRS S-NPP,2025,10,1104
+Central Kalimantan,VIIRS S-NPP,2025,11,119
+Central Kalimantan,VIIRS S-NPP,2025,12,22
+Central Kalimantan,VIIRS S-NPP,2026,1,390
+Central Kalimantan,VIIRS S-NPP,2026,2,65
+Central Kalimantan,VIIRS S-NPP,2026,3,130
+Central Kalimantan,VIIRS S-NPP,2026,4,112
+Central Kalimantan,VIIRS S-NPP,2026,5,49
+Central Kalimantan,VIIRS S-NPP,2026,6,148
+Central Kalimantan,VIIRS S-NPP,2026,7,1350
+Central Kalimantan,VIIRS S-NPP,2026,8,31914
+Central Kalimantan,VIIRS S-NPP,2026,9,66013
+Central Kalimantan,VIIRS S-NPP,2026,10,64739
+Central Kalimantan,VIIRS S-NPP,2026,11,465
+East Kalimantan,MODIS,2001,11,16
+East Kalimantan,MODIS,2001,12,6
+East Kalimantan,MODIS,2002,1,12
+East Kalimantan,MODIS,2002,2,11
+East Kalimantan,MODIS,2002,4,11
+East Kalimantan,MODIS,2002,5,12
+East Kalimantan,MODIS,2002,6,3
+East Kalimantan,MODIS,2002,7,150
+East Kalimantan,MODIS,2002,8,1465
+East Kalimantan,MODIS,2002,9,1716
+East Kalimantan,MODIS,2002,10,1762
+East Kalimantan,MODIS,2002,11,127
+East Kalimantan,MODIS,2002,12,61
+East Kalimantan,MODIS,2003,1,8
+East Kalimantan,MODIS,2003,2,23
+East Kalimantan,MODIS,2003,3,40
+East Kalimantan,MODIS,2003,4,23
+East Kalimantan,MODIS,2003,5,60
+East Kalimantan,MODIS,2003,6,167
+East Kalimantan,MODIS,2003,7,64
+East Kalimantan,MODIS,2003,8,506
+East Kalimantan,MODIS,2003,9,443
+East Kalimantan,MODIS,2003,10,233
+East Kalimantan,MODIS,2003,11,44
+East Kalimantan,MODIS,2003,12,12
+East Kalimantan,MODIS,2004,1,37
+East Kalimantan,MODIS,2004,2,10
+East Kalimantan,MODIS,2004,3,15
+East Kalimantan,MODIS,2004,4,15
+East Kalimantan,MODIS,2004,5,24
+East Kalimantan,MODIS,2004,6,83
+East Kalimantan,MODIS,2004,7,78
+East Kalimantan,MODIS,2004,8,1881
+East Kalimantan,MODIS,2004,9,951
+East Kalimantan,MODIS,2004,10,2562
+East Kalimantan,MODIS,2004,11,328
+East Kalimantan,MODIS,2004,12,3
+East Kalimantan,MODIS,2005,1,31
+East Kalimantan,MODIS,2005,2,64
+East Kalimantan,MODIS,2005,3,106
+East Kalimantan,MODIS,2005,4,9
+East Kalimantan,MODIS,2005,5,5
+East Kalimantan,MODIS,2005,6,31
+East Kalimantan,MODIS,2005,7,41
+East Kalimantan,MODIS,2005,8,359
+East Kalimantan,MODIS,2005,9,892
+East Kalimantan,MODIS,2005,10,333
+East Kalimantan,MODIS,2005,11,26
+East Kalimantan,MODIS,2006,1,12
+East Kalimantan,MODIS,2006,2,49
+East Kalimantan,MODIS,2006,3,24
+East Kalimantan,MODIS,2006,4,33
+East Kalimantan,MODIS,2006,5,24
+East Kalimantan,MODIS,2006,6,10
+East Kalimantan,MODIS,2006,7,218
+East Kalimantan,MODIS,2006,8,1365
+East Kalimantan,MODIS,2006,9,1833
+East Kalimantan,MODIS,2006,10,1445
+East Kalimantan,MODIS,2006,11,355
+East Kalimantan,MODIS,2006,12,153
+East Kalimantan,MODIS,2007,1,20
+East Kalimantan,MODIS,2007,2,39
+East Kalimantan,MODIS,2007,3,32
+East Kalimantan,MODIS,2007,4,68
+East Kalimantan,MODIS,2007,5,40
+East Kalimantan,MODIS,2007,6,14
+East Kalimantan,MODIS,2007,7,18
+East Kalimantan,MODIS,2007,8,251
+East Kalimantan,MODIS,2007,9,659
+East Kalimantan,MODIS,2007,10,572
+East Kalimantan,MODIS,2007,11,79
+East Kalimantan,MODIS,2007,12,32
+East Kalimantan,MODIS,2008,1,23
+East Kalimantan,MODIS,2008,2,36
+East Kalimantan,MODIS,2008,3,8
+East Kalimantan,MODIS,2008,4,26
+East Kalimantan,MODIS,2008,5,60
+East Kalimantan,MODIS,2008,6,58
+East Kalimantan,MODIS,2008,7,42
+East Kalimantan,MODIS,2008,8,65
+East Kalimantan,MODIS,2008,9,465
+East Kalimantan,MODIS,2008,10,277
+East Kalimantan,MODIS,2008,11,31
+East Kalimantan,MODIS,2008,12,5
+East Kalimantan,MODIS,2009,1,11
+East Kalimantan,MODIS,2009,2,8
+East Kalimantan,MODIS,2009,3,28
+East Kalimantan,MODIS,2009,4,21
+East Kalimantan,MODIS,2009,5,53
+East Kalimantan,MODIS,2009,6,87
+East Kalimantan,MODIS,2009,7,189
+East Kalimantan,MODIS,2009,8,801
+East Kalimantan,MODIS,2009,9,3087
+East Kalimantan,MODIS,2009,10,581
+East Kalimantan,MODIS,2009,11,206
+East Kalimantan,MODIS,2009,12,35
+East Kalimantan,MODIS,2010,1,56
+East Kalimantan,MODIS,2010,2,289
+East Kalimantan,MODIS,2010,3,282
+East Kalimantan,MODIS,2010,4,58
+East Kalimantan,MODIS,2010,5,34
+East Kalimantan,MODIS,2010,6,31
+East Kalimantan,MODIS,2010,7,14
+East Kalimantan,MODIS,2010,8,261
+East Kalimantan,MODIS,2010,9,268
+East Kalimantan,MODIS,2010,10,140
+East Kalimantan,MODIS,2010,11,40
+East Kalimantan,MODIS,2010,12,16
+East Kalimantan,MODIS,2011,1,8
+East Kalimantan,MODIS,2011,2,14
+East Kalimantan,MODIS,2011,3,4
+East Kalimantan,MODIS,2011,4,29
+East Kalimantan,MODIS,2011,5,25
+East Kalimantan,MODIS,2011,6,88
+East Kalimantan,MODIS,2011,7,154
+East Kalimantan,MODIS,2011,8,903
+East Kalimantan,MODIS,2011,9,542
+East Kalimantan,MODIS,2011,10,152
+East Kalimantan,MODIS,2011,11,106
+East Kalimantan,MODIS,2011,12,4
+East Kalimantan,MODIS,2012,1,15
+East Kalimantan,MODIS,2012,2,22
+East Kalimantan,MODIS,2012,3,10
+East Kalimantan,MODIS,2012,4,35
+East Kalimantan,MODIS,2012,5,40
+East Kalimantan,MODIS,2012,6,87
+East Kalimantan,MODIS,2012,7,133
+East Kalimantan,MODIS,2012,8,490
+East Kalimantan,MODIS,2012,9,970
+East Kalimantan,MODIS,2012,10,413
+East Kalimantan,MODIS,2012,11,125
+East Kalimantan,MODIS,2012,12,97
+East Kalimantan,MODIS,2013,1,56
+East Kalimantan,MODIS,2013,2,22
+East Kalimantan,MODIS,2013,3,34
+East Kalimantan,MODIS,2013,4,26
+East Kalimantan,MODIS,2013,5,32
+East Kalimantan,MODIS,2013,6,61
+East Kalimantan,MODIS,2013,7,37
+East Kalimantan,MODIS,2013,8,215
+East Kalimantan,MODIS,2013,9,743
+East Kalimantan,MODIS,2013,10,525
+East Kalimantan,MODIS,2013,11,75
+East Kalimantan,MODIS,2013,12,18
+East Kalimantan,MODIS,2014,1,23
+East Kalimantan,MODIS,2014,2,120
+East Kalimantan,MODIS,2014,3,152
+East Kalimantan,MODIS,2014,4,36
+East Kalimantan,MODIS,2014,5,116
+East Kalimantan,MODIS,2014,6,48
+East Kalimantan,MODIS,2014,7,115
+East Kalimantan,MODIS,2014,8,416
+East Kalimantan,MODIS,2014,9,1446
+East Kalimantan,MODIS,2014,10,2179
+East Kalimantan,MODIS,2014,11,227
+East Kalimantan,MODIS,2014,12,23
+East Kalimantan,MODIS,2015,1,15
+East Kalimantan,MODIS,2015,2,31
+East Kalimantan,MODIS,2015,3,84
+East Kalimantan,MODIS,2015,4,82
+East Kalimantan,MODIS,2015,5,48
+East Kalimantan,MODIS,2015,6,39
+East Kalimantan,MODIS,2015,7,348
+East Kalimantan,MODIS,2015,8,1836
+East Kalimantan,MODIS,2015,9,3406
+East Kalimantan,MODIS,2015,10,5428
+East Kalimantan,MODIS,2015,11,603
+East Kalimantan,MODIS,2015,12,265
+East Kalimantan,MODIS,2016,1,477
+East Kalimantan,MODIS,2016,2,310
+East Kalimantan,MODIS,2016,3,399
+East Kalimantan,MODIS,2016,4,222
+East Kalimantan,MODIS,2016,5,80
+East Kalimantan,MODIS,2016,6,31
+East Kalimantan,MODIS,2016,7,57
+East Kalimantan,MODIS,2016,8,133
+East Kalimantan,MODIS,2016,9,73
+East Kalimantan,MODIS,2016,10,54
+East Kalimantan,MODIS,2016,11,42
+East Kalimantan,MODIS,2016,12,12
+East Kalimantan,MODIS,2017,1,4
+East Kalimantan,MODIS,2017,2,7
+East Kalimantan,MODIS,2017,3,5
+East Kalimantan,MODIS,2017,4,26
+East Kalimantan,MODIS,2017,5,39
+East Kalimantan,MODIS,2017,6,16
+East Kalimantan,MODIS,2017,7,35
+East Kalimantan,MODIS,2017,8,90
+East Kalimantan,MODIS,2017,9,163
+East Kalimantan,MODIS,2017,10,132
+East Kalimantan,MODIS,2017,11,7
+East Kalimantan,MODIS,2017,12,9
+East Kalimantan,MODIS,2018,1,3
+East Kalimantan,MODIS,2018,2,6
+East Kalimantan,MODIS,2018,3,22
+East Kalimantan,MODIS,2018,4,17
+East Kalimantan,MODIS,2018,5,33
+East Kalimantan,MODIS,2018,6,30
+East Kalimantan,MODIS,2018,7,48
+East Kalimantan,MODIS,2018,8,313
+East Kalimantan,MODIS,2018,9,771
+East Kalimantan,MODIS,2018,10,295
+East Kalimantan,MODIS,2018,11,48
+East Kalimantan,MODIS,2018,12,50
+East Kalimantan,MODIS,2019,1,26
+East Kalimantan,MODIS,2019,2,117
+East Kalimantan,MODIS,2019,3,71
+East Kalimantan,MODIS,2019,4,49
+East Kalimantan,MODIS,2019,5,29
+East Kalimantan,MODIS,2019,6,24
+East Kalimantan,MODIS,2019,7,58
+East Kalimantan,MODIS,2019,8,437
+East Kalimantan,MODIS,2019,9,2276
+East Kalimantan,MODIS,2019,10,553
+East Kalimantan,MODIS,2019,11,219
+East Kalimantan,MODIS,2019,12,42
+East Kalimantan,MODIS,2020,1,63
+East Kalimantan,MODIS,2020,2,58
+East Kalimantan,MODIS,2020,3,93
+East Kalimantan,MODIS,2020,4,97
+East Kalimantan,MODIS,2020,5,62
+East Kalimantan,MODIS,2020,6,27
+East Kalimantan,MODIS,2020,7,13
+East Kalimantan,MODIS,2020,8,69
+East Kalimantan,MODIS,2020,9,163
+East Kalimantan,MODIS,2020,10,59
+East Kalimantan,MODIS,2020,11,89
+East Kalimantan,MODIS,2020,12,6
+East Kalimantan,MODIS,2021,1,1
+East Kalimantan,MODIS,2021,2,9
+East Kalimantan,MODIS,2021,3,18
+East Kalimantan,MODIS,2021,4,17
+East Kalimantan,MODIS,2021,5,13
+East Kalimantan,MODIS,2021,6,44
+East Kalimantan,MODIS,2021,7,42
+East Kalimantan,MODIS,2021,8,48
+East Kalimantan,MODIS,2021,9,85
+East Kalimantan,MODIS,2021,10,90
+East Kalimantan,MODIS,2021,11,20
+East Kalimantan,MODIS,2021,12,6
+East Kalimantan,MODIS,2022,1,7
+East Kalimantan,MODIS,2022,2,4
+East Kalimantan,MODIS,2022,3,12
+East Kalimantan,MODIS,2022,4,15
+East Kalimantan,MODIS,2022,5,25
+East Kalimantan,MODIS,2022,6,20
+East Kalimantan,MODIS,2022,7,23
+East Kalimantan,MODIS,2022,8,62
+East Kalimantan,MODIS,2022,9,106
+East Kalimantan,MODIS,2022,10,29
+East Kalimantan,MODIS,2022,11,11
+East Kalimantan,MODIS,2022,12,9
+East Kalimantan,MODIS,2023,1,7
+East Kalimantan,MODIS,2023,2,5
+East Kalimantan,MODIS,2023,3,33
+East Kalimantan,MODIS,2023,4,49
+East Kalimantan,MODIS,2023,5,60
+East Kalimantan,MODIS,2023,6,45
+East Kalimantan,MODIS,2023,7,129
+East Kalimantan,MODIS,2023,8,427
+East Kalimantan,MODIS,2023,9,818
+East Kalimantan,MODIS,2023,10,636
+East Kalimantan,MODIS,2023,11,131
+East Kalimantan,MODIS,2023,12,93
+East Kalimantan,MODIS,2024,1,49
+East Kalimantan,MODIS,2024,2,200
+East Kalimantan,MODIS,2024,3,89
+East Kalimantan,MODIS,2024,4,326
+East Kalimantan,MODIS,2024,5,63
+East Kalimantan,MODIS,2024,6,3
+East Kalimantan,MODIS,2024,7,79
+East Kalimantan,MODIS,2024,8,68
+East Kalimantan,MODIS,2024,9,591
+East Kalimantan,MODIS,2024,10,276
+East Kalimantan,MODIS,2024,11,42
+East Kalimantan,MODIS,2024,12,9
+East Kalimantan,MODIS,2025,1,15
+East Kalimantan,MODIS,2025,2,5
+East Kalimantan,MODIS,2025,3,29
+East Kalimantan,MODIS,2025,4,11
+East Kalimantan,MODIS,2025,5,36
+East Kalimantan,MODIS,2025,6,27
+East Kalimantan,MODIS,2025,7,220
+East Kalimantan,MODIS,2025,8,40
+East Kalimantan,MODIS,2025,9,209
+East Kalimantan,MODIS,2025,10,170
+East Kalimantan,MODIS,2025,11,22
+East Kalimantan,MODIS,2025,12,11
+East Kalimantan,MODIS,2026,1,63
+East Kalimantan,MODIS,2026,2,20
+East Kalimantan,MODIS,2026,3,32
+East Kalimantan,MODIS,2026,4,76
+East Kalimantan,MODIS,2026,5,81
+East Kalimantan,MODIS,2026,6,90
+East Kalimantan,MODIS,2026,7,300
+East Kalimantan,MODIS,2026,8,2372
+East Kalimantan,MODIS,2026,9,3203
+East Kalimantan,MODIS,2026,10,2258
+East Kalimantan,MODIS,2026,11,359
+East Kalimantan,VIIRS NOAA-20,2018,4,64
+East Kalimantan,VIIRS NOAA-20,2018,5,123
+East Kalimantan,VIIRS NOAA-20,2018,6,137
+East Kalimantan,VIIRS NOAA-20,2018,7,211
+East Kalimantan,VIIRS NOAA-20,2018,8,1403
+East Kalimantan,VIIRS NOAA-20,2018,9,3423
+East Kalimantan,VIIRS NOAA-20,2018,10,1216
+East Kalimantan,VIIRS NOAA-20,2018,11,339
+East Kalimantan,VIIRS NOAA-20,2018,12,213
+East Kalimantan,VIIRS NOAA-20,2019,1,131
+East Kalimantan,VIIRS NOAA-20,2019,2,556
+East Kalimantan,VIIRS NOAA-20,2019,3,436
+East Kalimantan,VIIRS NOAA-20,2019,4,148
+East Kalimantan,VIIRS NOAA-20,2019,5,153
+East Kalimantan,VIIRS NOAA-20,2019,6,119
+East Kalimantan,VIIRS NOAA-20,2019,7,335
+East Kalimantan,VIIRS NOAA-20,2019,8,1923
+East Kalimantan,VIIRS NOAA-20,2019,9,9597
+East Kalimantan,VIIRS NOAA-20,2019,10,2400
+East Kalimantan,VIIRS NOAA-20,2019,11,709
+East Kalimantan,VIIRS NOAA-20,2019,12,182
+East Kalimantan,VIIRS NOAA-20,2020,1,341
+East Kalimantan,VIIRS NOAA-20,2020,2,285
+East Kalimantan,VIIRS NOAA-20,2020,3,338
+East Kalimantan,VIIRS NOAA-20,2020,4,321
+East Kalimantan,VIIRS NOAA-20,2020,5,241
+East Kalimantan,VIIRS NOAA-20,2020,6,171
+East Kalimantan,VIIRS NOAA-20,2020,7,197
+East Kalimantan,VIIRS NOAA-20,2020,8,997
+East Kalimantan,VIIRS NOAA-20,2020,9,785
+East Kalimantan,VIIRS NOAA-20,2020,10,427
+East Kalimantan,VIIRS NOAA-20,2020,11,335
+East Kalimantan,VIIRS NOAA-20,2020,12,38
+East Kalimantan,VIIRS NOAA-20,2021,1,18
+East Kalimantan,VIIRS NOAA-20,2021,2,46
+East Kalimantan,VIIRS NOAA-20,2021,3,99
+East Kalimantan,VIIRS NOAA-20,2021,4,63
+East Kalimantan,VIIRS NOAA-20,2021,5,64
+East Kalimantan,VIIRS NOAA-20,2021,6,106
+East Kalimantan,VIIRS NOAA-20,2021,7,231
+East Kalimantan,VIIRS NOAA-20,2021,8,225
+East Kalimantan,VIIRS NOAA-20,2021,9,499
+East Kalimantan,VIIRS NOAA-20,2021,10,437
+East Kalimantan,VIIRS NOAA-20,2021,11,88
+East Kalimantan,VIIRS NOAA-20,2021,12,19
+East Kalimantan,VIIRS NOAA-20,2022,1,62
+East Kalimantan,VIIRS NOAA-20,2022,2,38
+East Kalimantan,VIIRS NOAA-20,2022,3,76
+East Kalimantan,VIIRS NOAA-20,2022,4,80
+East Kalimantan,VIIRS NOAA-20,2022,5,104
+East Kalimantan,VIIRS NOAA-20,2022,6,169
+East Kalimantan,VIIRS NOAA-20,2022,7,154
+East Kalimantan,VIIRS NOAA-20,2022,8,423
+East Kalimantan,VIIRS NOAA-20,2022,9,568
+East Kalimantan,VIIRS NOAA-20,2022,10,160
+East Kalimantan,VIIRS NOAA-20,2022,11,111
+East Kalimantan,VIIRS NOAA-20,2022,12,75
+East Kalimantan,VIIRS NOAA-20,2023,1,71
+East Kalimantan,VIIRS NOAA-20,2023,2,76
+East Kalimantan,VIIRS NOAA-20,2023,3,184
+East Kalimantan,VIIRS NOAA-20,2023,4,284
+East Kalimantan,VIIRS NOAA-20,2023,5,273
+East Kalimantan,VIIRS NOAA-20,2023,6,272
+East Kalimantan,VIIRS NOAA-20,2023,7,528
+East Kalimantan,VIIRS NOAA-20,2023,8,2066
+East Kalimantan,VIIRS NOAA-20,2023,9,2706
+East Kalimantan,VIIRS NOAA-20,2023,10,2976
+East Kalimantan,VIIRS NOAA-20,2023,11,867
+East Kalimantan,VIIRS NOAA-20,2023,12,359
+East Kalimantan,VIIRS NOAA-20,2024,1,301
+East Kalimantan,VIIRS NOAA-20,2024,2,649
+East Kalimantan,VIIRS NOAA-20,2024,3,568
+East Kalimantan,VIIRS NOAA-20,2024,4,1260
+East Kalimantan,VIIRS NOAA-20,2024,5,235
+East Kalimantan,VIIRS NOAA-20,2024,6,135
+East Kalimantan,VIIRS NOAA-20,2024,7,385
+East Kalimantan,VIIRS NOAA-20,2024,8,445
+East Kalimantan,VIIRS NOAA-20,2024,9,2800
+East Kalimantan,VIIRS NOAA-20,2024,10,1042
+East Kalimantan,VIIRS NOAA-20,2024,11,271
+East Kalimantan,VIIRS NOAA-20,2024,12,32
+East Kalimantan,VIIRS NOAA-20,2025,1,54
+East Kalimantan,VIIRS NOAA-20,2025,2,95
+East Kalimantan,VIIRS NOAA-20,2025,3,78
+East Kalimantan,VIIRS NOAA-20,2025,4,87
+East Kalimantan,VIIRS NOAA-20,2025,5,204
+East Kalimantan,VIIRS NOAA-20,2025,6,163
+East Kalimantan,VIIRS NOAA-20,2025,7,876
+East Kalimantan,VIIRS NOAA-20,2025,8,318
+East Kalimantan,VIIRS NOAA-20,2025,9,877
+East Kalimantan,VIIRS NOAA-20,2025,10,892
+East Kalimantan,VIIRS NOAA-20,2025,11,268
+East Kalimantan,VIIRS NOAA-20,2025,12,61
+East Kalimantan,VIIRS NOAA-20,2026,1,398
+East Kalimantan,VIIRS NOAA-20,2026,2,59
+East Kalimantan,VIIRS NOAA-20,2026,3,254
+East Kalimantan,VIIRS NOAA-20,2026,4,413
+East Kalimantan,VIIRS NOAA-20,2026,5,282
+East Kalimantan,VIIRS NOAA-20,2026,6,503
+East Kalimantan,VIIRS NOAA-20,2026,7,1081
+East Kalimantan,VIIRS NOAA-20,2026,8,8443
+East Kalimantan,VIIRS NOAA-20,2026,9,11118
+East Kalimantan,VIIRS NOAA-20,2026,10,9609
+East Kalimantan,VIIRS NOAA-20,2026,11,1516
+East Kalimantan,VIIRS NOAA-21,2023,3,124
+East Kalimantan,VIIRS NOAA-21,2023,4,223
+East Kalimantan,VIIRS NOAA-21,2023,5,188
+East Kalimantan,VIIRS NOAA-21,2023,6,193
+East Kalimantan,VIIRS NOAA-21,2023,7,550
+East Kalimantan,VIIRS NOAA-21,2023,8,1900
+East Kalimantan,VIIRS NOAA-21,2023,9,2867
+East Kalimantan,VIIRS NOAA-21,2023,10,2739
+East Kalimantan,VIIRS NOAA-21,2023,11,753
+East Kalimantan,VIIRS NOAA-21,2023,12,332
+East Kalimantan,VIIRS NOAA-21,2024,1,265
+East Kalimantan,VIIRS NOAA-21,2024,2,598
+East Kalimantan,VIIRS NOAA-21,2024,3,475
+East Kalimantan,VIIRS NOAA-21,2024,4,1240
+East Kalimantan,VIIRS NOAA-21,2024,5,258
+East Kalimantan,VIIRS NOAA-21,2024,6,136
+East Kalimantan,VIIRS NOAA-21,2024,7,342
+East Kalimantan,VIIRS NOAA-21,2024,8,389
+East Kalimantan,VIIRS NOAA-21,2024,9,2610
+East Kalimantan,VIIRS NOAA-21,2024,10,1066
+East Kalimantan,VIIRS NOAA-21,2024,11,220
+East Kalimantan,VIIRS NOAA-21,2024,12,24
+East Kalimantan,VIIRS NOAA-21,2025,1,60
+East Kalimantan,VIIRS NOAA-21,2025,2,80
+East Kalimantan,VIIRS NOAA-21,2025,3,86
+East Kalimantan,VIIRS NOAA-21,2025,4,88
+East Kalimantan,VIIRS NOAA-21,2025,5,152
+East Kalimantan,VIIRS NOAA-21,2025,6,135
+East Kalimantan,VIIRS NOAA-21,2025,7,713
+East Kalimantan,VIIRS NOAA-21,2025,8,303
+East Kalimantan,VIIRS NOAA-21,2025,9,1131
+East Kalimantan,VIIRS NOAA-21,2025,10,831
+East Kalimantan,VIIRS NOAA-21,2025,11,261
+East Kalimantan,VIIRS NOAA-21,2025,12,40
+East Kalimantan,VIIRS NOAA-21,2026,1,293
+East Kalimantan,VIIRS NOAA-21,2026,2,37
+East Kalimantan,VIIRS NOAA-21,2026,3,246
+East Kalimantan,VIIRS NOAA-21,2026,4,455
+East Kalimantan,VIIRS NOAA-21,2026,5,301
+East Kalimantan,VIIRS NOAA-21,2026,6,491
+East Kalimantan,VIIRS NOAA-21,2026,7,1054
+East Kalimantan,VIIRS NOAA-21,2026,8,7865
+East Kalimantan,VIIRS NOAA-21,2026,9,10825
+East Kalimantan,VIIRS NOAA-21,2026,10,9592
+East Kalimantan,VIIRS NOAA-21,2026,11,1580
+East Kalimantan,VIIRS S-NPP,2012,1,68
+East Kalimantan,VIIRS S-NPP,2012,2,181
+East Kalimantan,VIIRS S-NPP,2012,3,90
+East Kalimantan,VIIRS S-NPP,2012,4,192
+East Kalimantan,VIIRS S-NPP,2012,5,230
+East Kalimantan,VIIRS S-NPP,2012,6,633
+East Kalimantan,VIIRS S-NPP,2012,7,627
+East Kalimantan,VIIRS S-NPP,2012,8,2352
+East Kalimantan,VIIRS S-NPP,2012,9,4141
+East Kalimantan,VIIRS S-NPP,2012,10,2126
+East Kalimantan,VIIRS S-NPP,2012,11,624
+East Kalimantan,VIIRS S-NPP,2012,12,368
+East Kalimantan,VIIRS S-NPP,2013,1,236
+East Kalimantan,VIIRS S-NPP,2013,2,125
+East Kalimantan,VIIRS S-NPP,2013,3,233
+East Kalimantan,VIIRS S-NPP,2013,4,153
+East Kalimantan,VIIRS S-NPP,2013,5,141
+East Kalimantan,VIIRS S-NPP,2013,6,376
+East Kalimantan,VIIRS S-NPP,2013,7,278
+East Kalimantan,VIIRS S-NPP,2013,8,1121
+East Kalimantan,VIIRS S-NPP,2013,9,2661
+East Kalimantan,VIIRS S-NPP,2013,10,2336
+East Kalimantan,VIIRS S-NPP,2013,11,353
+East Kalimantan,VIIRS S-NPP,2013,12,114
+East Kalimantan,VIIRS S-NPP,2014,1,148
+East Kalimantan,VIIRS S-NPP,2014,2,583
+East Kalimantan,VIIRS S-NPP,2014,3,780
+East Kalimantan,VIIRS S-NPP,2014,4,264
+East Kalimantan,VIIRS S-NPP,2014,5,411
+East Kalimantan,VIIRS S-NPP,2014,6,272
+East Kalimantan,VIIRS S-NPP,2014,7,548
+East Kalimantan,VIIRS S-NPP,2014,8,1891
+East Kalimantan,VIIRS S-NPP,2014,9,6169
+East Kalimantan,VIIRS S-NPP,2014,10,11089
+East Kalimantan,VIIRS S-NPP,2014,11,973
+East Kalimantan,VIIRS S-NPP,2014,12,150
+East Kalimantan,VIIRS S-NPP,2015,1,122
+East Kalimantan,VIIRS S-NPP,2015,2,238
+East Kalimantan,VIIRS S-NPP,2015,3,309
+East Kalimantan,VIIRS S-NPP,2015,4,466
+East Kalimantan,VIIRS S-NPP,2015,5,380
+East Kalimantan,VIIRS S-NPP,2015,6,253
+East Kalimantan,VIIRS S-NPP,2015,7,1907
+East Kalimantan,VIIRS S-NPP,2015,8,7830
+East Kalimantan,VIIRS S-NPP,2015,9,13830
+East Kalimantan,VIIRS S-NPP,2015,10,25199
+East Kalimantan,VIIRS S-NPP,2015,11,2655
+East Kalimantan,VIIRS S-NPP,2015,12,1196
+East Kalimantan,VIIRS S-NPP,2016,1,2677
+East Kalimantan,VIIRS S-NPP,2016,2,2355
+East Kalimantan,VIIRS S-NPP,2016,3,1959
+East Kalimantan,VIIRS S-NPP,2016,4,880
+East Kalimantan,VIIRS S-NPP,2016,5,327
+East Kalimantan,VIIRS S-NPP,2016,6,175
+East Kalimantan,VIIRS S-NPP,2016,7,312
+East Kalimantan,VIIRS S-NPP,2016,8,583
+East Kalimantan,VIIRS S-NPP,2016,9,440
+East Kalimantan,VIIRS S-NPP,2016,10,306
+East Kalimantan,VIIRS S-NPP,2016,11,240
+East Kalimantan,VIIRS S-NPP,2016,12,49
+East Kalimantan,VIIRS S-NPP,2017,1,48
+East Kalimantan,VIIRS S-NPP,2017,2,95
+East Kalimantan,VIIRS S-NPP,2017,3,110
+East Kalimantan,VIIRS S-NPP,2017,4,126
+East Kalimantan,VIIRS S-NPP,2017,5,168
+East Kalimantan,VIIRS S-NPP,2017,6,101
+East Kalimantan,VIIRS S-NPP,2017,7,210
+East Kalimantan,VIIRS S-NPP,2017,8,524
+East Kalimantan,VIIRS S-NPP,2017,9,944
+East Kalimantan,VIIRS S-NPP,2017,10,580
+East Kalimantan,VIIRS S-NPP,2017,11,97
+East Kalimantan,VIIRS S-NPP,2017,12,87
+East Kalimantan,VIIRS S-NPP,2018,1,26
+East Kalimantan,VIIRS S-NPP,2018,2,70
+East Kalimantan,VIIRS S-NPP,2018,3,130
+East Kalimantan,VIIRS S-NPP,2018,4,80
+East Kalimantan,VIIRS S-NPP,2018,5,107
+East Kalimantan,VIIRS S-NPP,2018,6,158
+East Kalimantan,VIIRS S-NPP,2018,7,258
+East Kalimantan,VIIRS S-NPP,2018,8,1484
+East Kalimantan,VIIRS S-NPP,2018,9,3509
+East Kalimantan,VIIRS S-NPP,2018,10,1416
+East Kalimantan,VIIRS S-NPP,2018,11,323
+East Kalimantan,VIIRS S-NPP,2018,12,266
+East Kalimantan,VIIRS S-NPP,2019,1,147
+East Kalimantan,VIIRS S-NPP,2019,2,580
+East Kalimantan,VIIRS S-NPP,2019,3,525
+East Kalimantan,VIIRS S-NPP,2019,4,202
+East Kalimantan,VIIRS S-NPP,2019,5,217
+East Kalimantan,VIIRS S-NPP,2019,6,165
+East Kalimantan,VIIRS S-NPP,2019,7,464
+East Kalimantan,VIIRS S-NPP,2019,8,2119
+East Kalimantan,VIIRS S-NPP,2019,9,10245
+East Kalimantan,VIIRS S-NPP,2019,10,2434
+East Kalimantan,VIIRS S-NPP,2019,11,958
+East Kalimantan,VIIRS S-NPP,2019,12,241
+East Kalimantan,VIIRS S-NPP,2020,1,303
+East Kalimantan,VIIRS S-NPP,2020,2,243
+East Kalimantan,VIIRS S-NPP,2020,3,387
+East Kalimantan,VIIRS S-NPP,2020,4,295
+East Kalimantan,VIIRS S-NPP,2020,5,237
+East Kalimantan,VIIRS S-NPP,2020,6,185
+East Kalimantan,VIIRS S-NPP,2020,7,187
+East Kalimantan,VIIRS S-NPP,2020,8,982
+East Kalimantan,VIIRS S-NPP,2020,9,837
+East Kalimantan,VIIRS S-NPP,2020,10,495
+East Kalimantan,VIIRS S-NPP,2020,11,304
+East Kalimantan,VIIRS S-NPP,2020,12,44
+East Kalimantan,VIIRS S-NPP,2021,1,14
+East Kalimantan,VIIRS S-NPP,2021,2,34
+East Kalimantan,VIIRS S-NPP,2021,3,98
+East Kalimantan,VIIRS S-NPP,2021,4,54
+East Kalimantan,VIIRS S-NPP,2021,5,64
+East Kalimantan,VIIRS S-NPP,2021,6,136
+East Kalimantan,VIIRS S-NPP,2021,7,238
+East Kalimantan,VIIRS S-NPP,2021,8,194
+East Kalimantan,VIIRS S-NPP,2021,9,553
+East Kalimantan,VIIRS S-NPP,2021,10,391
+East Kalimantan,VIIRS S-NPP,2021,11,120
+East Kalimantan,VIIRS S-NPP,2021,12,20
+East Kalimantan,VIIRS S-NPP,2022,1,51
+East Kalimantan,VIIRS S-NPP,2022,2,46
+East Kalimantan,VIIRS S-NPP,2022,3,69
+East Kalimantan,VIIRS S-NPP,2022,4,62
+East Kalimantan,VIIRS S-NPP,2022,5,117
+East Kalimantan,VIIRS S-NPP,2022,6,156
+East Kalimantan,VIIRS S-NPP,2022,7,150
+East Kalimantan,VIIRS S-NPP,2022,8,302
+East Kalimantan,VIIRS S-NPP,2022,9,639
+East Kalimantan,VIIRS S-NPP,2022,10,208
+East Kalimantan,VIIRS S-NPP,2022,11,120
+East Kalimantan,VIIRS S-NPP,2022,12,78
+East Kalimantan,VIIRS S-NPP,2023,1,88
+East Kalimantan,VIIRS S-NPP,2023,2,61
+East Kalimantan,VIIRS S-NPP,2023,3,209
+East Kalimantan,VIIRS S-NPP,2023,4,307
+East Kalimantan,VIIRS S-NPP,2023,5,295
+East Kalimantan,VIIRS S-NPP,2023,6,231
+East Kalimantan,VIIRS S-NPP,2023,7,589
+East Kalimantan,VIIRS S-NPP,2023,8,2136
+East Kalimantan,VIIRS S-NPP,2023,9,2928
+East Kalimantan,VIIRS S-NPP,2023,10,2900
+East Kalimantan,VIIRS S-NPP,2023,11,791
+East Kalimantan,VIIRS S-NPP,2023,12,365
+East Kalimantan,VIIRS S-NPP,2024,1,264
+East Kalimantan,VIIRS S-NPP,2024,2,740
+East Kalimantan,VIIRS S-NPP,2024,3,507
+East Kalimantan,VIIRS S-NPP,2024,4,1169
+East Kalimantan,VIIRS S-NPP,2024,5,230
+East Kalimantan,VIIRS S-NPP,2024,6,136
+East Kalimantan,VIIRS S-NPP,2024,7,150
+East Kalimantan,VIIRS S-NPP,2024,8,391
+East Kalimantan,VIIRS S-NPP,2024,9,2663
+East Kalimantan,VIIRS S-NPP,2024,10,1063
+East Kalimantan,VIIRS S-NPP,2024,11,213
+East Kalimantan,VIIRS S-NPP,2024,12,26
+East Kalimantan,VIIRS S-NPP,2025,1,53
+East Kalimantan,VIIRS S-NPP,2025,2,62
+East Kalimantan,VIIRS S-NPP,2025,3,84
+East Kalimantan,VIIRS S-NPP,2025,4,102
+East Kalimantan,VIIRS S-NPP,2025,5,192
+East Kalimantan,VIIRS S-NPP,2025,6,143
+East Kalimantan,VIIRS S-NPP,2025,7,802
+East Kalimantan,VIIRS S-NPP,2025,8,355
+East Kalimantan,VIIRS S-NPP,2025,9,1148
+East Kalimantan,VIIRS S-NPP,2025,10,907
+East Kalimantan,VIIRS S-NPP,2025,11,285
+East Kalimantan,VIIRS S-NPP,2025,12,46
+East Kalimantan,VIIRS S-NPP,2026,1,265
+East Kalimantan,VIIRS S-NPP,2026,2,37
+East Kalimantan,VIIRS S-NPP,2026,3,306
+East Kalimantan,VIIRS S-NPP,2026,4,332
+East Kalimantan,VIIRS S-NPP,2026,5,290
+East Kalimantan,VIIRS S-NPP,2026,6,503
+East Kalimantan,VIIRS S-NPP,2026,7,636
+East Kalimantan,VIIRS S-NPP,2026,8,8504
+East Kalimantan,VIIRS S-NPP,2026,9,11022
+East Kalimantan,VIIRS S-NPP,2026,10,9804
+East Kalimantan,VIIRS S-NPP,2026,11,130
+North Kalimantan,MODIS,2001,12,2
+North Kalimantan,MODIS,2002,1,4
+North Kalimantan,MODIS,2002,2,4
+North Kalimantan,MODIS,2002,4,3
+North Kalimantan,MODIS,2002,5,2
+North Kalimantan,MODIS,2002,6,2
+North Kalimantan,MODIS,2002,7,15
+North Kalimantan,MODIS,2002,8,380
+North Kalimantan,MODIS,2002,9,57
+North Kalimantan,MODIS,2002,10,24
+North Kalimantan,MODIS,2002,11,11
+North Kalimantan,MODIS,2002,12,3
+North Kalimantan,MODIS,2003,1,29
+North Kalimantan,MODIS,2003,2,27
+North Kalimantan,MODIS,2003,3,7
+North Kalimantan,MODIS,2003,4,64
+North Kalimantan,MODIS,2003,5,35
+North Kalimantan,MODIS,2003,6,121
+North Kalimantan,MODIS,2003,7,26
+North Kalimantan,MODIS,2003,8,224
+North Kalimantan,MODIS,2003,9,80
+North Kalimantan,MODIS,2003,10,32
+North Kalimantan,MODIS,2003,11,62
+North Kalimantan,MODIS,2003,12,2
+North Kalimantan,MODIS,2004,1,18
+North Kalimantan,MODIS,2004,2,21
+North Kalimantan,MODIS,2004,3,37
+North Kalimantan,MODIS,2004,4,39
+North Kalimantan,MODIS,2004,5,29
+North Kalimantan,MODIS,2004,6,30
+North Kalimantan,MODIS,2004,7,66
+North Kalimantan,MODIS,2004,8,737
+North Kalimantan,MODIS,2004,9,237
+North Kalimantan,MODIS,2004,10,97
+North Kalimantan,MODIS,2004,11,61
+North Kalimantan,MODIS,2004,12,21
+North Kalimantan,MODIS,2005,1,125
+North Kalimantan,MODIS,2005,2,149
+North Kalimantan,MODIS,2005,3,236
+North Kalimantan,MODIS,2005,4,20
+North Kalimantan,MODIS,2005,5,23
+North Kalimantan,MODIS,2005,6,24
+North Kalimantan,MODIS,2005,7,46
+North Kalimantan,MODIS,2005,8,254
+North Kalimantan,MODIS,2005,9,208
+North Kalimantan,MODIS,2005,10,61
+North Kalimantan,MODIS,2005,11,9
+North Kalimantan,MODIS,2005,12,3
+North Kalimantan,MODIS,2006,1,17
+North Kalimantan,MODIS,2006,2,13
+North Kalimantan,MODIS,2006,3,23
+North Kalimantan,MODIS,2006,4,15
+North Kalimantan,MODIS,2006,5,37
+North Kalimantan,MODIS,2006,6,16
+North Kalimantan,MODIS,2006,7,22
+North Kalimantan,MODIS,2006,8,354
+North Kalimantan,MODIS,2006,9,124
+North Kalimantan,MODIS,2006,10,34
+North Kalimantan,MODIS,2006,11,69
+North Kalimantan,MODIS,2006,12,29
+North Kalimantan,MODIS,2007,1,13
+North Kalimantan,MODIS,2007,2,50
+North Kalimantan,MODIS,2007,3,67
+North Kalimantan,MODIS,2007,4,22
+North Kalimantan,MODIS,2007,5,16
+North Kalimantan,MODIS,2007,6,31
+North Kalimantan,MODIS,2007,7,14
+North Kalimantan,MODIS,2007,8,121
+North Kalimantan,MODIS,2007,9,244
+North Kalimantan,MODIS,2007,10,113
+North Kalimantan,MODIS,2007,11,4
+North Kalimantan,MODIS,2007,12,3
+North Kalimantan,MODIS,2008,1,7
+North Kalimantan,MODIS,2008,2,11
+North Kalimantan,MODIS,2008,3,3
+North Kalimantan,MODIS,2008,4,8
+North Kalimantan,MODIS,2008,5,19
+North Kalimantan,MODIS,2008,6,2
+North Kalimantan,MODIS,2008,7,6
+North Kalimantan,MODIS,2008,8,134
+North Kalimantan,MODIS,2008,9,165
+North Kalimantan,MODIS,2008,10,59
+North Kalimantan,MODIS,2008,11,10
+North Kalimantan,MODIS,2008,12,7
+North Kalimantan,MODIS,2009,1,6
+North Kalimantan,MODIS,2009,2,2
+North Kalimantan,MODIS,2009,3,42
+North Kalimantan,MODIS,2009,4,16
+North Kalimantan,MODIS,2009,5,7
+North Kalimantan,MODIS,2009,6,17
+North Kalimantan,MODIS,2009,7,51
+North Kalimantan,MODIS,2009,8,396
+North Kalimantan,MODIS,2009,9,212
+North Kalimantan,MODIS,2009,10,24
+North Kalimantan,MODIS,2009,11,10
+North Kalimantan,MODIS,2009,12,8
+North Kalimantan,MODIS,2010,1,6
+North Kalimantan,MODIS,2010,2,37
+North Kalimantan,MODIS,2010,3,97
+North Kalimantan,MODIS,2010,4,21
+North Kalimantan,MODIS,2010,5,19
+North Kalimantan,MODIS,2010,6,43
+North Kalimantan,MODIS,2010,7,7
+North Kalimantan,MODIS,2010,8,91
+North Kalimantan,MODIS,2010,9,95
+North Kalimantan,MODIS,2010,10,20
+North Kalimantan,MODIS,2010,11,19
+North Kalimantan,MODIS,2010,12,2
+North Kalimantan,MODIS,2011,1,8
+North Kalimantan,MODIS,2011,2,4
+North Kalimantan,MODIS,2011,3,1
+North Kalimantan,MODIS,2011,4,6
+North Kalimantan,MODIS,2011,5,7
+North Kalimantan,MODIS,2011,6,13
+North Kalimantan,MODIS,2011,7,14
+North Kalimantan,MODIS,2011,8,139
+North Kalimantan,MODIS,2011,9,96
+North Kalimantan,MODIS,2011,10,28
+North Kalimantan,MODIS,2011,11,3
+North Kalimantan,MODIS,2011,12,6
+North Kalimantan,MODIS,2012,1,5
+North Kalimantan,MODIS,2012,2,3
+North Kalimantan,MODIS,2012,3,2
+North Kalimantan,MODIS,2012,4,10
+North Kalimantan,MODIS,2012,5,9
+North Kalimantan,MODIS,2012,6,23
+North Kalimantan,MODIS,2012,7,40
+North Kalimantan,MODIS,2012,8,281
+North Kalimantan,MODIS,2012,9,122
+North Kalimantan,MODIS,2012,10,8
+North Kalimantan,MODIS,2012,11,12
+North Kalimantan,MODIS,2012,12,12
+North Kalimantan,MODIS,2013,1,3
+North Kalimantan,MODIS,2013,2,4
+North Kalimantan,MODIS,2013,3,20
+North Kalimantan,MODIS,2013,4,3
+North Kalimantan,MODIS,2013,5,5
+North Kalimantan,MODIS,2013,6,19
+North Kalimantan,MODIS,2013,7,17
+North Kalimantan,MODIS,2013,8,70
+North Kalimantan,MODIS,2013,9,60
+North Kalimantan,MODIS,2013,10,28
+North Kalimantan,MODIS,2013,11,3
+North Kalimantan,MODIS,2013,12,9
+North Kalimantan,MODIS,2014,1,9
+North Kalimantan,MODIS,2014,2,57
+North Kalimantan,MODIS,2014,3,103
+North Kalimantan,MODIS,2014,4,23
+North Kalimantan,MODIS,2014,5,47
+North Kalimantan,MODIS,2014,6,14
+North Kalimantan,MODIS,2014,7,77
+North Kalimantan,MODIS,2014,8,208
+North Kalimantan,MODIS,2014,9,148
+North Kalimantan,MODIS,2014,10,107
+North Kalimantan,MODIS,2014,11,10
+North Kalimantan,MODIS,2014,12,7
+North Kalimantan,MODIS,2015,1,2
+North Kalimantan,MODIS,2015,2,13
+North Kalimantan,MODIS,2015,3,21
+North Kalimantan,MODIS,2015,4,26
+North Kalimantan,MODIS,2015,5,22
+North Kalimantan,MODIS,2015,6,19
+North Kalimantan,MODIS,2015,7,259
+North Kalimantan,MODIS,2015,8,679
+North Kalimantan,MODIS,2015,9,219
+North Kalimantan,MODIS,2015,10,50
+North Kalimantan,MODIS,2015,11,8
+North Kalimantan,MODIS,2015,12,36
+North Kalimantan,MODIS,2016,1,19
+North Kalimantan,MODIS,2016,2,12
+North Kalimantan,MODIS,2016,3,70
+North Kalimantan,MODIS,2016,4,68
+North Kalimantan,MODIS,2016,5,16
+North Kalimantan,MODIS,2016,6,11
+North Kalimantan,MODIS,2016,7,18
+North Kalimantan,MODIS,2016,8,110
+North Kalimantan,MODIS,2016,9,110
+North Kalimantan,MODIS,2016,10,7
+North Kalimantan,MODIS,2016,11,5
+North Kalimantan,MODIS,2016,12,3
+North Kalimantan,MODIS,2017,1,1
+North Kalimantan,MODIS,2017,2,2
+North Kalimantan,MODIS,2017,3,2
+North Kalimantan,MODIS,2017,4,10
+North Kalimantan,MODIS,2017,5,8
+North Kalimantan,MODIS,2017,7,39
+North Kalimantan,MODIS,2017,8,64
+North Kalimantan,MODIS,2017,9,31
+North Kalimantan,MODIS,2017,10,15
+North Kalimantan,MODIS,2017,11,2
+North Kalimantan,MODIS,2017,12,4
+North Kalimantan,MODIS,2018,1,5
+North Kalimantan,MODIS,2018,2,2
+North Kalimantan,MODIS,2018,3,5
+North Kalimantan,MODIS,2018,4,6
+North Kalimantan,MODIS,2018,5,10
+North Kalimantan,MODIS,2018,6,4
+North Kalimantan,MODIS,2018,7,41
+North Kalimantan,MODIS,2018,8,101
+North Kalimantan,MODIS,2018,9,111
+North Kalimantan,MODIS,2018,10,20
+North Kalimantan,MODIS,2018,11,15
+North Kalimantan,MODIS,2018,12,5
+North Kalimantan,MODIS,2019,1,4
+North Kalimantan,MODIS,2019,2,24
+North Kalimantan,MODIS,2019,3,40
+North Kalimantan,MODIS,2019,4,12
+North Kalimantan,MODIS,2019,5,9
+North Kalimantan,MODIS,2019,6,7
+North Kalimantan,MODIS,2019,7,24
+North Kalimantan,MODIS,2019,8,158
+North Kalimantan,MODIS,2019,9,347
+North Kalimantan,MODIS,2019,10,29
+North Kalimantan,MODIS,2019,11,8
+North Kalimantan,MODIS,2019,12,2
+North Kalimantan,MODIS,2020,1,6
+North Kalimantan,MODIS,2020,2,10
+North Kalimantan,MODIS,2020,3,10
+North Kalimantan,MODIS,2020,4,22
+North Kalimantan,MODIS,2020,5,17
+North Kalimantan,MODIS,2020,6,14
+North Kalimantan,MODIS,2020,7,32
+North Kalimantan,MODIS,2020,8,104
+North Kalimantan,MODIS,2020,9,18
+North Kalimantan,MODIS,2020,10,4
+North Kalimantan,MODIS,2020,11,10
+North Kalimantan,MODIS,2020,12,4
+North Kalimantan,MODIS,2021,2,14
+North Kalimantan,MODIS,2021,3,6
+North Kalimantan,MODIS,2021,4,5
+North Kalimantan,MODIS,2021,5,6
+North Kalimantan,MODIS,2021,6,16
+North Kalimantan,MODIS,2021,7,42
+North Kalimantan,MODIS,2021,8,44
+North Kalimantan,MODIS,2021,9,69
+North Kalimantan,MODIS,2021,10,10
+North Kalimantan,MODIS,2021,11,13
+North Kalimantan,MODIS,2021,12,3
+North Kalimantan,MODIS,2022,1,5
+North Kalimantan,MODIS,2022,2,4
+North Kalimantan,MODIS,2022,3,2
+North Kalimantan,MODIS,2022,4,3
+North Kalimantan,MODIS,2022,5,3
+North Kalimantan,MODIS,2022,6,10
+North Kalimantan,MODIS,2022,7,20
+North Kalimantan,MODIS,2022,8,63
+North Kalimantan,MODIS,2022,9,57
+North Kalimantan,MODIS,2022,10,5
+North Kalimantan,MODIS,2022,11,4
+North Kalimantan,MODIS,2022,12,7
+North Kalimantan,MODIS,2023,1,4
+North Kalimantan,MODIS,2023,3,6
+North Kalimantan,MODIS,2023,4,6
+North Kalimantan,MODIS,2023,5,3
+North Kalimantan,MODIS,2023,6,6
+North Kalimantan,MODIS,2023,7,53
+North Kalimantan,MODIS,2023,8,61
+North Kalimantan,MODIS,2023,9,60
+North Kalimantan,MODIS,2023,10,43
+North Kalimantan,MODIS,2023,11,21
+North Kalimantan,MODIS,2023,12,12
+North Kalimantan,MODIS,2024,1,9
+North Kalimantan,MODIS,2024,2,18
+North Kalimantan,MODIS,2024,3,4
+North Kalimantan,MODIS,2024,4,7
+North Kalimantan,MODIS,2024,5,14
+North Kalimantan,MODIS,2024,6,1
+North Kalimantan,MODIS,2024,7,40
+North Kalimantan,MODIS,2024,8,18
+North Kalimantan,MODIS,2024,9,93
+North Kalimantan,MODIS,2024,10,40
+North Kalimantan,MODIS,2024,11,10
+North Kalimantan,MODIS,2025,1,5
+North Kalimantan,MODIS,2025,2,1
+North Kalimantan,MODIS,2025,3,2
+North Kalimantan,MODIS,2025,4,17
+North Kalimantan,MODIS,2025,5,2
+North Kalimantan,MODIS,2025,6,2
+North Kalimantan,MODIS,2025,7,54
+North Kalimantan,MODIS,2025,8,19
+North Kalimantan,MODIS,2025,9,18
+North Kalimantan,MODIS,2025,10,22
+North Kalimantan,MODIS,2025,11,5
+North Kalimantan,MODIS,2025,12,3
+North Kalimantan,MODIS,2026,1,10
+North Kalimantan,MODIS,2026,2,5
+North Kalimantan,MODIS,2026,3,6
+North Kalimantan,MODIS,2026,4,17
+North Kalimantan,MODIS,2026,5,42
+North Kalimantan,MODIS,2026,6,22
+North Kalimantan,MODIS,2026,7,16
+North Kalimantan,MODIS,2026,8,210
+North Kalimantan,MODIS,2026,9,151
+North Kalimantan,MODIS,2026,10,37
+North Kalimantan,MODIS,2026,11,35
+North Kalimantan,VIIRS NOAA-20,2018,4,26
+North Kalimantan,VIIRS NOAA-20,2018,5,17
+North Kalimantan,VIIRS NOAA-20,2018,6,21
+North Kalimantan,VIIRS NOAA-20,2018,7,101
+North Kalimantan,VIIRS NOAA-20,2018,8,517
+North Kalimantan,VIIRS NOAA-20,2018,9,364
+North Kalimantan,VIIRS NOAA-20,2018,10,68
+North Kalimantan,VIIRS NOAA-20,2018,11,23
+North Kalimantan,VIIRS NOAA-20,2018,12,16
+North Kalimantan,VIIRS NOAA-20,2019,1,21
+North Kalimantan,VIIRS NOAA-20,2019,2,134
+North Kalimantan,VIIRS NOAA-20,2019,3,292
+North Kalimantan,VIIRS NOAA-20,2019,4,28
+North Kalimantan,VIIRS NOAA-20,2019,5,25
+North Kalimantan,VIIRS NOAA-20,2019,6,9
+North Kalimantan,VIIRS NOAA-20,2019,7,83
+North Kalimantan,VIIRS NOAA-20,2019,8,753
+North Kalimantan,VIIRS NOAA-20,2019,9,1346
+North Kalimantan,VIIRS NOAA-20,2019,10,137
+North Kalimantan,VIIRS NOAA-20,2019,11,29
+North Kalimantan,VIIRS NOAA-20,2019,12,5
+North Kalimantan,VIIRS NOAA-20,2020,1,28
+North Kalimantan,VIIRS NOAA-20,2020,2,48
+North Kalimantan,VIIRS NOAA-20,2020,3,38
+North Kalimantan,VIIRS NOAA-20,2020,4,42
+North Kalimantan,VIIRS NOAA-20,2020,5,29
+North Kalimantan,VIIRS NOAA-20,2020,6,22
+North Kalimantan,VIIRS NOAA-20,2020,7,98
+North Kalimantan,VIIRS NOAA-20,2020,8,895
+North Kalimantan,VIIRS NOAA-20,2020,9,101
+North Kalimantan,VIIRS NOAA-20,2020,10,19
+North Kalimantan,VIIRS NOAA-20,2020,11,18
+North Kalimantan,VIIRS NOAA-20,2020,12,7
+North Kalimantan,VIIRS NOAA-20,2021,1,8
+North Kalimantan,VIIRS NOAA-20,2021,2,16
+North Kalimantan,VIIRS NOAA-20,2021,3,12
+North Kalimantan,VIIRS NOAA-20,2021,4,16
+North Kalimantan,VIIRS NOAA-20,2021,5,11
+North Kalimantan,VIIRS NOAA-20,2021,6,32
+North Kalimantan,VIIRS NOAA-20,2021,7,146
+North Kalimantan,VIIRS NOAA-20,2021,8,243
+North Kalimantan,VIIRS NOAA-20,2021,9,195
+North Kalimantan,VIIRS NOAA-20,2021,10,37
+North Kalimantan,VIIRS NOAA-20,2021,11,14
+North Kalimantan,VIIRS NOAA-20,2021,12,7
+North Kalimantan,VIIRS NOAA-20,2022,1,9
+North Kalimantan,VIIRS NOAA-20,2022,2,11
+North Kalimantan,VIIRS NOAA-20,2022,3,13
+North Kalimantan,VIIRS NOAA-20,2022,4,18
+North Kalimantan,VIIRS NOAA-20,2022,5,9
+North Kalimantan,VIIRS NOAA-20,2022,6,42
+North Kalimantan,VIIRS NOAA-20,2022,7,79
+North Kalimantan,VIIRS NOAA-20,2022,8,345
+North Kalimantan,VIIRS NOAA-20,2022,9,168
+North Kalimantan,VIIRS NOAA-20,2022,10,36
+North Kalimantan,VIIRS NOAA-20,2022,11,13
+North Kalimantan,VIIRS NOAA-20,2022,12,17
+North Kalimantan,VIIRS NOAA-20,2023,1,25
+North Kalimantan,VIIRS NOAA-20,2023,2,7
+North Kalimantan,VIIRS NOAA-20,2023,3,28
+North Kalimantan,VIIRS NOAA-20,2023,4,26
+North Kalimantan,VIIRS NOAA-20,2023,5,30
+North Kalimantan,VIIRS NOAA-20,2023,6,32
+North Kalimantan,VIIRS NOAA-20,2023,7,218
+North Kalimantan,VIIRS NOAA-20,2023,8,342
+North Kalimantan,VIIRS NOAA-20,2023,9,261
+North Kalimantan,VIIRS NOAA-20,2023,10,256
+North Kalimantan,VIIRS NOAA-20,2023,11,74
+North Kalimantan,VIIRS NOAA-20,2023,12,35
+North Kalimantan,VIIRS NOAA-20,2024,1,36
+North Kalimantan,VIIRS NOAA-20,2024,2,90
+North Kalimantan,VIIRS NOAA-20,2024,3,43
+North Kalimantan,VIIRS NOAA-20,2024,4,63
+North Kalimantan,VIIRS NOAA-20,2024,5,30
+North Kalimantan,VIIRS NOAA-20,2024,6,7
+North Kalimantan,VIIRS NOAA-20,2024,7,163
+North Kalimantan,VIIRS NOAA-20,2024,8,338
+North Kalimantan,VIIRS NOAA-20,2024,9,609
+North Kalimantan,VIIRS NOAA-20,2024,10,153
+North Kalimantan,VIIRS NOAA-20,2024,11,47
+North Kalimantan,VIIRS NOAA-20,2024,12,5
+North Kalimantan,VIIRS NOAA-20,2025,1,2
+North Kalimantan,VIIRS NOAA-20,2025,2,5
+North Kalimantan,VIIRS NOAA-20,2025,3,7
+North Kalimantan,VIIRS NOAA-20,2025,4,22
+North Kalimantan,VIIRS NOAA-20,2025,5,18
+North Kalimantan,VIIRS NOAA-20,2025,6,17
+North Kalimantan,VIIRS NOAA-20,2025,7,384
+North Kalimantan,VIIRS NOAA-20,2025,8,97
+North Kalimantan,VIIRS NOAA-20,2025,9,209
+North Kalimantan,VIIRS NOAA-20,2025,10,145
+North Kalimantan,VIIRS NOAA-20,2025,11,18
+North Kalimantan,VIIRS NOAA-20,2025,12,10
+North Kalimantan,VIIRS NOAA-20,2026,1,67
+North Kalimantan,VIIRS NOAA-20,2026,2,21
+North Kalimantan,VIIRS NOAA-20,2026,3,23
+North Kalimantan,VIIRS NOAA-20,2026,4,63
+North Kalimantan,VIIRS NOAA-20,2026,5,89
+North Kalimantan,VIIRS NOAA-20,2026,6,75
+North Kalimantan,VIIRS NOAA-20,2026,7,50
+North Kalimantan,VIIRS NOAA-20,2026,8,1494
+North Kalimantan,VIIRS NOAA-20,2026,9,876
+North Kalimantan,VIIRS NOAA-20,2026,10,222
+North Kalimantan,VIIRS NOAA-20,2026,11,79
+North Kalimantan,VIIRS NOAA-21,2023,3,37
+North Kalimantan,VIIRS NOAA-21,2023,4,26
+North Kalimantan,VIIRS NOAA-21,2023,5,28
+North Kalimantan,VIIRS NOAA-21,2023,6,24
+North Kalimantan,VIIRS NOAA-21,2023,7,204
+North Kalimantan,VIIRS NOAA-21,2023,8,405
+North Kalimantan,VIIRS NOAA-21,2023,9,258
+North Kalimantan,VIIRS NOAA-21,2023,10,238
+North Kalimantan,VIIRS NOAA-21,2023,11,71
+North Kalimantan,VIIRS NOAA-21,2023,12,49
+North Kalimantan,VIIRS NOAA-21,2024,1,38
+North Kalimantan,VIIRS NOAA-21,2024,2,70
+North Kalimantan,VIIRS NOAA-21,2024,3,48
+North Kalimantan,VIIRS NOAA-21,2024,4,50
+North Kalimantan,VIIRS NOAA-21,2024,5,63
+North Kalimantan,VIIRS NOAA-21,2024,6,5
+North Kalimantan,VIIRS NOAA-21,2024,7,220
+North Kalimantan,VIIRS NOAA-21,2024,8,229
+North Kalimantan,VIIRS NOAA-21,2024,9,389
+North Kalimantan,VIIRS NOAA-21,2024,10,162
+North Kalimantan,VIIRS NOAA-21,2024,11,33
+North Kalimantan,VIIRS NOAA-21,2024,12,4
+North Kalimantan,VIIRS NOAA-21,2025,1,12
+North Kalimantan,VIIRS NOAA-21,2025,2,1
+North Kalimantan,VIIRS NOAA-21,2025,3,8
+North Kalimantan,VIIRS NOAA-21,2025,4,23
+North Kalimantan,VIIRS NOAA-21,2025,5,16
+North Kalimantan,VIIRS NOAA-21,2025,6,9
+North Kalimantan,VIIRS NOAA-21,2025,7,289
+North Kalimantan,VIIRS NOAA-21,2025,8,156
+North Kalimantan,VIIRS NOAA-21,2025,9,225
+North Kalimantan,VIIRS NOAA-21,2025,10,102
+North Kalimantan,VIIRS NOAA-21,2025,11,29
+North Kalimantan,VIIRS NOAA-21,2025,12,5
+North Kalimantan,VIIRS NOAA-21,2026,1,65
+North Kalimantan,VIIRS NOAA-21,2026,2,28
+North Kalimantan,VIIRS NOAA-21,2026,3,28
+North Kalimantan,VIIRS NOAA-21,2026,4,99
+North Kalimantan,VIIRS NOAA-21,2026,5,113
+North Kalimantan,VIIRS NOAA-21,2026,6,72
+North Kalimantan,VIIRS NOAA-21,2026,7,61
+North Kalimantan,VIIRS NOAA-21,2026,8,1488
+North Kalimantan,VIIRS NOAA-21,2026,9,780
+North Kalimantan,VIIRS NOAA-21,2026,10,208
+North Kalimantan,VIIRS NOAA-21,2026,11,113
+North Kalimantan,VIIRS S-NPP,2012,1,7
+North Kalimantan,VIIRS S-NPP,2012,2,31
+North Kalimantan,VIIRS S-NPP,2012,3,19
+North Kalimantan,VIIRS S-NPP,2012,4,63
+North Kalimantan,VIIRS S-NPP,2012,5,82
+North Kalimantan,VIIRS S-NPP,2012,6,93
+North Kalimantan,VIIRS S-NPP,2012,7,87
+North Kalimantan,VIIRS S-NPP,2012,8,852
+North Kalimantan,VIIRS S-NPP,2012,9,608
+North Kalimantan,VIIRS S-NPP,2012,10,115
+North Kalimantan,VIIRS S-NPP,2012,11,70
+North Kalimantan,VIIRS S-NPP,2012,12,30
+North Kalimantan,VIIRS S-NPP,2013,1,25
+North Kalimantan,VIIRS S-NPP,2013,2,10
+North Kalimantan,VIIRS S-NPP,2013,3,96
+North Kalimantan,VIIRS S-NPP,2013,4,28
+North Kalimantan,VIIRS S-NPP,2013,5,60
+North Kalimantan,VIIRS S-NPP,2013,6,57
+North Kalimantan,VIIRS S-NPP,2013,7,92
+North Kalimantan,VIIRS S-NPP,2013,8,258
+North Kalimantan,VIIRS S-NPP,2013,9,437
+North Kalimantan,VIIRS S-NPP,2013,10,64
+North Kalimantan,VIIRS S-NPP,2013,11,33
+North Kalimantan,VIIRS S-NPP,2013,12,37
+North Kalimantan,VIIRS S-NPP,2014,1,49
+North Kalimantan,VIIRS S-NPP,2014,2,216
+North Kalimantan,VIIRS S-NPP,2014,3,626
+North Kalimantan,VIIRS S-NPP,2014,4,40
+North Kalimantan,VIIRS S-NPP,2014,5,154
+North Kalimantan,VIIRS S-NPP,2014,6,39
+North Kalimantan,VIIRS S-NPP,2014,7,232
+North Kalimantan,VIIRS S-NPP,2014,8,785
+North Kalimantan,VIIRS S-NPP,2014,9,687
+North Kalimantan,VIIRS S-NPP,2014,10,328
+North Kalimantan,VIIRS S-NPP,2014,11,66
+North Kalimantan,VIIRS S-NPP,2014,12,24
+North Kalimantan,VIIRS S-NPP,2015,1,12
+North Kalimantan,VIIRS S-NPP,2015,2,87
+North Kalimantan,VIIRS S-NPP,2015,3,115
+North Kalimantan,VIIRS S-NPP,2015,4,119
+North Kalimantan,VIIRS S-NPP,2015,5,71
+North Kalimantan,VIIRS S-NPP,2015,6,62
+North Kalimantan,VIIRS S-NPP,2015,7,1049
+North Kalimantan,VIIRS S-NPP,2015,8,2946
+North Kalimantan,VIIRS S-NPP,2015,9,1050
+North Kalimantan,VIIRS S-NPP,2015,10,197
+North Kalimantan,VIIRS S-NPP,2015,11,39
+North Kalimantan,VIIRS S-NPP,2015,12,124
+North Kalimantan,VIIRS S-NPP,2016,1,73
+North Kalimantan,VIIRS S-NPP,2016,2,166
+North Kalimantan,VIIRS S-NPP,2016,3,389
+North Kalimantan,VIIRS S-NPP,2016,4,316
+North Kalimantan,VIIRS S-NPP,2016,5,47
+North Kalimantan,VIIRS S-NPP,2016,6,27
+North Kalimantan,VIIRS S-NPP,2016,7,61
+North Kalimantan,VIIRS S-NPP,2016,8,321
+North Kalimantan,VIIRS S-NPP,2016,9,415
+North Kalimantan,VIIRS S-NPP,2016,10,43
+North Kalimantan,VIIRS S-NPP,2016,11,24
+North Kalimantan,VIIRS S-NPP,2016,12,5
+North Kalimantan,VIIRS S-NPP,2017,1,14
+North Kalimantan,VIIRS S-NPP,2017,2,19
+North Kalimantan,VIIRS S-NPP,2017,3,7
+North Kalimantan,VIIRS S-NPP,2017,4,53
+North Kalimantan,VIIRS S-NPP,2017,5,25
+North Kalimantan,VIIRS S-NPP,2017,6,4
+North Kalimantan,VIIRS S-NPP,2017,7,124
+North Kalimantan,VIIRS S-NPP,2017,8,571
+North Kalimantan,VIIRS S-NPP,2017,9,159
+North Kalimantan,VIIRS S-NPP,2017,10,55
+North Kalimantan,VIIRS S-NPP,2017,11,14
+North Kalimantan,VIIRS S-NPP,2017,12,8
+North Kalimantan,VIIRS S-NPP,2018,1,13
+North Kalimantan,VIIRS S-NPP,2018,2,12
+North Kalimantan,VIIRS S-NPP,2018,3,15
+North Kalimantan,VIIRS S-NPP,2018,4,10
+North Kalimantan,VIIRS S-NPP,2018,5,24
+North Kalimantan,VIIRS S-NPP,2018,6,17
+North Kalimantan,VIIRS S-NPP,2018,7,106
+North Kalimantan,VIIRS S-NPP,2018,8,547
+North Kalimantan,VIIRS S-NPP,2018,9,583
+North Kalimantan,VIIRS S-NPP,2018,10,92
+North Kalimantan,VIIRS S-NPP,2018,11,29
+North Kalimantan,VIIRS S-NPP,2018,12,29
+North Kalimantan,VIIRS S-NPP,2019,1,25
+North Kalimantan,VIIRS S-NPP,2019,2,139
+North Kalimantan,VIIRS S-NPP,2019,3,269
+North Kalimantan,VIIRS S-NPP,2019,4,34
+North Kalimantan,VIIRS S-NPP,2019,5,19
+North Kalimantan,VIIRS S-NPP,2019,6,9
+North Kalimantan,VIIRS S-NPP,2019,7,77
+North Kalimantan,VIIRS S-NPP,2019,8,641
+North Kalimantan,VIIRS S-NPP,2019,9,1369
+North Kalimantan,VIIRS S-NPP,2019,10,129
+North Kalimantan,VIIRS S-NPP,2019,11,43
+North Kalimantan,VIIRS S-NPP,2019,12,9
+North Kalimantan,VIIRS S-NPP,2020,1,28
+North Kalimantan,VIIRS S-NPP,2020,2,30
+North Kalimantan,VIIRS S-NPP,2020,3,27
+North Kalimantan,VIIRS S-NPP,2020,4,44
+North Kalimantan,VIIRS S-NPP,2020,5,25
+North Kalimantan,VIIRS S-NPP,2020,6,11
+North Kalimantan,VIIRS S-NPP,2020,7,81
+North Kalimantan,VIIRS S-NPP,2020,8,928
+North Kalimantan,VIIRS S-NPP,2020,9,163
+North Kalimantan,VIIRS S-NPP,2020,10,13
+North Kalimantan,VIIRS S-NPP,2020,11,30
+North Kalimantan,VIIRS S-NPP,2020,12,5
+North Kalimantan,VIIRS S-NPP,2021,1,1
+North Kalimantan,VIIRS S-NPP,2021,2,12
+North Kalimantan,VIIRS S-NPP,2021,3,11
+North Kalimantan,VIIRS S-NPP,2021,4,15
+North Kalimantan,VIIRS S-NPP,2021,5,10
+North Kalimantan,VIIRS S-NPP,2021,6,21
+North Kalimantan,VIIRS S-NPP,2021,7,221
+North Kalimantan,VIIRS S-NPP,2021,8,156
+North Kalimantan,VIIRS S-NPP,2021,9,156
+North Kalimantan,VIIRS S-NPP,2021,10,60
+North Kalimantan,VIIRS S-NPP,2021,11,31
+North Kalimantan,VIIRS S-NPP,2021,12,7
+North Kalimantan,VIIRS S-NPP,2022,1,10
+North Kalimantan,VIIRS S-NPP,2022,2,13
+North Kalimantan,VIIRS S-NPP,2022,3,14
+North Kalimantan,VIIRS S-NPP,2022,4,8
+North Kalimantan,VIIRS S-NPP,2022,5,7
+North Kalimantan,VIIRS S-NPP,2022,6,39
+North Kalimantan,VIIRS S-NPP,2022,7,70
+North Kalimantan,VIIRS S-NPP,2022,8,302
+North Kalimantan,VIIRS S-NPP,2022,9,208
+North Kalimantan,VIIRS S-NPP,2022,10,44
+North Kalimantan,VIIRS S-NPP,2022,11,11
+North Kalimantan,VIIRS S-NPP,2022,12,13
+North Kalimantan,VIIRS S-NPP,2023,1,15
+North Kalimantan,VIIRS S-NPP,2023,2,13
+North Kalimantan,VIIRS S-NPP,2023,3,39
+North Kalimantan,VIIRS S-NPP,2023,4,23
+North Kalimantan,VIIRS S-NPP,2023,5,18
+North Kalimantan,VIIRS S-NPP,2023,6,15
+North Kalimantan,VIIRS S-NPP,2023,7,154
+North Kalimantan,VIIRS S-NPP,2023,8,424
+North Kalimantan,VIIRS S-NPP,2023,9,236
+North Kalimantan,VIIRS S-NPP,2023,10,248
+North Kalimantan,VIIRS S-NPP,2023,11,59
+North Kalimantan,VIIRS S-NPP,2023,12,35
+North Kalimantan,VIIRS S-NPP,2024,1,29
+North Kalimantan,VIIRS S-NPP,2024,2,70
+North Kalimantan,VIIRS S-NPP,2024,3,48
+North Kalimantan,VIIRS S-NPP,2024,4,47
+North Kalimantan,VIIRS S-NPP,2024,5,58
+North Kalimantan,VIIRS S-NPP,2024,6,7
+North Kalimantan,VIIRS S-NPP,2024,7,75
+North Kalimantan,VIIRS S-NPP,2024,8,307
+North Kalimantan,VIIRS S-NPP,2024,9,470
+North Kalimantan,VIIRS S-NPP,2024,10,179
+North Kalimantan,VIIRS S-NPP,2024,11,42
+North Kalimantan,VIIRS S-NPP,2024,12,4
+North Kalimantan,VIIRS S-NPP,2025,1,6
+North Kalimantan,VIIRS S-NPP,2025,2,3
+North Kalimantan,VIIRS S-NPP,2025,3,4
+North Kalimantan,VIIRS S-NPP,2025,4,33
+North Kalimantan,VIIRS S-NPP,2025,5,17
+North Kalimantan,VIIRS S-NPP,2025,6,17
+North Kalimantan,VIIRS S-NPP,2025,7,335
+North Kalimantan,VIIRS S-NPP,2025,8,192
+North Kalimantan,VIIRS S-NPP,2025,9,256
+North Kalimantan,VIIRS S-NPP,2025,10,85
+North Kalimantan,VIIRS S-NPP,2025,11,22
+North Kalimantan,VIIRS S-NPP,2025,12,13
+North Kalimantan,VIIRS S-NPP,2026,1,78
+North Kalimantan,VIIRS S-NPP,2026,2,18
+North Kalimantan,VIIRS S-NPP,2026,3,22
+North Kalimantan,VIIRS S-NPP,2026,4,75
+North Kalimantan,VIIRS S-NPP,2026,5,101
+North Kalimantan,VIIRS S-NPP,2026,6,81
+North Kalimantan,VIIRS S-NPP,2026,7,45
+North Kalimantan,VIIRS S-NPP,2026,8,1551
+North Kalimantan,VIIRS S-NPP,2026,9,826
+North Kalimantan,VIIRS S-NPP,2026,10,198
+North Kalimantan,VIIRS S-NPP,2026,11,3
+Sarawak + Sabah + Brunei,MODIS,2001,11,10
+Sarawak + Sabah + Brunei,MODIS,2001,12,26
+Sarawak + Sabah + Brunei,MODIS,2002,1,36
+Sarawak + Sabah + Brunei,MODIS,2002,2,45
+Sarawak + Sabah + Brunei,MODIS,2002,3,42
+Sarawak + Sabah + Brunei,MODIS,2002,4,107
+Sarawak + Sabah + Brunei,MODIS,2002,5,50
+Sarawak + Sabah + Brunei,MODIS,2002,6,40
+Sarawak + Sabah + Brunei,MODIS,2002,7,551
+Sarawak + Sabah + Brunei,MODIS,2002,8,3319
+Sarawak + Sabah + Brunei,MODIS,2002,9,403
+Sarawak + Sabah + Brunei,MODIS,2002,10,91
+Sarawak + Sabah + Brunei,MODIS,2002,11,30
+Sarawak + Sabah + Brunei,MODIS,2002,12,84
+Sarawak + Sabah + Brunei,MODIS,2003,1,94
+Sarawak + Sabah + Brunei,MODIS,2003,2,159
+Sarawak + Sabah + Brunei,MODIS,2003,3,237
+Sarawak + Sabah + Brunei,MODIS,2003,4,242
+Sarawak + Sabah + Brunei,MODIS,2003,5,170
+Sarawak + Sabah + Brunei,MODIS,2003,6,257
+Sarawak + Sabah + Brunei,MODIS,2003,7,256
+Sarawak + Sabah + Brunei,MODIS,2003,8,1212
+Sarawak + Sabah + Brunei,MODIS,2003,9,461
+Sarawak + Sabah + Brunei,MODIS,2003,10,37
+Sarawak + Sabah + Brunei,MODIS,2003,11,48
+Sarawak + Sabah + Brunei,MODIS,2003,12,8
+Sarawak + Sabah + Brunei,MODIS,2004,1,47
+Sarawak + Sabah + Brunei,MODIS,2004,2,71
+Sarawak + Sabah + Brunei,MODIS,2004,3,124
+Sarawak + Sabah + Brunei,MODIS,2004,4,227
+Sarawak + Sabah + Brunei,MODIS,2004,5,218
+Sarawak + Sabah + Brunei,MODIS,2004,6,406
+Sarawak + Sabah + Brunei,MODIS,2004,7,151
+Sarawak + Sabah + Brunei,MODIS,2004,8,2076
+Sarawak + Sabah + Brunei,MODIS,2004,9,326
+Sarawak + Sabah + Brunei,MODIS,2004,10,300
+Sarawak + Sabah + Brunei,MODIS,2004,11,112
+Sarawak + Sabah + Brunei,MODIS,2004,12,22
+Sarawak + Sabah + Brunei,MODIS,2005,1,176
+Sarawak + Sabah + Brunei,MODIS,2005,2,132
+Sarawak + Sabah + Brunei,MODIS,2005,3,325
+Sarawak + Sabah + Brunei,MODIS,2005,4,573
+Sarawak + Sabah + Brunei,MODIS,2005,5,250
+Sarawak + Sabah + Brunei,MODIS,2005,6,201
+Sarawak + Sabah + Brunei,MODIS,2005,7,326
+Sarawak + Sabah + Brunei,MODIS,2005,8,1632
+Sarawak + Sabah + Brunei,MODIS,2005,9,638
+Sarawak + Sabah + Brunei,MODIS,2005,10,110
+Sarawak + Sabah + Brunei,MODIS,2005,11,25
+Sarawak + Sabah + Brunei,MODIS,2005,12,49
+Sarawak + Sabah + Brunei,MODIS,2006,1,22
+Sarawak + Sabah + Brunei,MODIS,2006,2,18
+Sarawak + Sabah + Brunei,MODIS,2006,3,96
+Sarawak + Sabah + Brunei,MODIS,2006,4,60
+Sarawak + Sabah + Brunei,MODIS,2006,5,104
+Sarawak + Sabah + Brunei,MODIS,2006,6,176
+Sarawak + Sabah + Brunei,MODIS,2006,7,488
+Sarawak + Sabah + Brunei,MODIS,2006,8,1626
+Sarawak + Sabah + Brunei,MODIS,2006,9,384
+Sarawak + Sabah + Brunei,MODIS,2006,10,201
+Sarawak + Sabah + Brunei,MODIS,2006,11,49
+Sarawak + Sabah + Brunei,MODIS,2006,12,53
+Sarawak + Sabah + Brunei,MODIS,2007,1,12
+Sarawak + Sabah + Brunei,MODIS,2007,2,63
+Sarawak + Sabah + Brunei,MODIS,2007,3,169
+Sarawak + Sabah + Brunei,MODIS,2007,4,224
+Sarawak + Sabah + Brunei,MODIS,2007,5,274
+Sarawak + Sabah + Brunei,MODIS,2007,6,133
+Sarawak + Sabah + Brunei,MODIS,2007,7,498
+Sarawak + Sabah + Brunei,MODIS,2007,8,1296
+Sarawak + Sabah + Brunei,MODIS,2007,9,302
+Sarawak + Sabah + Brunei,MODIS,2007,10,317
+Sarawak + Sabah + Brunei,MODIS,2007,11,34
+Sarawak + Sabah + Brunei,MODIS,2007,12,27
+Sarawak + Sabah + Brunei,MODIS,2008,1,115
+Sarawak + Sabah + Brunei,MODIS,2008,2,37
+Sarawak + Sabah + Brunei,MODIS,2008,3,14
+Sarawak + Sabah + Brunei,MODIS,2008,4,104
+Sarawak + Sabah + Brunei,MODIS,2008,5,464
+Sarawak + Sabah + Brunei,MODIS,2008,6,232
+Sarawak + Sabah + Brunei,MODIS,2008,7,224
+Sarawak + Sabah + Brunei,MODIS,2008,8,795
+Sarawak + Sabah + Brunei,MODIS,2008,9,672
+Sarawak + Sabah + Brunei,MODIS,2008,10,115
+Sarawak + Sabah + Brunei,MODIS,2008,11,65
+Sarawak + Sabah + Brunei,MODIS,2008,12,25
+Sarawak + Sabah + Brunei,MODIS,2009,1,2
+Sarawak + Sabah + Brunei,MODIS,2009,2,58
+Sarawak + Sabah + Brunei,MODIS,2009,3,56
+Sarawak + Sabah + Brunei,MODIS,2009,4,339
+Sarawak + Sabah + Brunei,MODIS,2009,5,407
+Sarawak + Sabah + Brunei,MODIS,2009,6,419
+Sarawak + Sabah + Brunei,MODIS,2009,7,765
+Sarawak + Sabah + Brunei,MODIS,2009,8,3150
+Sarawak + Sabah + Brunei,MODIS,2009,9,847
+Sarawak + Sabah + Brunei,MODIS,2009,10,214
+Sarawak + Sabah + Brunei,MODIS,2009,11,93
+Sarawak + Sabah + Brunei,MODIS,2009,12,37
+Sarawak + Sabah + Brunei,MODIS,2010,1,66
+Sarawak + Sabah + Brunei,MODIS,2010,2,436
+Sarawak + Sabah + Brunei,MODIS,2010,3,744
+Sarawak + Sabah + Brunei,MODIS,2010,4,230
+Sarawak + Sabah + Brunei,MODIS,2010,5,193
+Sarawak + Sabah + Brunei,MODIS,2010,6,229
+Sarawak + Sabah + Brunei,MODIS,2010,7,64
+Sarawak + Sabah + Brunei,MODIS,2010,8,527
+Sarawak + Sabah + Brunei,MODIS,2010,9,274
+Sarawak + Sabah + Brunei,MODIS,2010,10,235
+Sarawak + Sabah + Brunei,MODIS,2010,11,63
+Sarawak + Sabah + Brunei,MODIS,2010,12,21
+Sarawak + Sabah + Brunei,MODIS,2011,1,13
+Sarawak + Sabah + Brunei,MODIS,2011,2,29
+Sarawak + Sabah + Brunei,MODIS,2011,3,34
+Sarawak + Sabah + Brunei,MODIS,2011,4,63
+Sarawak + Sabah + Brunei,MODIS,2011,5,142
+Sarawak + Sabah + Brunei,MODIS,2011,6,358
+Sarawak + Sabah + Brunei,MODIS,2011,7,405
+Sarawak + Sabah + Brunei,MODIS,2011,8,655
+Sarawak + Sabah + Brunei,MODIS,2011,9,429
+Sarawak + Sabah + Brunei,MODIS,2011,10,111
+Sarawak + Sabah + Brunei,MODIS,2011,11,118
+Sarawak + Sabah + Brunei,MODIS,2011,12,25
+Sarawak + Sabah + Brunei,MODIS,2012,1,16
+Sarawak + Sabah + Brunei,MODIS,2012,2,32
+Sarawak + Sabah + Brunei,MODIS,2012,3,105
+Sarawak + Sabah + Brunei,MODIS,2012,4,98
+Sarawak + Sabah + Brunei,MODIS,2012,5,440
+Sarawak + Sabah + Brunei,MODIS,2012,6,1111
+Sarawak + Sabah + Brunei,MODIS,2012,7,232
+Sarawak + Sabah + Brunei,MODIS,2012,8,973
+Sarawak + Sabah + Brunei,MODIS,2012,9,535
+Sarawak + Sabah + Brunei,MODIS,2012,10,162
+Sarawak + Sabah + Brunei,MODIS,2012,11,44
+Sarawak + Sabah + Brunei,MODIS,2012,12,54
+Sarawak + Sabah + Brunei,MODIS,2013,1,92
+Sarawak + Sabah + Brunei,MODIS,2013,2,63
+Sarawak + Sabah + Brunei,MODIS,2013,3,183
+Sarawak + Sabah + Brunei,MODIS,2013,4,101
+Sarawak + Sabah + Brunei,MODIS,2013,5,179
+Sarawak + Sabah + Brunei,MODIS,2013,6,465
+Sarawak + Sabah + Brunei,MODIS,2013,7,284
+Sarawak + Sabah + Brunei,MODIS,2013,8,560
+Sarawak + Sabah + Brunei,MODIS,2013,9,371
+Sarawak + Sabah + Brunei,MODIS,2013,10,192
+Sarawak + Sabah + Brunei,MODIS,2013,11,43
+Sarawak + Sabah + Brunei,MODIS,2013,12,17
+Sarawak + Sabah + Brunei,MODIS,2014,1,30
+Sarawak + Sabah + Brunei,MODIS,2014,2,154
+Sarawak + Sabah + Brunei,MODIS,2014,3,309
+Sarawak + Sabah + Brunei,MODIS,2014,4,190
+Sarawak + Sabah + Brunei,MODIS,2014,5,182
+Sarawak + Sabah + Brunei,MODIS,2014,6,214
+Sarawak + Sabah + Brunei,MODIS,2014,7,825
+Sarawak + Sabah + Brunei,MODIS,2014,8,225
+Sarawak + Sabah + Brunei,MODIS,2014,9,262
+Sarawak + Sabah + Brunei,MODIS,2014,10,157
+Sarawak + Sabah + Brunei,MODIS,2014,11,39
+Sarawak + Sabah + Brunei,MODIS,2014,12,38
+Sarawak + Sabah + Brunei,MODIS,2015,1,2
+Sarawak + Sabah + Brunei,MODIS,2015,2,31
+Sarawak + Sabah + Brunei,MODIS,2015,3,219
+Sarawak + Sabah + Brunei,MODIS,2015,4,253
+Sarawak + Sabah + Brunei,MODIS,2015,5,224
+Sarawak + Sabah + Brunei,MODIS,2015,6,215
+Sarawak + Sabah + Brunei,MODIS,2015,7,505
+Sarawak + Sabah + Brunei,MODIS,2015,8,299
+Sarawak + Sabah + Brunei,MODIS,2015,9,310
+Sarawak + Sabah + Brunei,MODIS,2015,10,127
+Sarawak + Sabah + Brunei,MODIS,2015,11,12
+Sarawak + Sabah + Brunei,MODIS,2015,12,51
+Sarawak + Sabah + Brunei,MODIS,2016,1,87
+Sarawak + Sabah + Brunei,MODIS,2016,2,149
+Sarawak + Sabah + Brunei,MODIS,2016,3,597
+Sarawak + Sabah + Brunei,MODIS,2016,4,500
+Sarawak + Sabah + Brunei,MODIS,2016,5,160
+Sarawak + Sabah + Brunei,MODIS,2016,6,56
+Sarawak + Sabah + Brunei,MODIS,2016,7,139
+Sarawak + Sabah + Brunei,MODIS,2016,8,395
+Sarawak + Sabah + Brunei,MODIS,2016,9,146
+Sarawak + Sabah + Brunei,MODIS,2016,10,82
+Sarawak + Sabah + Brunei,MODIS,2016,11,17
+Sarawak + Sabah + Brunei,MODIS,2016,12,25
+Sarawak + Sabah + Brunei,MODIS,2017,1,37
+Sarawak + Sabah + Brunei,MODIS,2017,2,34
+Sarawak + Sabah + Brunei,MODIS,2017,3,24
+Sarawak + Sabah + Brunei,MODIS,2017,4,56
+Sarawak + Sabah + Brunei,MODIS,2017,5,58
+Sarawak + Sabah + Brunei,MODIS,2017,6,38
+Sarawak + Sabah + Brunei,MODIS,2017,7,261
+Sarawak + Sabah + Brunei,MODIS,2017,8,125
+Sarawak + Sabah + Brunei,MODIS,2017,9,149
+Sarawak + Sabah + Brunei,MODIS,2017,10,58
+Sarawak + Sabah + Brunei,MODIS,2017,11,23
+Sarawak + Sabah + Brunei,MODIS,2017,12,3
+Sarawak + Sabah + Brunei,MODIS,2018,1,4
+Sarawak + Sabah + Brunei,MODIS,2018,2,19
+Sarawak + Sabah + Brunei,MODIS,2018,3,28
+Sarawak + Sabah + Brunei,MODIS,2018,4,59
+Sarawak + Sabah + Brunei,MODIS,2018,5,44
+Sarawak + Sabah + Brunei,MODIS,2018,6,88
+Sarawak + Sabah + Brunei,MODIS,2018,7,345
+Sarawak + Sabah + Brunei,MODIS,2018,8,587
+Sarawak + Sabah + Brunei,MODIS,2018,9,120
+Sarawak + Sabah + Brunei,MODIS,2018,10,72
+Sarawak + Sabah + Brunei,MODIS,2018,11,26
+Sarawak + Sabah + Brunei,MODIS,2018,12,13
+Sarawak + Sabah + Brunei,MODIS,2019,1,23
+Sarawak + Sabah + Brunei,MODIS,2019,2,118
+Sarawak + Sabah + Brunei,MODIS,2019,3,199
+Sarawak + Sabah + Brunei,MODIS,2019,4,175
+Sarawak + Sabah + Brunei,MODIS,2019,5,156
+Sarawak + Sabah + Brunei,MODIS,2019,6,25
+Sarawak + Sabah + Brunei,MODIS,2019,7,88
+Sarawak + Sabah + Brunei,MODIS,2019,8,319
+Sarawak + Sabah + Brunei,MODIS,2019,9,331
+Sarawak + Sabah + Brunei,MODIS,2019,10,28
+Sarawak + Sabah + Brunei,MODIS,2019,11,27
+Sarawak + Sabah + Brunei,MODIS,2019,12,1
+Sarawak + Sabah + Brunei,MODIS,2020,1,6
+Sarawak + Sabah + Brunei,MODIS,2020,2,117
+Sarawak + Sabah + Brunei,MODIS,2020,3,138
+Sarawak + Sabah + Brunei,MODIS,2020,4,116
+Sarawak + Sabah + Brunei,MODIS,2020,5,73
+Sarawak + Sabah + Brunei,MODIS,2020,6,29
+Sarawak + Sabah + Brunei,MODIS,2020,7,39
+Sarawak + Sabah + Brunei,MODIS,2020,8,113
+Sarawak + Sabah + Brunei,MODIS,2020,9,50
+Sarawak + Sabah + Brunei,MODIS,2020,10,26
+Sarawak + Sabah + Brunei,MODIS,2020,11,16
+Sarawak + Sabah + Brunei,MODIS,2020,12,5
+Sarawak + Sabah + Brunei,MODIS,2021,1,1
+Sarawak + Sabah + Brunei,MODIS,2021,2,15
+Sarawak + Sabah + Brunei,MODIS,2021,3,15
+Sarawak + Sabah + Brunei,MODIS,2021,4,61
+Sarawak + Sabah + Brunei,MODIS,2021,5,24
+Sarawak + Sabah + Brunei,MODIS,2021,6,63
+Sarawak + Sabah + Brunei,MODIS,2021,7,255
+Sarawak + Sabah + Brunei,MODIS,2021,8,90
+Sarawak + Sabah + Brunei,MODIS,2021,9,45
+Sarawak + Sabah + Brunei,MODIS,2021,10,76
+Sarawak + Sabah + Brunei,MODIS,2021,11,12
+Sarawak + Sabah + Brunei,MODIS,2021,12,3
+Sarawak + Sabah + Brunei,MODIS,2022,1,4
+Sarawak + Sabah + Brunei,MODIS,2022,2,7
+Sarawak + Sabah + Brunei,MODIS,2022,3,32
+Sarawak + Sabah + Brunei,MODIS,2022,4,34
+Sarawak + Sabah + Brunei,MODIS,2022,5,46
+Sarawak + Sabah + Brunei,MODIS,2022,6,21
+Sarawak + Sabah + Brunei,MODIS,2022,7,59
+Sarawak + Sabah + Brunei,MODIS,2022,8,68
+Sarawak + Sabah + Brunei,MODIS,2022,9,30
+Sarawak + Sabah + Brunei,MODIS,2022,10,20
+Sarawak + Sabah + Brunei,MODIS,2022,11,8
+Sarawak + Sabah + Brunei,MODIS,2022,12,2
+Sarawak + Sabah + Brunei,MODIS,2023,1,7
+Sarawak + Sabah + Brunei,MODIS,2023,2,4
+Sarawak + Sabah + Brunei,MODIS,2023,3,24
+Sarawak + Sabah + Brunei,MODIS,2023,4,67
+Sarawak + Sabah + Brunei,MODIS,2023,5,65
+Sarawak + Sabah + Brunei,MODIS,2023,6,60
+Sarawak + Sabah + Brunei,MODIS,2023,7,167
+Sarawak + Sabah + Brunei,MODIS,2023,8,119
+Sarawak + Sabah + Brunei,MODIS,2023,9,59
+Sarawak + Sabah + Brunei,MODIS,2023,10,57
+Sarawak + Sabah + Brunei,MODIS,2023,11,34
+Sarawak + Sabah + Brunei,MODIS,2023,12,21
+Sarawak + Sabah + Brunei,MODIS,2024,1,20
+Sarawak + Sabah + Brunei,MODIS,2024,2,95
+Sarawak + Sabah + Brunei,MODIS,2024,3,206
+Sarawak + Sabah + Brunei,MODIS,2024,4,162
+Sarawak + Sabah + Brunei,MODIS,2024,5,126
+Sarawak + Sabah + Brunei,MODIS,2024,6,24
+Sarawak + Sabah + Brunei,MODIS,2024,7,118
+Sarawak + Sabah + Brunei,MODIS,2024,8,35
+Sarawak + Sabah + Brunei,MODIS,2024,9,119
+Sarawak + Sabah + Brunei,MODIS,2024,10,65
+Sarawak + Sabah + Brunei,MODIS,2024,11,23
+Sarawak + Sabah + Brunei,MODIS,2024,12,5
+Sarawak + Sabah + Brunei,MODIS,2025,1,6
+Sarawak + Sabah + Brunei,MODIS,2025,2,5
+Sarawak + Sabah + Brunei,MODIS,2025,3,18
+Sarawak + Sabah + Brunei,MODIS,2025,4,11
+Sarawak + Sabah + Brunei,MODIS,2025,5,49
+Sarawak + Sabah + Brunei,MODIS,2025,6,45
+Sarawak + Sabah + Brunei,MODIS,2025,7,305
+Sarawak + Sabah + Brunei,MODIS,2025,8,32
+Sarawak + Sabah + Brunei,MODIS,2025,9,66
+Sarawak + Sabah + Brunei,MODIS,2025,10,31
+Sarawak + Sabah + Brunei,MODIS,2025,11,28
+Sarawak + Sabah + Brunei,MODIS,2025,12,6
+Sarawak + Sabah + Brunei,MODIS,2026,1,18
+Sarawak + Sabah + Brunei,MODIS,2026,2,5
+Sarawak + Sabah + Brunei,MODIS,2026,3,110
+Sarawak + Sabah + Brunei,MODIS,2026,4,279
+Sarawak + Sabah + Brunei,MODIS,2026,5,36
+Sarawak + Sabah + Brunei,MODIS,2026,6,58
+Sarawak + Sabah + Brunei,MODIS,2026,7,40
+Sarawak + Sabah + Brunei,MODIS,2026,8,198
+Sarawak + Sabah + Brunei,MODIS,2026,9,135
+Sarawak + Sabah + Brunei,MODIS,2026,10,60
+Sarawak + Sabah + Brunei,MODIS,2026,11,11
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,4,318
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,5,170
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,6,411
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,7,1169
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,8,2437
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,9,518
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,10,310
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,11,85
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2018,12,96
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,1,139
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,2,531
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,3,990
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,4,900
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,5,571
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,6,128
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,7,531
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,8,1659
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,9,1255
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,10,130
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,11,140
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2019,12,24
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,1,112
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,2,505
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,3,650
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,4,454
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,5,255
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,6,147
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,7,209
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,8,873
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,9,226
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,10,122
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,11,69
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2020,12,42
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,1,24
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,2,97
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,3,111
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,4,318
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,5,156
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,6,266
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,7,1055
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,8,410
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,9,334
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,10,304
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,11,71
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2021,12,70
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,1,56
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,2,82
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,3,121
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,4,147
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,5,219
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,6,155
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,7,324
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,8,553
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,9,176
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,10,95
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,11,55
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2022,12,36
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,1,81
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,2,37
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,3,183
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,4,278
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,5,246
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,6,342
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,7,637
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,8,612
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,9,304
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,10,262
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,11,136
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2023,12,134
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,1,71
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,2,409
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,3,1028
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,4,550
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,5,536
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,6,105
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,7,561
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,8,172
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,9,676
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,10,183
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,11,96
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2024,12,41
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,1,16
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,2,29
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,3,48
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,4,121
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,5,249
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,6,227
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,7,1231
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,8,274
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,9,322
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,10,150
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,11,160
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2025,12,26
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,1,85
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,2,31
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,3,514
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,4,799
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,5,161
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,6,249
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,7,284
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,8,1542
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,9,1013
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,10,440
+Sarawak + Sabah + Brunei,VIIRS NOAA-20,2026,11,187
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,3,161
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,4,317
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,5,260
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,6,312
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,7,628
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,8,568
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,9,259
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,10,218
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,11,120
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2023,12,86
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,1,84
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,2,327
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,3,896
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,4,493
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,5,509
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,6,139
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,7,575
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,8,199
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,9,554
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,10,182
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,11,111
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2024,12,30
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,1,16
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,2,34
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,3,61
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,4,75
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,5,257
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,6,248
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,7,1168
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,8,348
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,9,318
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,10,160
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,11,132
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2025,12,42
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,1,81
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,2,20
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,3,461
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,4,813
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,5,156
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,6,188
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,7,241
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,8,1414
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,9,672
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,10,463
+Sarawak + Sabah + Brunei,VIIRS NOAA-21,2026,11,144
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,1,31
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,2,148
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,3,292
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,4,373
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,5,1585
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,6,4184
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,7,898
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,8,3166
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,9,2180
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,10,643
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,11,196
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2012,12,204
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,1,410
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,2,202
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,3,651
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,4,352
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,5,384
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,6,1711
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,7,1137
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,8,2780
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,9,1308
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,10,627
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,11,172
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2013,12,77
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,1,177
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,2,843
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,3,1650
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,4,811
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,5,761
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,6,935
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,7,3762
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,8,1008
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,9,1392
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,10,613
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,11,258
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2014,12,229
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,1,36
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,2,343
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,3,1422
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,4,1448
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,5,989
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,6,896
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,7,1945
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,8,1224
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,9,1184
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,10,502
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,11,102
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2015,12,220
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,1,414
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,2,1169
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,3,2782
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,4,2659
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,5,577
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,6,212
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,7,552
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,8,1652
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,9,553
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,10,380
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,11,114
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2016,12,163
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,1,177
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,2,104
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,3,84
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,4,225
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,5,174
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,6,174
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,7,1031
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,8,651
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,9,618
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,10,241
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,11,102
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2017,12,57
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,1,8
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,2,151
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,3,180
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,4,330
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,5,153
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,6,379
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,7,1265
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,8,2563
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,9,498
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,10,307
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,11,111
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2018,12,95
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,1,139
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,2,493
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,3,1057
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,4,988
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,5,593
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,6,164
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,7,508
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,8,1597
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,9,1330
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,10,126
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,11,143
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2019,12,16
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,1,90
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,2,511
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,3,602
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,4,482
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,5,240
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,6,135
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,7,175
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,8,822
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,9,210
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,10,175
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,11,42
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2020,12,32
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,1,20
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,2,114
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,3,102
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,4,329
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,5,139
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,6,266
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,7,1033
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,8,449
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,9,319
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,10,357
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,11,82
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2021,12,84
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,1,47
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,2,57
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,3,107
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,4,176
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,5,161
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,6,168
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,7,379
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,8,361
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,9,230
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,10,89
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,11,35
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2022,12,34
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,1,65
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,2,44
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,3,166
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,4,360
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,5,222
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,6,325
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,7,597
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,8,583
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,9,267
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,10,244
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,11,98
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2023,12,95
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,1,73
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,2,394
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,3,936
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,4,546
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,5,608
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,6,112
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,7,108
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,8,235
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,9,578
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,10,222
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,11,107
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2024,12,38
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,1,25
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,2,20
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,3,53
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,4,68
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,5,236
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,6,233
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,7,1276
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,8,300
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,9,321
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,10,129
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,11,158
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2025,12,56
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,1,95
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,2,20
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,3,489
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,4,776
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,5,213
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,6,218
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,7,137
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,8,1571
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,9,716
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,10,407
+Sarawak + Sabah + Brunei,VIIRS S-NPP,2026,11,12
+South Kalimantan,MODIS,2001,11,2
+South Kalimantan,MODIS,2001,12,4
+South Kalimantan,MODIS,2002,1,2
+South Kalimantan,MODIS,2002,4,1
+South Kalimantan,MODIS,2002,5,9
+South Kalimantan,MODIS,2002,6,1
+South Kalimantan,MODIS,2002,7,194
+South Kalimantan,MODIS,2002,8,1005
+South Kalimantan,MODIS,2002,9,1729
+South Kalimantan,MODIS,2002,10,1551
+South Kalimantan,MODIS,2002,11,107
+South Kalimantan,MODIS,2002,12,2
+South Kalimantan,MODIS,2003,1,2
+South Kalimantan,MODIS,2003,3,1
+South Kalimantan,MODIS,2003,5,18
+South Kalimantan,MODIS,2003,6,106
+South Kalimantan,MODIS,2003,7,87
+South Kalimantan,MODIS,2003,8,476
+South Kalimantan,MODIS,2003,9,972
+South Kalimantan,MODIS,2003,10,273
+South Kalimantan,MODIS,2003,11,16
+South Kalimantan,MODIS,2003,12,4
+South Kalimantan,MODIS,2004,1,7
+South Kalimantan,MODIS,2004,2,3
+South Kalimantan,MODIS,2004,3,5
+South Kalimantan,MODIS,2004,4,17
+South Kalimantan,MODIS,2004,5,28
+South Kalimantan,MODIS,2004,6,83
+South Kalimantan,MODIS,2004,7,60
+South Kalimantan,MODIS,2004,8,825
+South Kalimantan,MODIS,2004,9,1550
+South Kalimantan,MODIS,2004,10,1614
+South Kalimantan,MODIS,2004,11,82
+South Kalimantan,MODIS,2004,12,1
+South Kalimantan,MODIS,2005,1,6
+South Kalimantan,MODIS,2005,2,1
+South Kalimantan,MODIS,2005,3,3
+South Kalimantan,MODIS,2005,4,1
+South Kalimantan,MODIS,2005,5,2
+South Kalimantan,MODIS,2005,6,29
+South Kalimantan,MODIS,2005,7,59
+South Kalimantan,MODIS,2005,8,271
+South Kalimantan,MODIS,2005,9,1064
+South Kalimantan,MODIS,2005,10,304
+South Kalimantan,MODIS,2005,11,25
+South Kalimantan,MODIS,2006,1,6
+South Kalimantan,MODIS,2006,2,1
+South Kalimantan,MODIS,2006,3,11
+South Kalimantan,MODIS,2006,4,4
+South Kalimantan,MODIS,2006,5,11
+South Kalimantan,MODIS,2006,6,2
+South Kalimantan,MODIS,2006,7,95
+South Kalimantan,MODIS,2006,8,478
+South Kalimantan,MODIS,2006,9,2366
+South Kalimantan,MODIS,2006,10,2063
+South Kalimantan,MODIS,2006,11,369
+South Kalimantan,MODIS,2006,12,48
+South Kalimantan,MODIS,2007,1,2
+South Kalimantan,MODIS,2007,2,1
+South Kalimantan,MODIS,2007,3,4
+South Kalimantan,MODIS,2007,4,1
+South Kalimantan,MODIS,2007,5,1
+South Kalimantan,MODIS,2007,6,3
+South Kalimantan,MODIS,2007,7,7
+South Kalimantan,MODIS,2007,8,61
+South Kalimantan,MODIS,2007,9,391
+South Kalimantan,MODIS,2007,10,310
+South Kalimantan,MODIS,2007,11,76
+South Kalimantan,MODIS,2007,12,2
+South Kalimantan,MODIS,2008,1,11
+South Kalimantan,MODIS,2008,2,2
+South Kalimantan,MODIS,2008,3,1
+South Kalimantan,MODIS,2008,4,11
+South Kalimantan,MODIS,2008,5,28
+South Kalimantan,MODIS,2008,6,34
+South Kalimantan,MODIS,2008,7,15
+South Kalimantan,MODIS,2008,8,47
+South Kalimantan,MODIS,2008,9,215
+South Kalimantan,MODIS,2008,10,45
+South Kalimantan,MODIS,2008,11,4
+South Kalimantan,MODIS,2009,1,9
+South Kalimantan,MODIS,2009,2,3
+South Kalimantan,MODIS,2009,3,6
+South Kalimantan,MODIS,2009,4,24
+South Kalimantan,MODIS,2009,5,30
+South Kalimantan,MODIS,2009,6,75
+South Kalimantan,MODIS,2009,7,278
+South Kalimantan,MODIS,2009,8,981
+South Kalimantan,MODIS,2009,9,2666
+South Kalimantan,MODIS,2009,10,337
+South Kalimantan,MODIS,2009,11,116
+South Kalimantan,MODIS,2009,12,2
+South Kalimantan,MODIS,2010,1,1
+South Kalimantan,MODIS,2010,2,5
+South Kalimantan,MODIS,2010,3,1
+South Kalimantan,MODIS,2010,4,10
+South Kalimantan,MODIS,2010,5,5
+South Kalimantan,MODIS,2010,8,1
+South Kalimantan,MODIS,2010,9,14
+South Kalimantan,MODIS,2010,10,12
+South Kalimantan,MODIS,2010,11,2
+South Kalimantan,MODIS,2010,12,2
+South Kalimantan,MODIS,2011,1,5
+South Kalimantan,MODIS,2011,2,5
+South Kalimantan,MODIS,2011,3,1
+South Kalimantan,MODIS,2011,4,3
+South Kalimantan,MODIS,2011,5,17
+South Kalimantan,MODIS,2011,6,121
+South Kalimantan,MODIS,2011,7,583
+South Kalimantan,MODIS,2011,8,1191
+South Kalimantan,MODIS,2011,9,533
+South Kalimantan,MODIS,2011,10,179
+South Kalimantan,MODIS,2011,11,24
+South Kalimantan,MODIS,2011,12,2
+South Kalimantan,MODIS,2012,1,7
+South Kalimantan,MODIS,2012,2,3
+South Kalimantan,MODIS,2012,3,8
+South Kalimantan,MODIS,2012,4,3
+South Kalimantan,MODIS,2012,5,36
+South Kalimantan,MODIS,2012,6,19
+South Kalimantan,MODIS,2012,7,44
+South Kalimantan,MODIS,2012,8,245
+South Kalimantan,MODIS,2012,9,862
+South Kalimantan,MODIS,2012,10,460
+South Kalimantan,MODIS,2012,11,24
+South Kalimantan,MODIS,2012,12,7
+South Kalimantan,MODIS,2013,1,3
+South Kalimantan,MODIS,2013,3,2
+South Kalimantan,MODIS,2013,4,5
+South Kalimantan,MODIS,2013,5,3
+South Kalimantan,MODIS,2013,6,8
+South Kalimantan,MODIS,2013,7,10
+South Kalimantan,MODIS,2013,8,64
+South Kalimantan,MODIS,2013,9,346
+South Kalimantan,MODIS,2013,10,523
+South Kalimantan,MODIS,2013,11,55
+South Kalimantan,MODIS,2013,12,7
+South Kalimantan,MODIS,2014,1,10
+South Kalimantan,MODIS,2014,2,6
+South Kalimantan,MODIS,2014,3,7
+South Kalimantan,MODIS,2014,4,1
+South Kalimantan,MODIS,2014,5,6
+South Kalimantan,MODIS,2014,6,6
+South Kalimantan,MODIS,2014,7,35
+South Kalimantan,MODIS,2014,8,241
+South Kalimantan,MODIS,2014,9,1700
+South Kalimantan,MODIS,2014,10,1256
+South Kalimantan,MODIS,2014,11,490
+South Kalimantan,MODIS,2014,12,4
+South Kalimantan,MODIS,2015,1,4
+South Kalimantan,MODIS,2015,2,2
+South Kalimantan,MODIS,2015,3,2
+South Kalimantan,MODIS,2015,4,5
+South Kalimantan,MODIS,2015,5,10
+South Kalimantan,MODIS,2015,6,8
+South Kalimantan,MODIS,2015,7,94
+South Kalimantan,MODIS,2015,8,850
+South Kalimantan,MODIS,2015,9,3128
+South Kalimantan,MODIS,2015,10,2312
+South Kalimantan,MODIS,2015,11,303
+South Kalimantan,MODIS,2015,12,39
+South Kalimantan,MODIS,2016,1,72
+South Kalimantan,MODIS,2016,2,5
+South Kalimantan,MODIS,2016,3,4
+South Kalimantan,MODIS,2016,4,4
+South Kalimantan,MODIS,2016,6,5
+South Kalimantan,MODIS,2016,7,10
+South Kalimantan,MODIS,2016,8,45
+South Kalimantan,MODIS,2016,9,43
+South Kalimantan,MODIS,2016,10,29
+South Kalimantan,MODIS,2016,11,7
+South Kalimantan,MODIS,2016,12,2
+South Kalimantan,MODIS,2017,2,2
+South Kalimantan,MODIS,2017,3,1
+South Kalimantan,MODIS,2017,4,6
+South Kalimantan,MODIS,2017,5,1
+South Kalimantan,MODIS,2017,6,4
+South Kalimantan,MODIS,2017,7,30
+South Kalimantan,MODIS,2017,8,41
+South Kalimantan,MODIS,2017,9,191
+South Kalimantan,MODIS,2017,10,68
+South Kalimantan,MODIS,2017,11,6
+South Kalimantan,MODIS,2017,12,8
+South Kalimantan,MODIS,2018,1,5
+South Kalimantan,MODIS,2018,2,3
+South Kalimantan,MODIS,2018,3,2
+South Kalimantan,MODIS,2018,4,3
+South Kalimantan,MODIS,2018,5,4
+South Kalimantan,MODIS,2018,6,6
+South Kalimantan,MODIS,2018,7,68
+South Kalimantan,MODIS,2018,8,185
+South Kalimantan,MODIS,2018,9,661
+South Kalimantan,MODIS,2018,10,374
+South Kalimantan,MODIS,2018,11,38
+South Kalimantan,MODIS,2018,12,8
+South Kalimantan,MODIS,2019,1,12
+South Kalimantan,MODIS,2019,2,32
+South Kalimantan,MODIS,2019,3,13
+South Kalimantan,MODIS,2019,4,1
+South Kalimantan,MODIS,2019,5,44
+South Kalimantan,MODIS,2019,6,69
+South Kalimantan,MODIS,2019,7,86
+South Kalimantan,MODIS,2019,8,385
+South Kalimantan,MODIS,2019,9,1801
+South Kalimantan,MODIS,2019,10,597
+South Kalimantan,MODIS,2019,11,409
+South Kalimantan,MODIS,2019,12,44
+South Kalimantan,MODIS,2020,1,11
+South Kalimantan,MODIS,2020,2,2
+South Kalimantan,MODIS,2020,3,5
+South Kalimantan,MODIS,2020,5,3
+South Kalimantan,MODIS,2020,6,8
+South Kalimantan,MODIS,2020,7,2
+South Kalimantan,MODIS,2020,8,16
+South Kalimantan,MODIS,2020,9,80
+South Kalimantan,MODIS,2020,10,31
+South Kalimantan,MODIS,2020,11,17
+South Kalimantan,MODIS,2021,1,2
+South Kalimantan,MODIS,2021,2,1
+South Kalimantan,MODIS,2021,3,1
+South Kalimantan,MODIS,2021,4,16
+South Kalimantan,MODIS,2021,5,5
+South Kalimantan,MODIS,2021,6,34
+South Kalimantan,MODIS,2021,7,38
+South Kalimantan,MODIS,2021,8,45
+South Kalimantan,MODIS,2021,9,25
+South Kalimantan,MODIS,2021,10,22
+South Kalimantan,MODIS,2021,11,4
+South Kalimantan,MODIS,2022,1,9
+South Kalimantan,MODIS,2022,2,7
+South Kalimantan,MODIS,2022,3,7
+South Kalimantan,MODIS,2022,4,2
+South Kalimantan,MODIS,2022,5,6
+South Kalimantan,MODIS,2022,6,2
+South Kalimantan,MODIS,2022,7,14
+South Kalimantan,MODIS,2022,8,26
+South Kalimantan,MODIS,2022,9,10
+South Kalimantan,MODIS,2022,10,5
+South Kalimantan,MODIS,2022,11,7
+South Kalimantan,MODIS,2023,1,2
+South Kalimantan,MODIS,2023,3,1
+South Kalimantan,MODIS,2023,4,9
+South Kalimantan,MODIS,2023,5,45
+South Kalimantan,MODIS,2023,6,54
+South Kalimantan,MODIS,2023,7,150
+South Kalimantan,MODIS,2023,8,750
+South Kalimantan,MODIS,2023,9,1055
+South Kalimantan,MODIS,2023,10,553
+South Kalimantan,MODIS,2023,11,51
+South Kalimantan,MODIS,2023,12,11
+South Kalimantan,MODIS,2024,1,3
+South Kalimantan,MODIS,2024,2,5
+South Kalimantan,MODIS,2024,3,1
+South Kalimantan,MODIS,2024,4,3
+South Kalimantan,MODIS,2024,5,2
+South Kalimantan,MODIS,2024,6,1
+South Kalimantan,MODIS,2024,7,11
+South Kalimantan,MODIS,2024,8,46
+South Kalimantan,MODIS,2024,9,135
+South Kalimantan,MODIS,2024,10,56
+South Kalimantan,MODIS,2024,11,6
+South Kalimantan,MODIS,2024,12,2
+South Kalimantan,MODIS,2025,1,2
+South Kalimantan,MODIS,2025,2,3
+South Kalimantan,MODIS,2025,3,1
+South Kalimantan,MODIS,2025,4,2
+South Kalimantan,MODIS,2025,5,5
+South Kalimantan,MODIS,2025,7,101
+South Kalimantan,MODIS,2025,8,10
+South Kalimantan,MODIS,2025,9,66
+South Kalimantan,MODIS,2025,10,54
+South Kalimantan,MODIS,2025,11,8
+South Kalimantan,MODIS,2025,12,1
+South Kalimantan,MODIS,2026,1,12
+South Kalimantan,MODIS,2026,2,3
+South Kalimantan,MODIS,2026,3,4
+South Kalimantan,MODIS,2026,4,5
+South Kalimantan,MODIS,2026,5,9
+South Kalimantan,MODIS,2026,6,40
+South Kalimantan,MODIS,2026,7,172
+South Kalimantan,MODIS,2026,8,1724
+South Kalimantan,MODIS,2026,9,2106
+South Kalimantan,MODIS,2026,10,1827
+South Kalimantan,MODIS,2026,11,75
+South Kalimantan,VIIRS NOAA-20,2018,4,19
+South Kalimantan,VIIRS NOAA-20,2018,5,40
+South Kalimantan,VIIRS NOAA-20,2018,6,77
+South Kalimantan,VIIRS NOAA-20,2018,7,291
+South Kalimantan,VIIRS NOAA-20,2018,8,1315
+South Kalimantan,VIIRS NOAA-20,2018,9,3378
+South Kalimantan,VIIRS NOAA-20,2018,10,1693
+South Kalimantan,VIIRS NOAA-20,2018,11,125
+South Kalimantan,VIIRS NOAA-20,2018,12,34
+South Kalimantan,VIIRS NOAA-20,2019,1,32
+South Kalimantan,VIIRS NOAA-20,2019,2,41
+South Kalimantan,VIIRS NOAA-20,2019,3,23
+South Kalimantan,VIIRS NOAA-20,2019,4,13
+South Kalimantan,VIIRS NOAA-20,2019,5,72
+South Kalimantan,VIIRS NOAA-20,2019,6,75
+South Kalimantan,VIIRS NOAA-20,2019,7,448
+South Kalimantan,VIIRS NOAA-20,2019,8,1697
+South Kalimantan,VIIRS NOAA-20,2019,9,8241
+South Kalimantan,VIIRS NOAA-20,2019,10,3125
+South Kalimantan,VIIRS NOAA-20,2019,11,2517
+South Kalimantan,VIIRS NOAA-20,2019,12,221
+South Kalimantan,VIIRS NOAA-20,2020,1,86
+South Kalimantan,VIIRS NOAA-20,2020,2,57
+South Kalimantan,VIIRS NOAA-20,2020,3,31
+South Kalimantan,VIIRS NOAA-20,2020,4,16
+South Kalimantan,VIIRS NOAA-20,2020,5,23
+South Kalimantan,VIIRS NOAA-20,2020,6,35
+South Kalimantan,VIIRS NOAA-20,2020,7,44
+South Kalimantan,VIIRS NOAA-20,2020,8,146
+South Kalimantan,VIIRS NOAA-20,2020,9,227
+South Kalimantan,VIIRS NOAA-20,2020,10,315
+South Kalimantan,VIIRS NOAA-20,2020,11,72
+South Kalimantan,VIIRS NOAA-20,2020,12,8
+South Kalimantan,VIIRS NOAA-20,2021,1,2
+South Kalimantan,VIIRS NOAA-20,2021,2,7
+South Kalimantan,VIIRS NOAA-20,2021,3,9
+South Kalimantan,VIIRS NOAA-20,2021,4,97
+South Kalimantan,VIIRS NOAA-20,2021,5,64
+South Kalimantan,VIIRS NOAA-20,2021,6,136
+South Kalimantan,VIIRS NOAA-20,2021,7,206
+South Kalimantan,VIIRS NOAA-20,2021,8,228
+South Kalimantan,VIIRS NOAA-20,2021,9,193
+South Kalimantan,VIIRS NOAA-20,2021,10,245
+South Kalimantan,VIIRS NOAA-20,2021,11,24
+South Kalimantan,VIIRS NOAA-20,2021,12,20
+South Kalimantan,VIIRS NOAA-20,2022,1,27
+South Kalimantan,VIIRS NOAA-20,2022,2,14
+South Kalimantan,VIIRS NOAA-20,2022,3,33
+South Kalimantan,VIIRS NOAA-20,2022,4,70
+South Kalimantan,VIIRS NOAA-20,2022,5,64
+South Kalimantan,VIIRS NOAA-20,2022,6,87
+South Kalimantan,VIIRS NOAA-20,2022,7,92
+South Kalimantan,VIIRS NOAA-20,2022,8,226
+South Kalimantan,VIIRS NOAA-20,2022,9,180
+South Kalimantan,VIIRS NOAA-20,2022,10,49
+South Kalimantan,VIIRS NOAA-20,2022,11,34
+South Kalimantan,VIIRS NOAA-20,2022,12,18
+South Kalimantan,VIIRS NOAA-20,2023,1,26
+South Kalimantan,VIIRS NOAA-20,2023,2,17
+South Kalimantan,VIIRS NOAA-20,2023,3,28
+South Kalimantan,VIIRS NOAA-20,2023,4,47
+South Kalimantan,VIIRS NOAA-20,2023,5,222
+South Kalimantan,VIIRS NOAA-20,2023,6,338
+South Kalimantan,VIIRS NOAA-20,2023,7,712
+South Kalimantan,VIIRS NOAA-20,2023,8,3629
+South Kalimantan,VIIRS NOAA-20,2023,9,5952
+South Kalimantan,VIIRS NOAA-20,2023,10,2856
+South Kalimantan,VIIRS NOAA-20,2023,11,390
+South Kalimantan,VIIRS NOAA-20,2023,12,110
+South Kalimantan,VIIRS NOAA-20,2024,1,39
+South Kalimantan,VIIRS NOAA-20,2024,2,58
+South Kalimantan,VIIRS NOAA-20,2024,3,79
+South Kalimantan,VIIRS NOAA-20,2024,4,79
+South Kalimantan,VIIRS NOAA-20,2024,5,75
+South Kalimantan,VIIRS NOAA-20,2024,6,70
+South Kalimantan,VIIRS NOAA-20,2024,7,132
+South Kalimantan,VIIRS NOAA-20,2024,8,154
+South Kalimantan,VIIRS NOAA-20,2024,9,951
+South Kalimantan,VIIRS NOAA-20,2024,10,522
+South Kalimantan,VIIRS NOAA-20,2024,11,104
+South Kalimantan,VIIRS NOAA-20,2024,12,32
+South Kalimantan,VIIRS NOAA-20,2025,1,17
+South Kalimantan,VIIRS NOAA-20,2025,2,12
+South Kalimantan,VIIRS NOAA-20,2025,3,16
+South Kalimantan,VIIRS NOAA-20,2025,4,15
+South Kalimantan,VIIRS NOAA-20,2025,5,22
+South Kalimantan,VIIRS NOAA-20,2025,6,38
+South Kalimantan,VIIRS NOAA-20,2025,7,342
+South Kalimantan,VIIRS NOAA-20,2025,8,118
+South Kalimantan,VIIRS NOAA-20,2025,9,428
+South Kalimantan,VIIRS NOAA-20,2025,10,228
+South Kalimantan,VIIRS NOAA-20,2025,11,99
+South Kalimantan,VIIRS NOAA-20,2025,12,40
+South Kalimantan,VIIRS NOAA-20,2026,1,68
+South Kalimantan,VIIRS NOAA-20,2026,2,18
+South Kalimantan,VIIRS NOAA-20,2026,3,53
+South Kalimantan,VIIRS NOAA-20,2026,4,114
+South Kalimantan,VIIRS NOAA-20,2026,5,83
+South Kalimantan,VIIRS NOAA-20,2026,6,179
+South Kalimantan,VIIRS NOAA-20,2026,7,977
+South Kalimantan,VIIRS NOAA-20,2026,8,7319
+South Kalimantan,VIIRS NOAA-20,2026,9,8993
+South Kalimantan,VIIRS NOAA-20,2026,10,9271
+South Kalimantan,VIIRS NOAA-20,2026,11,552
+South Kalimantan,VIIRS NOAA-21,2023,3,25
+South Kalimantan,VIIRS NOAA-21,2023,4,34
+South Kalimantan,VIIRS NOAA-21,2023,5,148
+South Kalimantan,VIIRS NOAA-21,2023,6,278
+South Kalimantan,VIIRS NOAA-21,2023,7,672
+South Kalimantan,VIIRS NOAA-21,2023,8,3590
+South Kalimantan,VIIRS NOAA-21,2023,9,6048
+South Kalimantan,VIIRS NOAA-21,2023,10,2934
+South Kalimantan,VIIRS NOAA-21,2023,11,322
+South Kalimantan,VIIRS NOAA-21,2023,12,52
+South Kalimantan,VIIRS NOAA-21,2024,1,26
+South Kalimantan,VIIRS NOAA-21,2024,2,42
+South Kalimantan,VIIRS NOAA-21,2024,3,31
+South Kalimantan,VIIRS NOAA-21,2024,4,38
+South Kalimantan,VIIRS NOAA-21,2024,5,31
+South Kalimantan,VIIRS NOAA-21,2024,6,27
+South Kalimantan,VIIRS NOAA-21,2024,7,105
+South Kalimantan,VIIRS NOAA-21,2024,8,150
+South Kalimantan,VIIRS NOAA-21,2024,9,892
+South Kalimantan,VIIRS NOAA-21,2024,10,462
+South Kalimantan,VIIRS NOAA-21,2024,11,97
+South Kalimantan,VIIRS NOAA-21,2024,12,24
+South Kalimantan,VIIRS NOAA-21,2025,1,11
+South Kalimantan,VIIRS NOAA-21,2025,2,6
+South Kalimantan,VIIRS NOAA-21,2025,3,11
+South Kalimantan,VIIRS NOAA-21,2025,4,13
+South Kalimantan,VIIRS NOAA-21,2025,5,26
+South Kalimantan,VIIRS NOAA-21,2025,6,29
+South Kalimantan,VIIRS NOAA-21,2025,7,316
+South Kalimantan,VIIRS NOAA-21,2025,8,127
+South Kalimantan,VIIRS NOAA-21,2025,9,465
+South Kalimantan,VIIRS NOAA-21,2025,10,315
+South Kalimantan,VIIRS NOAA-21,2025,11,96
+South Kalimantan,VIIRS NOAA-21,2025,12,32
+South Kalimantan,VIIRS NOAA-21,2026,1,45
+South Kalimantan,VIIRS NOAA-21,2026,2,23
+South Kalimantan,VIIRS NOAA-21,2026,3,53
+South Kalimantan,VIIRS NOAA-21,2026,4,106
+South Kalimantan,VIIRS NOAA-21,2026,5,95
+South Kalimantan,VIIRS NOAA-21,2026,6,144
+South Kalimantan,VIIRS NOAA-21,2026,7,1015
+South Kalimantan,VIIRS NOAA-21,2026,8,6608
+South Kalimantan,VIIRS NOAA-21,2026,9,8726
+South Kalimantan,VIIRS NOAA-21,2026,10,8579
+South Kalimantan,VIIRS NOAA-21,2026,11,548
+South Kalimantan,VIIRS S-NPP,2012,1,34
+South Kalimantan,VIIRS S-NPP,2012,2,35
+South Kalimantan,VIIRS S-NPP,2012,3,33
+South Kalimantan,VIIRS S-NPP,2012,4,51
+South Kalimantan,VIIRS S-NPP,2012,5,170
+South Kalimantan,VIIRS S-NPP,2012,6,75
+South Kalimantan,VIIRS S-NPP,2012,7,240
+South Kalimantan,VIIRS S-NPP,2012,8,1193
+South Kalimantan,VIIRS S-NPP,2012,9,4191
+South Kalimantan,VIIRS S-NPP,2012,10,2800
+South Kalimantan,VIIRS S-NPP,2012,11,188
+South Kalimantan,VIIRS S-NPP,2012,12,52
+South Kalimantan,VIIRS S-NPP,2013,1,43
+South Kalimantan,VIIRS S-NPP,2013,2,33
+South Kalimantan,VIIRS S-NPP,2013,3,44
+South Kalimantan,VIIRS S-NPP,2013,4,46
+South Kalimantan,VIIRS S-NPP,2013,5,35
+South Kalimantan,VIIRS S-NPP,2013,6,78
+South Kalimantan,VIIRS S-NPP,2013,7,76
+South Kalimantan,VIIRS S-NPP,2013,8,373
+South Kalimantan,VIIRS S-NPP,2013,9,1673
+South Kalimantan,VIIRS S-NPP,2013,10,2992
+South Kalimantan,VIIRS S-NPP,2013,11,251
+South Kalimantan,VIIRS S-NPP,2013,12,39
+South Kalimantan,VIIRS S-NPP,2014,1,55
+South Kalimantan,VIIRS S-NPP,2014,2,24
+South Kalimantan,VIIRS S-NPP,2014,3,49
+South Kalimantan,VIIRS S-NPP,2014,4,80
+South Kalimantan,VIIRS S-NPP,2014,5,73
+South Kalimantan,VIIRS S-NPP,2014,6,76
+South Kalimantan,VIIRS S-NPP,2014,7,339
+South Kalimantan,VIIRS S-NPP,2014,8,1381
+South Kalimantan,VIIRS S-NPP,2014,9,7532
+South Kalimantan,VIIRS S-NPP,2014,10,7928
+South Kalimantan,VIIRS S-NPP,2014,11,2420
+South Kalimantan,VIIRS S-NPP,2014,12,48
+South Kalimantan,VIIRS S-NPP,2015,1,28
+South Kalimantan,VIIRS S-NPP,2015,2,46
+South Kalimantan,VIIRS S-NPP,2015,3,46
+South Kalimantan,VIIRS S-NPP,2015,4,67
+South Kalimantan,VIIRS S-NPP,2015,5,107
+South Kalimantan,VIIRS S-NPP,2015,6,125
+South Kalimantan,VIIRS S-NPP,2015,7,768
+South Kalimantan,VIIRS S-NPP,2015,8,4781
+South Kalimantan,VIIRS S-NPP,2015,9,15277
+South Kalimantan,VIIRS S-NPP,2015,10,14090
+South Kalimantan,VIIRS S-NPP,2015,11,1535
+South Kalimantan,VIIRS S-NPP,2015,12,217
+South Kalimantan,VIIRS S-NPP,2016,1,302
+South Kalimantan,VIIRS S-NPP,2016,2,56
+South Kalimantan,VIIRS S-NPP,2016,3,23
+South Kalimantan,VIIRS S-NPP,2016,4,12
+South Kalimantan,VIIRS S-NPP,2016,5,29
+South Kalimantan,VIIRS S-NPP,2016,6,47
+South Kalimantan,VIIRS S-NPP,2016,7,96
+South Kalimantan,VIIRS S-NPP,2016,8,305
+South Kalimantan,VIIRS S-NPP,2016,9,325
+South Kalimantan,VIIRS S-NPP,2016,10,312
+South Kalimantan,VIIRS S-NPP,2016,11,92
+South Kalimantan,VIIRS S-NPP,2016,12,6
+South Kalimantan,VIIRS S-NPP,2017,1,9
+South Kalimantan,VIIRS S-NPP,2017,2,7
+South Kalimantan,VIIRS S-NPP,2017,3,30
+South Kalimantan,VIIRS S-NPP,2017,4,31
+South Kalimantan,VIIRS S-NPP,2017,5,34
+South Kalimantan,VIIRS S-NPP,2017,6,47
+South Kalimantan,VIIRS S-NPP,2017,7,136
+South Kalimantan,VIIRS S-NPP,2017,8,249
+South Kalimantan,VIIRS S-NPP,2017,9,1060
+South Kalimantan,VIIRS S-NPP,2017,10,412
+South Kalimantan,VIIRS S-NPP,2017,11,57
+South Kalimantan,VIIRS S-NPP,2017,12,34
+South Kalimantan,VIIRS S-NPP,2018,1,24
+South Kalimantan,VIIRS S-NPP,2018,2,38
+South Kalimantan,VIIRS S-NPP,2018,3,25
+South Kalimantan,VIIRS S-NPP,2018,4,28
+South Kalimantan,VIIRS S-NPP,2018,5,49
+South Kalimantan,VIIRS S-NPP,2018,6,146
+South Kalimantan,VIIRS S-NPP,2018,7,425
+South Kalimantan,VIIRS S-NPP,2018,8,1290
+South Kalimantan,VIIRS S-NPP,2018,9,3547
+South Kalimantan,VIIRS S-NPP,2018,10,1664
+South Kalimantan,VIIRS S-NPP,2018,11,132
+South Kalimantan,VIIRS S-NPP,2018,12,46
+South Kalimantan,VIIRS S-NPP,2019,1,38
+South Kalimantan,VIIRS S-NPP,2019,2,81
+South Kalimantan,VIIRS S-NPP,2019,3,72
+South Kalimantan,VIIRS S-NPP,2019,4,26
+South Kalimantan,VIIRS S-NPP,2019,5,142
+South Kalimantan,VIIRS S-NPP,2019,6,128
+South Kalimantan,VIIRS S-NPP,2019,7,473
+South Kalimantan,VIIRS S-NPP,2019,8,1884
+South Kalimantan,VIIRS S-NPP,2019,9,8457
+South Kalimantan,VIIRS S-NPP,2019,10,3295
+South Kalimantan,VIIRS S-NPP,2019,11,2226
+South Kalimantan,VIIRS S-NPP,2019,12,205
+South Kalimantan,VIIRS S-NPP,2020,1,63
+South Kalimantan,VIIRS S-NPP,2020,2,53
+South Kalimantan,VIIRS S-NPP,2020,3,35
+South Kalimantan,VIIRS S-NPP,2020,4,11
+South Kalimantan,VIIRS S-NPP,2020,5,15
+South Kalimantan,VIIRS S-NPP,2020,6,24
+South Kalimantan,VIIRS S-NPP,2020,7,40
+South Kalimantan,VIIRS S-NPP,2020,8,120
+South Kalimantan,VIIRS S-NPP,2020,9,246
+South Kalimantan,VIIRS S-NPP,2020,10,288
+South Kalimantan,VIIRS S-NPP,2020,11,83
+South Kalimantan,VIIRS S-NPP,2020,12,11
+South Kalimantan,VIIRS S-NPP,2021,1,6
+South Kalimantan,VIIRS S-NPP,2021,2,8
+South Kalimantan,VIIRS S-NPP,2021,3,8
+South Kalimantan,VIIRS S-NPP,2021,4,128
+South Kalimantan,VIIRS S-NPP,2021,5,42
+South Kalimantan,VIIRS S-NPP,2021,6,128
+South Kalimantan,VIIRS S-NPP,2021,7,156
+South Kalimantan,VIIRS S-NPP,2021,8,162
+South Kalimantan,VIIRS S-NPP,2021,9,171
+South Kalimantan,VIIRS S-NPP,2021,10,199
+South Kalimantan,VIIRS S-NPP,2021,11,20
+South Kalimantan,VIIRS S-NPP,2021,12,14
+South Kalimantan,VIIRS S-NPP,2022,1,38
+South Kalimantan,VIIRS S-NPP,2022,2,6
+South Kalimantan,VIIRS S-NPP,2022,3,34
+South Kalimantan,VIIRS S-NPP,2022,4,69
+South Kalimantan,VIIRS S-NPP,2022,5,60
+South Kalimantan,VIIRS S-NPP,2022,6,57
+South Kalimantan,VIIRS S-NPP,2022,7,70
+South Kalimantan,VIIRS S-NPP,2022,8,133
+South Kalimantan,VIIRS S-NPP,2022,9,198
+South Kalimantan,VIIRS S-NPP,2022,10,58
+South Kalimantan,VIIRS S-NPP,2022,11,22
+South Kalimantan,VIIRS S-NPP,2022,12,35
+South Kalimantan,VIIRS S-NPP,2023,1,26
+South Kalimantan,VIIRS S-NPP,2023,2,14
+South Kalimantan,VIIRS S-NPP,2023,3,39
+South Kalimantan,VIIRS S-NPP,2023,4,41
+South Kalimantan,VIIRS S-NPP,2023,5,259
+South Kalimantan,VIIRS S-NPP,2023,6,328
+South Kalimantan,VIIRS S-NPP,2023,7,634
+South Kalimantan,VIIRS S-NPP,2023,8,3675
+South Kalimantan,VIIRS S-NPP,2023,9,6006
+South Kalimantan,VIIRS S-NPP,2023,10,2960
+South Kalimantan,VIIRS S-NPP,2023,11,406
+South Kalimantan,VIIRS S-NPP,2023,12,100
+South Kalimantan,VIIRS S-NPP,2024,1,43
+South Kalimantan,VIIRS S-NPP,2024,2,73
+South Kalimantan,VIIRS S-NPP,2024,3,70
+South Kalimantan,VIIRS S-NPP,2024,4,96
+South Kalimantan,VIIRS S-NPP,2024,5,64
+South Kalimantan,VIIRS S-NPP,2024,6,49
+South Kalimantan,VIIRS S-NPP,2024,7,77
+South Kalimantan,VIIRS S-NPP,2024,8,165
+South Kalimantan,VIIRS S-NPP,2024,9,717
+South Kalimantan,VIIRS S-NPP,2024,10,491
+South Kalimantan,VIIRS S-NPP,2024,11,88
+South Kalimantan,VIIRS S-NPP,2024,12,17
+South Kalimantan,VIIRS S-NPP,2025,1,8
+South Kalimantan,VIIRS S-NPP,2025,2,15
+South Kalimantan,VIIRS S-NPP,2025,3,11
+South Kalimantan,VIIRS S-NPP,2025,4,19
+South Kalimantan,VIIRS S-NPP,2025,5,25
+South Kalimantan,VIIRS S-NPP,2025,6,38
+South Kalimantan,VIIRS S-NPP,2025,7,361
+South Kalimantan,VIIRS S-NPP,2025,8,149
+South Kalimantan,VIIRS S-NPP,2025,9,383
+South Kalimantan,VIIRS S-NPP,2025,10,341
+South Kalimantan,VIIRS S-NPP,2025,11,104
+South Kalimantan,VIIRS S-NPP,2025,12,37
+South Kalimantan,VIIRS S-NPP,2026,1,65
+South Kalimantan,VIIRS S-NPP,2026,2,16
+South Kalimantan,VIIRS S-NPP,2026,3,53
+South Kalimantan,VIIRS S-NPP,2026,4,93
+South Kalimantan,VIIRS S-NPP,2026,5,100
+South Kalimantan,VIIRS S-NPP,2026,6,207
+South Kalimantan,VIIRS S-NPP,2026,7,815
+South Kalimantan,VIIRS S-NPP,2026,8,7158
+South Kalimantan,VIIRS S-NPP,2026,9,9070
+South Kalimantan,VIIRS S-NPP,2026,10,8656
+South Kalimantan,VIIRS S-NPP,2026,11,32
+West Kalimantan,MODIS,2001,12,1
+West Kalimantan,MODIS,2002,2,14
+West Kalimantan,MODIS,2002,3,3
+West Kalimantan,MODIS,2002,4,4
+West Kalimantan,MODIS,2002,5,18
+West Kalimantan,MODIS,2002,6,16
+West Kalimantan,MODIS,2002,7,1006
+West Kalimantan,MODIS,2002,8,13042
+West Kalimantan,MODIS,2002,9,2865
+West Kalimantan,MODIS,2002,10,520
+West Kalimantan,MODIS,2002,11,7
+West Kalimantan,MODIS,2002,12,13
+West Kalimantan,MODIS,2003,1,7
+West Kalimantan,MODIS,2003,2,18
+West Kalimantan,MODIS,2003,3,58
+West Kalimantan,MODIS,2003,4,2
+West Kalimantan,MODIS,2003,5,117
+West Kalimantan,MODIS,2003,6,347
+West Kalimantan,MODIS,2003,7,419
+West Kalimantan,MODIS,2003,8,4470
+West Kalimantan,MODIS,2003,9,2154
+West Kalimantan,MODIS,2003,10,58
+West Kalimantan,MODIS,2003,11,3
+West Kalimantan,MODIS,2004,1,14
+West Kalimantan,MODIS,2004,2,73
+West Kalimantan,MODIS,2004,3,47
+West Kalimantan,MODIS,2004,4,21
+West Kalimantan,MODIS,2004,5,75
+West Kalimantan,MODIS,2004,6,558
+West Kalimantan,MODIS,2004,7,85
+West Kalimantan,MODIS,2004,8,10282
+West Kalimantan,MODIS,2004,9,1630
+West Kalimantan,MODIS,2004,10,597
+West Kalimantan,MODIS,2004,11,16
+West Kalimantan,MODIS,2004,12,2
+West Kalimantan,MODIS,2005,1,63
+West Kalimantan,MODIS,2005,2,76
+West Kalimantan,MODIS,2005,3,106
+West Kalimantan,MODIS,2005,4,63
+West Kalimantan,MODIS,2005,5,31
+West Kalimantan,MODIS,2005,6,42
+West Kalimantan,MODIS,2005,7,193
+West Kalimantan,MODIS,2005,8,4092
+West Kalimantan,MODIS,2005,9,1149
+West Kalimantan,MODIS,2005,10,55
+West Kalimantan,MODIS,2005,11,20
+West Kalimantan,MODIS,2005,12,5
+West Kalimantan,MODIS,2006,1,119
+West Kalimantan,MODIS,2006,2,44
+West Kalimantan,MODIS,2006,3,177
+West Kalimantan,MODIS,2006,4,17
+West Kalimantan,MODIS,2006,5,20
+West Kalimantan,MODIS,2006,6,73
+West Kalimantan,MODIS,2006,7,1581
+West Kalimantan,MODIS,2006,8,10032
+West Kalimantan,MODIS,2006,9,2600
+West Kalimantan,MODIS,2006,10,3581
+West Kalimantan,MODIS,2006,11,233
+West Kalimantan,MODIS,2006,12,8
+West Kalimantan,MODIS,2007,1,5
+West Kalimantan,MODIS,2007,2,174
+West Kalimantan,MODIS,2007,3,146
+West Kalimantan,MODIS,2007,4,62
+West Kalimantan,MODIS,2007,5,45
+West Kalimantan,MODIS,2007,6,28
+West Kalimantan,MODIS,2007,7,142
+West Kalimantan,MODIS,2007,8,2682
+West Kalimantan,MODIS,2007,9,1520
+West Kalimantan,MODIS,2007,10,477
+West Kalimantan,MODIS,2007,11,20
+West Kalimantan,MODIS,2007,12,11
+West Kalimantan,MODIS,2008,1,319
+West Kalimantan,MODIS,2008,2,42
+West Kalimantan,MODIS,2008,3,20
+West Kalimantan,MODIS,2008,4,30
+West Kalimantan,MODIS,2008,5,684
+West Kalimantan,MODIS,2008,6,310
+West Kalimantan,MODIS,2008,7,131
+West Kalimantan,MODIS,2008,8,1365
+West Kalimantan,MODIS,2008,9,2161
+West Kalimantan,MODIS,2008,10,53
+West Kalimantan,MODIS,2008,11,72
+West Kalimantan,MODIS,2008,12,7
+West Kalimantan,MODIS,2009,1,17
+West Kalimantan,MODIS,2009,2,113
+West Kalimantan,MODIS,2009,3,29
+West Kalimantan,MODIS,2009,4,97
+West Kalimantan,MODIS,2009,5,214
+West Kalimantan,MODIS,2009,6,605
+West Kalimantan,MODIS,2009,7,2348
+West Kalimantan,MODIS,2009,8,8680
+West Kalimantan,MODIS,2009,9,4387
+West Kalimantan,MODIS,2009,10,144
+West Kalimantan,MODIS,2009,11,24
+West Kalimantan,MODIS,2009,12,19
+West Kalimantan,MODIS,2010,1,31
+West Kalimantan,MODIS,2010,2,62
+West Kalimantan,MODIS,2010,3,64
+West Kalimantan,MODIS,2010,4,61
+West Kalimantan,MODIS,2010,5,53
+West Kalimantan,MODIS,2010,6,71
+West Kalimantan,MODIS,2010,7,34
+West Kalimantan,MODIS,2010,8,651
+West Kalimantan,MODIS,2010,9,686
+West Kalimantan,MODIS,2010,10,495
+West Kalimantan,MODIS,2010,11,14
+West Kalimantan,MODIS,2010,12,24
+West Kalimantan,MODIS,2011,1,46
+West Kalimantan,MODIS,2011,2,135
+West Kalimantan,MODIS,2011,3,69
+West Kalimantan,MODIS,2011,4,286
+West Kalimantan,MODIS,2011,5,105
+West Kalimantan,MODIS,2011,6,471
+West Kalimantan,MODIS,2011,7,967
+West Kalimantan,MODIS,2011,8,4056
+West Kalimantan,MODIS,2011,9,1568
+West Kalimantan,MODIS,2011,10,99
+West Kalimantan,MODIS,2011,11,30
+West Kalimantan,MODIS,2011,12,11
+West Kalimantan,MODIS,2012,1,37
+West Kalimantan,MODIS,2012,2,9
+West Kalimantan,MODIS,2012,3,127
+West Kalimantan,MODIS,2012,4,48
+West Kalimantan,MODIS,2012,5,364
+West Kalimantan,MODIS,2012,6,781
+West Kalimantan,MODIS,2012,7,533
+West Kalimantan,MODIS,2012,8,4312
+West Kalimantan,MODIS,2012,9,3279
+West Kalimantan,MODIS,2012,10,552
+West Kalimantan,MODIS,2012,11,7
+West Kalimantan,MODIS,2012,12,6
+West Kalimantan,MODIS,2013,1,103
+West Kalimantan,MODIS,2013,2,15
+West Kalimantan,MODIS,2013,3,281
+West Kalimantan,MODIS,2013,4,51
+West Kalimantan,MODIS,2013,5,25
+West Kalimantan,MODIS,2013,6,485
+West Kalimantan,MODIS,2013,7,189
+West Kalimantan,MODIS,2013,8,2552
+West Kalimantan,MODIS,2013,9,1733
+West Kalimantan,MODIS,2013,10,630
+West Kalimantan,MODIS,2013,11,8
+West Kalimantan,MODIS,2013,12,2
+West Kalimantan,MODIS,2014,1,453
+West Kalimantan,MODIS,2014,2,1608
+West Kalimantan,MODIS,2014,3,353
+West Kalimantan,MODIS,2014,4,105
+West Kalimantan,MODIS,2014,5,45
+West Kalimantan,MODIS,2014,6,282
+West Kalimantan,MODIS,2014,7,3319
+West Kalimantan,MODIS,2014,8,2223
+West Kalimantan,MODIS,2014,9,2244
+West Kalimantan,MODIS,2014,10,1156
+West Kalimantan,MODIS,2014,11,338
+West Kalimantan,MODIS,2014,12,17
+West Kalimantan,MODIS,2015,1,11
+West Kalimantan,MODIS,2015,2,21
+West Kalimantan,MODIS,2015,3,69
+West Kalimantan,MODIS,2015,4,16
+West Kalimantan,MODIS,2015,5,56
+West Kalimantan,MODIS,2015,6,108
+West Kalimantan,MODIS,2015,7,1098
+West Kalimantan,MODIS,2015,8,4814
+West Kalimantan,MODIS,2015,9,5744
+West Kalimantan,MODIS,2015,10,1051
+West Kalimantan,MODIS,2015,11,64
+West Kalimantan,MODIS,2015,12,16
+West Kalimantan,MODIS,2016,1,6
+West Kalimantan,MODIS,2016,2,1
+West Kalimantan,MODIS,2016,3,32
+West Kalimantan,MODIS,2016,4,20
+West Kalimantan,MODIS,2016,5,6
+West Kalimantan,MODIS,2016,6,12
+West Kalimantan,MODIS,2016,7,94
+West Kalimantan,MODIS,2016,8,2033
+West Kalimantan,MODIS,2016,9,1248
+West Kalimantan,MODIS,2016,10,112
+West Kalimantan,MODIS,2016,11,18
+West Kalimantan,MODIS,2016,12,14
+West Kalimantan,MODIS,2017,1,48
+West Kalimantan,MODIS,2017,2,31
+West Kalimantan,MODIS,2017,3,11
+West Kalimantan,MODIS,2017,4,12
+West Kalimantan,MODIS,2017,5,36
+West Kalimantan,MODIS,2017,6,47
+West Kalimantan,MODIS,2017,7,375
+West Kalimantan,MODIS,2017,8,492
+West Kalimantan,MODIS,2017,9,901
+West Kalimantan,MODIS,2017,10,62
+West Kalimantan,MODIS,2017,11,4
+West Kalimantan,MODIS,2017,12,15
+West Kalimantan,MODIS,2018,1,16
+West Kalimantan,MODIS,2018,2,245
+West Kalimantan,MODIS,2018,3,45
+West Kalimantan,MODIS,2018,4,34
+West Kalimantan,MODIS,2018,5,9
+West Kalimantan,MODIS,2018,6,37
+West Kalimantan,MODIS,2018,7,804
+West Kalimantan,MODIS,2018,8,4834
+West Kalimantan,MODIS,2018,9,625
+West Kalimantan,MODIS,2018,10,102
+West Kalimantan,MODIS,2018,11,9
+West Kalimantan,MODIS,2018,12,6
+West Kalimantan,MODIS,2019,1,22
+West Kalimantan,MODIS,2019,2,12
+West Kalimantan,MODIS,2019,3,132
+West Kalimantan,MODIS,2019,4,74
+West Kalimantan,MODIS,2019,5,94
+West Kalimantan,MODIS,2019,6,28
+West Kalimantan,MODIS,2019,7,229
+West Kalimantan,MODIS,2019,8,3250
+West Kalimantan,MODIS,2019,9,6402
+West Kalimantan,MODIS,2019,10,111
+West Kalimantan,MODIS,2019,11,159
+West Kalimantan,MODIS,2019,12,8
+West Kalimantan,MODIS,2020,1,8
+West Kalimantan,MODIS,2020,2,6
+West Kalimantan,MODIS,2020,3,26
+West Kalimantan,MODIS,2020,4,20
+West Kalimantan,MODIS,2020,5,19
+West Kalimantan,MODIS,2020,6,20
+West Kalimantan,MODIS,2020,7,10
+West Kalimantan,MODIS,2020,8,432
+West Kalimantan,MODIS,2020,9,519
+West Kalimantan,MODIS,2020,10,246
+West Kalimantan,MODIS,2020,11,8
+West Kalimantan,MODIS,2020,12,17
+West Kalimantan,MODIS,2021,1,13
+West Kalimantan,MODIS,2021,2,300
+West Kalimantan,MODIS,2021,3,32
+West Kalimantan,MODIS,2021,4,105
+West Kalimantan,MODIS,2021,5,50
+West Kalimantan,MODIS,2021,6,30
+West Kalimantan,MODIS,2021,7,209
+West Kalimantan,MODIS,2021,8,431
+West Kalimantan,MODIS,2021,9,857
+West Kalimantan,MODIS,2021,10,298
+West Kalimantan,MODIS,2021,11,13
+West Kalimantan,MODIS,2021,12,2
+West Kalimantan,MODIS,2022,1,15
+West Kalimantan,MODIS,2022,2,37
+West Kalimantan,MODIS,2022,3,171
+West Kalimantan,MODIS,2022,4,45
+West Kalimantan,MODIS,2022,5,62
+West Kalimantan,MODIS,2022,6,23
+West Kalimantan,MODIS,2022,7,256
+West Kalimantan,MODIS,2022,8,871
+West Kalimantan,MODIS,2022,9,256
+West Kalimantan,MODIS,2022,10,27
+West Kalimantan,MODIS,2022,11,7
+West Kalimantan,MODIS,2022,12,20
+West Kalimantan,MODIS,2023,1,24
+West Kalimantan,MODIS,2023,2,55
+West Kalimantan,MODIS,2023,3,10
+West Kalimantan,MODIS,2023,4,81
+West Kalimantan,MODIS,2023,5,91
+West Kalimantan,MODIS,2023,6,150
+West Kalimantan,MODIS,2023,7,2051
+West Kalimantan,MODIS,2023,8,3002
+West Kalimantan,MODIS,2023,9,1230
+West Kalimantan,MODIS,2023,10,428
+West Kalimantan,MODIS,2023,11,29
+West Kalimantan,MODIS,2023,12,12
+West Kalimantan,MODIS,2024,1,13
+West Kalimantan,MODIS,2024,2,5
+West Kalimantan,MODIS,2024,3,63
+West Kalimantan,MODIS,2024,4,18
+West Kalimantan,MODIS,2024,5,24
+West Kalimantan,MODIS,2024,6,42
+West Kalimantan,MODIS,2024,7,617
+West Kalimantan,MODIS,2024,8,548
+West Kalimantan,MODIS,2024,9,2823
+West Kalimantan,MODIS,2024,10,159
+West Kalimantan,MODIS,2024,11,12
+West Kalimantan,MODIS,2024,12,3
+West Kalimantan,MODIS,2025,1,10
+West Kalimantan,MODIS,2025,2,34
+West Kalimantan,MODIS,2025,3,17
+West Kalimantan,MODIS,2025,4,13
+West Kalimantan,MODIS,2025,5,69
+West Kalimantan,MODIS,2025,6,78
+West Kalimantan,MODIS,2025,7,1370
+West Kalimantan,MODIS,2025,8,975
+West Kalimantan,MODIS,2025,9,1064
+West Kalimantan,MODIS,2025,10,90
+West Kalimantan,MODIS,2025,11,51
+West Kalimantan,MODIS,2025,12,10
+West Kalimantan,MODIS,2026,1,198
+West Kalimantan,MODIS,2026,2,91
+West Kalimantan,MODIS,2026,3,374
+West Kalimantan,MODIS,2026,4,70
+West Kalimantan,MODIS,2026,5,32
+West Kalimantan,MODIS,2026,6,126
+West Kalimantan,MODIS,2026,7,897
+West Kalimantan,MODIS,2026,8,9672
+West Kalimantan,MODIS,2026,9,6596
+West Kalimantan,MODIS,2026,10,2101
+West Kalimantan,MODIS,2026,11,29
+West Kalimantan,VIIRS NOAA-20,2018,4,133
+West Kalimantan,VIIRS NOAA-20,2018,5,78
+West Kalimantan,VIIRS NOAA-20,2018,6,164
+West Kalimantan,VIIRS NOAA-20,2018,7,2581
+West Kalimantan,VIIRS NOAA-20,2018,8,19800
+West Kalimantan,VIIRS NOAA-20,2018,9,3981
+West Kalimantan,VIIRS NOAA-20,2018,10,382
+West Kalimantan,VIIRS NOAA-20,2018,11,46
+West Kalimantan,VIIRS NOAA-20,2018,12,16
+West Kalimantan,VIIRS NOAA-20,2019,1,97
+West Kalimantan,VIIRS NOAA-20,2019,2,42
+West Kalimantan,VIIRS NOAA-20,2019,3,674
+West Kalimantan,VIIRS NOAA-20,2019,4,332
+West Kalimantan,VIIRS NOAA-20,2019,5,381
+West Kalimantan,VIIRS NOAA-20,2019,6,108
+West Kalimantan,VIIRS NOAA-20,2019,7,1281
+West Kalimantan,VIIRS NOAA-20,2019,8,12918
+West Kalimantan,VIIRS NOAA-20,2019,9,23689
+West Kalimantan,VIIRS NOAA-20,2019,10,664
+West Kalimantan,VIIRS NOAA-20,2019,11,772
+West Kalimantan,VIIRS NOAA-20,2019,12,14
+West Kalimantan,VIIRS NOAA-20,2020,1,21
+West Kalimantan,VIIRS NOAA-20,2020,2,19
+West Kalimantan,VIIRS NOAA-20,2020,3,187
+West Kalimantan,VIIRS NOAA-20,2020,4,83
+West Kalimantan,VIIRS NOAA-20,2020,5,63
+West Kalimantan,VIIRS NOAA-20,2020,6,87
+West Kalimantan,VIIRS NOAA-20,2020,7,63
+West Kalimantan,VIIRS NOAA-20,2020,8,5537
+West Kalimantan,VIIRS NOAA-20,2020,9,4121
+West Kalimantan,VIIRS NOAA-20,2020,10,853
+West Kalimantan,VIIRS NOAA-20,2020,11,20
+West Kalimantan,VIIRS NOAA-20,2020,12,95
+West Kalimantan,VIIRS NOAA-20,2021,1,32
+West Kalimantan,VIIRS NOAA-20,2021,2,2055
+West Kalimantan,VIIRS NOAA-20,2021,3,269
+West Kalimantan,VIIRS NOAA-20,2021,4,390
+West Kalimantan,VIIRS NOAA-20,2021,5,132
+West Kalimantan,VIIRS NOAA-20,2021,6,129
+West Kalimantan,VIIRS NOAA-20,2021,7,860
+West Kalimantan,VIIRS NOAA-20,2021,8,1594
+West Kalimantan,VIIRS NOAA-20,2021,9,4914
+West Kalimantan,VIIRS NOAA-20,2021,10,1080
+West Kalimantan,VIIRS NOAA-20,2021,11,70
+West Kalimantan,VIIRS NOAA-20,2021,12,56
+West Kalimantan,VIIRS NOAA-20,2022,1,141
+West Kalimantan,VIIRS NOAA-20,2022,2,252
+West Kalimantan,VIIRS NOAA-20,2022,3,1059
+West Kalimantan,VIIRS NOAA-20,2022,4,404
+West Kalimantan,VIIRS NOAA-20,2022,5,314
+West Kalimantan,VIIRS NOAA-20,2022,6,107
+West Kalimantan,VIIRS NOAA-20,2022,7,1005
+West Kalimantan,VIIRS NOAA-20,2022,8,5735
+West Kalimantan,VIIRS NOAA-20,2022,9,1763
+West Kalimantan,VIIRS NOAA-20,2022,10,123
+West Kalimantan,VIIRS NOAA-20,2022,11,42
+West Kalimantan,VIIRS NOAA-20,2022,12,104
+West Kalimantan,VIIRS NOAA-20,2023,1,124
+West Kalimantan,VIIRS NOAA-20,2023,2,265
+West Kalimantan,VIIRS NOAA-20,2023,3,65
+West Kalimantan,VIIRS NOAA-20,2023,4,455
+West Kalimantan,VIIRS NOAA-20,2023,5,455
+West Kalimantan,VIIRS NOAA-20,2023,6,746
+West Kalimantan,VIIRS NOAA-20,2023,7,5460
+West Kalimantan,VIIRS NOAA-20,2023,8,11774
+West Kalimantan,VIIRS NOAA-20,2023,9,5030
+West Kalimantan,VIIRS NOAA-20,2023,10,1465
+West Kalimantan,VIIRS NOAA-20,2023,11,119
+West Kalimantan,VIIRS NOAA-20,2023,12,57
+West Kalimantan,VIIRS NOAA-20,2024,1,78
+West Kalimantan,VIIRS NOAA-20,2024,2,33
+West Kalimantan,VIIRS NOAA-20,2024,3,230
+West Kalimantan,VIIRS NOAA-20,2024,4,65
+West Kalimantan,VIIRS NOAA-20,2024,5,79
+West Kalimantan,VIIRS NOAA-20,2024,6,147
+West Kalimantan,VIIRS NOAA-20,2024,7,3263
+West Kalimantan,VIIRS NOAA-20,2024,8,2273
+West Kalimantan,VIIRS NOAA-20,2024,9,9318
+West Kalimantan,VIIRS NOAA-20,2024,10,784
+West Kalimantan,VIIRS NOAA-20,2024,11,24
+West Kalimantan,VIIRS NOAA-20,2024,12,39
+West Kalimantan,VIIRS NOAA-20,2025,1,27
+West Kalimantan,VIIRS NOAA-20,2025,2,105
+West Kalimantan,VIIRS NOAA-20,2025,3,61
+West Kalimantan,VIIRS NOAA-20,2025,4,55
+West Kalimantan,VIIRS NOAA-20,2025,5,313
+West Kalimantan,VIIRS NOAA-20,2025,6,345
+West Kalimantan,VIIRS NOAA-20,2025,7,5283
+West Kalimantan,VIIRS NOAA-20,2025,8,6254
+West Kalimantan,VIIRS NOAA-20,2025,9,5786
+West Kalimantan,VIIRS NOAA-20,2025,10,288
+West Kalimantan,VIIRS NOAA-20,2025,11,163
+West Kalimantan,VIIRS NOAA-20,2025,12,35
+West Kalimantan,VIIRS NOAA-20,2026,1,1019
+West Kalimantan,VIIRS NOAA-20,2026,2,463
+West Kalimantan,VIIRS NOAA-20,2026,3,1882
+West Kalimantan,VIIRS NOAA-20,2026,4,258
+West Kalimantan,VIIRS NOAA-20,2026,5,137
+West Kalimantan,VIIRS NOAA-20,2026,6,377
+West Kalimantan,VIIRS NOAA-20,2026,7,4283
+West Kalimantan,VIIRS NOAA-20,2026,8,38246
+West Kalimantan,VIIRS NOAA-20,2026,9,23156
+West Kalimantan,VIIRS NOAA-20,2026,10,9759
+West Kalimantan,VIIRS NOAA-20,2026,11,147
+West Kalimantan,VIIRS NOAA-21,2023,3,64
+West Kalimantan,VIIRS NOAA-21,2023,4,426
+West Kalimantan,VIIRS NOAA-21,2023,5,464
+West Kalimantan,VIIRS NOAA-21,2023,6,672
+West Kalimantan,VIIRS NOAA-21,2023,7,5562
+West Kalimantan,VIIRS NOAA-21,2023,8,11351
+West Kalimantan,VIIRS NOAA-21,2023,9,5307
+West Kalimantan,VIIRS NOAA-21,2023,10,1587
+West Kalimantan,VIIRS NOAA-21,2023,11,119
+West Kalimantan,VIIRS NOAA-21,2023,12,64
+West Kalimantan,VIIRS NOAA-21,2024,1,57
+West Kalimantan,VIIRS NOAA-21,2024,2,35
+West Kalimantan,VIIRS NOAA-21,2024,3,262
+West Kalimantan,VIIRS NOAA-21,2024,4,88
+West Kalimantan,VIIRS NOAA-21,2024,5,89
+West Kalimantan,VIIRS NOAA-21,2024,6,209
+West Kalimantan,VIIRS NOAA-21,2024,7,2881
+West Kalimantan,VIIRS NOAA-21,2024,8,2142
+West Kalimantan,VIIRS NOAA-21,2024,9,10494
+West Kalimantan,VIIRS NOAA-21,2024,10,646
+West Kalimantan,VIIRS NOAA-21,2024,11,56
+West Kalimantan,VIIRS NOAA-21,2024,12,53
+West Kalimantan,VIIRS NOAA-21,2025,1,9
+West Kalimantan,VIIRS NOAA-21,2025,2,120
+West Kalimantan,VIIRS NOAA-21,2025,3,44
+West Kalimantan,VIIRS NOAA-21,2025,4,51
+West Kalimantan,VIIRS NOAA-21,2025,5,324
+West Kalimantan,VIIRS NOAA-21,2025,6,344
+West Kalimantan,VIIRS NOAA-21,2025,7,5281
+West Kalimantan,VIIRS NOAA-21,2025,8,5558
+West Kalimantan,VIIRS NOAA-21,2025,9,6120
+West Kalimantan,VIIRS NOAA-21,2025,10,345
+West Kalimantan,VIIRS NOAA-21,2025,11,184
+West Kalimantan,VIIRS NOAA-21,2025,12,53
+West Kalimantan,VIIRS NOAA-21,2026,1,901
+West Kalimantan,VIIRS NOAA-21,2026,2,566
+West Kalimantan,VIIRS NOAA-21,2026,3,1885
+West Kalimantan,VIIRS NOAA-21,2026,4,244
+West Kalimantan,VIIRS NOAA-21,2026,5,168
+West Kalimantan,VIIRS NOAA-21,2026,6,376
+West Kalimantan,VIIRS NOAA-21,2026,7,4186
+West Kalimantan,VIIRS NOAA-21,2026,8,34563
+West Kalimantan,VIIRS NOAA-21,2026,9,26518
+West Kalimantan,VIIRS NOAA-21,2026,10,8459
+West Kalimantan,VIIRS NOAA-21,2026,11,202
+West Kalimantan,VIIRS S-NPP,2012,1,96
+West Kalimantan,VIIRS S-NPP,2012,2,44
+West Kalimantan,VIIRS S-NPP,2012,3,390
+West Kalimantan,VIIRS S-NPP,2012,4,325
+West Kalimantan,VIIRS S-NPP,2012,5,1189
+West Kalimantan,VIIRS S-NPP,2012,6,3075
+West Kalimantan,VIIRS S-NPP,2012,7,1656
+West Kalimantan,VIIRS S-NPP,2012,8,15432
+West Kalimantan,VIIRS S-NPP,2012,9,13072
+West Kalimantan,VIIRS S-NPP,2012,10,3092
+West Kalimantan,VIIRS S-NPP,2012,11,55
+West Kalimantan,VIIRS S-NPP,2012,12,17
+West Kalimantan,VIIRS S-NPP,2013,1,606
+West Kalimantan,VIIRS S-NPP,2013,2,111
+West Kalimantan,VIIRS S-NPP,2013,3,1541
+West Kalimantan,VIIRS S-NPP,2013,4,181
+West Kalimantan,VIIRS S-NPP,2013,5,91
+West Kalimantan,VIIRS S-NPP,2013,6,1986
+West Kalimantan,VIIRS S-NPP,2013,7,914
+West Kalimantan,VIIRS S-NPP,2013,8,10350
+West Kalimantan,VIIRS S-NPP,2013,9,7080
+West Kalimantan,VIIRS S-NPP,2013,10,3216
+West Kalimantan,VIIRS S-NPP,2013,11,72
+West Kalimantan,VIIRS S-NPP,2013,12,30
+West Kalimantan,VIIRS S-NPP,2014,1,2184
+West Kalimantan,VIIRS S-NPP,2014,2,7600
+West Kalimantan,VIIRS S-NPP,2014,3,1915
+West Kalimantan,VIIRS S-NPP,2014,4,398
+West Kalimantan,VIIRS S-NPP,2014,5,248
+West Kalimantan,VIIRS S-NPP,2014,6,1331
+West Kalimantan,VIIRS S-NPP,2014,7,14545
+West Kalimantan,VIIRS S-NPP,2014,8,9280
+West Kalimantan,VIIRS S-NPP,2014,9,12275
+West Kalimantan,VIIRS S-NPP,2014,10,4660
+West Kalimantan,VIIRS S-NPP,2014,11,1470
+West Kalimantan,VIIRS S-NPP,2014,12,68
+West Kalimantan,VIIRS S-NPP,2015,1,68
+West Kalimantan,VIIRS S-NPP,2015,2,150
+West Kalimantan,VIIRS S-NPP,2015,3,453
+West Kalimantan,VIIRS S-NPP,2015,4,119
+West Kalimantan,VIIRS S-NPP,2015,5,267
+West Kalimantan,VIIRS S-NPP,2015,6,435
+West Kalimantan,VIIRS S-NPP,2015,7,4148
+West Kalimantan,VIIRS S-NPP,2015,8,21255
+West Kalimantan,VIIRS S-NPP,2015,9,22128
+West Kalimantan,VIIRS S-NPP,2015,10,5965
+West Kalimantan,VIIRS S-NPP,2015,11,369
+West Kalimantan,VIIRS S-NPP,2015,12,137
+West Kalimantan,VIIRS S-NPP,2016,1,22
+West Kalimantan,VIIRS S-NPP,2016,2,23
+West Kalimantan,VIIRS S-NPP,2016,3,147
+West Kalimantan,VIIRS S-NPP,2016,4,67
+West Kalimantan,VIIRS S-NPP,2016,5,67
+West Kalimantan,VIIRS S-NPP,2016,6,70
+West Kalimantan,VIIRS S-NPP,2016,7,488
+West Kalimantan,VIIRS S-NPP,2016,8,8523
+West Kalimantan,VIIRS S-NPP,2016,9,5786
+West Kalimantan,VIIRS S-NPP,2016,10,781
+West Kalimantan,VIIRS S-NPP,2016,11,36
+West Kalimantan,VIIRS S-NPP,2016,12,71
+West Kalimantan,VIIRS S-NPP,2017,1,209
+West Kalimantan,VIIRS S-NPP,2017,2,144
+West Kalimantan,VIIRS S-NPP,2017,3,82
+West Kalimantan,VIIRS S-NPP,2017,4,92
+West Kalimantan,VIIRS S-NPP,2017,5,87
+West Kalimantan,VIIRS S-NPP,2017,6,194
+West Kalimantan,VIIRS S-NPP,2017,7,1288
+West Kalimantan,VIIRS S-NPP,2017,8,2258
+West Kalimantan,VIIRS S-NPP,2017,9,4078
+West Kalimantan,VIIRS S-NPP,2017,10,450
+West Kalimantan,VIIRS S-NPP,2017,11,19
+West Kalimantan,VIIRS S-NPP,2017,12,99
+West Kalimantan,VIIRS S-NPP,2018,1,68
+West Kalimantan,VIIRS S-NPP,2018,2,1643
+West Kalimantan,VIIRS S-NPP,2018,3,216
+West Kalimantan,VIIRS S-NPP,2018,4,136
+West Kalimantan,VIIRS S-NPP,2018,5,101
+West Kalimantan,VIIRS S-NPP,2018,6,180
+West Kalimantan,VIIRS S-NPP,2018,7,2896
+West Kalimantan,VIIRS S-NPP,2018,8,19821
+West Kalimantan,VIIRS S-NPP,2018,9,4440
+West Kalimantan,VIIRS S-NPP,2018,10,325
+West Kalimantan,VIIRS S-NPP,2018,11,25
+West Kalimantan,VIIRS S-NPP,2018,12,11
+West Kalimantan,VIIRS S-NPP,2019,1,96
+West Kalimantan,VIIRS S-NPP,2019,2,47
+West Kalimantan,VIIRS S-NPP,2019,3,653
+West Kalimantan,VIIRS S-NPP,2019,4,331
+West Kalimantan,VIIRS S-NPP,2019,5,391
+West Kalimantan,VIIRS S-NPP,2019,6,101
+West Kalimantan,VIIRS S-NPP,2019,7,1169
+West Kalimantan,VIIRS S-NPP,2019,8,13246
+West Kalimantan,VIIRS S-NPP,2019,9,23941
+West Kalimantan,VIIRS S-NPP,2019,10,812
+West Kalimantan,VIIRS S-NPP,2019,11,704
+West Kalimantan,VIIRS S-NPP,2019,12,10
+West Kalimantan,VIIRS S-NPP,2020,1,22
+West Kalimantan,VIIRS S-NPP,2020,2,47
+West Kalimantan,VIIRS S-NPP,2020,3,150
+West Kalimantan,VIIRS S-NPP,2020,4,113
+West Kalimantan,VIIRS S-NPP,2020,5,68
+West Kalimantan,VIIRS S-NPP,2020,6,65
+West Kalimantan,VIIRS S-NPP,2020,7,77
+West Kalimantan,VIIRS S-NPP,2020,8,4841
+West Kalimantan,VIIRS S-NPP,2020,9,2863
+West Kalimantan,VIIRS S-NPP,2020,10,1372
+West Kalimantan,VIIRS S-NPP,2020,11,42
+West Kalimantan,VIIRS S-NPP,2020,12,61
+West Kalimantan,VIIRS S-NPP,2021,1,52
+West Kalimantan,VIIRS S-NPP,2021,2,1798
+West Kalimantan,VIIRS S-NPP,2021,3,209
+West Kalimantan,VIIRS S-NPP,2021,4,426
+West Kalimantan,VIIRS S-NPP,2021,5,140
+West Kalimantan,VIIRS S-NPP,2021,6,91
+West Kalimantan,VIIRS S-NPP,2021,7,880
+West Kalimantan,VIIRS S-NPP,2021,8,1489
+West Kalimantan,VIIRS S-NPP,2021,9,4483
+West Kalimantan,VIIRS S-NPP,2021,10,1223
+West Kalimantan,VIIRS S-NPP,2021,11,70
+West Kalimantan,VIIRS S-NPP,2021,12,83
+West Kalimantan,VIIRS S-NPP,2022,1,124
+West Kalimantan,VIIRS S-NPP,2022,2,154
+West Kalimantan,VIIRS S-NPP,2022,3,1178
+West Kalimantan,VIIRS S-NPP,2022,4,566
+West Kalimantan,VIIRS S-NPP,2022,5,275
+West Kalimantan,VIIRS S-NPP,2022,6,99
+West Kalimantan,VIIRS S-NPP,2022,7,1022
+West Kalimantan,VIIRS S-NPP,2022,8,3433
+West Kalimantan,VIIRS S-NPP,2022,9,1376
+West Kalimantan,VIIRS S-NPP,2022,10,131
+West Kalimantan,VIIRS S-NPP,2022,11,87
+West Kalimantan,VIIRS S-NPP,2022,12,113
+West Kalimantan,VIIRS S-NPP,2023,1,157
+West Kalimantan,VIIRS S-NPP,2023,2,257
+West Kalimantan,VIIRS S-NPP,2023,3,66
+West Kalimantan,VIIRS S-NPP,2023,4,476
+West Kalimantan,VIIRS S-NPP,2023,5,407
+West Kalimantan,VIIRS S-NPP,2023,6,649
+West Kalimantan,VIIRS S-NPP,2023,7,4969
+West Kalimantan,VIIRS S-NPP,2023,8,11295
+West Kalimantan,VIIRS S-NPP,2023,9,5197
+West Kalimantan,VIIRS S-NPP,2023,10,1633
+West Kalimantan,VIIRS S-NPP,2023,11,90
+West Kalimantan,VIIRS S-NPP,2023,12,67
+West Kalimantan,VIIRS S-NPP,2024,1,55
+West Kalimantan,VIIRS S-NPP,2024,2,53
+West Kalimantan,VIIRS S-NPP,2024,3,266
+West Kalimantan,VIIRS S-NPP,2024,4,74
+West Kalimantan,VIIRS S-NPP,2024,5,81
+West Kalimantan,VIIRS S-NPP,2024,6,156
+West Kalimantan,VIIRS S-NPP,2024,7,733
+West Kalimantan,VIIRS S-NPP,2024,8,2264
+West Kalimantan,VIIRS S-NPP,2024,9,10283
+West Kalimantan,VIIRS S-NPP,2024,10,708
+West Kalimantan,VIIRS S-NPP,2024,11,43
+West Kalimantan,VIIRS S-NPP,2024,12,31
+West Kalimantan,VIIRS S-NPP,2025,1,10
+West Kalimantan,VIIRS S-NPP,2025,2,96
+West Kalimantan,VIIRS S-NPP,2025,3,69
+West Kalimantan,VIIRS S-NPP,2025,4,71
+West Kalimantan,VIIRS S-NPP,2025,5,349
+West Kalimantan,VIIRS S-NPP,2025,6,341
+West Kalimantan,VIIRS S-NPP,2025,7,5591
+West Kalimantan,VIIRS S-NPP,2025,8,7586
+West Kalimantan,VIIRS S-NPP,2025,9,6576
+West Kalimantan,VIIRS S-NPP,2025,10,339
+West Kalimantan,VIIRS S-NPP,2025,11,164
+West Kalimantan,VIIRS S-NPP,2025,12,42
+West Kalimantan,VIIRS S-NPP,2026,1,993
+West Kalimantan,VIIRS S-NPP,2026,2,570
+West Kalimantan,VIIRS S-NPP,2026,3,2033
+West Kalimantan,VIIRS S-NPP,2026,4,266
+West Kalimantan,VIIRS S-NPP,2026,5,182
+West Kalimantan,VIIRS S-NPP,2026,6,261
+West Kalimantan,VIIRS S-NPP,2026,7,3706
+West Kalimantan,VIIRS S-NPP,2026,8,38683
+West Kalimantan,VIIRS S-NPP,2026,9,23754
+West Kalimantan,VIIRS S-NPP,2026,10,8880
+West Kalimantan,VIIRS S-NPP,2026,11,77

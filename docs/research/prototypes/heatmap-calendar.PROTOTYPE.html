@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IGNIS Heatmap Prototype</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="heatmap-calendar.PROTOTYPE.data.js"></script>
+<style>
+:root{--bg:#111418;--panel:#1a1e24;--line:#2c323b;--fg:#e8eaed;--mut:#9aa3ad;--peak:#d7301f;--active:#fc8d59;--mod:#fdcc8a;--low:#2a3038;--acc:#fdbb84;--sb:380px}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:13px/1.4 system-ui,sans-serif}
+#banner{position:fixed;top:0;left:0;right:0;z-index:1000;background:#5a1d1d;color:#fff;font-size:11px;padding:3px 10px;text-align:center}
+#map{position:fixed;top:22px;left:0;bottom:64px;right:var(--sb);transition:right .25s}
+body.collapsed #map{right:0}
+#bar{position:fixed;left:0;right:var(--sb);bottom:0;height:64px;background:var(--panel);border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 14px;transition:right .25s;z-index:900}
+body.collapsed #bar{right:0}
+#bar input[type=range]{flex:1}
+#bar button,#bar select{background:#262b33;color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 9px;cursor:pointer}
+#label{min-width:200px}
+#label b{font-size:15px}
+#src{font-size:11px;color:var(--mut)}
+#sb{position:fixed;top:22px;right:0;bottom:0;width:var(--sb);background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;padding:14px;transition:transform .25s;z-index:950}
+body.collapsed #sb{transform:translateX(100%)}
+#toggle{position:fixed;top:60px;right:var(--sb);z-index:960;background:var(--panel);color:var(--fg);border:1px solid var(--line);border-right:0;border-radius:8px 0 0 8px;padding:10px 6px;cursor:pointer;transition:right .25s;writing-mode:vertical-rl}
+body.collapsed #toggle{right:0}
+h2{font-size:14px;margin:0 0 4px}
+h3{font-size:12px;margin:18px 0 6px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.typ{display:grid;grid-template-columns:repeat(12,1fr);gap:3px}
+.typ div{height:46px;border-radius:4px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:10px;padding-bottom:3px;cursor:pointer;border:2px solid transparent}
+.typ div.sel,.grid td.sel{outline:2px solid #fff;outline-offset:-1px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--mut);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+table.grid{border-collapse:separate;border-spacing:2px;width:100%;font-size:10px}
+.grid td{height:14px;border-radius:2px;cursor:pointer}
+.grid th{color:var(--mut);font-weight:400;text-align:right;padding-right:4px}
+.grid thead th{text-align:center;padding:0}
+.grid tr.modis th{color:#c9a96e}
+#state{font:11px/1.4 ui-monospace,monospace;background:#0c0e11;border:1px solid var(--line);border-radius:6px;padding:8px;white-space:pre-wrap;color:#b8c0c8}
+.note{font-size:11px;color:var(--mut)}
+@media (max-width:700px){:root{--sb:100vw}#label{min-width:0}}
+</style>
+</head>
+<body>
+<div id="banner">PROTOTYPE — throwaway. West Kalimantan, harmonized to VIIRS-equivalent Hotspots (ADR 0001). 0.1° grid.</div>
+<div id="map"></div>
+<div id="bar">
+  <button id="play">▶</button>
+  <div id="label"><b id="when"></b><div id="src"></div></div>
+  <input type="range" id="slider" min="0">
+  <select id="mode"><option value="month">Single month</option><option value="typical">Typical Year (all years, this month)</option></select>
+</div>
+<button id="toggle">Burning Calendar ◂</button>
+<aside id="sb">
+  <h2>Burning Calendar</h2>
+  <div class="note">West Kalimantan · harmonized 2002–2026</div>
+  <h3>Typical Year</h3>
+  <div class="typ" id="typ"></div>
+  <div class="legend"><span><i style="background:var(--peak)"></i>Peak ≥15%</span><span><i style="background:var(--active)"></i>Active ≥8%</span><span><i style="background:var(--mod)"></i>Moderate ≥4%</span><span><i style="background:var(--low)"></i>Low</span></div>
+  <h3>Year × month (Harmonized Hotspot Count)</h3>
+  <table class="grid" id="grid"></table>
+  <div class="note">Gold year labels = MODIS-only years scaled by k(m). Click any cell to show it on the map.</div>
+  <h3>State</h3>
+  <div id="state"></div>
+</aside>
+<script>
+const D=window.PROTO_DATA, MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const keys=Object.keys(D.months).sort();
+const years=[...new Set(keys.map(k=>+k.slice(0,4)))];
+const H=(y,m)=>{const r=D.months[`${y}-${String(m).padStart(2,"0")}`];return r?r.h:null};
+const typical=MN.map((_,i)=>{const v=years.map(y=>H(y,i+1)).filter(v=>v!=null);return v.reduce((a,b)=>a+b,0)/years.length});
+const tot=typical.reduce((a,b)=>a+b,0);
+const phase=s=>s>=.15?"Peak burning":s>=.08?"Active burning":s>=.04?"Moderate":"Low";
+const pcol={"Peak burning":"var(--peak)","Active burning":"var(--active)","Moderate":"var(--mod)","Low":"var(--low)"};
+let st={idx:keys.indexOf("2019-09"),mode:"month",playing:false,collapsed:false};
+
+const map=L.map("map",{preferCanvas:true,zoomControl:true}).setView([0,111],7);
+L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",{attribution:"© Esri",maxZoom:12}).addTo(map);
+const layer=L.layerGroup().addTo(map);
+const ramp=t=>{const c=[[255,255,178],[254,204,92],[253,141,60],[240,59,32],[189,0,38]];t=Math.max(0,Math.min(1,t))*(c.length-1);const i=Math.min(c.length-2,Math.floor(t)),f=t-i;return`rgb(${c[i].map((v,j)=>Math.round(v+(c[i+1][j]-v)*f))})`};
+
+function cellsFor(){
+  const m=+keys[st.idx].slice(5);
+  if(st.mode==="month")return D.months[keys[st.idx]].cells;
+  const acc={};
+  years.forEach(y=>{const r=D.months[`${y}-${String(m).padStart(2,"0")}`];if(r)r.cells.forEach(([x,yy,v])=>{const k=x+","+yy;acc[k]=(acc[k]||0)+v/years.length})});
+  return Object.entries(acc).map(([k,v])=>{const[x,y]=k.split(",").map(Number);return[x,y,v]});
+}
+function drawMap(){
+  layer.clearLayers();
+  const c=cellsFor(),mx=Math.max(1,...c.map(v=>v[2])),s=D.cell;
+  c.forEach(([x,y,v])=>{const t=Math.log1p(v)/Math.log1p(mx);
+    L.rectangle([[y*s,x*s],[(y+1)*s,(x+1)*s]],{stroke:false,fillColor:ramp(t),fillOpacity:.25+.65*t}).bindTooltip(`${v.toFixed(1)} VIIRS-eq Hotspots`).addTo(layer)});
+  return{cells:c.length,max:mx};
+}
+function drawTyp(){
+  const m=+keys[st.idx].slice(5);
+  document.getElementById("typ").innerHTML=typical.map((v,i)=>{const p=phase(v/tot);return`<div data-m="${i+1}" class="${i+1===m?"sel":""}" style="background:${pcol[p]};color:${p==="Low"?"var(--mut)":"#111"}" title="${p} · ${(v/tot*100).toFixed(1)}%">${MN[i][0]}</div>`}).join("");
+}
+function drawGrid(){
+  const mx=Math.max(...keys.map(k=>D.months[k].h));
+  let h="<thead><tr><th></th>"+MN.map(n=>`<th>${n[0]}</th>`).join("")+"</tr></thead><tbody>";
+  years.slice().reverse().forEach(y=>{
+    const modis=[...Array(12)].some((_,i)=>D.months[`${y}-${String(i+1).padStart(2,"0")}`]?.src==="MODIS");
+    h+=`<tr class="${modis?"modis":""}"><th>${y}</th>`;
+    for(let m=1;m<=12;m++){const k=`${y}-${String(m).padStart(2,"0")}`,r=D.months[k];
+      h+=r?`<td data-k="${k}" class="${keys[st.idx]===k?"sel":""}" style="background:${ramp(Math.log1p(r.h)/Math.log1p(mx))};opacity:${r.h<1?.15:1}" title="${MN[m-1]} ${y}: ${Math.round(r.h)} (${r.src})"></td>`:`<td style="background:#0c0e11"></td>`}
+    h+="</tr>"});
+  document.getElementById("grid").innerHTML=h+"</tbody>";
+}
+function render(){
+  const k=keys[st.idx],r=D.months[k],y=+k.slice(0,4),m=+k.slice(5);
+  const info=drawMap();
+  document.getElementById("slider").value=st.idx;
+  document.getElementById("when").textContent=st.mode==="month"?`${MN[m-1]} ${y}`:`Typical ${MN[m-1]}`;
+  document.getElementById("src").textContent=st.mode==="month"?`${Math.round(r.h)} VIIRS-eq · from ${r.src}${r.src==="MODIS"?` (${r.raw} × k=${D.k[m].toFixed(2)})`:r.src==="VIIRS NOAA-20"?` (${r.raw} ÷ ${D.r})`:""}`:`mean over ${years.length} years · ${phase(typical[m-1]/tot)}`;
+  drawTyp();drawGrid();
+  document.getElementById("state").textContent=JSON.stringify({month:k,mode:st.mode,source:r.src,raw:r.raw,harmonized:r.h,k_m:+D.k[m].toFixed(3),phase:phase(typical[m-1]/tot),typical_share:+(typical[m-1]/tot).toFixed(3),cells_drawn:info.cells,max_cell:+info.max.toFixed(1),sidebar:st.collapsed?"collapsed":"open"},null,1);
+}
+const slider=document.getElementById("slider");slider.max=keys.length-1;
+slider.oninput=e=>{st.idx=+e.target.value;render()};
+document.getElementById("mode").onchange=e=>{st.mode=e.target.value;render()};
+document.getElementById("typ").onclick=e=>{const m=e.target.dataset.m;if(!m)return;const y=keys[st.idx].slice(0,4);const k=`${y}-${m.padStart(2,"0")}`;st.idx=keys.includes(k)?keys.indexOf(k):st.idx;st.mode="typical";document.getElementById("mode").value="typical";render()};
+document.getElementById("grid").onclick=e=>{const k=e.target.dataset.k;if(!k)return;st.idx=keys.indexOf(k);st.mode="month";document.getElementById("mode").value="month";render()};
+document.getElementById("toggle").onclick=()=>{st.collapsed=!st.collapsed;document.body.classList.toggle("collapsed",st.collapsed);document.getElementById("toggle").textContent=st.collapsed?"Burning Calendar ▸":"Burning Calendar ◂";setTimeout(()=>map.invalidateSize(),260);render()};
+let timer;document.getElementById("play").onclick=e=>{st.playing=!st.playing;e.target.textContent=st.playing?"❚❚":"▶";clearInterval(timer);if(st.playing)timer=setInterval(()=>{st.idx=(st.idx+1)%keys.length;render()},400)};
+render();
+</script>
+</body>
+</html>
