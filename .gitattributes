@@ -1,1 +1,3 @@
 .githooks/* text eol=lf
+docs/OBJECTIVES.md text eol=lf
+scripts/*.sh text eol=lf

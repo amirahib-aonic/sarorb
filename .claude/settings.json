@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh scripts/check-objectives.sh --strict; exit 0"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "out=$(sh scripts/check-objectives.sh 2>&1) || { echo \"$out\" | grep FAIL >&2; echo 'Fix docs/OBJECTIVES.md evidence or prohibited assets before finishing.' >&2; exit 2; }"
+          }
+        ]
+      }
+    ]
+  }
+}

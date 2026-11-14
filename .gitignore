@@ -1,7 +1,8 @@
 hotspots_filtered.csv.gz
 
 .zcode/
-.claude/
+.claude/*
+!.claude/settings.json
 .codex/
 .cursor/
 .kiro/

@@ -6,8 +6,10 @@ strict=0
 [ "$1" = "--strict" ] && strict=1
 fail=0
 level=""
+cr=$(printf '\r')
 
-while IFS= read -r line; do
+while IFS= read -r line || [ -n "$line" ]; do
+  line=${line%"$cr"}
   case "$line" in
     "## "*) level=${line#"## "} ;;
     "- ["*"] "*": "*)
@@ -24,9 +26,23 @@ while IFS= read -r line; do
           [ -e "$p" ] || { echo "FAIL $id evidence missing: $p"; fail=1; }
         done
         IFS=$old_ifs
-      elif [ "$level" = "Must" ]; then
-        echo "TODO $id"
-        [ $strict -eq 1 ] && fail=1
+      else
+        ready=0
+        if [ -n "$evidence" ]; then
+          ready=1
+          old_ifs=$IFS; IFS=,
+          for p in $evidence; do
+            p=$(printf '%s' "$p" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+            [ -e "$p" ] || ready=0
+          done
+          IFS=$old_ifs
+        fi
+        if [ $ready -eq 1 ]; then
+          echo "READY $id (evidence exists, tick it once the objective is really met)"
+        elif [ "$level" = "Must" ]; then
+          echo "TODO $id"
+        fi
+        [ "$level" = "Must" ] && [ $strict -eq 1 ] && fail=1
       fi
       ;;
   esac
