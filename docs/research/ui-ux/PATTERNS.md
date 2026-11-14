@@ -264,9 +264,10 @@ Cross-cutting decisions that every pattern below assumes. They live here so they
 - **Serves:** scientist, land manager
 - **Why:** Three national-scale authorities independently prove users need the sensor record's breaks stated where the data lives — IGNIS states the Overlap Period (2012 onward) and what the Harmonized Hotspot Count did about it, as a dated banner plus an about/method explanation, not silence.
 
-### English + Bahasa Indonesia + Bahasa Malaysia from day one
+### English + Bahasa Indonesia + Bahasa Malaysia from day one, Iban next
 - **Sources:** SiPongi+ (full ID/EN toggle translating every string), Global Nature Watch ex-GFW (six languages including Bahasa Indonesia), APIMS (BM advisory PDFs); NASA FIRMS, ASMC and GWIS as the **avoid** cases (English-only despite Borneo audiences).
 - **Screenshots:** none (no screenshot of a language switcher was captured).
 - **Verdict:** adapt — the one-click full-string-table toggle is inherited from SiPongi+ as-is; the named change is that no audited app ships this particular combination, so EN + ID + MS in one string table is IGNIS's own scope decision.
 - **Serves:** all three users plus the haze-impact audience
 - **Why:** The Coverage Area spans Bahasa Indonesia-speaking Kalimantan (including the source-side of the haze-impact audience this library defines) and Bahasa Malaysia-speaking Sarawak, Sabah and Brunei, SiPongi+ proves a complete bilingual toggle is cheap, and every English-only predecessor is a demonstrated gap.
+- **Iban (team decision, not audit evidence):** Iban is the language of Sarawak's largest ethnic group, and many longhouse and rural communities sit closest to recurring burning, so it reaches the land managers and residents the Malay locales miss. No audited app ships Iban, and terms like Hotspot, Harmonized Hotspot Count and Burning Phase have no settled Iban wording, so the strings need a native-speaker reviewer. Plan the string table for a fourth locale from the start; ship Iban at launch only if that reviewer signs off, otherwise as the first post-launch locale.
