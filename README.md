@@ -24,6 +24,28 @@ Raw inputs can stay in the git-ignored `data/firms_raw/` directory or anywhere l
 
 Run `npm --prefix web run build` to type-check and build the production bundle into `web/dist/`.
 
+## Burning Calendar data
+
+In Git Bash, extract the local `firmsdata` branch and generate the JSON:
+
+```bash
+mkdir -p data/firms_raw
+git archive --format=tar firmsdata | tar -xf - -C data/firms_raw
+python -m pip install pandas
+python scripts/build_burning_calendar.py --download-area
+```
+
+The download-area run uses the FIRMS rectangle. For island-only results, install
+Shapely 2 and pass `--boundary data/firms_raw/borneo.geojson` in place of
+`--download-area`. Use a WGS84 GeoJSON Feature containing the island polygon.
+
+The script filters archive detections, counts UTC months, fits 12 pooled
+S-NPP/MODIS ratios on paired months in 2012–2025, and estimates the NOAA-20/S-NPP
+ratio in their overlap. It selects S-NPP first, adjusted NOAA-20 second, then
+scaled MODIS for pre-2012 months. Interior archive months are treated as covered,
+and partial edge months are excluded. Commit the regenerated JSON under
+`web/public/data/` to publish the new numbers.
+
 ## Vercel previews
 
 Import this GitHub repo in Vercel and use these settings:
