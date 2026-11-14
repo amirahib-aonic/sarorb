@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  width: min(100% - 3rem, 46rem);
+  width: min(100% - 3rem, 76rem);
   margin: clamp(3rem, 12vh, 8rem) auto;
 }
 
@@ -40,4 +40,27 @@ section p {
 
 li {
   overflow-wrap: anywhere;
+}
+
+.calendar-scroll {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.calendar th,
+.calendar td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid #d4d9cc;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.calendar th {
+  background: #f6f5ef;
 }

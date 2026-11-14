@@ -14,6 +14,13 @@
         <p id="status" role="status">Loading preview data…</p>
         <ul id="sources" hidden></ul>
       </section>
+      <section class="calendar" aria-labelledby="calendar-title">
+        <h2 id="calendar-title">Burning Calendar</h2>
+        <p id="calendar-status" role="status">Loading calendar.</p>
+        <div class="calendar-scroll" tabindex="0" role="region" aria-labelledby="calendar-title">
+          <table id="burning-calendar" aria-describedby="calendar-status" hidden></table>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>

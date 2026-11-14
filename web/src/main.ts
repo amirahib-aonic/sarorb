@@ -1,4 +1,5 @@
 import "./style.css";
+import { loadBurningCalendar } from "./burning-calendar";
 
 type PreviewData = {
   sources: { file: string; rows: number }[];
@@ -32,3 +33,4 @@ async function loadPreview() {
 }
 
 void loadPreview();
+void loadBurningCalendar();
