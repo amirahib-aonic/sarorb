@@ -1,6 +1,6 @@
 # Harmonize to VIIRS-equivalent counts by Overlap Period scaling
 
-MODIS (1 km, from 2002) and VIIRS (375 m, from 2012) count Hotspots differently, so their records cannot be compared directly. We express every Harmonized Hotspot Count as the count VIIRS would have recorded: over the Overlap Period we fit a scaling factor between the two sensors and apply it to the MODIS-only years, and we report its error on held-out years. VIIRS is the current and future sensor, so recent years stay as observed.
+MODIS (1 km, from 2002) and VIIRS (375 m, from 2012) count Hotspots differently, so their records cannot be compared directly. We express every Harmonized Hotspot Count as the count VIIRS would have recorded: over the Overlap Period we fit one scaling factor per calendar month between the two sensors and apply it to the MODIS-only years, and we report its error on held-out years. VIIRS is the current and future sensor, so recent years stay as observed.
 
 ## Considered Options
 
