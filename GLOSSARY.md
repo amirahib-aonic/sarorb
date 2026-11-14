@@ -40,6 +40,22 @@ _Avoid_: Season, intensity level, Rising
 How a month's Harmonized Hotspot Count compares with the median of the same calendar month across every other year, written as a multiple such as "3.2× normal". The median keeps a few extreme fire years from making ordinary years look quiet.
 _Avoid_: Departure, deviation, Times Normal
 
+### Views
+
+**Map View**:
+What the heatmap shows for an Area of Interest, one at a time: a single Month, the Range Total, the Typical Year for a calendar month, or the Anomaly for a month.
+_Avoid_: Mode, layer, map mode
+
+**Date Range**:
+The period a user picks to filter the heatmap and downloads. The Burning Calendar always shows the full history, with the Date Range outlined on it.
+_Avoid_: Time window, period, filter
+
+**Range Total**:
+The Harmonized Hotspot Count summed over every month the Date Range touches.
+_Avoid_: Range sum, cumulative count, season total
+
+### Calibration
+
 **Overlap Period**:
 The years when MODIS and VIIRS both observed the Coverage Area (2012 onward), used to calibrate one sensor against the other.
 _Avoid_: Calibration window, shared years
