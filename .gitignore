@@ -1,1 +1,14 @@
 hotspots_filtered.csv.gz
+
+.zcode/
+.claude/
+.codex/
+.cursor/
+.kiro/
+.pi/
+.codegraph/
+.windsurf/
+.aider*
+.continue/
+.opencode/
+CLAUDE.local.md
