@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f5ef;
+  color: #202a23;
+  font: 1rem/1.55 Inter, system-ui, sans-serif;
+}
+
+main {
+  width: min(100% - 3rem, 46rem);
+  margin: clamp(3rem, 12vh, 8rem) auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+section {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #d4d9cc;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+section p {
+  margin-bottom: 0;
+}
+
+li {
+  overflow-wrap: anywhere;
+}
