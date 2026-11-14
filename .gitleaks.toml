@@ -1,0 +1,40 @@
+title = "IGNIS gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "pii-email"
+description = "Email address"
+regex = '''[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'''
+tags = ["pii"]
+  [[rules.allowlists]]
+  regexes = ['''(?i)@(example\.(com|org)|users\.noreply\.github\.com|anthropic\.com)''', '''(?i)^noreply@''']
+
+[[rules]]
+id = "pii-malaysia-ic"
+description = "Malaysian MyKad number"
+regex = '''\b\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])-\d{2}-\d{4}\b'''
+tags = ["pii"]
+
+[[rules]]
+id = "pii-indonesia-nik"
+description = "Indonesian NIK number"
+regex = '''\b\d{6}(0[1-9]|[12]\d|3[01]|4[1-9]|[56]\d|7[01])(0[1-9]|1[0-2])\d{2}\d{4}\b'''
+tags = ["pii"]
+  [[rules.allowlists]]
+  paths = ['''\.csv(\.gz)?$''', '''\.json$''', '''\.geojson$''']
+
+[[rules]]
+id = "pii-phone"
+description = "Malaysian or Indonesian phone number"
+regex = '''(\+?60|\b0)1[0-9][- ]?\d{3,4}[- ]?\d{4}\b|(\+?62|\b0)8[1-9]\d[- ]?\d{3,4}[- ]?\d{3,5}\b'''
+tags = ["pii"]
+  [[rules.allowlists]]
+  paths = ['''\.csv(\.gz)?$''', '''\.json$''', '''\.geojson$''']
+
+[[rules]]
+id = "private-doc-link"
+description = "Link to a private Google Drive, Docs or Sheets file"
+regex = '''https?://(drive|docs)\.google\.com/[^\s)"'>]+'''
+tags = ["private"]

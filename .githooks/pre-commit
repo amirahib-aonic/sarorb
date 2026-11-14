@@ -1,0 +1,38 @@
+#!/bin/sh
+set -e
+
+find_gitleaks() {
+  if command -v gitleaks >/dev/null 2>&1; then echo gitleaks; return; fi
+  for p in "$LOCALAPPDATA"/Microsoft/WinGet/Packages/Gitleaks.Gitleaks_*/gitleaks.exe; do
+    [ -x "$p" ] && { echo "$p"; return; }
+  done
+}
+
+GITLEAKS=$(find_gitleaks)
+if [ -z "$GITLEAKS" ]; then
+  echo "pre-commit: gitleaks not found. Install it (winget install Gitleaks.Gitleaks, brew install gitleaks) and retry." >&2
+  exit 1
+fi
+
+blocked_ext='\.(pdf|doc|docx|xls|xlsx|ppt|pptx|odt|ods|odp|rtf|pages|numbers|key|msg|eml)$'
+max_bytes=5242880
+fail=0
+
+for f in $(git diff --cached --name-only --diff-filter=ACMR); do
+  if echo "$f" | grep -Eiq "$blocked_ext"; then
+    echo "pre-commit: blocked document file: $f" >&2
+    fail=1
+  fi
+  size=$(git cat-file -s ":$f" 2>/dev/null || echo 0)
+  if [ "$size" -gt "$max_bytes" ]; then
+    echo "pre-commit: file over 5 MB: $f ($size bytes). Commit precomputed grids, not raw data." >&2
+    fail=1
+  fi
+done
+
+"$GITLEAKS" git --pre-commit --staged --redact --no-banner --config .gitleaks.toml || fail=1
+
+if [ "$fail" -ne 0 ]; then
+  echo "pre-commit: commit blocked. Remove the flagged files or text and try again." >&2
+  exit 1
+fi

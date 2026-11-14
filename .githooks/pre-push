@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+
+GITLEAKS=$(command -v gitleaks 2>/dev/null || true)
+if [ -z "$GITLEAKS" ]; then
+  for p in "$LOCALAPPDATA"/Microsoft/WinGet/Packages/Gitleaks.Gitleaks_*/gitleaks.exe; do
+    [ -x "$p" ] && GITLEAKS="$p" && break
+  done
+fi
+if [ -z "$GITLEAKS" ]; then
+  echo "pre-push: gitleaks not found. Install it and retry." >&2
+  exit 1
+fi
+
+zero=0000000000000000000000000000000000000000
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue
+  if [ "$remote_sha" = "$zero" ]; then
+    range="$local_sha --not --remotes"
+  else
+    range="$remote_sha..$local_sha"
+  fi
+  "$GITLEAKS" git --redact --no-banner --config .gitleaks.toml --log-opts="$range" || {
+    echo "pre-push: push blocked by gitleaks findings in $local_ref." >&2
+    exit 1
+  }
+done
