@@ -15,12 +15,16 @@ Any region a user selects to examine, either drawn on the map as a shape or pick
 _Avoid_: AOI, selection, bounding box, study area
 
 **Drawn Area**:
-An Area of Interest the user shaped on the map. It can be moved and reshaped. Copying a Preset Area makes a Drawn Area.
-_Avoid_: draw area, polygon, custom area
+An Area of Interest whose Boundary is set in the app, by drawing on the map, typing or pasting points, or loading a boundary file. It can be moved and reshaped. Copying a Preset Area makes a Drawn Area.
+_Avoid_: draw area, polygon, custom area, coordinates area
 
 **Preset Area**:
-An Area of Interest that follows an official boundary. It cannot be reshaped.
-_Avoid_: admin area, boundary
+An Area of Interest whose Boundary is an official one. It cannot be reshaped.
+_Avoid_: admin area
+
+**Boundary**:
+The outline of an Area of Interest: an ordered ring of latitude, longitude points. A Drawn Area's Boundary is set in the app; a Preset Area's is official.
+_Avoid_: polygon, bounding box, coords, shape
 
 ### Fire record
 
