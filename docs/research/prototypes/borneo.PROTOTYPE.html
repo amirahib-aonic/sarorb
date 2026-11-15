@@ -252,9 +252,20 @@ function pipRing(x,y,ring){let ins=false;for(let i=0,j=ring.length-1;i<ring.leng
 function inGeom(x,y,g){const ps=g.type==="Polygon"?[g.coordinates]:g.coordinates;return ps.some(p=>pipRing(x,y,p[0])&&!p.slice(1).some(h=>pipRing(x,y,h)))}
 const cc=c=>[(D.cells[c][1]+.5)*D.cell,(D.cells[c][0]+.5)*D.cell];
 
+function placeName(cells){
+  if(!cells||!cells.length)return"Drawn Area";
+  const tally=lv=>{const cand=D.presets.filter(p=>p.level===lv&&(lv===1||p.parent===lead)),n=new Map();
+    for(const c of cells){const[la,ln]=cc(c),p=cand.find(q=>inGeom(ln,la,q.geom));if(p)n.set(p.name,(n.get(p.name)||0)+1)}
+    return[...n].sort((a,b)=>b[1]-a[1])};
+  let lead=null;const top=tally(1);if(!top.length)return"Drawn Area";lead=top[0][0];
+  const share=top[0][1]/cells.length,list=top.filter(([,v])=>v/cells.length>=.15).map(([k])=>k);
+  if(share<.85)return"Section of "+(list.length>2?list.slice(0,-1).join(", ")+" and "+list.at(-1):list.join(" and "));
+  const sub=tally(2);if(sub.length&&sub[0][1]/cells.length>=.6)return"Section of "+sub[0][0]+", "+lead;
+  return"Section of "+lead}
 function computeAoi(){
   const g=st.aoi?st.aoi.kind==="drawn"?{type:"Polygon",coordinates:[st.aoi.pts.map(([a,b])=>[b,a])]}:st.aoi.geom:null;
   st.aoiCells=g?Int32Array.from([...Array(NC).keys()].filter(c=>{const[la,ln]=cc(c);return inGeom(ln,la,g)})):null;
+  if(st.aoi&&st.aoi.kind==="drawn")st.aoi.name=placeName(st.aoiCells);
   SER=new Float64Array(NM);PSER={};
   for(let i=0;i<NM;i++){let s=0;const o=i*NC;if(st.aoiCells)for(const c of st.aoiCells)s+=H[o+c];else for(let c=0;c<NC;c++)s+=H[o+c];SER[i]=s}
   for(const k in PART){const a=PART[k];let s=0;if(st.aoiCells)for(const c of st.aoiCells)s+=a[c];else for(let c=0;c<NC;c++)s+=a[c];PSER[k]=s}
@@ -333,14 +344,19 @@ function endStep(){if(ghost)map.removeLayer(ghost);ghost=null;commit()}
 function undo(){if(!hist.length||!st.aoi||st.aoi.kind!=="drawn"){toast("Nothing to undo");return}fut.push(st.aoi.pts);st.aoi.pts=hist.pop();st.selV=null;commit()}
 function bindMove(){const el=aoiLayer.getElement();if(!el)return;el.style.cursor=st.edit?"move":"pointer";el.style.touchAction="none";
   el.addEventListener("pointerdown",e=>{if(e.button>0||st.draw)return;L.DomEvent.stop(e);
-    if(!st.edit){st.edit=true;showAoi();syncButtons();return}
+    const touch=e.pointerType!=="mouse",cx=e.clientX,cy=e.clientY,ll=map.mouseEventToLatLng(e);let lpT=null,lpDone=false,cleanup=()=>{};
+    const lpStop=()=>{clearTimeout(lpT);lpT=null};
+    if(touch)lpT=setTimeout(()=>{lpDone=true;cleanup();openRadial(cx,cy,"shape",ll);R.drag=true;R.sel=-1;drawRadial()},+set.lp);
+    if(!st.edit){if(!touch){st.edit=true;showAoi();syncButtons();return}
+      const sel=()=>{el.removeEventListener("pointerup",sel);el.removeEventListener("pointercancel",sel);lpStop();if(!lpDone){st.edit=true;showAoi();syncButtons()}};
+      el.addEventListener("pointerup",sel);el.addEventListener("pointercancel",sel);return}
     const p0=map.mouseEventToContainerPoint(e),base=st.aoi.pts.map(q=>map.latLngToContainerPoint(q));let moved=false;
-    map.dragging.disable();el.setPointerCapture(e.pointerId);
-    const mv=ev=>{const d=map.mouseEventToContainerPoint(ev).subtract(p0);if(!moved&&d.x*d.x+d.y*d.y<16)return;
+    map.dragging.disable();try{el.setPointerCapture(e.pointerId)}catch(_){}
+    const mv=ev=>{const d=map.mouseEventToContainerPoint(ev).subtract(p0);if(!moved&&d.x*d.x+d.y*d.y<16)return;lpStop();
       if(!moved){moved=true;startStep();handles.forEach(h=>h.setOpacity(0))}
       st.aoi.pts=base.map(b=>{const l=map.containerPointToLatLng(b.add(d));return[l.lat,l.lng]});liveShape()};
-    const up=()=>{el.removeEventListener("pointermove",mv);el.removeEventListener("pointerup",up);el.removeEventListener("pointercancel",up);map.dragging.enable();if(moved){justDrew=Date.now();endStep()}};
-    el.addEventListener("pointermove",mv);el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up)})}
+    function up(){lpStop();el.removeEventListener("pointermove",mv);el.removeEventListener("pointerup",up);el.removeEventListener("pointercancel",up);map.dragging.enable();if(moved){justDrew=Date.now();endStep()}};
+    cleanup=up;el.addEventListener("pointermove",mv);el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up)})}
 map.on("click",()=>{if(Date.now()-justDrew<400||st.draw||!st.edit)return;st.edit=false;st.selV=null;showAoi();syncButtons()});
 document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){const k=e.key.toLowerCase();if(k==="z"&&!e.shiftKey){e.preventDefault();undo()}else if(k==="y"||(k==="z"&&e.shiftKey)){e.preventDefault();redo()}}});
 function toast(s){const el=document.getElementById("toast");el.textContent=s;el.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display="none",Math.max(2200,s.length*55))}
@@ -413,7 +429,7 @@ const ACT={
   delPt:{l:"delPt",f:ll=>delVertex(nearestVertex(ll))}
 };
 const PAGES=[{n:"area",items:["draw","edit","preset","clear"]},{n:"view",items:["vMonth","vRange","vTyp","vAnom","range"]},{n:"exp",items:["csvRaw","csvHarm","xlsx","report","settings"]}];
-const SHAPE={n:"shape",items:["addPt","delPt","edit","clear"]};
+const SHAPE={n:"shape",items:["addPt","delPt","edit","report","clear"]};
 let R={open:false,page:0,menu:null,sel:-1,ll:null,x:0,y:0,drag:false};
 const rad=document.getElementById("radial"),rsvg=document.getElementById("rsvg");
 const RI=50,RO=135;
