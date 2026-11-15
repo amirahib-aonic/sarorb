@@ -17,9 +17,9 @@ Tick `[x]` only once every listed evidence path exists. The script fails if a ti
 - [x] O3-REGION: The user can select a region | evidence: docs/research/prototypes/borneo.PROTOTYPE.html
 - [x] O4-DATERANGE: The user can select a date range | evidence: docs/research/prototypes/borneo.PROTOTYPE.html
 - [x] O5-CALENDAR: A burning calendar shows hotspot counts from the early 2000s to the present | evidence: docs/research/prototypes/borneo.PROTOTYPE.html
-- [ ] O6-DOWNLOAD: Analytics and visualizations of fire activity can be downloaded | evidence: docs/research/prototypes/borneo.PROTOTYPE.html, docs/research/prototypes/PNG-SUMMARY-EXPORT
+- [x] O6-DOWNLOAD: Analytics and visualizations of fire activity can be downloaded | evidence: docs/research/prototypes/borneo.PROTOTYPE.html, docs/DEPLOYMENT.md
 - [x] S1-NASA-DATA: At least one NASA resource from the challenge Resources tab is used and listed (FIRMS MODIS/VIIRS) | evidence: docs/research/RESOURCE.md
-- [ ] S2-DEPLOYED: A deployed link judges can use | evidence:
+- [x] S2-DEPLOYED: A deployed link judges can use | evidence: docs/DEPLOYMENT.md
 - [ ] S3-VIDEO: A ~30 s demo video on YouTube, no under-18s on camera | evidence:
 - [ ] S4-AI-USE: Use of AI is described, AI images labelled | evidence:
 - [ ] S5-PLAIN-LANGUAGE: Non-technical judges can follow the app, video, summary and project details: jargon (MODIS, VIIRS, FRP, harmonization, anomaly) is replaced or explained in plain words on first use | evidence:

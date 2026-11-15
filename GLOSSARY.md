@@ -22,7 +22,8 @@ _Avoid_: Fire, fire point, detection
 
 **Harmonized Hotspot Count**:
 The monthly number of Hotspots in an Area of Interest, expressed as the count VIIRS would have recorded, whichever sensor actually observed it.
-_Avoid_: Combined count, merged count, raw count
+_UI label_: Combined count (visible label; the "i" names the Harmonized Hotspot Count)
+_Avoid_: merged count, raw count
 
 **Burning Calendar**:
 The view of when burning happens in an Area of Interest: a Typical Year on top, and a year-by-month grid of Harmonized Hotspot Counts below for history and unusual years.

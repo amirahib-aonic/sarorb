@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+sh scripts/check-objectives.sh || { echo "pre-push: objectives check failed (docs/OBJECTIVES.md)." >&2; exit 1; }
 
 GITLEAKS=$(command -v gitleaks 2>/dev/null || true)
 if [ -z "$GITLEAKS" ]; then

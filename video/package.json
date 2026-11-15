@@ -1,0 +1,21 @@
+{
+  "name": "ignis-demo-video",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts IgnisDemo out/ignis-demo.mp4 --codec h264 --crf 17",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.543",
+    "@remotion/google-fonts": "^4.0.543",
+    "@remotion/transitions": "^4.0.543",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
