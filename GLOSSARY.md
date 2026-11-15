@@ -11,8 +11,16 @@ The island of Borneo (Kalimantan, Sarawak, Sabah and Brunei), the whole region I
 _Avoid_: Fire Area, study area, region
 
 **Area of Interest**:
-Any region a user selects to examine, either drawn on the map as a shape or picked from a preset: a province, state or country, or a district or division within one.
+Any region a user selects to examine, either drawn on the map as a shape or picked from a preset: a province, state or country, or a district or division within one. Only one is active at a time, and only the part inside the Coverage Area counts.
 _Avoid_: AOI, selection, bounding box, study area
+
+**Drawn Area**:
+An Area of Interest the user shaped on the map. It can be moved and reshaped. Copying a Preset Area makes a Drawn Area.
+_Avoid_: draw area, polygon, custom area
+
+**Preset Area**:
+An Area of Interest that follows an official boundary. It cannot be reshaped.
+_Avoid_: admin area, boundary
 
 ### Fire record
 
