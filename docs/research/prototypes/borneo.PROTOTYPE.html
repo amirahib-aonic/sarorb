@@ -192,6 +192,8 @@ table.kt{border-collapse:collapse;width:100%;font-size:11px;margin-top:4px}
 #tourCard .ts{border:0;background:none;color:var(--mut);padding-left:0}
 #tHelp{writing-mode:horizontal-tb!important;justify-content:center;font-weight:700;font-size:15px;padding:8px 0!important}
 .tourGo{margin:4px 0 10px}
+#bar .bi{display:none}
+@media (max-width:760px){#bar .bi{display:inline;font-size:16px;line-height:1}#bar .bl{display:none}#bRng,#bExp{padding-left:10px;padding-right:10px}#label{min-width:0}#bar #sub{white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.25}}
 @media (max-width:760px){#tabs{gap:4px;max-width:calc(100vw - 16px)}#tabs button{padding:6px 9px;font-size:12px;white-space:nowrap;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;display:block}#tabs button .ic{display:none}#tabs #tHelp{flex:0 0 32px;width:32px;padding:6px 0!important;font-size:14px}}
 @media (prefers-reduced-motion:reduce){#tourSpot,#tourCard{transition:none}}
 .info{min-height:0;padding:0 5px;margin-left:6px;border-radius:50%;font-size:11px;line-height:16px;background:transparent;color:var(--mut);vertical-align:1px;text-transform:none}
@@ -1160,8 +1162,9 @@ function applySettings(){
   document.getElementById("bUndo").textContent=t("undo");
   document.getElementById("bRedo").textContent=t("redo");
   document.getElementById("bRngAll").textContent=t("all");
-  document.getElementById("bRng").textContent=t("dates");
-  document.getElementById("bExp").textContent=t("exp")+" ▾";
+  const bR=document.getElementById("bRng"),bE=document.getElementById("bExp");
+  bR.innerHTML=`<span class="bi" aria-hidden="true">📅</span><span class="bl">${t("dates")}</span>`;bR.setAttribute("aria-label",t("dates"));bR.title=t("dates");
+  bE.innerHTML=`<span class="bi" aria-hidden="true">⤓</span><span class="bl">${t("exp")} ▾</span>`;bE.setAttribute("aria-label",t("exp"));bE.title=t("exp");
   document.getElementById("coachOk").textContent=t("gotIt");
   document.getElementById("mode").innerHTML=[["month","month"],["range","rangeTotal"],["typical","typicalYear"],["anomaly","anomaly"]].map(([v,l])=>`<option value="${v}">${t(l)}</option>`).join("");
   document.getElementById("mode").value=st.mode;
