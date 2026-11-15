@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="borneo.PROTOTYPE.data.js"></script>
+<script src="live.js"></script>
 <style>
 :root{--bg:#111418;--panel:#1a1e24;--panel2:#22272f;--line:#333a44;--fg:#eceef1;--mut:#b6bfc9;--acc:#f28c38;--sb:390px;--bar:64px;--r1:6px;--r2:10px}
 *{box-sizing:border-box}
@@ -34,6 +35,8 @@ body.collapsed #tools{max-width:calc(100vw - 60px)}
 #label{min-width:170px;line-height:1.2}
 #label b{font-size:15px;font-variant-numeric:tabular-nums}
 #sub{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+#label{overflow:hidden}
+#label b,#sub{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sl{flex:1;min-width:160px;position:relative;padding-bottom:14px}
 .sl input{width:100%;margin:0}
 #ticks{position:absolute;left:8px;right:8px;bottom:0;height:12px;font-size:11px;color:var(--mut)}
@@ -87,6 +90,9 @@ table.kt{border-collapse:collapse;width:100%;font-size:11px;margin-top:4px}
 #fab{position:fixed;left:10px;bottom:calc(var(--bar) + 90px);z-index:1000;border-radius:50%;width:52px;height:52px;background:var(--panel);font-size:20px;box-shadow:0 4px 14px #0007}
 #coach{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--bar) + 60px);z-index:1100;display:flex;align-items:center;gap:10px;background:#2b3240;border:1px solid var(--acc);border-radius:var(--r2);padding:8px 10px 8px 12px;box-shadow:0 6px 20px #0009;max-width:calc(100vw - 20px);font-size:13px}
 #coach[hidden]{display:none}
+.info{min-height:0;padding:0 5px;margin-left:6px;border-radius:50%;font-size:11px;line-height:16px;background:transparent;color:var(--mut);vertical-align:1px;text-transform:none}
+.info:hover{color:var(--fg)}
+#toast{max-width:min(460px,calc(100vw - 20px));text-align:center}
 #tip{position:fixed;z-index:1100;pointer-events:none;background:#000c;color:#fff;font-size:11px;padding:3px 6px;border-radius:4px;display:none}
 #toast{position:fixed;left:50%;top:40px;transform:translateX(-50%);z-index:1300;background:#2b3240;border:1px solid var(--line);padding:6px 12px;border-radius:6px;display:none}
 #radial{position:fixed;inset:0;z-index:1250;display:none}
@@ -115,6 +121,7 @@ body.noanim,body.noanim *{transition:none!important}
 #bar .grp.rng{display:none}
 #bRng{display:block}
 #label{flex:1;min-width:0}
+#mode{max-width:150px}
 body.showrng #bar .grp.rng{display:flex;flex-wrap:wrap;position:fixed;left:10px;bottom:calc(var(--bar) + 8px);z-index:1001;background:var(--panel);border:1px solid var(--line);border-radius:var(--r2);padding:10px;box-shadow:0 6px 20px #0008;max-width:calc(100vw - 20px)}
 body.showrng #bar{z-index:1001}
 }
@@ -152,7 +159,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
 </style>
 </head>
 <body class="noanim">
-<div id="banner"></div>
+<div id="banner"><span id="bannerText"></span><span class="iSlot" data-k="sat"></span><span class="iSlot" data-k="hot"></span></div>
 <div id="map" role="region" aria-label="Hotspot heatmap of Borneo"></div>
 <div id="tools" role="toolbar" aria-label="Area of Interest">
   <button id="bArea" aria-expanded="false">▦ Area</button>
@@ -167,10 +174,10 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <button id="play" aria-label="Play">▶</button>
   <div id="label"><b id="when"></b><div id="sub"></div></div>
   <div class="sl"><input type="range" id="slider" min="0" aria-label="Month"><div id="ticks" aria-hidden="true"></div></div>
-  <select id="mode" aria-label="Map mode"></select>
-  <div class="grp rng"><span class="note" data-i18n="range"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"></div>
+  <select id="mode" aria-label="Map View"></select><span class="iSlot" data-k="view"></span>
+  <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="range"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"></div>
   <button id="bRng" aria-expanded="false" aria-controls="from">Dates</button>
-  <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button></div></div>
+  <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button><button id="bXlsx" role="menuitem" data-i18n="xlsx"></button><button id="bReport" role="menuitem" data-i18n="report"></button></div></div>
 </div>
 <div id="tabs">
   <button id="tCal" data-tab="cal"></button>
@@ -178,16 +185,16 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
 </div>
 <aside id="sb">
   <section class="panel" id="pCal">
-    <h2 id="aoiName"></h2>
+    <h2><span id="aoiName"></span><span class="iSlot" data-k="area"></span></h2>
     <div class="note" id="aoiNote"></div>
     <div id="lowData"></div>
-    <h3><span data-i18n="typical"></span><span class="w" id="lowIcon"></span></h3>
+    <h3><span data-i18n="typical"></span><span id="iTyp"></span><span class="w" id="lowIcon"></span></h3>
     <div class="typ" id="typ"></div>
     <div class="legend" id="phaseLegend"></div>
     <h3 id="gridTitle"></h3>
     <table class="grid" id="grid"></table>
     <div class="bands" id="gridRamp"></div>
-    <div class="note" style="margin-top:8px" data-i18n="gridNote"></div>
+    <div class="note" style="margin-top:8px"><span data-i18n="gridNote"></span><span class="iSlot" data-k="gold"></span></div>
     <details class="dbg"><summary>Debug state</summary><div id="state"></div></details>
   </section>
   <section class="panel" id="pSet" hidden>
@@ -209,7 +216,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
 <div id="radial" role="menu" aria-label="Tool wheel"><svg id="rsvg" width="300" height="300" viewBox="-150 -150 300 300"></svg></div>
 <div id="tip"></div>
 <div id="toast" role="status"></div>
-<script>
+<script>window.PROTO_READY.then(()=>{
 const D=window.PROTO_DATA,NC=D.cells.length,keys=Object.keys(D.months).sort(),NM=keys.length,CUR=D.current;
 const kIdx=Object.fromEntries(keys.map((k,i)=>[k,i])),kY=k=>+k.slice(0,4),kM=k=>+k.slice(5),key=(y,m)=>`${y}-${String(m).padStart(2,"0")}`;
 const years=[...new Set(keys.map(kY))];
@@ -219,7 +226,7 @@ const cellId=new Map(D.cells.map(([x,y],i)=>[x+","+y,i]));
 const LOW=50,MN={en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],ms:["Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogo","Sep","Okt","Nov","Dis"],id:["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"]};
 
 const I18N={
-en:{allDistricts:"All districts",district:"District",banner:"PROTOTYPE — throwaway. Borneo, harmonized to VIIRS-equivalent Hotspots (ADR 0001, Borneo-wide k). 0.1° grid.",cal:"Burning Calendar",settings:"Settings",draw:"Draw area",edit:"Edit points",clear:"Clear area",preset:"Pick preset",range:"Date range",csvRaw:"CSV: Hotspots",csvHarm:"CSV: Harmonized",typical:"Typical Year",month:"Month",rangeTotal:"Range total",typicalYear:"Typical Year",anomaly:"Anomaly",gridCounts:"Year × month (Harmonized Hotspot Count)",gridAnom:"Year × month (Anomaly vs median of other years)",gridNote:"Gold years = MODIS-only, scaled by k(m). White box = date range. Hatched = partial month. Click a cell to map it.",language:"Language",palette:"Colours",wheel:"Tool wheel",lpDelay:"Long-press delay (ms)",wheelKey:"Key that opens it",wheelStart:"Opens on",mapH:"Map",basemap:"Basemap",opacity:"Heatmap opacity",about:"About the data (fixed)",area:"Area",view:"View",exp:"Export",shape:"Shape",addPt:"Add point",delPt:"Delete point",borneo:"All of Borneo",low:"Low data: fewer than 50 Hotspots a year on average. Burning Phases are not reliable here.",peak:"Peak burning",active:"Active burning",moderate:"Moderate",lowp:"Low",partial:"partial",normal:"normal"},
+en:{xlsx:"Excel workbook",report:"Printable report",fires:"Hotspots",olderSat:"MODIS (older satellite), scaled up",newerSat:"VIIRS (newer satellite)",allDistricts:"All districts",district:"District",banner:"PROTOTYPE — Hotspots over Borneo from NASA's MODIS and VIIRS satellites, combined into one count.",cal:"Burning Calendar",settings:"Settings",draw:"Draw area",edit:"Edit points",clear:"Clear area",preset:"Pick preset",range:"Date range",csvRaw:"CSV: Hotspot locations",csvHarm:"CSV: Combined monthly counts",typical:"Typical Year",month:"Month",rangeTotal:"Range Total",typicalYear:"Typical Year",anomaly:"Compared with normal",gridCounts:"Combined count by year and month",gridAnom:"Each month compared with normal",gridNote:"Gold years: only MODIS was flying, so its counts are scaled up to match VIIRS. White box = your dates. Striped = this month so far. Click a square to show it on the map.",language:"Language",palette:"Colours",wheel:"Tool wheel",lpDelay:"Long-press delay (ms)",wheelKey:"Key that opens it",wheelStart:"Opens on",mapH:"Map",basemap:"Basemap",opacity:"Heatmap opacity",about:"About the data (fixed)",area:"Area",view:"Map View",exp:"Export",shape:"Shape",addPt:"Add point",delPt:"Delete point",borneo:"All of Borneo",low:"Not much fire data here (under 50 Hotspots a year), so the Burning Phases shown are only a rough guide.",peak:"Peak burning",active:"Active burning",moderate:"Moderate",lowp:"Low",partial:"partial",normal:"normal"},
 ms:{allDistricts:"Semua daerah",district:"Daerah",banner:"PROTOTAIP — sementara. Borneo, diharmonikan kepada Titik Panas setara VIIRS. Grid 0.1°.",cal:"Kalendar Pembakaran",settings:"Tetapan",draw:"Lukis kawasan",edit:"Sunting titik",clear:"Kosongkan",preset:"Pilih pratetap",range:"Julat tarikh",csvRaw:"CSV: Titik Panas",csvHarm:"CSV: Diharmonikan",typical:"Tahun Biasa",month:"Bulan",rangeTotal:"Jumlah julat",typicalYear:"Tahun Biasa",anomaly:"Anomali",gridCounts:"Tahun × bulan (Kiraan Titik Panas Diharmonikan)",gridAnom:"Tahun × bulan (Anomali berbanding Tahun Biasa)",gridNote:"Tahun emas = MODIS sahaja, diskala dengan k(m). Kotak putih = julat tarikh. Berlorek = bulan separa.",language:"Bahasa",palette:"Warna",wheel:"Roda alat",lpDelay:"Tempoh tekan lama (ms)",wheelKey:"Kekunci pembuka",wheelStart:"Dibuka pada",mapH:"Peta",basemap:"Peta asas",opacity:"Kelegapan peta haba",about:"Tentang data (tetap)",area:"Kawasan",view:"Paparan",exp:"Eksport",shape:"Bentuk",addPt:"Tambah titik",delPt:"Padam titik",borneo:"Seluruh Borneo",low:"Data rendah: kurang 50 Titik Panas setahun secara purata. Fasa Pembakaran tidak boleh dipercayai.",peak:"Puncak pembakaran",active:"Pembakaran aktif",moderate:"Sederhana",lowp:"Rendah",partial:"separa",normal:"biasa"},
 id:{allDistricts:"Semua kabupaten/kota",district:"Kabupaten/kota",banner:"PROTOTIPE — sementara. Borneo, diharmonisasi ke Titik Panas setara VIIRS. Grid 0,1°.",cal:"Kalender Kebakaran",settings:"Pengaturan",draw:"Gambar area",edit:"Edit titik",clear:"Hapus area",preset:"Pilih wilayah",range:"Rentang tanggal",csvRaw:"CSV: Titik Panas",csvHarm:"CSV: Harmonisasi",typical:"Tahun Tipikal",month:"Bulan",rangeTotal:"Total rentang",typicalYear:"Tahun Tipikal",anomaly:"Anomali",gridCounts:"Tahun × bulan (Jumlah Titik Panas Harmonisasi)",gridAnom:"Tahun × bulan (Anomali terhadap Tahun Tipikal)",gridNote:"Tahun emas = hanya MODIS, diskalakan dengan k(m). Kotak putih = rentang tanggal. Arsiran = bulan parsial.",language:"Bahasa",palette:"Warna",wheel:"Roda alat",lpDelay:"Jeda tekan lama (ms)",wheelKey:"Tombol pembuka",wheelStart:"Terbuka di",mapH:"Peta",basemap:"Peta dasar",opacity:"Opasitas peta panas",about:"Tentang data (tetap)",area:"Area",view:"Tampilan",exp:"Ekspor",shape:"Bentuk",addPt:"Tambah titik",delPt:"Hapus titik",borneo:"Seluruh Kalimantan",low:"Data sedikit: rata-rata kurang dari 50 Titik Panas per tahun. Fase Kebakaran tidak andal di sini.",peak:"Puncak kebakaran",active:"Kebakaran aktif",moderate:"Sedang",lowp:"Rendah",partial:"parsial",normal:"normal"}};
 const PAL={default:{heat:["#ffffb2","#fecc5c","#fd8d3c","#f03b20","#bd0026"],phase:{peak:"#d7301f",active:"#fc8d59",moderate:"#fdcc8a",lowp:"#2a3038"}},cb:{heat:["#ffffcc","#a1dab4","#41b6c4","#2c7fb8","#253494"],phase:{peak:"#D55E00",active:"#E69F00",moderate:"#F0E442",lowp:"#2a3038"}}};
@@ -255,6 +262,10 @@ const typical=(m,excl)=>mean(years.filter(y=>y!==excl).map(y=>key(y,m)).filter(k
 const median=a=>{if(!a.length)return 0;const s=[...a].sort((x,y)=>x-y),h=s.length>>1;return s.length%2?s[h]:(s[h-1]+s[h])/2};
 const baseline=(m,excl)=>median(years.filter(y=>y!==excl).map(y=>key(y,m)).filter(k=>k in kIdx&&k!==CUR).map(k=>SER[kIdx[k]]));
 function anomaly(k){const y=kY(k),m=kM(k);if(k===CUR){const den=median(years.filter(yy=>yy!==y).map(yy=>key(yy,m)).filter(kk=>kk in PSER).map(kk=>PSER[kk]));return den>0?PSER[k]/den:null}const den=baseline(m,y);return den>0?SER[kIdx[k]]/den:null}
+const INFO={hot:"Hotspot: one satellite detection of active fire at a place and time, from NASA FIRMS.",sat:"MODIS = Moderate Resolution Imaging Spectroradiometer (older, on record from 2002). VIIRS = Visible Infrared Imaging Radiometer Suite (newer, from 2012, sees more small fires).",typ:"Typical Year: the average Combined count for each calendar month, across every year on record.",grid:"Combined count (technical: Harmonized Hotspot Count). MODIS spots fewer fires than VIIRS, so its 2002–2011 counts are multiplied by a monthly factor k(m) of about 4 to 5 to read as VIIRS would have.",anom:"Compared with normal (technical: Anomaly). This month's Hotspots divided by the median of the same month in the other years. 2× normal means twice the usual amount. The median stops a few extreme fire years making ordinary years look quiet.",phase:"Burning Phase: how much of a Typical Year's burning falls in that month. Peak burning ≥15%, Active burning ≥8%, Moderate ≥4%, Low below that.",range:"Range Total: the Combined count summed over every month your Date Range touches.",view:"Map View: what the heatmap shows, one at a time: a single Month, the Range Total, the Typical Year, or Compared with normal.",area:"Area (technical: Area of Interest): the region you are looking at, drawn on the map or picked from a preset. All of Borneo is the full Coverage Area: Kalimantan, Sarawak, Sabah and Brunei.",gold:"Gold years (2002–2011): only MODIS was flying. Its counts are scaled by k(m), a factor fitted in the Overlap Period (2012 onward, when MODIS and VIIRS both observed Borneo).",cell:"Each square is about 11 km across (a 0.1° grid cell). Its colour shows how many Hotspots the satellites detected there."};
+const info=k=>`<button type="button" class="info" data-info="${k}" aria-label="What does this mean?" title="${INFO[k]}">ⓘ</button>`;
+const satName=s=>s==="MODIS"?t("olderSat"):t("newerSat");
+document.addEventListener("click",e=>{const b=e.target.closest(".info");if(b){e.stopPropagation();toast(INFO[b.dataset.info])}},true);
 const phaseKey=s=>s>=.15?"peak":s>=.08?"active":s>=.04?"moderate":"lowp";
 const inRange=k=>{const a=st.from.slice(0,7),b=st.to.slice(0,7);return k>=a&&k<=b};
 
@@ -303,11 +314,11 @@ function drawCanvas(){
 }
 map.on("move zoom resize viewreset",drawCanvas);
 const tip=document.getElementById("tip");
-map.on("mousemove",e=>{if(st.draw){tip.style.display="none";return}const c=cellId.get(Math.floor(e.latlng.lng/D.cell)+","+Math.floor(e.latlng.lat/D.cell));if(c==null||!VALS[c]){tip.style.display="none";return}const v=VALS[c];tip.textContent=st.mode==="anomaly"?`${v.toFixed(2)}× ${t("normal")} (55 km area) · fire here in ${FREQ.f[c]} of ${FREQ.n} ${mn()[kM(keys[st.idx])-1]}s`:`${v.toFixed(1)} VIIRS-eq Hotspots`;tip.style.left=e.originalEvent.clientX+12+"px";tip.style.top=e.originalEvent.clientY+12+"px";tip.style.display="block"});
+map.on("mousemove",e=>{if(st.draw){tip.style.display="none";return}const c=cellId.get(Math.floor(e.latlng.lng/D.cell)+","+Math.floor(e.latlng.lat/D.cell));if(c==null||!VALS[c]){tip.style.display="none";return}const v=VALS[c];tip.textContent=st.mode==="anomaly"?`${v.toFixed(2)}× ${t("normal")} (55 km area) · fire here in ${FREQ.f[c]} of ${FREQ.n} ${mn()[kM(keys[st.idx])-1]}s`:`${v.toFixed(1)} ${t("fires")}`;tip.style.left=e.originalEvent.clientX+12+"px";tip.style.top=e.originalEvent.clientY+12+"px";tip.style.display="block"});
 map.on("mouseout",()=>tip.style.display="none");
 
 let aoiLayer=null,handles=[];
-function toast(s){const el=document.getElementById("toast");el.textContent=s;el.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display="none",2200)}
+function toast(s){const el=document.getElementById("toast");el.textContent=s;el.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display="none",Math.max(2200,s.length*55))}
 function showAoi(){
   if(aoiLayer)map.removeLayer(aoiLayer);aoiLayer=null;handles.forEach(h=>map.removeLayer(h));handles=[];
   inAoi.fill(0);if(st.aoiCells)for(const c of st.aoiCells)inAoi[c]=1;
@@ -360,11 +371,11 @@ preset2.onchange=()=>pickPreset(preset2.value);
 const ACT={
   draw:{l:"draw",f:startDraw},edit:{l:"edit",f:startEdit},preset:{l:"preset",f:()=>{presetSel.focus();presetSel.showPicker?.()}},clear:{l:"clear",f:clearAoi},
   vMonth:{l:"month",f:()=>setMode("month")},vRange:{l:"rangeTotal",f:()=>setMode("range")},vTyp:{l:"typicalYear",f:()=>setMode("typical")},vAnom:{l:"anomaly",f:()=>setMode("anomaly")},range:{l:"range",f:()=>showRange(true)},
-  csvRaw:{l:"csvRaw",f:()=>csv("raw")},csvHarm:{l:"csvHarm",f:()=>csv("harm")},settings:{l:"settings",f:()=>openTab("set")},
+  csvRaw:{l:"csvRaw",f:()=>csv("raw")},csvHarm:{l:"csvHarm",f:()=>csv("harm")},xlsx:{l:"xlsx",f:()=>workbook()},report:{l:"report",f:()=>report()},settings:{l:"settings",f:()=>openTab("set")},
   addPt:{l:"addPt",f:ll=>{const i=nearestEdge(ll);st.aoi.pts.splice(i+1,0,[ll.lat,ll.lng]);st.edit=true;st.selV=i+1;commit();syncButtons()}},
   delPt:{l:"delPt",f:ll=>delVertex(nearestVertex(ll))}
 };
-const PAGES=[{n:"area",items:["draw","edit","preset","clear"]},{n:"view",items:["vMonth","vRange","vTyp","vAnom","range"]},{n:"exp",items:["csvRaw","csvHarm","settings"]}];
+const PAGES=[{n:"area",items:["draw","edit","preset","clear"]},{n:"view",items:["vMonth","vRange","vTyp","vAnom","range"]},{n:"exp",items:["csvRaw","csvHarm","xlsx","report","settings"]}];
 const SHAPE={n:"shape",items:["addPt","delPt","edit","clear"]};
 let R={open:false,page:0,menu:null,sel:-1,ll:null,x:0,y:0,drag:false};
 const rad=document.getElementById("radial"),rsvg=document.getElementById("rsvg");
@@ -442,23 +453,23 @@ function csv(kind){
 function drawCalendar(){
   const k=keys[st.idx],m=kM(k),M=mn(),pal=PAL[set.pal];
   document.getElementById("aoiName").textContent=st.aoi?st.aoi.name:t("borneo");
-  document.getElementById("aoiNote").textContent=`${st.aoiCells?st.aoiCells.length:NC} cells · harmonized ${GRID0}–${CUR.slice(0,4)} · data to ${D.lastDate}`;
+  document.getElementById("aoiNote").textContent=`${st.aoiCells?st.aoiCells.length:NC} cells · harmonized ${GRID0}–${CUR.slice(0,4)} · data to ${D.lastDate}${D.live?" (live from NASA)":""}`;
   const typ=Array.from({length:12},(_,i)=>typical(i+1,null)),tot=typ.reduce((a,b)=>a+b,0),low=tot<LOW;
   document.getElementById("lowData").innerHTML=low?`<div class="warn">⚠ ${t("low")}</div>`:"";
   const li=document.getElementById("lowIcon");li.textContent=low?"⚠ low data":"";li.title=low?t("low"):"";
   document.getElementById("typ").innerHTML=typ.map((v,i)=>{const p=phaseKey(tot?v/tot:0),bg=low?"#30353d":pal.phase[p];return`<button data-m="${i+1}" class="${i+1===m?"sel":""}" style="background:${bg};color:${low||p==="lowp"?"var(--mut)":"#111"}" title="${M[i]}: ${t(p)} · ${tot?(v/tot*100).toFixed(1):0}% · ${Math.round(v)} avg" aria-label="${M[i]} ${t(p)}">${M[i][0]}</button>`}).join("");
-  document.getElementById("phaseLegend").innerHTML=["peak","active","moderate","lowp"].map((p,i)=>`<span><i style="background:${low?"#30353d":pal.phase[p]}"></i>${t(p)} ${["≥15%","≥8%","≥4%",""][i]}</span>`).join("");
+  document.getElementById("phaseLegend").innerHTML=["peak","active","moderate","lowp"].map((p,i)=>`<span><i style="background:${low?"#30353d":pal.phase[p]}"></i>${t(p)} ${["≥15%","≥8%","≥4%",""][i]}</span>`).join("")+info("phase");
   const an=st.mode==="anomaly";
   const sv=keys.filter(kk=>kY(kk)>=GRID0&&kk!==CUR).map(kk=>SER[kIdx[kk]]).sort((a,b)=>a-b),NB=7;
   const th=Array.from({length:NB-1},(_,i)=>sv[Math.floor(sv.length*(i+1)/NB)]||0);
   const band=v=>th.filter(x=>v>=x).length,bcol=b=>lerp(pal.heat,b/(NB-1));
-  document.getElementById("gridTitle").textContent=t(an?"gridAnom":"gridCounts");
+  document.getElementById("gridTitle").innerHTML=t(an?"gridAnom":"gridCounts")+info(an?"anom":"grid");document.getElementById("iTyp").innerHTML=info("typ");
   document.getElementById("gridRamp").innerHTML=an?["¼×","½×","1×","2×","4×"].map((l,i)=>`<div><i style="background:${DIV[i]}"></i>${l}</div>`).join(""):Array.from({length:NB},(_,b)=>`<div><i style="background:${bcol(b)}"></i>${b?fmt(th[b-1]):"0"}+</div>`).join("");
   let h="<thead><tr><th></th>"+M.map(n=>`<th>${n[0]}</th>`).join("")+"</tr></thead><tbody>";
   years.filter(y=>y>=GRID0).reverse().forEach(y=>{const modis=[...Array(12)].some((_,i)=>D.months[key(y,i+1)]?.s==="MODIS");h+=`<tr class="${modis?"modis":""}"><th>${y}</th>`;
     for(let mm=1;mm<=12;mm++){const kk=key(y,mm);if(!(kk in kIdx)){h+=`<td style="background:#0c0e11;cursor:default"></td>`;continue}
       const v=SER[kIdx[kk]],r=an?anomaly(kk):null,bg=an?(r==null?"#30353d":div(r)):bcol(band(v)),cls=[kk===k?"sel":"",inRange(kk)?"inr":"",kk===CUR?"part":""].join(" ");
-      h+=`<td data-k="${kk}" class="${cls}" style="background:${bg}" title="${M[mm-1]} ${y}: ${Math.round(v)} VIIRS-eq${r!=null?` · ${r.toFixed(2)}× ${t("normal")}`:""} (${D.months[kk].s})${kk===CUR?` · ${t("partial")} 1–${D.cutDay}`:""}"></td>`}
+      h+=`<td data-k="${kk}" class="${cls}" style="background:${bg}" title="${M[mm-1]} ${y}: ${Math.round(v)} ${t("fires")}${r!=null?` · ${r.toFixed(2)}× ${t("normal")}`:""} (${satName(D.months[kk].s)})${kk===CUR?` · ${t("partial")} 1–${D.cutDay}`:""}"></td>`}
     h+="</tr>"});
   document.getElementById("grid").innerHTML=h+"</tbody>";
   return{typ,tot,low};
@@ -470,18 +481,18 @@ function render(){
   document.getElementById("slider").value=st.idx;
   const cal=drawCalendar(),an=anomaly(k),part=k===CUR;
   const when={month:`${M[m-1]} ${y}${part?` (${t("partial")} 1–${D.cutDay})`:""}`,range:`${st.from} → ${st.to}`,typical:`${t("typicalYear")}: ${M[m-1]}`,anomaly:`${t("anomaly")}: ${M[m-1]} ${y}${part?` (${t("partial")})`:""}`}[st.mode];
-  const sub={month:`${Math.round(SER[st.idx])} VIIRS-eq · ${r.s}${r.s==="MODIS"?` × k=${D.k[m].toFixed(2)}`:r.s==="VIIRS NOAA-20"?` ÷ ${D.r}`:""}`,range:`${Math.round(keys.reduce((s,kk,i)=>s+(inRange(kk)?SER[i]:0),0))} VIIRS-eq in range (whole months)`,typical:`${Math.round(cal.typ[m-1])} avg · ${t(phaseKey(cal.tot?cal.typ[m-1]/cal.tot:0))}`,anomaly:an==null?"no baseline":`${an.toFixed(2)}× ${t("normal")}${part?` vs 1–${D.cutDay} ${M[m-1]} in past years`:""}`}[st.mode];
+  const sub={month:`${Math.round(SER[st.idx])} ${t("fires")} · ${satName(r.s)}${r.s==="MODIS"?` ×${D.k[m].toFixed(1)}`:""}`,range:`${Math.round(keys.reduce((s,kk,i)=>s+(inRange(kk)?SER[i]:0),0))} ${t("fires")} · ${t("rangeTotal")}`,typical:`${Math.round(cal.typ[m-1])} avg · ${t(phaseKey(cal.tot?cal.typ[m-1]/cal.tot:0))}`,anomaly:an==null?"no baseline":`${an.toFixed(2)}× ${t("normal")}${part?` vs 1–${D.cutDay} ${M[m-1]} in past years`:""}`}[st.mode];
   document.getElementById("when").textContent=when;document.getElementById("sub").textContent=sub;
   const pal=PAL[set.pal],lg=document.getElementById("mlegend");
-  lg.innerHTML=st.mode==="anomaly"?`<b>${t("anomaly")}</b><div class="bands">${["¼×","½×","1×","2×","4×"].map((l,i)=>`<div><i style="background:${DIV[i]}"></i>${l}</div>`).join("")}</div><div class="note" style="margin-top:4px">Red cells with no history = new fire</div>`
-    :`<b>${{month:"VIIRS-eq Hotspots / cell",range:"Hotspots / cell, range total",typical:"Avg Hotspots / cell"}[st.mode]}</b><div class="ramp" style="background:linear-gradient(90deg,${pal.heat.join(",")})"></div><div class="ends"><span>1</span><span>${fmt(VMAX)}</span></div><div class="note">log scale</div>`;
+  lg.innerHTML=st.mode==="anomaly"?`<b>${t("anomaly")}</b>${info("anom")}<div class="bands">${["¼×","½×","1×","2×","4×"].map((l,i)=>`<div><i style="background:${DIV[i]}"></i>${l}</div>`).join("")}</div><div class="note" style="margin-top:4px">Each square is compared over its surrounding 55 km area</div>`
+    :`<b>${{month:"Hotspots per square",range:"Hotspots per square, Range Total",typical:"Typical Year Hotspots per square"}[st.mode]}</b>${info("cell")}<div class="ramp" style="background:linear-gradient(90deg,${pal.heat.join(",")})"></div><div class="ends"><span>1</span><span>${fmt(VMAX)}</span></div>`;
   document.getElementById("state").textContent=JSON.stringify({aoi:st.aoi?{kind:st.aoi.kind,name:st.aoi.name,points:st.aoi.pts?.length}:"Borneo",cells:st.aoiCells?st.aoiCells.length:NC,month:k,mode:st.mode,source:r.s,factor:r.w,harmonized:+SER[st.idx].toFixed(1),anomaly:an&&+an.toFixed(2),partial:part,range:[st.from,st.to],lowData:cal.low,typicalAnnual:Math.round(cal.tot),editing:st.edit,drawing:st.draw,selectedPoint:st.selV,sidebar:st.collapsed?"collapsed":st.tab,settings:set},null,1);
 }
 
 function applySettings(){
   document.documentElement.lang=set.lang==="iba"?"iba":set.lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
-  document.getElementById("banner").textContent=t("banner");
+  document.getElementById("bannerText").textContent=t("banner");document.querySelectorAll(".iSlot").forEach(el=>el.innerHTML=info(el.dataset.k));
   document.getElementById("ibaNote").innerHTML=set.lang==="iba"?`<div class="warn">Iban strings are not written yet — showing Bahasa Malaysia until a native speaker reviews the translation.</div>`:"";
   document.getElementById("mode").innerHTML=[["month","month"],["range","rangeTotal"],["typical","typicalYear"],["anomaly","anomaly"]].map(([v,l])=>`<option value="${v}">${t(l)}</option>`).join("");
   document.getElementById("mode").value=st.mode;
@@ -515,8 +526,156 @@ const bArea=document.getElementById("bArea"),toolsEl=document.getElementById("to
 bArea.onclick=()=>{const o=toolsEl.classList.toggle("open");bArea.setAttribute("aria-expanded",o)};
 document.getElementById("ticks").innerHTML=years.filter(y=>y%5===0).map(y=>{const i=kIdx[key(y,1)]??kIdx[key(y,2)];return i==null?"":`<span style="left:${(i/(NM-1)*100).toFixed(2)}%">${y}</span>`}).join("");
 let timer;document.getElementById("play").onclick=e=>{st.playing=!st.playing;e.target.textContent=st.playing?"❚❚":"▶";clearInterval(timer);if(st.playing)timer=setInterval(()=>{st.idx=(st.idx+1)%NM;render()},450)};
+const MONTHS_EN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function loadExcel(){return window.ExcelJS?Promise.resolve():new Promise((ok,bad)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js";sc.onload=ok;sc.onerror=bad;document.head.appendChild(sc)})}
+function insights(){
+  const area=st.aoi?st.aoi.name:t("borneo"),ks=keys.filter(inRange),cs=st.aoiCells||Int32Array.from(Array(NC).keys());
+  const typ=Array.from({length:12},(_,i)=>typical(i+1,null)),tot=typ.reduce((a,b)=>a+b,0);
+  const rangeTotal=ks.reduce((a,k)=>a+SER[kIdx[k]],0);
+  const busiest=ks.reduce((b,k)=>!b||SER[kIdx[k]]>SER[kIdx[b]]?k:b,null);
+  const peak=typ.map((v,i)=>[i,v]).filter(([,v])=>tot&&v/tot>=.15).map(([i])=>MONTHS_EN[i]);
+  const lastFull=CUR.slice(5)==="12"?kY(CUR):kY(CUR)-1;
+  const yearTot=y=>Array.from({length:12},(_,i)=>key(y,i+1)).filter(k=>k in kIdx).reduce((a,k)=>a+SER[kIdx[k]],0);
+  const yearsFull=years.filter(y=>y>=GRID0&&y<kY(CUR)&&y!==lastFull),medYear=median(yearsFull.map(yearTot));
+  const ratio=medYear>0?yearTot(lastFull)/medYear:null;
+  return{area,ks,cs,typ,tot,rangeTotal,busiest,peak,lastFull,ratio,low:tot<LOW};
+}
+async function workbook(){
+  try{await loadExcel()}catch(e){toast("Could not load the Excel library. Check your connection.");return}
+  const I=insights(),wb=new ExcelJS.Workbook();wb.creator="IGNIS prototype";
+  const head=(ws,cols)=>{ws.addRow(cols).font={bold:true};ws.views=[{state:"frozen",ySplit:1}]};
+  const r1=wb.addWorksheet("Read me");r1.columns=[{width:110}];
+  [["IGNIS: Hotspot download"],[""],["Area: "+I.area],["Your dates: "+st.from+" to "+st.to+" (rounded to whole months)"],["Data up to: "+D.lastDate],[""],
+   ["Where the data comes from: NASA FIRMS active-fire detections from MODIS (Moderate Resolution Imaging Spectroradiometer, older, 2002 onward) and VIIRS (Visible Infrared Imaging Radiometer Suite, newer, 2012 onward)."],
+   ["Why the counts were combined: VIIRS spots about 4 to 5 times more small fires than MODIS. To make one Combined count (technical: Harmonized Hotspot Count), counts from years when only MODIS flew (2002 to 2011) are multiplied by a factor k(m) for each calendar month, fitted in the Overlap Period (2012 onward, both sensors), so every year reads as VIIRS would have detected."],
+   ["Accuracy: the scaled years are estimates, typically within about 11% for a whole year."],[""],
+   ["Sheets: Summary (key numbers). Monthly (Combined count by year and month, shaded like a calendar). Typical Year (average per month, with bars). Compared with normal (each month in your Date Range against the median). Hotspot locations (Hotspots per 11 km square)."],
+   ["Terms: Hotspot = one satellite detection of active fire at a place and time. Combined count = Harmonized Hotspot Count. Typical Year = the average Combined count for each calendar month. Burning Phase = share of a Typical Year in a month: Peak burning >=15%, Active burning >=8%, Moderate >=4%, Low. Compared with normal (technical: Anomaly) = this month divided by the median of the same month in other years, so 2x means twice the usual. Range Total = Combined count summed over the Date Range."]
+  ].forEach(r=>r1.addRow(r));r1.getRow(1).font={bold:true,size:14};r1.eachRow(r=>{r.alignment={wrapText:true,vertical:"top"}});
+  const r2=wb.addWorksheet("Summary");r2.columns=[{width:46},{width:30}];head(r2,["What","Value"]);
+  [["Area",I.area],["Date Range",st.from+" to "+st.to],["Range Total (Hotspots)",Math.round(I.rangeTotal)],
+   ["Busiest month in Date Range",I.busiest?MONTHS_EN[kM(I.busiest)-1]+" "+kY(I.busiest)+" ("+Math.round(SER[kIdx[I.busiest]])+")":"none"],
+   ["Peak burning months here",I.peak.join(", ")||"no clear peak"],["Hotspots in a Typical Year",Math.round(I.tot)],
+   [I.lastFull+" compared with normal",I.ratio==null?"not available":I.ratio.toFixed(1)+"x normal"],
+   ["Enough data for reliable Burning Phases?",I.low?"No: under 50 Hotspots a year":"Yes"]].forEach(r=>r2.addRow(r));
+  const r3=wb.addWorksheet("Monthly");r3.columns=[{width:8}].concat(MONTHS_EN.map(()=>({width:8})),[{width:10},{width:20}]);
+  head(r3,["Year"].concat(MONTHS_EN,["Total","Satellite"]));
+  const ys=years.filter(y=>y>=GRID0);
+  ys.forEach(y=>{const row=[y];let tt=0;for(let m=1;m<=12;m++){const k=key(y,m);const v=k in kIdx?Math.round(SER[kIdx[k]]):null;row.push(v);tt+=v||0}row.push(tt);row.push(y<2012?"MODIS, scaled up":"VIIRS");r3.addRow(row)});
+  r3.addConditionalFormatting({ref:"B2:M"+(ys.length+1),rules:[{type:"colorScale",priority:1,cfvo:[{type:"min"},{type:"percentile",value:50},{type:"max"}],color:[{argb:"FFFFFFB2"},{argb:"FFFD8D3C"},{argb:"FFBD0026"}]}]});
+  const r4=wb.addWorksheet("Typical Year");r4.columns=[{width:10},{width:26},{width:16},{width:18}];head(r4,["Month","Typical Hotspots","Share of year","Burning Phase"]);
+  I.typ.forEach((v,i)=>{const sh=I.tot?v/I.tot:0;r4.addRow([MONTHS_EN[i],Math.round(v),+sh.toFixed(3),I.low?"not enough data":t(phaseKey(sh))])});
+  r4.getColumn(3).numFmt="0%";
+  r4.addConditionalFormatting({ref:"B2:B13",rules:[{type:"dataBar",priority:1,minLength:0,maxLength:100,gradient:true,cfvo:[{type:"min"},{type:"max"}],color:{argb:"FFF03B20"}}]});
+  const r5=wb.addWorksheet("Compared with normal");r5.columns=[{width:8},{width:14},{width:18},{width:24},{width:24}];
+  head(r5,["Year","Month","Combined count","Median for this month","Compared with normal (x)"]);
+  I.ks.forEach(k=>{const a=anomaly(k),base=k===CUR?null:baseline(kM(k),kY(k));r5.addRow([kY(k),MONTHS_EN[kM(k)-1]+(k===CUR?" (so far)":""),Math.round(SER[kIdx[k]]),base==null?"same days in past years":Math.round(base),a==null?null:+a.toFixed(2)])});
+  if(I.ks.length)r5.addConditionalFormatting({ref:"E2:E"+(I.ks.length+1),rules:[{type:"colorScale",priority:1,cfvo:[{type:"num",value:.25},{type:"num",value:1},{type:"num",value:4}],color:[{argb:"FF2166AC"},{argb:"FFD9D9D9"},{argb:"FFB2182B"}]}]});
+  const r6=wb.addWorksheet("Fire locations");r6.columns=[{width:8},{width:8},{width:12},{width:12},{width:18},{width:16}];
+  head(r6,["Year","Month","Square lat","Square lng","Satellite","Hotspots"]);
+  I.ks.forEach(k=>{const i=kIdx[k],r=D.months[k];for(const c of I.cs){const n=RW[i*NC+c];if(n){const ll=cc(c);r6.addRow([kY(k),kM(k),+ll[0].toFixed(2),+ll[1].toFixed(2),r.s==="MODIS"?"MODIS (older)":"VIIRS (newer)",n])}}});
+  const buf=await wb.xlsx.writeBuffer(),u=URL.createObjectURL(new Blob([buf],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"})),a=document.createElement("a");
+  a.href=u;a.download="ignis_"+I.area.replace(/\W+/g,"_")+"_"+st.from.slice(0,7)+"_"+st.to.slice(0,7)+".xlsx";a.click();URL.revokeObjectURL(u);toast("Workbook downloaded: 6 sheets");
+  return wb;
+}
+function reportMap(I){
+  const cs=I.cs,s=D.cell,ks=I.ks,vals=new Float32Array(NC);
+  ks.forEach(k=>{const o=kIdx[k]*NC;for(const c of cs)vals[c]+=H[o+c]});
+  let x0=1e9,x1=-1e9,y0=1e9,y1=-1e9;
+  for(const c of cs){const[x,y]=D.cells[c];x0=Math.min(x0,x);x1=Math.max(x1,x+1);y0=Math.min(y0,y);y1=Math.max(y1,y+1)}
+  const pad=Math.max(2,Math.round((x1-x0)*.06));x0-=pad;x1+=pad;y0-=pad;y1+=pad;
+  const W=1600,Hh=Math.round(W*Math.min(.62,Math.max(.4,(y1-y0)/(x1-x0))));
+  const sc=Math.min(W/(x1-x0),Hh/(y1-y0)),ox=(W-(x1-x0)*sc)/2,oy=(Hh-(y1-y0)*sc)/2;
+  const px=ln=>ox+(ln/s-x0)*sc,py=la=>oy+(y1-la/s)*sc;
+  const c2=document.createElement("canvas");c2.width=W;c2.height=Hh;const g=c2.getContext("2d");
+  g.fillStyle="#f4f3f0";g.fillRect(0,0,W,Hh);
+  const ring=r=>{g.beginPath();r.forEach(([ln,la],i)=>i?g.lineTo(px(ln),py(la)):g.moveTo(px(ln),py(la)));g.closePath()};
+  const polys=gm=>gm.type==="Polygon"?[gm.coordinates]:gm.coordinates;
+  D.presets.filter(p=>p.level===1).forEach(p=>polys(p.geom).forEach(pl=>{ring(pl[0]);g.fillStyle="#e6e3dc";g.fill()}));
+  let mx=1;for(const c of cs)if(vals[c]>mx)mx=vals[c];
+  for(const c of cs){const v=vals[c];if(!v)continue;const[x,y]=D.cells[c],q=Math.log1p(v)/Math.log1p(mx);g.fillStyle=lerp(PAL[set.pal].heat,q);g.globalAlpha=.35+.65*q;g.fillRect(ox+(x-x0)*sc,oy+(y1-y-1)*sc,Math.ceil(sc),Math.ceil(sc))}
+  g.globalAlpha=1;g.lineWidth=1.4;g.strokeStyle="rgba(28,25,23,.45)";
+  D.presets.filter(p=>p.level===1).forEach(p=>polys(p.geom).forEach(pl=>{ring(pl[0]);g.stroke()}));
+  if(st.aoi){g.lineWidth=4;g.strokeStyle="#c2410c";const gm=st.aoi.kind==="drawn"?{type:"Polygon",coordinates:[st.aoi.pts.map(([a,b])=>[b,a])]}:st.aoi.geom;polys(gm).forEach(pl=>{ring(pl[0]);g.stroke()})}
+  return{img:c2.toDataURL("image/png"),max:mx,ratio:Hh/W};
+}
+function reportHtml(){
+  const I=insights(),M=MONTHS_EN,pal=PAL[set.pal],esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const fmtD=d=>{const[y,m,dd]=d.split("-");return +dd+" "+M[+m-1]+" "+y};
+  const map=reportMap(I),nf=n=>Math.round(n).toLocaleString("en-GB");
+  const ink=hex=>{const h=hex.replace("#","");if(h.length<6)return"#1c1917";const r=parseInt(h.slice(0,2),16),gg=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);return(r*.299+gg*.587+b*.114)>150?"#1c1917":"#fafaf9"};
+  const phaseBg=k=>I.low?"#d6d3d1":(k==="lowp"?"#e7e5e4":pal.phase[k]);
+  const usual=I.typ.map((v,i)=>{const k=phaseKey(I.tot?v/I.tot:0),bg=phaseBg(k);return '<td style="background:'+bg+';color:'+ink(bg)+'"><span>'+M[i]+'</span><b>'+nf(v)+'</b></td>'}).join("");
+  const ak=I.ks.slice(-13);
+  const anom=ak.map(k=>{const a=anomaly(k),bg=a==null?"#e7e5e4":div(a).replace(/rgb\((\d+),(\d+),(\d+)\)/,(m,r,g2,b)=>"#"+[r,g2,b].map(n=>(+n).toString(16).padStart(2,"0")).join(""));return '<td style="background:'+bg+';color:'+ink(bg)+'"><span>'+M[kM(k)-1]+(k===CUR?"*":"")+" "+String(kY(k)).slice(2)+'</span><b>'+(a==null?"–":a.toFixed(1)+"×")+'</b></td>'}).join("");
+  const ys=years.filter(y=>y>=GRID0),sv=keys.filter(k=>kY(k)>=GRID0&&k!==CUR).map(k=>SER[kIdx[k]]).sort((a,b)=>a-b),NB=7;
+  const th=Array.from({length:NB-1},(_,i)=>sv[Math.floor(sv.length*(i+1)/NB)]||0),band=v=>th.filter(x=>v>=x).length,bcol=b=>lerp(pal.heat,b/(NB-1));
+  let cal='<table class="cal"><thead><tr><th></th>'+M.map(m=>"<th>"+m[0]+"</th>").join("")+'<th class="tot">Year</th></tr></thead><tbody>';
+  ys.slice().reverse().forEach(y=>{let tt=0;cal+='<tr><th class="'+(y<2012?"old":"")+'">'+y+"</th>";for(let m=1;m<=12;m++){const k=key(y,m);if(!(k in kIdx)){cal+='<td class="na"></td>';continue}const v=SER[kIdx[k]];tt+=v;cal+='<td class="'+(inRange(k)?"in ":"")+(k===CUR?"part":"")+'" style="background:'+bcol(band(v))+'"></td>'}cal+='<td class="tot">'+nf(tt)+"</td></tr>"});
+  cal+="</tbody></table>";
+  const calKey=Array.from({length:NB},(_,b)=>'<span><i style="background:'+bcol(b)+'"></i>'+(b?nf(th[b-1]):"0")+"+</span>").join("");
+  const now=new Date(),gen=now.getDate()+" "+M[now.getMonth()]+" "+now.getFullYear()+", "+String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0");
+  const css=`
+  @page{size:A4 portrait;margin:11mm 12mm}
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{color-scheme:light}
+  body{margin:0;background:#fafaf9;color:#1c1917;font:9pt/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-variant-numeric:tabular-nums}
+  .page{width:186mm;margin:0 auto}
+  @media screen{body{background:#e7e5e4}.page{background:#fafaf9;padding:11mm 12mm;width:210mm;min-height:297mm;margin:16px auto;box-shadow:0 2px 12px rgba(0,0,0,.15)}}
+  .eyebrow{font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;color:rgba(28,25,23,.6)}
+  h1{font-weight:300;font-size:20pt;letter-spacing:-.02em;margin:1mm 0 1mm;text-wrap:balance}
+  .meta{color:rgba(28,25,23,.7)}
+  .rule{border:0;border-top:1.5pt solid #1c1917;margin:3mm 0 2.5mm}
+  h2{font-weight:400;font-size:9pt;letter-spacing:.06em;text-transform:uppercase;margin:3.5mm 0 1.5mm;padding-bottom:1mm;border-bottom:.5pt solid rgba(28,25,23,.25)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:.5pt solid rgba(28,25,23,.25)}
+  .kpi{padding:1.5mm 3mm 2mm 0}.kpi+.kpi{padding-left:3mm;border-left:.5pt solid rgba(28,25,23,.25)}
+  .kpi span{display:block;font-size:7.5pt;color:rgba(28,25,23,.65)}.kpi b{display:block;font-weight:400;font-size:15pt;letter-spacing:-.01em;margin-top:.5mm}
+  .kpi b.hot{color:#c2410c}
+  .strip{width:100%;border-collapse:separate;border-spacing:.6mm;table-layout:fixed;margin:0 -.6mm}
+  .strip td{padding:1mm .5mm;text-align:center}.strip span{display:block;font-size:6.5pt;opacity:.85}.strip b{display:block;font-weight:500;font-size:8pt}
+  .twocol{display:grid;grid-template-columns:1fr 62mm;gap:5mm;align-items:start}
+  .map img{display:block;width:100%;border:.5pt solid rgba(28,25,23,.25)}
+  .ramp{height:2mm;margin-top:1.5mm}.ends{display:flex;justify-content:space-between;font-size:7pt;color:rgba(28,25,23,.65)}
+  .note{font-size:7.5pt;color:rgba(28,25,23,.65);margin:1mm 0 0}
+  table.cal{width:100%;border-collapse:separate;border-spacing:.35mm;table-layout:fixed;font-size:6.5pt}
+  .cal th{font-weight:400;color:rgba(28,25,23,.65);padding:0}.cal tbody th{text-align:right;padding-right:1mm;width:8mm}.cal th.old{color:#a16207;font-weight:500}
+  .cal td{height:2.45mm;padding:0}.cal td.na{background:#e7e5e4}.cal td.in{outline:.6pt solid #1c1917;outline-offset:-.6pt}
+  .cal td.part{background-image:repeating-linear-gradient(45deg,transparent 0 1mm,rgba(255,255,255,.6) 1mm 1.5mm)!important}
+  .cal .tot{width:11mm;text-align:right;color:rgba(28,25,23,.7);padding-left:1mm}
+  .key{display:flex;flex-wrap:wrap;gap:1mm 3mm;font-size:7pt;color:rgba(28,25,23,.7);margin-top:1.5mm}.key i{display:inline-block;width:3mm;height:2.2mm;vertical-align:-.3mm;margin-right:1mm}
+  .side p{margin:0 0 2mm;max-width:60ch}
+  footer{margin-top:3mm;padding-top:1.5mm;border-top:.5pt solid rgba(28,25,23,.25);display:flex;justify-content:space-between;gap:4mm;font-size:7pt;color:rgba(28,25,23,.65)}
+  `;
+  const ratioTxt=I.ratio==null?"–":I.ratio.toFixed(1)+"×";
+  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>IGNIS report – '+esc(I.area)+'</title><style>'+css+'</style></head><body><div class="page">'
+   +'<div class="eyebrow">IGNIS fire activity report</div><h1>'+esc(I.area)+'</h1>'
+   +'<div class="meta">'+fmtD(st.from)+' – '+fmtD(st.to)+' · counted in whole months · data to '+fmtD(D.lastDate)+'</div><hr class="rule">'
+   +'<div class="kpis"><div class="kpi"><span>Range Total (Hotspots)</span><b>'+nf(I.rangeTotal)+'</b></div>'
+   +'<div class="kpi"><span>Busiest month</span><b>'+(I.busiest?M[kM(I.busiest)-1]+" "+kY(I.busiest):"–")+'</b></div>'
+   +'<div class="kpi"><span>Peak burning</span><b>'+(I.peak.join("–")||"No clear peak")+'</b></div>'
+   +'<div class="kpi"><span>'+I.lastFull+' vs normal</span><b class="'+(I.ratio>1.25?"hot":"")+'">'+ratioTxt+'</b></div></div>'
+   +(I.low?'<p class="note">Not much fire data in this area (under 50 Hotspots a year), so Burning Phases are a rough guide.</p>':"")
+   +'<h2>Compared with normal, month by month</h2><table class="strip"><tr>'+anom+'</tr></table>'
+   +'<p class="note">Anomaly: each month’s Combined count ÷ the median of the same month in other years. 1× is normal; 2× is twice the usual.'+(I.ks.includes(CUR)?" * Month so far, compared with the same days in past years.":"")+(I.ks.length>13?" Last 13 months of the Date Range shown.":"")+'</p>'
+   +'<div class="twocol"><div><h2>Where Hotspots were detected</h2><div class="map"><img src="'+map.img+'" alt="Map of Hotspots"></div>'
+   +'<div class="ramp" style="background:linear-gradient(90deg,'+pal.heat.join(",")+')"></div><div class="ends"><span>1 Hotspot</span><span>'+nf(map.max)+' per 11 km square (0.1°), Date Range</span></div></div>'
+   +'<div class="side"><h2>Typical Year</h2><table class="strip" style="table-layout:fixed"><tr>'+usual.split("</td>").slice(0,6).join("</td>")+'</td></tr><tr>'+usual.split("</td>").slice(6,12).join("</td>")+'</td></tr></table>'
+   +'<p class="note">Average detections per month across all years. Darker = bigger share of the year’s burning.</p>'
+   +'<h2>How to read this</h2><p>Satellites detect active fires as <b>Hotspots</b>. MODIS (Moderate Resolution Imaging Spectroradiometer; 2002–2011 years in gold) sees fewer small fires than VIIRS (Visible Infrared Imaging Radiometer Suite), so its counts are scaled by a monthly factor k(m) of about 4–5×, fitted in the Overlap Period (2012 onward), to give one Combined count (Harmonized Hotspot Count). Scaled years are estimates, typically within about 11% for a whole year.</p></div></div>'
+   +'<h2>Burning Calendar: Combined count by year and month</h2>'+cal
+   +'<div class="key">'+calKey+'<span>Outlined: Date Range</span><span>Striped: month so far</span></div>'
+   +'<footer><span>Generated '+gen+' · ignis-borneo.vercel.app</span><span>Data: NASA FIRMS (MODIS, VIIRS)</span><span>IGNIS · Sarawak Orbiters · NASA Space Apps 2026 · Prototype</span></footer>'
+   +'</div></body></html>';
+}
+function report(){
+  const w=window.open("","_blank");if(!w){toast("Allow pop-ups to open the report");return}
+  w.document.write(reportHtml());w.document.close();setTimeout(()=>{try{w.focus();w.print()}catch(e){}},400);
+}
+document.getElementById("bXlsx").onclick=()=>{expShow(false);workbook()};
+document.getElementById("bReport").onclick=()=>{expShow(false);report()};
 computeAoi();applySettings();
 requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.remove("noanim")));
+});
 </script>
 </body>
 </html>

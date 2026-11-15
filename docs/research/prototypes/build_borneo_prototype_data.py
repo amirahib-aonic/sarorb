@@ -111,6 +111,8 @@ df["c"] = [cid[(a, b)] for a, b in zip(df.gx, df.gy)]
 
 grid = df.groupby(["y", "m", "sensor", "c"]).size()
 grid_part = df[df.d <= cut_day].groupby(["y", "m", "sensor", "c"]).size()
+next_m = cur_key[1] % 12 + 1
+daily = df[df.m.isin([cur_key[1], next_m])].groupby(["y", "m", "sensor", "c", "d"]).size()
 months = {}
 for (y, m), row in counts.iterrows():
     if row.get("VIIRS S-NPP", 0) > 0:
@@ -127,6 +129,9 @@ for (y, m), row in counts.iterrows():
             rec["p"] = [[int(c), int(n)] for c, n in gp.items()]
         except KeyError:
             rec["p"] = []
+    if m in (cur_key[1], next_m):
+        gd = daily.loc[(y, m, src)]
+        rec["d"] = [[int(c), int(d), int(n)] for (c, d), n in gd.items()]
     months[f"{y}-{m:02d}"] = rec
 
 a2 = adm2(units)

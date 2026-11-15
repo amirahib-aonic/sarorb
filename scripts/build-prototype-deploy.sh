@@ -7,7 +7,9 @@ out=${1:-"$root/.deploy"}
 rm -rf "$out"
 mkdir -p "$out/site"
 cp "$src/borneo.PROTOTYPE.html" "$out/site/index.html"
-cp "$src/borneo.PROTOTYPE.data.js" "$out/site/"
+cp "$src/borneo.PROTOTYPE.data.js" "$src/live.js" "$out/site/"
+mkdir -p "$out/site/api"
+cp "$src/api/firms.mjs" "$out/site/api/"
 rev=$(git rev-parse --short HEAD)
 dirty=$(git status --porcelain -- "$src" | head -1)
 [ -n "$dirty" ] && rev="$rev-dirty"
