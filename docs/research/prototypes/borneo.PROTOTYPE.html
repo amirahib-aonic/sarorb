@@ -63,6 +63,20 @@ body.collapsed #tabs{right:0}
 #tabs button .ic{writing-mode:horizontal-tb;font-size:14px}
 #tabs button.active{background:var(--panel);color:var(--fg);border-color:var(--line);box-shadow:inset 3px 0 0 var(--acc);margin-right:-1px}
 .panel[hidden]{display:none}
+#bBnd{white-space:nowrap}
+#bnd{position:fixed;z-index:1000;width:250px;max-height:min(60vh,520px);display:flex;flex-direction:column;gap:6px;background:var(--panel);border:1px solid var(--acc);border-radius:var(--r2);padding:9px;box-shadow:0 6px 20px #0008}
+#bnd[hidden]{display:none}
+#bnd .bh{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+#bnd .bl{overflow-y:auto;min-height:60px;display:flex;flex-direction:column;gap:3px;padding-right:2px}
+#bnd .br{display:grid;grid-template-columns:22px 1fr auto;gap:4px;align-items:center}
+#bnd .bi{color:var(--mut);font-size:11px;text-align:right;font-variant-numeric:tabular-nums}
+#bnd .br input{min-height:26px;padding:3px 6px;font-variant-numeric:tabular-nums;width:100%;box-sizing:border-box}
+#bnd .br.sel .bi{color:var(--acc)}#bnd .br.sel input{border-color:var(--acc)}#bnd .br.bad input{border-color:#e5484d}
+#bnd .bx{min-height:24px;padding:2px 7px;background:transparent;border-color:transparent;color:var(--mut)}#bnd .bx:hover{color:var(--fg);border-color:var(--line)}
+#bnd .bb{display:flex;flex-wrap:wrap;gap:4px}#bnd .bb button{min-height:26px;padding:3px 8px;font-size:12px}
+#bnd .bf{display:flex;flex-direction:column;gap:4px}#bnd textarea{font:12px/1.4 ui-monospace,monospace;color:var(--fg);background:var(--panel2);border:1px solid var(--line);border-radius:var(--r1);padding:6px;resize:vertical}
+#bnd .be{color:#ff6b6b;font-size:12px}#bnd .bw{color:#f5dc8a;font-size:12px}#bnd .bn{margin:0;color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}#bnd .bo{color:#f5dc8a}
+@media (max-width:760px){#bnd{left:10px!important;right:10px;width:auto;max-height:45vh}}
 #sbGrip{position:fixed;top:22px;bottom:0;right:calc(var(--sb) - 3px);width:7px;cursor:col-resize;z-index:955;touch-action:none}
 #sbGrip::after{content:"";position:absolute;top:max(520px,70%);left:2px;width:3px;height:40px;margin-top:-20px;border-radius:2px;background:var(--line)}
 #sbGrip:hover::after,#sbGrip:focus-visible::after,body.resizing #sbGrip::after{background:var(--acc);height:80px;margin-top:-40px}
@@ -200,8 +214,9 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <span class="tg"><button id="bDraw"></button><button id="bEdit" hidden></button><button id="bClear" data-i18n="clear"></button><button id="bUndo" title="Undo (Ctrl+Z)" aria-label="Undo" hidden>↶ Undo</button><button id="bRedo" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" hidden>↷ Redo</button></span>
   <span class="sep"></span>
   <span class="tg"><select id="preset" aria-label="Region"></select><select id="preset2" aria-label="District" disabled></select></span>
-  <details><summary>Coordinates ▾</summary><div class="ll"><input id="ll1" placeholder="lat, lng (corner 1)" aria-label="Corner 1 latitude, longitude"><input id="ll2" placeholder="lat, lng (corner 2)" aria-label="Corner 2 latitude, longitude"><button id="bLL">Apply corners</button></div></details>
+  <button id="bBnd" hidden aria-expanded="false" aria-controls="bnd"></button>
 </div>
+<div id="bnd" role="region" aria-label="Boundary points" hidden></div>
 <div id="mlegend" aria-live="polite"></div>
 <div id="coach" role="status" hidden><span id="coachText"></span><button id="coachOk">Got it</button></div>
 <div id="bar">
@@ -211,7 +226,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <select id="mode" aria-label="Map View"></select><span class="iSlot" data-k="view"></span>
   <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="dr"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"><button type="button" id="bRngAll" title="Reset to the whole timeline">↺ All</button></div>
   <button id="bRng" aria-expanded="false" aria-controls="from">Dates</button>
-  <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button><button id="bXlsx" role="menuitem" data-i18n="xlsx"></button><button id="bReport" role="menuitem" data-i18n="report"></button></div></div>
+  <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button><button id="bXlsx" role="menuitem" data-i18n="xlsx"></button><button id="bReport" role="menuitem" data-i18n="report"></button><button id="bGeo" role="menuitem">Boundary (GeoJSON)</button></div></div>
 </div>
 <div id="tabs">
   <button id="tCal" data-tab="cal"></button>
@@ -458,9 +473,7 @@ function syncButtons(){const bd=document.getElementById("bDraw");
   bd.textContent=st.draw?"Cancel drawing":!st.aoi?"Draw area":st.aoi.kind!=="drawn"?"Edit as drawn":st.edit?"Done":"Edit shape";
   bd.classList.toggle("on",st.draw||(st.edit&&st.aoi&&st.aoi.kind==="drawn"));
   const ed=st.edit&&st.aoi&&st.aoi.kind==="drawn",bu=document.getElementById("bUndo"),br=document.getElementById("bRedo");
-  bu.hidden=br.hidden=!ed;bu.disabled=!hist.length;br.disabled=!fut.length}
-function applyLL(){const p=s=>s.split(/[ ,;]+/).map(Number);const a=p(document.getElementById("ll1").value),b=p(document.getElementById("ll2").value);if([...a,...b].length!==4||[...a,...b].some(Number.isNaN)){toast("Enter two corners as: lat, lng");return}
-  const n=Math.max(a[0],b[0]),s=Math.min(a[0],b[0]),w=Math.min(a[1],b[1]),e=Math.max(a[1],b[1]);st.aoi={kind:"drawn",name:"Coordinates",pts:[[n,w],[n,e],[s,e],[s,w]]};st.edit=true;commit();map.fitBounds([[s,w],[n,e]]);syncButtons()}
+  bu.hidden=br.hidden=!ed;bu.disabled=!hist.length;br.disabled=!fut.length;if(typeof bndSync==='function')bndSync()}
 
 const presetSel=document.getElementById("preset");
 const preset2=document.getElementById("preset2");
@@ -680,6 +693,103 @@ document.getElementById("insYears").addEventListener("keydown",e=>{const y=e.tar
     const r=sv.getBoundingClientRect(),bx=box.getBoundingClientRect(),x=r.left-bx.left+d.px(n)*r.width/d.W;
     tip.style.top="4px";tip.style.left=Math.max(0,Math.min(x+10>bx.width-tip.offsetWidth?x-tip.offsetWidth-10:x+10,bx.width-tip.offsetWidth))+"px"});
   box.addEventListener("pointerleave",hide)})();
+const BND_MAX=500,BND_TABLE_MAX=20,BND_CREDIT="Official boundary: geoBoundaries (CC BY 4.0)";
+const bnd={open:false,mode:null,errs:{},note:""};
+const bndFmt=p=>`${p[0].toFixed(4)}, ${p[1].toFixed(4)}`;
+function bndParse(s){const m=String(s).trim().split(/[\s,;]+/).filter(Boolean).map(Number);if(m.length!==2||m.some(Number.isNaN))return null;const[la,ln]=m;if(Math.abs(la)>90||Math.abs(ln)>180)return null;return[la,ln]}
+function segX(a,b,c,d){const o=(p,q,r)=>Math.sign((q[1]-p[1])*(r[0]-q[0])-(q[0]-p[0])*(r[1]-q[1]));return o(a,b,c)!==o(a,b,d)&&o(c,d,a)!==o(c,d,b)&&o(a,b,c)!==0&&o(c,d,a)!==0}
+function bndCross(pts){const n=pts.length;for(let i=0;i<n;i++){const a=pts[i],b=pts[(i+1)%n];for(let j=i+2;j<n;j++){if(i===0&&j===n-1)continue;if(segX(a,b,pts[j],pts[(j+1)%n]))return j+1}}return 0}
+function ringKm2(r){if(r.length<3)return 0;const lat=r.reduce((s,p)=>s+p[0],0)/r.length,kx=111.32*Math.cos(lat*Math.PI/180),ky=110.57;let a=0;r.forEach((p,i)=>{const q=r[(i+1)%r.length];a+=p[1]*kx*q[0]*ky-q[1]*kx*p[0]*ky});return Math.abs(a)/2}
+function ringCentre(r){let a=0,x=0,y=0;r.forEach((p,i)=>{const q=r[(i+1)%r.length],c=p[1]*q[0]-q[1]*p[0];a+=c;x+=(p[1]+q[1])*c;y+=(p[0]+q[0])*c});return a?[y/(3*a),x/(3*a)]:[r[0][0],r[0][1]]}
+function inBorneo(la,ln){return D.presets.some(p=>p.level===1&&inGeom(ln,la,p.geom))}
+function simplify(pts,max){if(pts.length<=max)return pts;const dp=(a,tol)=>{if(a.length<3)return a;const[s,e]=[a[0],a.at(-1)];let im=0,dm=0;for(let i=1;i<a.length-1;i++){const p=a[i],dx=e[1]-s[1],dy=e[0]-s[0],L=Math.hypot(dx,dy)||1e-12,d=Math.abs(dy*(p[1]-s[1])-dx*(p[0]-s[0]))/L;if(d>dm){dm=d;im=i}}if(dm<=tol)return[s,e];return dp(a.slice(0,im+1),tol).slice(0,-1).concat(dp(a.slice(im),tol))};
+  let far=0,fd=-1;pts.forEach((p,i)=>{const d=Math.hypot(p[0]-pts[0][0],p[1]-pts[0][1]);if(d>fd){fd=d;far=i}});
+  const run=tol=>dp(pts.slice(0,far+1),tol).slice(0,-1).concat(dp(pts.slice(far).concat([pts[0]]),tol).slice(0,-1));
+  let tol=1e-4,out=pts;while(out.length>max&&tol<10){out=run(tol);tol*=1.6}return out.length>=3?out:pts.slice(0,max)}
+function bndRing(){if(!st.aoi)return null;if(st.aoi.kind==="drawn")return st.aoi.pts;const rs=aoiRings().map(r=>r.map(([ln,la])=>[la,ln]));if(!rs.length)return null;const r=rs.reduce((p,q)=>ringKm2(q)>ringKm2(p)?q:p);return r.length>1&&r[0][0]===r.at(-1)[0]&&r[0][1]===r.at(-1)[1]?r.slice(0,-1):r}
+function bndStats(){const r=bndRing();if(!r||r.length<3)return null;const out=r.filter(p=>!inBorneo(p[0],p[1])).length;let area=ringKm2(r);
+  if(out){let s0=0,s1=0;const la0=Math.min(...r.map(p=>p[0])),la1=Math.max(...r.map(p=>p[0])),ln0=Math.min(...r.map(p=>p[1])),ln1=Math.max(...r.map(p=>p[1])),N=40;const g=st.aoi.kind==="drawn"?{type:"Polygon",coordinates:[r.map(([a,b])=>[b,a])]}:st.aoi.geom;
+    for(let i=0;i<N;i++)for(let j=0;j<N;j++){const la=la0+(la1-la0)*(i+.5)/N,ln=ln0+(ln1-ln0)*(j+.5)/N;if(inGeom(ln,la,g)){s0++;if(inBorneo(la,ln))s1++}}area*=s0?s1/s0:0}
+  return{ring:r,n:r.length,area,centre:ringCentre(r),out}}
+function bndReadGeo(obj){const rings=[];let holes=0;const take=g=>{if(!g)return;if(g.type==="Polygon"){rings.push(g.coordinates[0]);holes+=g.coordinates.length-1}else if(g.type==="MultiPolygon")g.coordinates.forEach(p=>{rings.push(p[0]);holes+=p.length-1});else if(g.type==="GeometryCollection")g.geometries.forEach(take)};
+  if(obj.type==="FeatureCollection")obj.features.forEach(f=>take(f.geometry));else if(obj.type==="Feature")take(obj.geometry);else take(obj);
+  if(!rings.length)return{err:"No area shape found in that GeoJSON"};
+  const rs=rings.map(r=>{const q=r.map(([ln,la])=>[la,ln]);if(q.length>1&&q[0][0]===q.at(-1)[0]&&q[0][1]===q.at(-1)[1])q.pop();return q});
+  const best=rs.reduce((p,q)=>ringKm2(q)>ringKm2(p)?q:p),notes=[];
+  if(rs.length>1)notes.push(`Used the largest of ${rs.length} shapes`);if(holes)notes.push("holes ignored");return{pts:best,note:notes.join("; ")}}
+function bndFromText(txt){const s=txt.trim();if(!s)return{err:"Paste points or a GeoJSON file first"};
+  if(/^[\[{]/.test(s)){try{return bndReadGeo(JSON.parse(s))}catch(e){if(s[0]==="{")return{err:"That GeoJSON could not be read"}}}
+  const rows=s.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),pts=[];for(let i=0;i<rows.length;i++){const p=bndParse(rows[i]);if(!p)return{err:`Row ${i+1}: expected lat, lng (for example 1.490, 110.470)`};pts.push(p)}
+  return{pts,note:""}}
+function bndApply(pts,note,fit){if(pts.length<3)return"A Boundary needs at least 3 points";const notes=note?[note]:[];
+  const n0=pts.length;pts=simplify(pts,BND_MAX);if(pts.length<n0)notes.push(`Simplified from ${n0.toLocaleString()} to ${pts.length} points`);
+  const x=bndCross(pts);if(x)return`Row ${x}: the Boundary crosses itself here`;
+  if(st.aoi&&st.aoi.kind==="drawn")snap();else hist=[];st.aoi={kind:"drawn",name:"",pts};st.edit=true;bnd.note=notes.join(". ");bnd.errs={};bnd.mode=null;
+  commit();if(fit)map.fitBounds(L.polygon(pts).getBounds(),{maxZoom:9});return""}
+function bndRow(i,val){const p=bndParse(val);if(!p){bnd.errs={[i]:`Row ${i+1}: expected lat, lng (for example 1.490, 110.470)`};bndRender();return}
+  const next=st.aoi.pts.map((q,j)=>j===i?p:q);const x=bndCross(next);if(x){bnd.errs={[i]:`Row ${i+1}: this point makes the Boundary cross itself`};bndRender();return}
+  snap();st.aoi.pts=next;bnd.errs={};st.selV=i;commit()}
+function bndSync(){const b=document.getElementById("bBnd"),r=bndRing(),drawn=st.aoi&&st.aoi.kind==="drawn";
+  b.hidden=!drawn;if(drawn)b.textContent=`Boundary · ${r.length} points ${bnd.open?"▴":"▾"}`;b.setAttribute("aria-expanded",bnd.open&&drawn);
+  if(drawn&&st.edit&&!bndSync.wasEdit)bnd.open=true;bndSync.wasEdit=!!(drawn&&st.edit);if(!drawn)bnd.open=false;bndRender()}
+function bndRender(){const el=document.getElementById("bnd");const drawn=st.aoi&&st.aoi.kind==="drawn";el.hidden=!(bnd.open&&drawn);if(el.hidden)return;
+  const tb=document.getElementById("tools").getBoundingClientRect();el.style.top=(tb.bottom+6)+"px";el.style.left=tb.left+"px";
+  const pts=st.aoi.pts,ro=!st.edit,S=bndStats();
+  const rows=pts.map((p,i)=>`<div class="br${st.selV===i?" sel":""}${bnd.errs[i]?" bad":""}"><span class="bi">${i+1}</span><input data-i="${i}" value="${bndFmt(p)}" aria-label="Point ${i+1}, latitude and longitude"${ro?" readonly":""}>${ro?"":`<button type="button" class="bx" data-del="${i}" aria-label="Delete point ${i+1}">✕</button>`}</div>`).join("");
+  const err=Object.values(bnd.errs)[0];
+  el.innerHTML=`<div class="bh"><b>Boundary · ${pts.length} points</b><button type="button" class="bx" id="bndClose" aria-label="Hide Boundary panel">▴</button></div>
+  <div class="bl" id="bndList">${rows}</div>${err?`<div class="be" role="alert">${err}</div>`:""}
+  ${ro?`<p class="bn">Choose Edit shape to change points.</p>`:""}
+  <div class="bb">${ro?"":`<button type="button" data-a="add">+ Point</button><button type="button" data-a="paste">Paste</button><button type="button" data-a="corners">2 corners</button>`}<button type="button" data-a="copy">Copy</button><button type="button" data-a="geo">GeoJSON</button></div>
+  ${bnd.mode==="paste"?`<div class="bf"><textarea id="bndTxt" rows="4" placeholder="1.553, 110.344&#10;1.601, 110.402&#10;…or paste a GeoJSON file"></textarea><button type="button" data-a="pasteGo">Use these points</button></div>`:""}
+  ${bnd.mode==="corners"?`<div class="bf"><input id="bndC1" placeholder="lat, lng (corner 1)" aria-label="Corner 1"><input id="bndC2" placeholder="lat, lng (corner 2)" aria-label="Corner 2"><button type="button" data-a="cornersGo">Make rectangle</button></div>`:""}
+  ${bnd.note?`<div class="bw">⚠ ${bnd.note}</div>`:""}
+  ${S?`<p class="bn">${S.area>=1?Math.round(S.area).toLocaleString():"<1"} km² inside Borneo · centre ${fmtLL(S.centre)}${S.out?`<br><span class="bo">Only the part inside Borneo counts.</span>`:""}</p>`:""}`;
+  const sel=el.querySelector(".br.sel");if(sel)sel.scrollIntoView({block:"nearest"})}
+const fmtLL=([la,ln])=>`${Math.abs(la).toFixed(2)}°${la>=0?"N":"S"}, ${Math.abs(ln).toFixed(2)}°${ln>=0?"E":"W"}`;
+function bndGeoJSON(){const S=bndStats();if(!st.aoi){return{type:"FeatureCollection",name:"Borneo Coverage Area",features:D.presets.filter(p=>p.level===1).map(p=>({type:"Feature",properties:{name:p.name,source:BND_CREDIT},geometry:p.geom}))}}
+  if(st.aoi.kind==="preset")return{type:"Feature",properties:{name:st.aoi.name,kind:"Preset Area",source:BND_CREDIT,area_km2_inside_borneo:S?Math.round(S.area):null},geometry:st.aoi.geom};
+  const ring=st.aoi.pts.map(([la,ln])=>[+ln.toFixed(6),+la.toFixed(6)]);ring.push(ring[0]);
+  return{type:"Feature",properties:{name:st.aoi.name,kind:"Drawn Area",points:st.aoi.pts.length,area_km2_inside_borneo:S?Math.round(S.area):null,centre_lat:S?+S.centre[0].toFixed(4):null,centre_lng:S?+S.centre[1].toFixed(4):null},geometry:{type:"Polygon",coordinates:[ring]}}}
+function bndDownload(){const g=bndGeoJSON(),nm=(st.aoi?st.aoi.name:"borneo").replace(/\W+/g,"_");const u=URL.createObjectURL(new Blob([JSON.stringify(g)],{type:"application/geo+json"})),a=document.createElement("a");a.href=u;a.download=`ignis_boundary_${nm}.geojson`;a.click();URL.revokeObjectURL(u);toast(st.aoi?"Boundary downloaded as GeoJSON":"Borneo outline downloaded as GeoJSON")}
+(()=>{const el=document.getElementById("bnd"),b=document.getElementById("bBnd");
+  b.onclick=()=>{bnd.open=!bnd.open;bndSync()};
+  el.addEventListener("click",e=>{const t=e.target;if(t.id==="bndClose"){bnd.open=false;bndSync();return}
+    if(t.dataset.del!=null){delVertex(+t.dataset.del);return}
+    const a=t.dataset.a;if(!a)return;
+    if(a==="add"){const p=st.aoi.pts,i=st.selV!=null?st.selV:p.length-1,q=p[(i+1)%p.length],m=[(p[i][0]+q[0])/2,(p[i][1]+q[1])/2];snap();p.splice(i+1,0,m);st.selV=i+1;commit();return}
+    if(a==="paste"||a==="corners"){bnd.mode=bnd.mode===a?null:a;bndRender();const f=el.querySelector(a==="paste"?"#bndTxt":"#bndC1");if(f)f.focus();return}
+    if(a==="pasteGo"){const r=bndFromText(document.getElementById("bndTxt").value);if(r.err){bnd.errs={0:r.err};bndRender();return}const m=bndApply(r.pts,r.note,true);if(m){bnd.errs={0:m};bndRender()}return}
+    if(a==="cornersGo"){const c1=bndParse(document.getElementById("bndC1").value),c2=bndParse(document.getElementById("bndC2").value);if(!c1||!c2){bnd.errs={0:"Enter both corners as lat, lng"};bndRender();return}
+      const n=Math.max(c1[0],c2[0]),s=Math.min(c1[0],c2[0]),w=Math.min(c1[1],c2[1]),e2=Math.max(c1[1],c2[1]);if(n===s||w===e2){bnd.errs={0:"The two corners must differ in both latitude and longitude"};bndRender();return}bndApply([[n,w],[n,e2],[s,e2],[s,w]],"",true);return}
+    if(a==="copy"){const txt=st.aoi.pts.map(bndFmt).join("\n");(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast(`Copied ${st.aoi.pts.length} points`),()=>toast("Copy failed: select the points and copy them by hand"));return}
+    if(a==="geo")bndDownload()});
+  el.addEventListener("change",e=>{const i=e.target.dataset.i;if(i!=null&&st.edit)bndRow(+i,e.target.value)});
+  el.addEventListener("keydown",e=>{const i=e.target.dataset.i;if(i!=null&&e.key==="Enter"){e.preventDefault();e.target.blur();const nx=el.querySelector(`input[data-i="${+i+1}"]`);if(nx)nx.focus()}});
+  el.addEventListener("focusin",e=>{const i=e.target.dataset.i;if(i!=null&&st.selV!==+i){st.selV=+i;showAoi()}});
+  addEventListener("resize",()=>bndRender());
+  document.getElementById("bGeo").onclick=()=>{expShow(false);bndDownload()};
+})();
+function reportBoundary(){const S=bndStats(),esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const LN0=108.5,LN1=119.5,LA0=-4.6,LA1=7.6,W=520,HH=Math.round(W*(LA1-LA0)/(LN1-LN0)),X=v=>((v-LN0)/(LN1-LN0)*W).toFixed(1),Y=v=>((LA1-v)/(LA1-LA0)*HH).toFixed(1);
+  const pathOf=g=>(g.type==="MultiPolygon"?g.coordinates:[g.coordinates]).map(poly=>poly.map(r=>"M"+r.map(([ln,la])=>X(ln)+","+Y(la)).join("L")+"Z").join("")).join("");
+  const outl=D.presets.filter(p=>p.level===1).map(p=>`<path d="${pathOf(p.geom)}" fill="#f5f5f4" stroke="#a8a29e" stroke-width=".6"/>`).join("");
+  const ks=keys.filter(inRange),v=new Float32Array(NC);ks.forEach(k=>{const o=kIdx[k]*NC;for(let c=0;c<NC;c++)v[c]+=H[o+c]});let mx=1;for(let c=0;c<NC;c++)if(v[c]>mx)mx=v[c];
+  const inA=new Uint8Array(NC);if(st.aoiCells)for(const c of st.aoiCells)inA[c]=1;
+  const cw=(W*D.cell/(LN1-LN0)).toFixed(2),ch=(HH*D.cell/(LA1-LA0)).toFixed(2);let heat="";
+  for(let c=0;c<NC;c++){if(!v[c])continue;const[gx,gy]=D.cells[c],t=Math.min(1,Math.log1p(v[c])/Math.log1p(mx));heat+=`<rect x="${X(gx*D.cell)}" y="${Y((gy+1)*D.cell)}" width="${cw}" height="${ch}" fill="rgb(${255-40*t|0},${220-190*t|0},${120-100*t|0})" opacity="${!st.aoi||inA[c]?.9:.3}"/>`}
+  const aoi=S?`<path d="M${S.ring.map(([la,ln])=>X(ln)+","+Y(la)).join("L")}Z" fill="#f28c38" fill-opacity=".08" stroke="#c2410c" stroke-width="1.6"/><circle cx="${X(S.centre[1])}" cy="${Y(S.centre[0])}" r="3.5" fill="#1c1917" stroke="#fff" stroke-width="1.2"/>`:"";
+  const km100=(W/(LN1-LN0)*100/111.32).toFixed(0);
+  const svg=`<svg viewBox="0 0 ${W} ${HH}" class="bmap" role="img" aria-label="Borneo with ${st.aoi?"the Area's Boundary outlined":"its provinces and states"} and Hotspots in the Date Range shaded"><rect width="${W}" height="${HH}" fill="#eef4f8"/>${outl}${heat}${aoi}<line x1="${W-110}" x2="${W-110+ +km100}" y1="${HH-16}" y2="${HH-16}" stroke="#44403c" stroke-width="2"/><text x="${W-110}" y="${HH-22}" font-size="9" fill="#44403c">100 km</text></svg>`;
+  const kind=!st.aoi?"Coverage Area":st.aoi.kind==="drawn"?"Drawn Area":"Preset Area";
+  let rows=`<tr><th>Area</th><td>${esc(st.aoi?st.aoi.name:"All of Borneo")} (${kind})</td></tr>`;
+  if(S)rows+=`<tr><th>Size</th><td>${Math.round(S.area).toLocaleString()} km² (inside Borneo)</td></tr><tr><th>Centre</th><td>${fmtLL(S.centre)}</td></tr>`;
+  let pts="";
+  if(st.aoi&&st.aoi.kind==="drawn"){const p=st.aoi.pts,row=(q,i)=>`<tr><td>${i+1}</td><td>${q[0].toFixed(4)}</td><td>${q[1].toFixed(4)}</td></tr>`;
+    rows+=`<tr><th>Boundary</th><td>${p.length} points${p.length>BND_TABLE_MAX?", full list in the Excel workbook and Export → Boundary (GeoJSON)":""}</td></tr>`;
+    pts=`<table class="bpts"><tr><th>#</th><th>Latitude</th><th>Longitude</th></tr>${p.length>BND_TABLE_MAX?p.slice(0,5).map(row).join("")+`<tr><td colspan="3" class="more">⋮ ${p.length-7} more points</td></tr>`+p.slice(-2).map((q,i)=>row(q,p.length-2+i)).join(""):p.map(row).join("")}</table>`}
+  else rows+=`<tr><th>Boundary</th><td>${BND_CREDIT}. Download it from Export → Boundary (GeoJSON).</td></tr>`;
+  return`<div class="bsec"><h2>Area and Boundary</h2><div class="bgrid"><div>${svg}<div class="key"><span>Shaded: Hotspots in the Date Range, darker = more</span>${st.aoi?"<span>Outline: Boundary</span>":""}</div></div><div><table class="bt">${rows}</table>${pts}</div></div><p class="note">Map drawn from the geoBoundaries outlines (CC BY 4.0) and the same Hotspot grid as the app, with no map tiles.</p></div>`}
 function applySettings(){
   document.documentElement.lang=set.lang==="iba"?"iba":set.lang;
   document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
@@ -703,7 +813,7 @@ document.getElementById("bRngAll").onclick=()=>{st.from=keys[0].slice(0,7)+"-01"
 ["from","to"].forEach(id=>document.getElementById(id).onchange=e=>{st[id]=e.target.value||st[id];if(st.from>st.to){[st.from,st.to]=[st.to,st.from];document.getElementById("from").value=st.from;document.getElementById("to").value=st.to}render()});
 document.getElementById("typ").onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=key(kY(keys[st.idx]),+b.dataset.m);st.idx=k in kIdx?kIdx[k]:st.idx;setMode("typical")};
 document.getElementById("grid").onclick=e=>{const k=e.target.dataset.k;if(!k)return;st.idx=kIdx[k];if(st.mode==="typical"||st.mode==="range")st.mode="month";document.getElementById("mode").value=st.mode;render()};
-document.getElementById("bUndo").onclick=undo;document.getElementById("bRedo").onclick=redo;document.getElementById("bDraw").onclick=primaryAction;syncButtons();document.getElementById("bEdit").onclick=startEdit;document.getElementById("bClear").onclick=clearAoi;document.getElementById("bLL").onclick=applyLL;
+document.getElementById("bUndo").onclick=undo;document.getElementById("bRedo").onclick=redo;document.getElementById("bDraw").onclick=primaryAction;syncButtons();document.getElementById("bEdit").onclick=startEdit;document.getElementById("bClear").onclick=clearAoi;
 const expMenu=document.getElementById("expMenu"),bExp=document.getElementById("bExp");
 const expShow=v=>{expMenu.hidden=!v;bExp.setAttribute("aria-expanded",v)};
 bExp.onclick=e=>{e.stopPropagation();expShow(expMenu.hidden)};document.addEventListener("click",()=>expShow(false));
@@ -786,6 +896,11 @@ async function workbook(){
   const r6=wb.addWorksheet("Fire locations");r6.columns=[{width:8},{width:8},{width:12},{width:12},{width:18},{width:16}];
   head(r6,["Year","Month","Square lat","Square lng","Satellite","Hotspots"]);
   I.ks.forEach(k=>{const i=kIdx[k],r=D.months[k];for(const c of I.cs){const n=RW[i*NC+c];if(n){const ll=cc(c);r6.addRow([kY(k),kM(k),+ll[0].toFixed(2),+ll[1].toFixed(2),r.s==="MODIS"?"MODIS (older)":"VIIRS (newer)",n])}}});
+  const bs=bndStats(),r7=wb.addWorksheet("Boundary");r7.columns=[{width:10},{width:14},{width:14}];
+  r7.addRow(["Area",st.aoi?st.aoi.name:"All of Borneo"]).font={bold:true};r7.addRow(["Kind",!st.aoi?"Coverage Area":st.aoi.kind==="drawn"?"Drawn Area":"Preset Area"]);
+  if(bs){r7.addRow(["Size (km², inside Borneo)",Math.round(bs.area)]);r7.addRow(["Centre",+bs.centre[0].toFixed(4),+bs.centre[1].toFixed(4)])}
+  r7.addRow([]);if(st.aoi&&st.aoi.kind==="drawn"){r7.addRow(["Point","Latitude","Longitude"]).font={bold:true};st.aoi.pts.forEach((q,i)=>r7.addRow([i+1,+q[0].toFixed(6),+q[1].toFixed(6)]))}
+  else r7.addRow([BND_CREDIT+". The full outline is in Export → Boundary (GeoJSON)."]);
   const buf=await wb.xlsx.writeBuffer(),u=URL.createObjectURL(new Blob([buf],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"})),a=document.createElement("a");
   a.href=u;a.download="ignis_"+I.area.replace(/\W+/g,"_")+"_"+st.from.slice(0,7)+"_"+st.to.slice(0,7)+".xlsx";a.click();URL.revokeObjectURL(u);toast("Workbook downloaded: 7 sheets");
   return wb;
@@ -877,7 +992,7 @@ function reportHtml(){
   .side p{margin:0 0 2mm;max-width:60ch}
   .ins{display:grid;grid-template-columns:1fr 1fr;gap:5mm;align-items:start}.ins svg{display:block;width:100%;height:auto;margin-top:1mm}
   .il{font-size:7.5pt;color:rgba(28,25,23,.65)}.ih{font-size:12pt;font-weight:400;letter-spacing:-.01em;margin-top:.5mm}.ih.hot{color:#c2410c}
-  h2.pb{break-before:page;margin-top:0}table.cal,.twocol,.ins{break-inside:avoid}
+  h2.pb{break-before:page;margin-top:0}.bsec{break-inside:avoid;margin-top:14px}.bgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:start}.bmap{width:100%;height:auto;display:block;max-height:88mm}.bt,.bpts{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}.bt th,.bt td,.bpts th,.bpts td{border-bottom:1px solid #e7e5e4;padding:3px 6px;text-align:left;font-size:10.5px}.bpts{margin-top:8px}.bpts .more{text-align:center;color:#78716c}table.cal,.twocol,.ins{break-inside:avoid}
   footer{margin-top:3mm;padding-top:1.5mm;border-top:.5pt solid rgba(28,25,23,.25);display:flex;justify-content:space-between;gap:4mm;font-size:7pt;color:rgba(28,25,23,.65)}
   `;
   const ratioTxt=I.ratio==null?"–":I.ratio.toFixed(1)+"×";
@@ -899,6 +1014,7 @@ function reportHtml(){
    +'<h2>How to read this</h2><p>Satellites detect active fires as <b>Hotspots</b>. MODIS (Moderate Resolution Imaging Spectroradiometer; 2002–2011 years in gold) sees fewer small fires than VIIRS (Visible Infrared Imaging Radiometer Suite), so its counts are scaled by a monthly factor k(m) of about 4–5×, fitted in the Overlap Period (2012 onward), to give one Combined count (Harmonized Hotspot Count). Scaled years are estimates, typically within about 11% for a whole year.</p></div></div>'
    +'<h2 class="pb">Burning Calendar: Combined count by year and month</h2>'+cal
    +'<div class="key">'+calKey+'<span>Bold outline: Date Range (other months faded)</span><span>Striped: month so far</span></div>'
+   +reportBoundary()
    +'<footer><span>Generated '+gen+' · ignis-borneo.vercel.app</span><span>Data: NASA FIRMS (MODIS, VIIRS)</span><span>IGNIS · Sarawak Orbiters · NASA Space Apps 2026 · Prototype</span></footer>'
    +'</div></body></html>';
 }
