@@ -21,6 +21,7 @@ button.on{background:#4a2c12;border-color:var(--acc)}
 #banner{position:fixed;top:0;left:0;right:0;z-index:1200;background:var(--panel);border-bottom:1px solid var(--line);color:var(--mut);font-size:11px;padding:3px 12px;height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:8px}
 #banner .brand{color:var(--fg);font-weight:600;font-size:12px;letter-spacing:.02em}
 #banner .brand b{color:var(--acc)}
+@media (max-width:760px){#banner>span:not(.brand){display:none}#banner .brand{min-width:0;overflow:hidden;text-overflow:ellipsis;font-size:11px;letter-spacing:0}#banner{padding:3px 8px}}
 #map{position:fixed;top:22px;left:0;bottom:var(--bar);right:var(--sb);transition:right .25s}
 body.collapsed #map,body.collapsed #bar{right:0}
 #tools{position:fixed;top:32px;left:10px;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:6px;max-width:calc(100vw - var(--sb) - 60px);background:rgba(26,30,36,.94);border:1px solid var(--line);border-radius:var(--r2);padding:6px;box-shadow:0 4px 16px #0006}
