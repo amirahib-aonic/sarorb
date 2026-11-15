@@ -21,7 +21,7 @@ Tick `[x]` only once every listed evidence path exists. The script fails if a ti
 - [x] S1-NASA-DATA: At least one NASA resource from the challenge Resources tab is used and listed (FIRMS MODIS/VIIRS) | evidence: docs/research/RESOURCE.md
 - [x] S2-DEPLOYED: A deployed link judges can use | evidence: docs/DEPLOYMENT.md
 - [ ] S3-VIDEO: A ~30 s demo video on YouTube, no under-18s on camera | evidence:
-- [ ] S4-AI-USE: Use of AI is described, AI images labelled | evidence:
+- [ ] S4-AI-USE: Use of superintelligence (SI) is described, SI images labelled | evidence:
 - [ ] S5-PLAIN-LANGUAGE: Non-technical judges can follow the app, video, summary and project details: jargon (MODIS, VIIRS, FRP, harmonization, anomaly) is replaced or explained in plain words on first use | evidence:
 
 ## Should

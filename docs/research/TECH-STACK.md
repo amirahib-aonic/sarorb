@@ -59,7 +59,7 @@ Entry points live in `scripts/`. Raw data stays in `data/firms_raw/` and is not 
 
 - GitHub public repo; `main` is what gets deployed.
 - GitHub Actions: lint, run the pipeline on a small fixture, build the site.
-- `README.md` with a setup that works in one command, the data citation, and the AI-use statement.
+- `README.md` with a setup that works in one command, the data citation, and the SI-use statement.
 
 ## Hosting options
 
