@@ -56,11 +56,13 @@ _Avoid_: Departure, deviation, Times Normal, normal
 
 **Observation Window**:
 A fixed 12-hour daytime or night-time block within one day that gathers every Hotspot observed in it, from any sensor.
-_Avoid_: Overpass, pass, time step
+_UI label_: satellite pass
+_Avoid_: Overpass, time step
 
 **Pass Cluster**:
 A group of nearby Hotspots within one Observation Window, located at their centre.
-_Avoid_: Group, cluster, fire patch
+_UI label_: Hotspot group
+_Avoid_: Group, cluster, fire patch, fire spot
 
 **Fire Event**:
 A chain of Pass Clusters in successive Observation Windows judged to be the same burning, counted for an Area of Interest and month when any of its Hotspots fall inside both.
@@ -68,7 +70,12 @@ _Avoid_: Fire, event, incident
 
 **Hotspot Shift**:
 The observed change in location between the centres of two linked Pass Clusters. It is not a measure of how fast a fire spreads.
-_Avoid_: Fire movement, spread, fire direction
+_Avoid_: Fire movement, spread, fire direction, move
+
+**Fire Radiative Power**:
+How much heat a Hotspot or Pass Cluster gives off, in megawatts (MW). Bigger means a hotter, more intense fire.
+_UI label_: Heat given off (FRP)
+_Avoid_: intensity, brightness, fire strength
 
 ### Views
 
