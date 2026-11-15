@@ -34,7 +34,7 @@ _Avoid_: Fire, fire point, detection
 
 **Harmonized Hotspot Count**:
 The monthly number of Hotspots in an Area of Interest, expressed as the count VIIRS would have recorded, whichever sensor actually observed it.
-_UI label_: Combined count (visible label; the "i" names the Harmonized Hotspot Count)
+_UI label_: H Count (visible label, as in the Space Apps project summary; the "i" explains it as short for Harmonized Hotspot Count)
 _Avoid_: merged count, raw count
 
 **Burning Calendar**:
@@ -53,6 +53,22 @@ _Avoid_: Season, intensity level, Rising
 How a month's Harmonized Hotspot Count compares with the median of the same calendar month across every other year, said in plain words such as "3.2 times the usual September" or "Half the usual March". For a Date Range, it is the Range Total against those medians added up for the same months. The median keeps a few extreme fire years from making ordinary years look quiet.
 _UI label_: Compared with the usual
 _Avoid_: Departure, deviation, Times Normal, normal
+
+**Observation Window**:
+A fixed 12-hour daytime or night-time block within one day that gathers every Hotspot observed in it, from any sensor.
+_Avoid_: Overpass, pass, time step
+
+**Pass Cluster**:
+A group of nearby Hotspots within one Observation Window, located at their centre.
+_Avoid_: Group, cluster, fire patch
+
+**Fire Event**:
+A chain of Pass Clusters in successive Observation Windows judged to be the same burning, counted for an Area of Interest and month when any of its Hotspots fall inside both.
+_Avoid_: Fire, event, incident
+
+**Hotspot Shift**:
+The observed change in location between the centres of two linked Pass Clusters. It is not a measure of how fast a fire spreads.
+_Avoid_: Fire movement, spread, fire direction
 
 ### Views
 

@@ -27,11 +27,11 @@ window.PROTO_READY = (async () => {
   } catch {
     return;
   }
-  if (!live.source || !live.rows.length) return;
+  if (!live || !Array.isArray(live.rows)) return;
 
   const cellId = new Map(D.cells.map(([x, y], i) => [x + "," + y, i]));
   const added = {};
-  let last = D.lastDate;
+  let last = live.to && live.to > D.lastDate ? live.to : D.lastDate;
   for (const [lat, lon, date] of live.rows) {
     if (date <= D.lastDate || !inBorneo(lon, lat)) continue;
     const gx = Math.floor(lon / D.cell), gy = Math.floor(lat / D.cell), id = gx + "," + gy;
@@ -43,12 +43,12 @@ window.PROTO_READY = (async () => {
     (added[k] ||= new Map()).set(c, (added[k].get(c) || 0) + 1);
     if (date > last) last = date;
   }
-  if (last === D.lastDate) return;
+  if (last <= D.lastDate) return;
 
-  const weight = live.source === "VIIRS NOAA-20" ? 1 / R : 1;
+  const src = live.source || "VIIRS S-NPP", weight = src === "VIIRS NOAA-20" ? 1 / R : 1;
   for (const [k, cells] of Object.entries(added)) {
     let rec = D.months[k];
-    if (!rec) rec = D.months[k] = { s: live.source, w: weight, c: [] };
+    if (!rec) rec = D.months[k] = { s: src, w: weight, c: [] };
     const scale = weight / rec.w;
     const merged = new Map(rec.c);
     for (const [c, n] of cells) merged.set(c, (merged.get(c) || 0) + n * scale);
@@ -56,6 +56,7 @@ window.PROTO_READY = (async () => {
   }
 
   const curKey = monthKey(last), cutDay = +last.slice(8, 10), curMonth = curKey.slice(5);
+  if (!D.months[curKey]) D.months[curKey] = { s: src, w: weight, c: [] };
   for (const [k, rec] of Object.entries(D.months)) {
     delete rec.p;
     if (k === curKey) rec.p = rec.c.slice();
@@ -67,6 +68,6 @@ window.PROTO_READY = (async () => {
   }
   D.current = curKey;
   D.cutDay = cutDay;
-  D.live = { source: live.source, from: D.lastDate, rows: live.rows.length };
+  D.live = { source: src, from: D.lastDate, rows: live.rows.length };
   D.lastDate = last;
 })();
