@@ -77,6 +77,7 @@ details.dbg summary{cursor:pointer;color:var(--mut);font-size:12px;margin-top:18
 table.grid{border-collapse:separate;border-spacing:2px;width:100%;table-layout:fixed;font-size:11px;font-variant-numeric:tabular-nums}
 .grid td{height:15px;border-radius:2px;cursor:pointer;position:relative}
 .grid td.inr{box-shadow:inset 0 0 0 1px rgba(255,255,255,.75)}
+.grid td[data-k]:not(.inr){opacity:.25}
 .grid td.sel{outline:2px solid #fff;outline-offset:0}
 .grid td.part{outline:1px dashed #fff;outline-offset:-1px;background-image:repeating-linear-gradient(45deg,transparent 0 3px,rgba(0,0,0,.35) 3px 5px)!important}
 .grid th{color:var(--mut);font-weight:400;text-align:right;padding-right:4px}
@@ -164,7 +165,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
 <div id="map" role="region" aria-label="Hotspot heatmap of Borneo"></div>
 <div id="tools" role="toolbar" aria-label="Area of Interest">
   <button id="bArea" aria-expanded="false">▦ Area</button>
-  <span class="tg"><button id="bDraw" data-i18n="draw"></button><button id="bEdit" data-i18n="edit"></button><button id="bClear" data-i18n="clear"></button></span>
+  <span class="tg"><button id="bDraw" data-i18n="draw"></button><button id="bEdit" data-i18n="edit"></button><button id="bClear" data-i18n="clear"></button><button id="bUndo" title="Undo (Ctrl+Z)" aria-label="Undo" hidden>↶ Undo</button><button id="bRedo" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" hidden>↷ Redo</button></span>
   <span class="sep"></span>
   <span class="tg"><select id="preset" aria-label="Region"></select><select id="preset2" aria-label="District" disabled></select></span>
   <details><summary>Coordinates ▾</summary><div class="ll"><input id="ll1" placeholder="lat, lng (corner 1)" aria-label="Corner 1 latitude, longitude"><input id="ll2" placeholder="lat, lng (corner 2)" aria-label="Corner 2 latitude, longitude"><button id="bLL">Apply corners</button></div></details>
@@ -176,7 +177,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <div id="label"><b id="when"></b><div id="sub"></div></div>
   <div class="sl"><input type="range" id="slider" min="0" aria-label="Month"><div id="ticks" aria-hidden="true"></div></div>
   <select id="mode" aria-label="Map View"></select><span class="iSlot" data-k="view"></span>
-  <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="range"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"></div>
+  <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="dr"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"></div>
   <button id="bRng" aria-expanded="false" aria-controls="from">Dates</button>
   <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button><button id="bXlsx" role="menuitem" data-i18n="xlsx"></button><button id="bReport" role="menuitem" data-i18n="report"></button></div></div>
 </div>
@@ -227,7 +228,7 @@ const cellId=new Map(D.cells.map(([x,y],i)=>[x+","+y,i]));
 const LOW=50,MN={en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],ms:["Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogo","Sep","Okt","Nov","Dis"],id:["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"]};
 
 const I18N={
-en:{xlsx:"Excel workbook",report:"Printable report",fires:"Hotspots",olderSat:"MODIS (older satellite), scaled up",newerSat:"VIIRS (newer satellite)",allDistricts:"All districts",district:"District",banner:"PROTOTYPE — Hotspots over Borneo from NASA's MODIS and VIIRS satellites, combined into one count.",cal:"Burning Calendar",settings:"Settings",draw:"Draw area",edit:"Edit points",clear:"Clear area",preset:"Pick preset",range:"Date range",csvRaw:"CSV: Hotspot locations",csvHarm:"CSV: Combined monthly counts",typical:"Typical Year",month:"Month",rangeTotal:"Range Total",typicalYear:"Typical Year",anomaly:"Compared with normal",gridCounts:"Combined count by year and month",gridAnom:"Each month compared with normal",gridNote:"Gold years: only MODIS was flying, so its counts are scaled up to match VIIRS. White box = Date Range. Striped = this month so far. Click a square to show it on the map.",language:"Language",palette:"Colours",wheel:"Tool wheel",lpDelay:"Long-press delay (ms)",wheelKey:"Key that opens it",wheelStart:"Opens on",mapH:"Map",basemap:"Basemap",opacity:"Heatmap opacity",about:"About the data (fixed)",area:"Area",view:"Map View",exp:"Export",shape:"Shape",addPt:"Add point",delPt:"Delete point",borneo:"All of Borneo",low:"Not much fire data here (under 50 Hotspots a year), so the Burning Phases shown are only a rough guide.",peak:"Peak burning",active:"Active burning",moderate:"Moderate",lowp:"Low",partial:"partial",normal:"normal"},
+en:{xlsx:"Excel workbook",report:"Printable report",fires:"Hotspots",olderSat:"MODIS (older satellite), scaled up",newerSat:"VIIRS (newer satellite)",allDistricts:"All districts",district:"District",banner:"PROTOTYPE — Hotspots over Borneo from NASA's MODIS and VIIRS satellites, combined into one count.",cal:"Burning Calendar",settings:"Settings",draw:"Draw area",edit:"Edit points",clear:"Clear area",preset:"Pick preset",range:"Date range",csvRaw:"CSV: Hotspot locations",csvHarm:"CSV: Combined monthly counts",typical:"Typical Year",month:"Month",rangeTotal:"Range Total",typicalYear:"Typical Year",anomaly:"Compared with normal",gridCounts:"Combined count by year and month",gridAnom:"Each month compared with normal",gridNote:"Gold years: only MODIS was flying, so its counts are scaled up to match VIIRS. Faded squares = outside your Date Range. Striped = this month so far. Click a square to show it on the map.",language:"Language",palette:"Colours",wheel:"Tool wheel",lpDelay:"Long-press delay (ms)",wheelKey:"Key that opens it",wheelStart:"Opens on",mapH:"Map",basemap:"Basemap",opacity:"Heatmap opacity",about:"About the data (fixed)",area:"Area",view:"Map View",exp:"Export",shape:"Shape",addPt:"Add point",delPt:"Delete point",borneo:"All of Borneo",low:"Not much fire data here (under 50 Hotspots a year), so the Burning Phases shown are only a rough guide.",peak:"Peak burning",active:"Active burning",moderate:"Moderate",lowp:"Low",partial:"partial",normal:"normal"},
 ms:{allDistricts:"Semua daerah",district:"Daerah",banner:"PROTOTAIP — sementara. Borneo, diharmonikan kepada Titik Panas setara VIIRS. Grid 0.1°.",cal:"Kalendar Pembakaran",settings:"Tetapan",draw:"Lukis kawasan",edit:"Sunting titik",clear:"Kosongkan",preset:"Pilih pratetap",range:"Julat tarikh",csvRaw:"CSV: Titik Panas",csvHarm:"CSV: Diharmonikan",typical:"Tahun Biasa",month:"Bulan",rangeTotal:"Jumlah julat",typicalYear:"Tahun Biasa",anomaly:"Anomali",gridCounts:"Tahun × bulan (Kiraan Titik Panas Diharmonikan)",gridAnom:"Tahun × bulan (Anomali berbanding Tahun Biasa)",gridNote:"Tahun emas = MODIS sahaja, diskala dengan k(m). Kotak putih = julat tarikh. Berlorek = bulan separa.",language:"Bahasa",palette:"Warna",wheel:"Roda alat",lpDelay:"Tempoh tekan lama (ms)",wheelKey:"Kekunci pembuka",wheelStart:"Dibuka pada",mapH:"Peta",basemap:"Peta asas",opacity:"Kelegapan peta haba",about:"Tentang data (tetap)",area:"Kawasan",view:"Paparan",exp:"Eksport",shape:"Bentuk",addPt:"Tambah titik",delPt:"Padam titik",borneo:"Seluruh Borneo",low:"Data rendah: kurang 50 Titik Panas setahun secara purata. Fasa Pembakaran tidak boleh dipercayai.",peak:"Puncak pembakaran",active:"Pembakaran aktif",moderate:"Sederhana",lowp:"Rendah",partial:"separa",normal:"biasa"},
 id:{allDistricts:"Semua kabupaten/kota",district:"Kabupaten/kota",banner:"PROTOTIPE — sementara. Borneo, diharmonisasi ke Titik Panas setara VIIRS. Grid 0,1°.",cal:"Kalender Kebakaran",settings:"Pengaturan",draw:"Gambar area",edit:"Edit titik",clear:"Hapus area",preset:"Pilih wilayah",range:"Rentang tanggal",csvRaw:"CSV: Titik Panas",csvHarm:"CSV: Harmonisasi",typical:"Tahun Tipikal",month:"Bulan",rangeTotal:"Total rentang",typicalYear:"Tahun Tipikal",anomaly:"Anomali",gridCounts:"Tahun × bulan (Jumlah Titik Panas Harmonisasi)",gridAnom:"Tahun × bulan (Anomali terhadap Tahun Tipikal)",gridNote:"Tahun emas = hanya MODIS, diskalakan dengan k(m). Kotak putih = rentang tanggal. Arsiran = bulan parsial.",language:"Bahasa",palette:"Warna",wheel:"Roda alat",lpDelay:"Jeda tekan lama (ms)",wheelKey:"Tombol pembuka",wheelStart:"Terbuka di",mapH:"Peta",basemap:"Peta dasar",opacity:"Opasitas peta panas",about:"Tentang data (tetap)",area:"Area",view:"Tampilan",exp:"Ekspor",shape:"Bentuk",addPt:"Tambah titik",delPt:"Hapus titik",borneo:"Seluruh Kalimantan",low:"Data sedikit: rata-rata kurang dari 50 Titik Panas per tahun. Fase Kebakaran tidak andal di sini.",peak:"Puncak kebakaran",active:"Kebakaran aktif",moderate:"Sedang",lowp:"Rendah",partial:"parsial",normal:"normal"}};
 const PAL={default:{heat:["#ffffb2","#fecc5c","#fd8d3c","#f03b20","#bd0026"],phase:{peak:"#d7301f",active:"#fc8d59",moderate:"#fdcc8a",lowp:"#2a3038"}},cb:{heat:["#ffffcc","#a1dab4","#41b6c4","#2c7fb8","#253494"],phase:{peak:"#D55E00",active:"#E69F00",moderate:"#F0E442",lowp:"#2a3038"}}};
@@ -263,7 +264,7 @@ const typical=(m,excl)=>mean(years.filter(y=>y!==excl).map(y=>key(y,m)).filter(k
 const median=a=>{if(!a.length)return 0;const s=[...a].sort((x,y)=>x-y),h=s.length>>1;return s.length%2?s[h]:(s[h-1]+s[h])/2};
 const baseline=(m,excl)=>median(years.filter(y=>y!==excl).map(y=>key(y,m)).filter(k=>k in kIdx&&k!==CUR).map(k=>SER[kIdx[k]]));
 function anomaly(k){const y=kY(k),m=kM(k);if(k===CUR){const den=median(years.filter(yy=>yy!==y).map(yy=>key(yy,m)).filter(kk=>kk in PSER).map(kk=>PSER[kk]));return den>0?PSER[k]/den:null}const den=baseline(m,y);return den>0?SER[kIdx[k]]/den:null}
-const INFO={hot:"Hotspot: one satellite detection of active fire at a place and time, from NASA FIRMS.",sat:"MODIS = Moderate Resolution Imaging Spectroradiometer (older, on record from 2002). VIIRS = Visible Infrared Imaging Radiometer Suite (newer, from 2012, sees more small fires).",typ:"Typical Year: the average Combined count for each calendar month, across every year on record.",grid:"Combined count (technical: Harmonized Hotspot Count). MODIS spots fewer fires than VIIRS, so its 2002–2011 counts are multiplied by a monthly factor k(m) of about 4 to 5 to read as VIIRS would have.",anom:"Compared with normal (technical: Anomaly). This month's Hotspots divided by the median of the same month in the other years. 2× normal means twice the usual amount. The median stops a few extreme fire years making ordinary years look quiet.",phase:"Burning Phase: how much of a Typical Year's burning falls in that month. Peak burning ≥15%, Active burning ≥8%, Moderate ≥4%, Low below that.",range:"Range Total: the Combined count summed over every month your Date Range touches.",view:"Map View: what the heatmap shows, one at a time: a single Month, the Range Total, the Typical Year, or Compared with normal.",area:"Area (technical: Area of Interest): the region you are looking at, drawn on the map or picked from a preset. All of Borneo is the full Coverage Area: Kalimantan, Sarawak, Sabah and Brunei.",gold:"Gold years (2002–2011): only MODIS was flying. Its counts are scaled by k(m), a factor fitted in the Overlap Period (2012 onward, when MODIS and VIIRS both observed Borneo).",cell:"Each square is about 11 km across (a 0.1° grid cell). Its colour shows how many Hotspots the satellites detected there."};
+const INFO={hot:"Hotspot: one satellite detection of active fire at a place and time, from NASA FIRMS.",sat:"MODIS = Moderate Resolution Imaging Spectroradiometer (older, on record from 2002). VIIRS = Visible Infrared Imaging Radiometer Suite (newer, from 2012, sees more small fires).",typ:"Typical Year: the average Combined count for each calendar month, across every year on record.",grid:"Combined count (technical: Harmonized Hotspot Count). MODIS spots fewer fires than VIIRS, so its 2002–2011 counts are multiplied by a monthly factor k(m) of about 4 to 5 to read as VIIRS would have.",anom:"Compared with normal (technical: Anomaly). This month's Hotspots divided by the median of the same month in the other years. 2× normal means twice the usual amount. The median stops a few extreme fire years making ordinary years look quiet.",phase:"Burning Phase: how much of a Typical Year's burning falls in that month. Peak burning ≥15%, Active burning ≥8%, Moderate ≥4%, Low below that.",range:"Range Total: the Combined count summed over every month your Date Range touches.",dr:"Date Range: the months you pick here. They filter the heatmap and downloads, and Range Total adds up the Combined count over every month the range touches. The Burning Calendar always shows the full history, with months outside your Date Range faded.",view:"Map View: what the heatmap shows, one at a time: a single Month, the Range Total, the Typical Year, or Compared with normal.",area:"Area (technical: Area of Interest): the region you are looking at, drawn on the map or picked from a preset. All of Borneo is the full Coverage Area: Kalimantan, Sarawak, Sabah and Brunei.",gold:"Gold years (2002–2011): only MODIS was flying. Its counts are scaled by k(m), a factor fitted in the Overlap Period (2012 onward, when MODIS and VIIRS both observed Borneo).",cell:"Each square is about 11 km across (a 0.1° grid cell). Its colour shows how many Hotspots the satellites detected there."};
 const info=k=>`<button type="button" class="info" data-info="${k}" aria-label="What does this mean?" title="${INFO[k]}">ⓘ</button>`;
 const satName=s=>s==="MODIS"?t("olderSat"):t("newerSat");
 document.addEventListener("click",e=>{const b=e.target.closest(".info");if(b){e.stopPropagation();toast(INFO[b.dataset.info])}},true);
@@ -318,31 +319,58 @@ const tip=document.getElementById("tip");
 map.on("mousemove",e=>{if(st.draw){tip.style.display="none";return}const c=cellId.get(Math.floor(e.latlng.lng/D.cell)+","+Math.floor(e.latlng.lat/D.cell));if(c==null||!VALS[c]){tip.style.display="none";return}const v=VALS[c];tip.textContent=st.mode==="anomaly"?`${v.toFixed(2)}× ${t("normal")} (55 km area) · fire here in ${FREQ.f[c]} of ${FREQ.n} ${mn()[kM(keys[st.idx])-1]}s`:`${v.toFixed(1)} ${t("fires")}`;tip.style.left=e.originalEvent.clientX+12+"px";tip.style.top=e.originalEvent.clientY+12+"px";tip.style.display="block"});
 map.on("mouseout",()=>tip.style.display="none");
 
-let aoiLayer=null,handles=[];
+let aoiLayer=null,handles=[],shield=null,ghost=null,hist=[],justDrew=0;
+map.createPane("shield").style.zIndex=340;map.getPane("shield").style.pointerEvents="none";
+const WORLD=[[-85,-179],[-85,179],[85,179],[85,-179]];
+function aoiRings(){if(!st.aoi)return[];if(st.aoi.kind==="drawn")return[st.aoi.pts];const gm=st.aoi.geom;return(gm.type==="Polygon"?[gm.coordinates]:gm.coordinates).map(p=>p[0].map(([a,b])=>[b,a]))}
+function shieldOp(drag){return drag?.68:st.edit?.55:.4}
+let fut=[];
+function snap(){hist.push(st.aoi.pts.map(p=>p.slice()));if(hist.length>20)hist.shift();fut=[]}
+function redo(){if(!fut.length||!st.aoi||st.aoi.kind!=="drawn"){toast("Nothing to redo");return}hist.push(st.aoi.pts);st.aoi.pts=fut.pop();st.selV=null;commit()}
+function startStep(){snap();ghost=L.polygon(st.aoi.pts.map(p=>p.slice()),{color:"#fff",weight:1.5,opacity:.8,dashArray:"5 5",fill:false,interactive:false}).addTo(map);shield.setStyle({fillOpacity:shieldOp(true)})}
+function liveShape(){aoiLayer.setLatLngs(st.aoi.pts);shield.setLatLngs([WORLD,st.aoi.pts])}
+function endStep(){if(ghost)map.removeLayer(ghost);ghost=null;commit()}
+function undo(){if(!hist.length||!st.aoi||st.aoi.kind!=="drawn"){toast("Nothing to undo");return}fut.push(st.aoi.pts);st.aoi.pts=hist.pop();st.selV=null;commit()}
+function bindMove(){const el=aoiLayer.getElement();if(!el)return;el.style.cursor=st.edit?"move":"pointer";el.style.touchAction="none";
+  el.addEventListener("pointerdown",e=>{if(e.button>0||st.draw)return;L.DomEvent.stop(e);
+    if(!st.edit){st.edit=true;showAoi();syncButtons();return}
+    const p0=map.mouseEventToContainerPoint(e),base=st.aoi.pts.map(q=>map.latLngToContainerPoint(q));let moved=false;
+    map.dragging.disable();el.setPointerCapture(e.pointerId);
+    const mv=ev=>{const d=map.mouseEventToContainerPoint(ev).subtract(p0);if(!moved&&d.x*d.x+d.y*d.y<16)return;
+      if(!moved){moved=true;startStep();handles.forEach(h=>h.setOpacity(0))}
+      st.aoi.pts=base.map(b=>{const l=map.containerPointToLatLng(b.add(d));return[l.lat,l.lng]});liveShape()};
+    const up=()=>{el.removeEventListener("pointermove",mv);el.removeEventListener("pointerup",up);el.removeEventListener("pointercancel",up);map.dragging.enable();if(moved){justDrew=Date.now();endStep()}};
+    el.addEventListener("pointermove",mv);el.addEventListener("pointerup",up);el.addEventListener("pointercancel",up)})}
+map.on("click",()=>{if(Date.now()-justDrew<400||st.draw||!st.edit)return;st.edit=false;st.selV=null;showAoi();syncButtons()});
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){const k=e.key.toLowerCase();if(k==="z"&&!e.shiftKey){e.preventDefault();undo()}else if(k==="y"||(k==="z"&&e.shiftKey)){e.preventDefault();redo()}}});
 function toast(s){const el=document.getElementById("toast");el.textContent=s;el.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>el.style.display="none",Math.max(2200,s.length*55))}
 function showAoi(){
-  if(aoiLayer)map.removeLayer(aoiLayer);aoiLayer=null;handles.forEach(h=>map.removeLayer(h));handles=[];
+  if(aoiLayer)map.removeLayer(aoiLayer);aoiLayer=null;if(shield)map.removeLayer(shield);shield=null;handles.forEach(h=>map.removeLayer(h));handles=[];
   inAoi.fill(0);if(st.aoiCells)for(const c of st.aoiCells)inAoi[c]=1;
   if(!st.aoi)return;
-  const sty={color:"#f28c38",weight:2,fill:true,fillOpacity:.03,dashArray:st.edit?"6 4":null};
+  shield=L.polygon([WORLD,...aoiRings()],{pane:"shield",stroke:false,fillColor:"#05070a",fillOpacity:shieldOp(false),interactive:false}).addTo(map);
+  const sty={color:"#f28c38",weight:st.edit?2.5:2,fill:true,fillOpacity:.03,bubblingMouseEvents:false};
   aoiLayer=st.aoi.kind==="drawn"?L.polygon(st.aoi.pts,sty):L.geoJSON(st.aoi.geom,{style:()=>sty});
   aoiLayer.addTo(map);aoiLayer.on("contextmenu",e=>{L.DomEvent.stop(e);openRadial(e.originalEvent.clientX,e.originalEvent.clientY,"shape",e.latlng)});
-  if(st.aoi.kind==="drawn"&&st.edit)buildHandles();
+  if(st.aoi.kind==="drawn"){bindMove();if(st.edit)buildHandles()}
 }
 function buildHandles(){
   const pts=st.aoi.pts;
   pts.forEach((p,i)=>{const mk=L.marker(p,{draggable:true,keyboard:true,title:`Point ${i+1}`,icon:L.divIcon({className:"vtx"+(st.selV===i?" selv":"")})}).addTo(map);
-    mk.on("drag",e=>{pts[i]=[e.latlng.lat,e.latlng.lng];aoiLayer.setLatLngs(pts)});
-    mk.on("dragend",commit);mk.on("click",()=>{st.selV=i;showAoi()});
-    mk.on("dblclick",e=>{L.DomEvent.stop(e);delVertex(i)});handles.push(mk)});
+    mk.on("dragstart",startStep);
+    mk.on("drag",e=>{pts[i]=[e.latlng.lat,e.latlng.lng];liveShape()});
+    mk.on("dragend",endStep);mk.on("click",()=>{st.selV=i;showAoi()});
+    mk.on("dblclick",e=>{L.DomEvent.stop(e);delVertex(i)});
+    mk.getElement().addEventListener("pointerdown",e=>{if(e.pointerType==="mouse")return;const t=setTimeout(()=>{navigator.vibrate?.(20);delVertex(i)},550),c=()=>clearTimeout(t);mk.once("dragstart",c);e.target.addEventListener("pointerup",c,{once:true})});
+    handles.push(mk)});
   pts.forEach((p,i)=>{const q=pts[(i+1)%pts.length],mid=[(p[0]+q[0])/2,(p[1]+q[1])/2];
     const mk=L.marker(mid,{draggable:true,title:"Drag to add a point",icon:L.divIcon({className:"mid",html:"+"})}).addTo(map);
-    let ins=false;mk.on("dragstart",()=>{pts.splice(i+1,0,mid);ins=true});
-    mk.on("drag",e=>{if(ins){pts[i+1]=[e.latlng.lat,e.latlng.lng];aoiLayer.setLatLngs(pts)}});
-    mk.on("dragend",()=>{st.selV=i+1;commit()});handles.push(mk)});
+    let ins=false;mk.on("dragstart",()=>{startStep();pts.splice(i+1,0,mid);ins=true});
+    mk.on("drag",e=>{if(ins){pts[i+1]=[e.latlng.lat,e.latlng.lng];liveShape()}});
+    mk.on("dragend",()=>{st.selV=i+1;endStep()});handles.push(mk)});
 }
-function delVertex(i){if(st.aoi.pts.length<=3){toast("A shape needs at least 3 points");return}st.aoi.pts.splice(i,1);st.selV=null;commit()}
-function commit(){computeAoi();showAoi();render()}
+function delVertex(i){if(st.aoi.pts.length<=3){toast("A shape needs at least 3 points");return}snap();st.aoi.pts.splice(i,1);st.selV=null;commit()}
+function commit(){computeAoi();showAoi();render();syncButtons()}
 function nearestEdge(ll){const p=map.latLngToLayerPoint(ll),pts=st.aoi.pts.map(q=>map.latLngToLayerPoint(q));let best=0,bd=1e18;pts.forEach((a,i)=>{const b=pts[(i+1)%pts.length],d=L.LineUtil.pointToSegmentDistance(p,a,b);if(d<bd){bd=d;best=i}});return best}
 function nearestVertex(ll){const p=map.latLngToLayerPoint(ll);let best=0,bd=1e18;st.aoi.pts.forEach((q,i)=>{const d=p.distanceTo(map.latLngToLayerPoint(q));if(d<bd){bd=d;best=i}});return best}
 
@@ -353,10 +381,15 @@ mapEl.addEventListener("pointerdown",e=>{if(!st.draw||e.button!==0)return;drawSt
 mapEl.addEventListener("pointermove",e=>{if(drawRect)drawRect.setBounds([drawStart,map.mouseEventToLatLng(e)])});
 mapEl.addEventListener("pointerup",e=>{if(!drawRect)return;const b=drawRect.getBounds();map.removeLayer(drawRect);drawRect=null;st.draw=false;map.dragging.enable();mapEl.style.cursor="";
   if(Math.abs(b.getNorth()-b.getSouth())<.05||Math.abs(b.getEast()-b.getWest())<.05){toast("Too small — try again");syncButtons();return}
-  st.aoi={kind:"drawn",name:"Drawn area",pts:[[b.getNorth(),b.getWest()],[b.getNorth(),b.getEast()],[b.getSouth(),b.getEast()],[b.getSouth(),b.getWest()]]};st.edit=true;st.selV=null;syncPreset();commit();syncButtons()});
-function startEdit(){if(!st.aoi||st.aoi.kind!=="drawn"){toast("Draw an area first to edit its points");return}st.edit=!st.edit;showAoi();syncButtons()}
+  st.aoi={kind:"drawn",name:"Drawn Area",pts:[[b.getNorth(),b.getWest()],[b.getNorth(),b.getEast()],[b.getSouth(),b.getEast()],[b.getSouth(),b.getWest()]]};st.edit=true;st.selV=null;hist=[];justDrew=Date.now();syncPreset();commit();syncButtons()});
+function startEdit(){if(!st.aoi){toast("Draw an area first to edit its points");return}
+  if(st.aoi.kind!=="drawn"){const r=aoiRings().sort((a,b)=>b.length-a.length)[0],step=Math.ceil(r.length/30),pts=r.filter((_,i)=>i%step===0);if(pts.length>1&&pts[0][0]===pts.at(-1)[0]&&pts[0][1]===pts.at(-1)[1])pts.pop();
+    st.aoi={kind:"drawn",name:"Drawn Area (from "+st.aoi.name+")",pts};st.edit=true;hist=[];syncPreset();commit();syncButtons();toast("Copied as a Drawn Area you can reshape");return}
+  st.edit=!st.edit;showAoi();syncButtons()}
 function clearAoi(){st.aoi=null;st.edit=false;st.draw=false;map.dragging.enable();syncPreset();commit();syncButtons()}
-function syncButtons(){document.getElementById("bDraw").classList.toggle("on",st.draw);document.getElementById("bEdit").classList.toggle("on",st.edit)}
+function syncButtons(){document.getElementById("bDraw").classList.toggle("on",st.draw);document.getElementById("bEdit").classList.toggle("on",st.edit);
+  const ed=st.edit&&st.aoi&&st.aoi.kind==="drawn",bu=document.getElementById("bUndo"),br=document.getElementById("bRedo");
+  bu.hidden=br.hidden=!ed;bu.disabled=!hist.length;br.disabled=!fut.length}
 function applyLL(){const p=s=>s.split(/[ ,;]+/).map(Number);const a=p(document.getElementById("ll1").value),b=p(document.getElementById("ll2").value);if([...a,...b].length!==4||[...a,...b].some(Number.isNaN)){toast("Enter two corners as: lat, lng");return}
   const n=Math.max(a[0],b[0]),s=Math.min(a[0],b[0]),w=Math.min(a[1],b[1]),e=Math.max(a[1],b[1]);st.aoi={kind:"drawn",name:"Coordinates",pts:[[n,w],[n,e],[s,e],[s,w]]};st.edit=true;commit();map.fitBounds([[s,w],[n,e]]);syncButtons()}
 
@@ -512,7 +545,7 @@ document.getElementById("from").value=st.from;document.getElementById("to").valu
 ["from","to"].forEach(id=>document.getElementById(id).onchange=e=>{st[id]=e.target.value||st[id];if(st.from>st.to)[st.from,st.to]=[st.to,st.from];render()});
 document.getElementById("typ").onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=key(kY(keys[st.idx]),+b.dataset.m);st.idx=k in kIdx?kIdx[k]:st.idx;setMode("typical")};
 document.getElementById("grid").onclick=e=>{const k=e.target.dataset.k;if(!k)return;st.idx=kIdx[k];if(st.mode==="typical"||st.mode==="range")st.mode="month";document.getElementById("mode").value=st.mode;render()};
-document.getElementById("bDraw").onclick=startDraw;document.getElementById("bEdit").onclick=startEdit;document.getElementById("bClear").onclick=clearAoi;document.getElementById("bLL").onclick=applyLL;
+document.getElementById("bUndo").onclick=undo;document.getElementById("bRedo").onclick=redo;document.getElementById("bDraw").onclick=startDraw;document.getElementById("bEdit").onclick=startEdit;document.getElementById("bClear").onclick=clearAoi;document.getElementById("bLL").onclick=applyLL;
 const expMenu=document.getElementById("expMenu"),bExp=document.getElementById("bExp");
 const expShow=v=>{expMenu.hidden=!v;bExp.setAttribute("aria-expanded",v)};
 bExp.onclick=e=>{e.stopPropagation();expShow(expMenu.hidden)};document.addEventListener("click",()=>expShow(false));
@@ -597,6 +630,7 @@ function reportMap(I){
   for(const c of cs){const v=vals[c];if(!v)continue;const[x,y]=D.cells[c],q=Math.log1p(v)/Math.log1p(mx);g.fillStyle=lerp(PAL[set.pal].heat,q);g.globalAlpha=.35+.65*q;g.fillRect(ox+(x-x0)*sc,oy+(y1-y-1)*sc,Math.ceil(sc),Math.ceil(sc))}
   g.globalAlpha=1;g.lineWidth=1.4;g.strokeStyle="rgba(28,25,23,.45)";
   D.presets.filter(p=>p.level===1).forEach(p=>polys(p.geom).forEach(pl=>{ring(pl[0]);g.stroke()}));
+  if(st.aoi){g.beginPath();g.rect(0,0,W,Hh);aoiRings().forEach(r=>r.forEach(([la,ln],i)=>i?g.lineTo(px(ln),py(la)):g.moveTo(px(ln),py(la))));g.fillStyle="rgba(28,25,23,.38)";g.fill("evenodd")}
   if(st.aoi){g.lineWidth=4;g.strokeStyle="#c2410c";const gm=st.aoi.kind==="drawn"?{type:"Polygon",coordinates:[st.aoi.pts.map(([a,b])=>[b,a])]}:st.aoi.geom;polys(gm).forEach(pl=>{ring(pl[0]);g.stroke()})}
   return{img:c2.toDataURL("image/png"),max:mx,ratio:Hh/W};
 }
