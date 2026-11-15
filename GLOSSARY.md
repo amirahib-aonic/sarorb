@@ -46,7 +46,7 @@ How much of a Typical Year's burning falls in one month: Peak burning, Active bu
 _Avoid_: Season, intensity level, Rising
 
 **Anomaly**:
-How a month's Harmonized Hotspot Count compares with the median of the same calendar month across every other year, written as a multiple such as "3.2× normal". The median keeps a few extreme fire years from making ordinary years look quiet.
+How a month's Harmonized Hotspot Count compares with the median of the same calendar month across every other year, said in plain words such as "3.2 times the usual September" or "Half the usual March". The median keeps a few extreme fire years from making ordinary years look quiet.
 _Avoid_: Departure, deviation, Times Normal
 
 ### Views
