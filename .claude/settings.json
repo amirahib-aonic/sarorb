@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "out=$(sh scripts/check-objectives.sh 2>&1) || { echo \"$out\" | grep FAIL >&2; echo 'Fix docs/OBJECTIVES.md evidence or prohibited assets before finishing.' >&2; exit 2; }"
+            "command": "out=$(sh \"$CLAUDE_PROJECT_DIR/scripts/check-objectives.sh\" 2>&1) || { echo \"$out\" | grep FAIL >&2; echo 'Fix docs/OBJECTIVES.md evidence or prohibited assets before finishing.' >&2; exit 2; }"
           }
         ]
       }
