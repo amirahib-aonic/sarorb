@@ -844,7 +844,7 @@ function reportHtml(){
   const ys=years.filter(y=>y>=GRID0),sv=keys.filter(k=>kY(k)>=GRID0&&k!==CUR).map(k=>SER[kIdx[k]]).sort((a,b)=>a-b),NB=7;
   const th=Array.from({length:NB-1},(_,i)=>sv[Math.floor(sv.length*(i+1)/NB)]||0),band=v=>th.filter(x=>v>=x).length,bcol=b=>lerp(pal.heat,b/(NB-1));
   let cal='<table class="cal"><thead><tr><th></th>'+M.map(m=>"<th>"+m[0]+"</th>").join("")+'<th class="tot">Year</th></tr></thead><tbody>';
-  ys.slice().reverse().forEach(y=>{let tt=0;cal+='<tr><th class="'+(y<2012?"old":"")+'">'+y+"</th>";for(let m=1;m<=12;m++){const k=key(y,m);if(!(k in kIdx)){cal+='<td class="na"></td>';continue}const v=SER[kIdx[k]];tt+=v;cal+='<td class="'+(inRange(k)?"in ":"")+(k===CUR?"part":"")+'" style="background:'+bcol(band(v))+'"></td>'}cal+='<td class="tot">'+nf(tt)+"</td></tr>"});
+  ys.slice().reverse().forEach(y=>{let tt=0;cal+='<tr><th class="'+(y<2012?"old":"")+'">'+y+"</th>";for(let m=1;m<=12;m++){const k=key(y,m);if(!(k in kIdx)){cal+='<td class="na"></td>';continue}const v=SER[kIdx[k]];tt+=v;cal+='<td class="'+(inRange(k)?"in ":"out ")+(k===CUR?"part":"")+'" style="background:'+bcol(band(v))+'"></td>'}cal+='<td class="tot">'+nf(tt)+"</td></tr>"});
   cal+="</tbody></table>";
   const calKey=Array.from({length:NB},(_,b)=>'<span><i style="background:'+bcol(b)+'"></i>'+(b?nf(th[b-1]):"0")+"+</span>").join("");
   const now=new Date(),gen=now.getDate()+" "+M[now.getMonth()]+" "+now.getFullYear()+", "+String(now.getHours()).padStart(2,"0")+":"+String(now.getMinutes()).padStart(2,"0");
@@ -872,7 +872,7 @@ function reportHtml(){
   .note{font-size:7.5pt;color:rgba(28,25,23,.65);margin:1mm 0 0}
   table.cal{width:100%;border-collapse:separate;border-spacing:.35mm;table-layout:fixed;font-size:6.5pt}
   .cal th{font-weight:400;color:rgba(28,25,23,.65);padding:0}.cal tbody th{text-align:right;padding-right:1mm;width:8mm}.cal th.old{color:#a16207;font-weight:500}
-  .cal td{height:2.45mm;padding:0}.cal td.na{background:#e7e5e4}.cal td.in{outline:.6pt solid #1c1917;outline-offset:-.6pt}
+  .cal td{height:2.45mm;padding:0}.cal td.na{background:#e7e5e4}.cal td.in{outline:1pt solid #1c1917;outline-offset:-1pt}.cal td.out{opacity:.22}
   .cal td.part{background-image:repeating-linear-gradient(45deg,transparent 0 1mm,rgba(255,255,255,.6) 1mm 1.5mm)!important}
   .cal .tot{width:11mm;text-align:right;color:rgba(28,25,23,.7);padding-left:1mm}
   .key{display:flex;flex-wrap:wrap;gap:1mm 3mm;font-size:7pt;color:rgba(28,25,23,.7);margin-top:1.5mm}.key i{display:inline-block;width:3mm;height:2.2mm;vertical-align:-.3mm;margin-right:1mm}
@@ -900,7 +900,7 @@ function reportHtml(){
    +'<p class="note">Average detections per month across all years. Darker = bigger share of the year’s burning.</p>'
    +'<h2>How to read this</h2><p>Satellites detect active fires as <b>Hotspots</b>. MODIS (Moderate Resolution Imaging Spectroradiometer; 2002–2011 years in gold) sees fewer small fires than VIIRS (Visible Infrared Imaging Radiometer Suite), so its counts are scaled by a monthly factor k(m) of about 4–5×, fitted in the Overlap Period (2012 onward), to give one Combined count (Harmonized Hotspot Count). Scaled years are estimates, typically within about 11% for a whole year.</p></div></div>'
    +'<h2 class="pb">Burning Calendar: Combined count by year and month</h2>'+cal
-   +'<div class="key">'+calKey+'<span>Outlined: Date Range</span><span>Striped: month so far</span></div>'
+   +'<div class="key">'+calKey+'<span>Bold outline: Date Range (other months faded)</span><span>Striped: month so far</span></div>'
    +'<footer><span>Generated '+gen+' · ignis-borneo.vercel.app</span><span>Data: NASA FIRMS (MODIS, VIIRS)</span><span>IGNIS · Sarawak Orbiters · NASA Space Apps 2026 · Prototype</span></footer>'
    +'</div></body></html>';
 }
