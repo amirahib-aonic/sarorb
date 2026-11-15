@@ -726,9 +726,7 @@ function insights(){
   const busiest=ks.reduce((b,k)=>!b||SER[kIdx[k]]>SER[kIdx[b]]?k:b,null);
   const peak=typ.map((v,i)=>[i,v]).filter(([,v])=>tot&&v/tot>=.15).map(([i])=>MONTHS_EN[i]);
   const lastFull=CUR.slice(5)==="12"?kY(CUR):kY(CUR)-1;
-  const yearTot=y=>Array.from({length:12},(_,i)=>key(y,i+1)).filter(k=>k in kIdx).reduce((a,k)=>a+SER[kIdx[k]],0);
-  const yearsFull=years.filter(y=>y>=GRID0&&y<kY(CUR)&&y!==lastFull),medYear=median(yearsFull.map(yearTot));
-  const ratio=medYear>0?yearTot(lastFull)/medYear:null;
+  const ratio=insCompare(Array.from({length:12},(_,i)=>key(lastFull,i+1)).filter(k=>k in kIdx)).a;
   const sel=insSel(),yv=insYears(),y0=+st.from.slice(0,4),y1=+st.to.slice(0,4),rk=ks.length?ks:[sel];
   const cmp=Object.assign(insCompare(rk),{label:rk.length===1?MONTH_LONG[kM(rk[0])-1]+" "+kY(rk[0]):MONTHS_EN[kM(rk[0])-1]+" "+kY(rk[0])+" – "+MONTHS_EN[kM(rk.at(-1))-1]+" "+kY(rk.at(-1)),one:rk.length===1,m:kM(rk.at(-1)),hasCur:rk.includes(CUR)});
   cmp.text=cmp.a>0?usualText(cmp.a,cmp.m,cmp.one?null:"for these months"):null;
