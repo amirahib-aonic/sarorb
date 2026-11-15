@@ -177,6 +177,22 @@ table.kt{border-collapse:collapse;width:100%;font-size:11px;margin-top:4px}
 #fab{position:fixed;left:10px;bottom:calc(var(--bar) + 90px);z-index:1000;border-radius:50%;width:52px;height:52px;background:var(--panel);font-size:20px;box-shadow:0 4px 14px #0007}
 #coach{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--bar) + 60px);z-index:1100;display:flex;align-items:center;gap:10px;background:#2b3240;border:1px solid var(--acc);border-radius:var(--r2);padding:8px 10px 8px 12px;box-shadow:0 6px 20px #0009;max-width:calc(100vw - 20px);font-size:13px}
 #coach[hidden]{display:none}
+#tour[hidden]{display:none}
+#tour{position:fixed;inset:0;z-index:1400}
+#tourBlock{position:absolute;inset:0}
+#tourSpot{position:fixed;border-radius:var(--r2);box-shadow:0 0 0 2px var(--acc),0 0 0 9999px rgba(6,8,11,.68);pointer-events:none;transition:all .25s ease}
+#tourSpot.none{box-shadow:0 0 0 9999px rgba(6,8,11,.68)}
+#tourCard{position:fixed;width:min(340px,calc(100vw - 20px));background:#2b3240;border:1px solid var(--acc);border-radius:var(--r2);padding:12px 14px;box-shadow:0 10px 30px #000a;font-size:13px;line-height:1.45;transition:top .25s ease,left .25s ease}
+#tourCard h3{margin:0 0 6px;font-size:15px;color:var(--fg)}
+#tourCard p{margin:0 0 10px;color:var(--fg)}
+#tourCard .tf{display:flex;align-items:center;gap:8px}
+#tourCard .tc{flex:1;color:var(--mut);font-size:12px}
+#tourCard .tp{background:var(--acc);border-color:var(--acc);color:#111;font-weight:600}
+#tourCard .ts{border:0;background:none;color:var(--mut);padding-left:0}
+#tHelp{writing-mode:horizontal-tb!important;justify-content:center;font-weight:700;font-size:15px;padding:8px 0!important}
+.tourGo{margin:4px 0 10px}
+@media (max-width:760px){#tabs{gap:4px;max-width:calc(100vw - 16px)}#tabs button{padding:6px 9px;font-size:12px;white-space:nowrap;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;display:block}#tabs button .ic{display:none}#tabs #tHelp{flex:0 0 32px;width:32px;padding:6px 0!important;font-size:14px}}
+@media (prefers-reduced-motion:reduce){#tourSpot,#tourCard{transition:none}}
 .info{min-height:0;padding:0 5px;margin-left:6px;border-radius:50%;font-size:11px;line-height:16px;background:transparent;color:var(--mut);vertical-align:1px;text-transform:none}
 .info:hover{color:var(--fg)}
 #toast{max-width:min(460px,calc(100vw - 20px));text-align:center}
@@ -276,6 +292,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <button id="tIns" data-tab="ins"></button>
   <button id="tSet" data-tab="set"></button>
   <button id="tAbt" data-tab="abt"></button>
+  <button id="tHelp" aria-label="Start the Guided Tour" title="Guided Tour">?</button>
 </div>
 <div id="sbGrip" role="separator" aria-orientation="vertical" aria-label="Resize side panel" tabindex="0" title="Drag to resize. Double-click to reset."></div>
 <aside id="sb"><div id="sbHandle" role="button" tabindex="0" aria-label="Hide panel" title="Swipe down to hide"></div>
@@ -319,6 +336,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   </section>
   <section class="panel" id="pAbt" hidden>
     <h2>IGNIS</h2>
+    <button type="button" class="tourGo" id="bTour">▶ Start Guided Tour</button>
     <p class="note" style="margin-top:-6px">Integrated Geospatial Network for Ignition Surveillance · an entry to the NASA Space Apps Challenge 2026, “MODIS and VIIRS Hot Spots” (Sarawak)</p>
     <h3 data-i18n="abMission"></h3>
     <p class="abt-lead">IGNIS helps people prepare for Borneo’s next fire season by showing, in plain words, when and where fires have burned over 20+ years, and where this year stands against the usual.</p>
@@ -365,6 +383,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
 <div id="radial" role="menu" aria-label="Tool wheel"><svg id="rsvg" width="300" height="300" viewBox="-150 -150 300 300"></svg></div>
 <div id="tip"></div>
 <div id="toast" role="status"></div>
+<div id="tour" hidden><div id="tourBlock"></div><div id="tourSpot"></div><div id="tourCard" role="dialog" aria-modal="true" aria-labelledby="tourT" tabindex="-1"><h3 id="tourT"></h3><p id="tourP"></p><div class="tf"><button type="button" class="ts" id="tourSkip">Skip tour</button><span class="tc" id="tourC"></span><button type="button" id="tourBack">Back</button><button type="button" class="tp" id="tourNext">Next</button></div></div></div>
 <script>window.PROTO_READY.then(()=>{
 const D=window.PROTO_DATA,NC=D.cells.length,keys=Object.keys(D.months).sort(),NM=keys.length,CUR=D.current;
 const kIdx=Object.fromEntries(keys.map((k,i)=>[k,i])),kY=k=>+k.slice(0,4),kM=k=>+k.slice(5),key=(y,m)=>`${y}-${String(m).padStart(2,"0")}`;
@@ -790,7 +809,7 @@ const coach=document.getElementById("coach");
 document.getElementById("coachText").textContent=touch?"Tip: press and hold the map to open the tool wheel.":`Tip: right-click the map or press ${set.key.toUpperCase()} to open the tool wheel.`;
 const coachDone=()=>{coach.hidden=true;try{localStorage.setItem("ignis-proto-coach","1")}catch(e){}};
 document.getElementById("coachOk").onclick=coachDone;
-if(!seen)setTimeout(()=>coach.hidden=false,1200);
+if(!seen)setTimeout(()=>{if(!tourEl||tourEl.hidden)coach.hidden=false},1200);
 document.addEventListener("keydown",e=>{
   const typing=/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName);
   if(R.open){const n=R.menu.items.length;
@@ -1371,7 +1390,67 @@ function report(){
 }
 document.getElementById("bXlsx").onclick=()=>{expShow(false);workbook()};
 document.getElementById("bReport").onclick=()=>{expShow(false);report()};
+const TOUR_AREA="Pulang Pisau (Central Kalimantan)",TOUR_MONTH="2019-09",narrow=()=>innerWidth<760;
+const $=id=>document.getElementById(id);
+const tourEl=$("tour"),tourSpot=$("tourSpot"),tourCard=$("tourCard");
+const showPanel=tab=>{st.tab=tab;st.collapsed=false;applyTabs()};
+const TOUR=[
+  {t:"Welcome to IGNIS",p:"This tour shows you how to check fire in your area. It takes about a minute, and it puts your view back the way it was when you finish.",go:()=>showRange(false)},
+  {t:"Pick your area",p:()=>`Choose a region and a district here. For this tour we picked Pulang Pisau in Central Kalimantan, one of the busiest fire areas in Borneo. You can also draw your own area: ${touch?"press and hold the map":`right-click the map or press ${set.key.toUpperCase()}`} to open the tool wheel.`,el:()=>$("tools"),go:()=>{pickPreset(TOUR_AREA);showPanel("cal")}},
+  {t:"Burning Calendar",p:"The Typical Year strip shows which months usually burn here. Darker months carry a bigger share of the year’s fire.",el:()=>$("typ"),go:()=>showPanel("cal")},
+  {t:"Year by month",p:"Each square is one month. Gold years come from the older satellite, scaled up to match the newer one. Striped squares are this month so far. Tap any square to show that month on the map.",el:()=>$("grid"),go:()=>{showPanel("cal");setMode("month")}},
+  {t:"The map",p:"The heatmap shows Hotspots per square for the month you picked, here September 2019. The legend tells you what each colour means.",el:()=>$("mlegend"),go:()=>{st.idx=kIdx[TOUR_MONTH]??st.idx;st.win=null;setMode("month");if(narrow()){st.collapsed=true;applyTabs()}}},
+  {t:"Compared with the usual",p:"Switch the Map View to Compared with the usual. Red squares burned more than they usually do in that month, blue squares burned less.",el:()=>$("mode"),go:()=>{setMode("anomaly");if(narrow()){st.collapsed=true;applyTabs()}}},
+  {t:"Date Range",p:"Narrow the period you care about. The Range Total adds up every month inside it, and the calendar fades the months outside it.",el:()=>document.querySelector("#bar .grp.rng"),go:()=>{setMode("range");if(innerWidth<=1280)showRange(true);if(narrow()){st.collapsed=true;applyTabs()}}},
+  {t:"Insights",p:"The Insights tab keeps a running total for the year and shows whether this year is ahead of or behind the usual.",el:()=>$("insYtdHero").closest(".icard"),go:()=>{showRange(false);showPanel("ins")}},
+  {t:"Export (optional)",p:"Take it with you: a printable report, a spreadsheet, the raw Hotspots as CSV, or the area’s Boundary as GeoJSON.",el:()=>$("exp"),go:()=>{if(narrow()){st.collapsed=true;applyTabs()}}},
+  {t:"You’re ready",p:"Reopen this tour any time from the ? button. Tap any ⓘ next to a word for a plain-word Explainer, including Hotspot Shifts and Settings.",el:()=>$("tHelp"),go:()=>{if(narrow()){st.collapsed=true;applyTabs()}}}
+];
+let tourI=-1,tourSaved=null;
+function tourPlace(){
+  if(tourI<0)return;const s=TOUR[tourI],el=s.el&&s.el();
+  if(el&&el.getClientRects().length&&el.getBoundingClientRect().width){el.scrollIntoView({block:"nearest"});const r=el.getBoundingClientRect(),pd=6;
+    Object.assign(tourSpot.style,{left:r.left-pd+"px",top:r.top-pd+"px",width:r.width+2*pd+"px",height:r.height+2*pd+"px"});tourSpot.classList.remove("none");
+    const cw=tourCard.offsetWidth,ch=tourCard.offsetHeight,W=innerWidth,Hh=innerHeight;let x,y;
+    if(narrow()){x=(W-cw)/2;y=r.top+r.height/2>Hh/2?10:Hh-ch-10}
+    else{x=Math.min(Math.max(10,r.left+r.width/2-cw/2),W-cw-10);
+      if(r.bottom+12+ch<Hh-10)y=r.bottom+12;else if(r.top-12-ch>10)y=r.top-12-ch;
+      else{y=Math.min(Math.max(10,r.top),Hh-ch-10);x=r.left-cw-12>10?r.left-cw-12:Math.min(r.right+12,W-cw-10)}}
+    Object.assign(tourCard.style,{left:x+"px",top:y+"px"})}
+  else{Object.assign(tourSpot.style,{left:innerWidth/2+"px",top:innerHeight/2+"px",width:"0px",height:"0px"});tourSpot.classList.add("none");
+    Object.assign(tourCard.style,{left:(innerWidth-tourCard.offsetWidth)/2+"px",top:(innerHeight-tourCard.offsetHeight)/2+"px"})}
+}
+function tourShow(i){
+  tourI=i;const s=TOUR[i];showRange(false);s.go&&s.go();
+  $("tourT").textContent=s.t;$("tourP").textContent=typeof s.p==="function"?s.p():s.p;
+  $("tourC").textContent=i===0?"":`${i} of ${TOUR.length-1}`;
+  $("tourBack").hidden=i===0;$("tourNext").textContent=i===0?"Start":i===TOUR.length-1?"Finish":"Next";
+  tourPlace();setTimeout(tourPlace,320);tourCard.focus({preventScroll:true});
+}
+function tourStart(){
+  if(tourI>=0)return;closeRadial();expShow(false);coach.hidden=true;
+  tourSaved={aoi:st.aoi,mode:st.mode,idx:st.idx,win:st.win,shifts:st.shifts,from:st.from,to:st.to,tab:st.tab,collapsed:st.collapsed,c:map.getCenter(),z:map.getZoom()};
+  try{localStorage.setItem("ignis-proto-tour","1");localStorage.setItem("ignis-proto-coach","1")}catch(e){}
+  st.from=keys[0].slice(0,7)+"-01";st.to=D.lastDate;$("from").value=st.from;$("to").value=st.to;
+  tourEl.hidden=false;tourShow(0);
+}
+function tourEnd(){
+  if(tourI<0)return;tourI=-1;tourEl.hidden=true;showRange(false);const s=tourSaved;tourSaved=null;
+  Object.assign(st,{aoi:s.aoi,idx:s.idx,win:s.win,shifts:s.shifts,from:s.from,to:s.to,tab:s.tab,collapsed:s.collapsed,edit:false,draw:false});
+  $("from").value=st.from;$("to").value=st.to;commit();syncPreset();setMode(s.mode);st.shifts=s.shifts;applyTabs();map.setView(s.c,s.z);
+  $("tHelp").focus();
+}
+$("tourNext").onclick=()=>tourI===TOUR.length-1?tourEnd():tourShow(tourI+1);
+$("tourBack").onclick=()=>tourI>0&&tourShow(tourI-1);
+$("tourSkip").onclick=tourEnd;
+tourEl.addEventListener("click",e=>e.stopPropagation());
+tourEl.addEventListener("pointerdown",e=>e.stopPropagation());
+document.addEventListener("keydown",e=>{if(tourI<0)return;if(e.key==="Escape")tourEnd();else if(e.key==="ArrowRight")$("tourNext").click();else if(e.key==="ArrowLeft")$("tourBack").click();else if(e.key==="Tab"){const f=[...tourCard.querySelectorAll("button:not([hidden])")],a=f.indexOf(document.activeElement);if(e.shiftKey&&a<=0){f[f.length-1].focus();e.preventDefault()}else if(!e.shiftKey&&a===f.length-1){f[0].focus();e.preventDefault()}return}else return;e.preventDefault();e.stopImmediatePropagation()},true);
+addEventListener("resize",()=>tourPlace());
+$("tHelp").onclick=tourStart;$("bTour").onclick=tourStart;
+let tourSeen=false;try{tourSeen=localStorage.getItem("ignis-proto-tour")==="1"}catch(e){}
 computeAoi();applySettings();
+if(!tourSeen)setTimeout(tourStart,900);
 requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.remove("noanim")));
 });
 </script>

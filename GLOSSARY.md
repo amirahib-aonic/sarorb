@@ -89,3 +89,13 @@ _Avoid_: Range sum, cumulative count, season total
 **Overlap Period**:
 The years when MODIS and VIIRS both observed the Coverage Area (2012 onward), used to calibrate one sensor against the other.
 _Avoid_: Calibration window, shared years
+
+### Help
+
+**Guided Tour**:
+A step-by-step walk through one task, checking fire in an area, that highlights each control in turn. It runs once on a first visit and can be restarted from the "?" button or the About tab. While it runs it shows a busy demo area, then puts back the user's own Area of Interest and view.
+_Avoid_: walkthrough, onboarding, tutorial, coach marks
+
+**Explainer**:
+The ⓘ note next to a term or control that says what it means in plain words. It covers what the Guided Tour leaves out.
+_Avoid_: tooltip, info icon, help text
