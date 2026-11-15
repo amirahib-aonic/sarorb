@@ -1234,6 +1234,7 @@ async function workbook(){
   const r1=wb.addWorksheet("Read me");r1.columns=[{width:110}];
   [["IGNIS: Hotspot download"],[""],["Area: "+I.area],["Date Range: "+st.from+" to "+st.to+" (rounded to whole months)"],["Data up to: "+D.lastDate],[""],
    ["Where the data comes from: NASA FIRMS active-fire detections from MODIS (Moderate Resolution Imaging Spectroradiometer, older, 2002 onward) and VIIRS (Visible Infrared Imaging Radiometer Suite, newer, 2012 onward)."],
+   ["Credits: We acknowledge the use of data and imagery from NASA's Fire Information for Resource Management System (FIRMS), part of NASA's Earth Science Data and Information System (ESDIS), https://firms.modaps.eosdis.nasa.gov/ . NASA does not endorse IGNIS. Boundaries: geoBoundaries (William & Mary geoLab, CC BY 4.0), https://www.geoboundaries.org/ ."],
    ["Why the counts were combined: VIIRS spots about 4 to 5 times more small fires than MODIS. To make one H Count (Harmonized Hotspot Count), counts from years when only MODIS flew (2002 to 2011) are multiplied by a factor k(m) for each calendar month, fitted in the Overlap Period (2012 onward, both sensors), so every year reads as VIIRS would have detected."],
    ["Accuracy: the scaled years are estimates, typically within about 11% for a whole year."],[""],
    ["Sheets: Summary (key numbers). Monthly (H Count by year and month, shaded like a calendar). Typical Year (average per month, with bars). Compared with the usual (each month in your Date Range against the median). Insights (the Date Range against the usual, this year so far against the usual, and yearly totals). Hotspot locations (Hotspots per 11 km square)."],
@@ -1397,7 +1398,7 @@ function reportHtml(){
    +'<h2 class="pb">Burning Calendar: H Count by year and month</h2>'+cal
    +'<div class="key">'+calKey+'<span>Bold outline: Date Range (other months faded)</span><span>Striped: month so far</span></div>'
    +reportBoundary()
-   +'<footer><span>Generated '+gen+' · ignis-borneo.vercel.app</span><span>Data: NASA FIRMS (MODIS, VIIRS), NASA ESDIS · Boundaries: geoBoundaries (CC BY 4.0) · Basemap: Esri</span><span>IGNIS · Sarawak Orbiters · NASA Space Apps 2026 · Prototype</span></footer>'
+   +'<footer><span>Generated '+gen+' · ignis-borneo.vercel.app</span><span>Data: NASA FIRMS (MODIS, VIIRS), NASA ESDIS · Boundaries: geoBoundaries (CC BY 4.0) · Basemap: Esri · NASA does not endorse IGNIS</span><span>IGNIS · Sarawak Orbiters · NASA Space Apps 2026 · Prototype</span></footer>'
    +'</div></body></html>';
 }
 function report(){
