@@ -177,7 +177,7 @@ body:not(.collapsed) #tabs{bottom:calc(var(--bar) + 62vh + 8px)}
   <div id="label"><b id="when"></b><div id="sub"></div></div>
   <div class="sl"><input type="range" id="slider" min="0" aria-label="Month"><div id="ticks" aria-hidden="true"></div></div>
   <select id="mode" aria-label="Map View"></select><span class="iSlot" data-k="view"></span>
-  <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="dr"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"></div>
+  <div class="grp rng"><span class="note" data-i18n="range"></span><span class="iSlot" data-k="dr"></span><input type="date" id="from" aria-label="From"><span class="note">→</span><input type="date" id="to" aria-label="To"><button type="button" id="bRngAll" title="Reset to the whole timeline">↺ All</button></div>
   <button id="bRng" aria-expanded="false" aria-controls="from">Dates</button>
   <div id="exp"><button id="bExp" aria-haspopup="menu" aria-expanded="false">Export ▾</button><div id="expMenu" role="menu" hidden><button id="bRaw" role="menuitem" data-i18n="csvRaw"></button><button id="bHarm" role="menuitem" data-i18n="csvHarm"></button><button id="bXlsx" role="menuitem" data-i18n="xlsx"></button><button id="bReport" role="menuitem" data-i18n="report"></button></div></div>
 </div>
@@ -512,7 +512,13 @@ function drawCalendar(){
   return{typ,tot,low};
 }
 
+function rangeIdx(){const a=st.from.slice(0,7),b=st.to.slice(0,7);let lo=keys.findIndex(k=>k>=a),hi=keys.findLastIndex(k=>k<=b);if(lo<0)lo=0;if(hi<0)hi=NM-1;return lo<=hi?[lo,hi]:[0,NM-1]}
+function syncSlider(){const[lo,hi]=rangeIdx(),sl=document.getElementById("slider"),tk=document.getElementById("ticks");st.idx=Math.min(hi,Math.max(lo,st.idx));
+  const sig=lo+":"+hi;if(tk.dataset.sig!==sig){tk.dataset.sig=sig;sl.min=lo;sl.max=hi;const n=Math.max(1,hi-lo),yrs=n/12,step=yrs>15?5:yrs>6?2:yrs>2?1:0;
+    tk.innerHTML=keys.slice(lo,hi+1).map((k,j)=>{const y=kY(k),m=kM(k);const show=step?m===1&&y%step===0:(yrs>1?m%3===1:true);return show?`<span style="left:${(j/n*100).toFixed(2)}%">${step?y:MONTHS_EN[m-1].slice(0,3)+(m===1||j===0?" "+String(y).slice(2):"")}</span>`:""}).join("")}
+  sl.value=st.idx}
 function render(){
+  syncSlider();
   const k=keys[st.idx],r=D.months[k],y=kY(k),m=kM(k),M=mn();
   VALS=cellValues();VMAX=st.mode==="month"?MAXCELL:Math.max(1,...VALS.filter(v=>!Number.isNaN(v)));drawCanvas();
   document.getElementById("slider").value=st.idx;
@@ -542,9 +548,10 @@ function applySettings(){
 const MAXCELL=H.reduce((a,b)=>b>a?b:a,1);
 const bind=(id,k,ev="change")=>{const el=document.getElementById(id);el.value=set[k];el.addEventListener(ev,()=>{set[k]=el.value;save();applySettings()})};
 bind("sLang","lang");bind("sPal","pal");bind("sLp","lp");bind("sKey","key","input");bind("sStart","start");bind("sBase","base");bind("sOp","op","input");
-const slider=document.getElementById("slider");slider.max=NM-1;slider.oninput=e=>{st.idx=+e.target.value;render()};
+const slider=document.getElementById("slider");slider.oninput=e=>{st.idx=+e.target.value;render()};
 document.getElementById("mode").onchange=e=>setMode(e.target.value);
 document.getElementById("from").value=st.from;document.getElementById("to").value=st.to;
+document.getElementById("bRngAll").onclick=()=>{st.from=keys[0].slice(0,7)+"-01";st.to=D.lastDate;document.getElementById("from").value=st.from;document.getElementById("to").value=st.to;render();toast("Date Range reset to the whole timeline")};
 ["from","to"].forEach(id=>document.getElementById(id).onchange=e=>{st[id]=e.target.value||st[id];if(st.from>st.to)[st.from,st.to]=[st.to,st.from];render()});
 document.getElementById("typ").onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=key(kY(keys[st.idx]),+b.dataset.m);st.idx=k in kIdx?kIdx[k]:st.idx;setMode("typical")};
 document.getElementById("grid").onclick=e=>{const k=e.target.dataset.k;if(!k)return;st.idx=kIdx[k];if(st.mode==="typical"||st.mode==="range")st.mode="month";document.getElementById("mode").value=st.mode;render()};
@@ -561,8 +568,7 @@ document.addEventListener("click",()=>showRange(false));
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&document.body.classList.contains("showrng")){showRange(false);bRng.focus()}});
 const bArea=document.getElementById("bArea"),toolsEl=document.getElementById("tools");
 bArea.onclick=()=>{const o=toolsEl.classList.toggle("open");bArea.setAttribute("aria-expanded",o)};
-document.getElementById("ticks").innerHTML=years.filter(y=>y%5===0).map(y=>{const i=kIdx[key(y,1)]??kIdx[key(y,2)];return i==null?"":`<span style="left:${(i/(NM-1)*100).toFixed(2)}%">${y}</span>`}).join("");
-let timer;document.getElementById("play").onclick=e=>{st.playing=!st.playing;e.target.textContent=st.playing?"❚❚":"▶";clearInterval(timer);if(st.playing)timer=setInterval(()=>{st.idx=(st.idx+1)%NM;render()},450)};
+let timer;document.getElementById("play").onclick=e=>{st.playing=!st.playing;e.target.textContent=st.playing?"❚❚":"▶";clearInterval(timer);if(st.playing)timer=setInterval(()=>{const[lo,hi]=rangeIdx();st.idx=st.idx>=hi?lo:st.idx+1;render()},450)};
 const MONTHS_EN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function loadExcel(){return window.ExcelJS?Promise.resolve():new Promise((ok,bad)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js";sc.onload=ok;sc.onerror=bad;document.head.appendChild(sc)})}
 function insights(){
